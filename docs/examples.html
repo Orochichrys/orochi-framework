@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../orochi.css">
+</head>
+
+<body>
+  
+  <nav class="orochi-nav-wrapper orochi-sticky">
+    <div class="orochi-nav-container">
+      <div class="orochi-flex orochi-items-center">
+        <a href="#" class="orochi-brand">Orochi</a>
+        <button class="orochi-menu-toggler">
+          <span class="orochi-menu-toggler-icon"></span>
+        </button>
+        <ul class="orochi-menu">
+          <li class="orochi-menu-item">
+            <a href="#" class="orochi-menu-link">Accueil</a>
+          </li>
+          <li class="orochi-menu-item">
+            <a href="#" class="orochi-menu-link">Services</a>
+          </li>
+          <li class="orochi-menu-item orochi-dropdown">
+            <a href="#" class="orochi-menu-link">Services</a>
+            <ul class="orochi-dropdown-menu">
+              <li><a href="#" class="orochi-dropdown-item">Développement Web</a></li>
+              <li><a href="#" class="orochi-dropdown-item">Design UI</a></li>
+              <li><a href="#" class="orochi-dropdown-item">Consulting</a></li>
+            </ul>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="orochi-container orochi-bg-primary orochi-mt-5">
+    <h1>Bienvenue sur Orochi-Framework</h1>
+    <p>Ce conteneur a une largeur fixe selon la taille de l'écran.</p>
+  </div>
+  
+  <div class="orochi-container-fluid orochi-bg-primary orochi-mt-5">
+    <h2>Section pleine largeur</h2>
+    <p>Ce conteneur prend toujours 100% de la largeur.</p>
+  </div>
+
+   <div class="orochi-container orochi-text-center orochi-mt-5">
+    <div class="orochi-row ">
+        <div class="orochi-col">
+          1 of 2
+        </div>
+        <div class="orochi-col">
+          2 of 2
+        </div>
+    </div>
+    <div class="orochi-row">
+      <div class="orochi-col">
+        1 of 3
+      </div>
+      <div class="orochi-col">
+        2 of 3
+      </div>
+      <div class="orochi-col">
+        3 of 3
+      </div>
+  </div>
+  </div>
+ 
+  <div class="orochi-container orochi-text-center orochi-mt-5">
+    <div class="orochi-row">
+      <div class="orochi-col">
+        1 of 3
+      </div>
+      <div class="orochi-col-6">
+        2 of 3 (wider)
+      </div>
+      <div class="orochi-col">
+        3 of 3
+      </div>
+    </div>
+    <div class="orochi-row">
+      <div class="orochi-col">
+        1 of 3
+      </div>
+      <div class="orochi-col-5">
+        2 of 3 (wider)
+      </div>
+      <div class="orochi-col">
+        3 of 3
+      </div>
+    </div>
+  </div>
+   
+  <div class="orochi-container orochi-text-center">
+    <div class="orochi-row orochi-justify-center-md">
+      <div class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark">1 of 3</div>
+      <div class="orochi-col-md-auto orochi-bg-primary orochi-border orochi-border-dark">Variable width content</div>
+      <div class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark">3 of 3</div>
+    </div>
+    
+    <div class="orochi-row orochi-mt-3">
+      <div class="orochi-col orochi-bg-primary orochi-border orochi-border-dark">1 of 3</div>
+      <div class="orochi-col-md-auto orochi-bg-primary orochi-border orochi-border-dark">Variable width content</div>
+      <div class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark">3 of 3</div>
+    </div>
+  </div>
+
+  <div class="orochi-container orochi-text-center orochi-mt-5">
+    <div class="orochi-row">
+      <div class="orochi-col">Column</div>
+      <div class="orochi-col">Column</div>
+      <div class="orochi-col">Column</div>
+      <div class="orochi-col">Column</div>
+    </div>
+  </div>
+
+  <div class=" orochi-container orochi-border  orochi-rounded-lg orochi-border-2 orochi-p-3">
+    Contenu avec bordure primaire, arrondie et épaisse.
+  </div>
+  
+  <div class="orochi-container orochi-border orochi-border-dashed orochi-rounded-lg orochi-border-2 orochi-p-3 orochi-mt-3">
+    Contenu avec bordure en pointillés, arrondie et épaisse.
+  </div>
+  
+<!-- <div class="orochi-container orochi-mt-9">
+    <div class="orochi-grid">
+      <div class="orochi-unit orochi-unit-6">
+        <div class="orochi-card">
+          <div class="orochi-card-header">
+            <h2>Titre</h2>
+          </div>
+          <div class="orochi-card-body">
+            <form class="orochi-form-group">
+              <label class="orochi-form-label">Email</label>
+              <input type="email" class="orochi-form-input">
+              <button class="orochi-button orochi-button-primary orochi-mt-2">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="orochi-unit orochi-unit-6">
+        <div class="orochi-card">
+          <div class="orochi-card-header">
+            <h2>Titre</h2>
+          </div>
+          <div class="orochi-card-body">
+            <form class="orochi-form-group">
+              <label class="orochi-form-label">Email</label>
+              <input type="email" class="orochi-form-input">
+              <button class="orochi-button orochi-button-primary orochi-mt-2">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="orochi-unit orochi-unit-6">
+        <div class="orochi-card">
+          <div class="orochi-card-header">
+            <h2>Titre</h2>
+          </div>
+          <div class="orochi-card-body">
+            <form class="orochi-form-group">
+              <label class="orochi-form-label">Email</label>
+              <input type="email" class="orochi-form-input">
+              <button class="orochi-button orochi-button-primary orochi-mt-2">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="orochi-unit orochi-unit-6">
+        <div class="orochi-card">
+          <div class="orochi-card-header">
+            <h2>Titre</h2>
+          </div>
+          <div class="orochi-card-body">
+            <form class="orochi-form-group">
+              <label class="orochi-form-label">Email</label>
+              <input type="email" class="orochi-form-input">
+              <button class="orochi-button orochi-button-primary orochi-mt-2">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="orochi-container orochi-mt-5">
+    <div class="orochi-card">
+    <div class="orochi-card-body">
+      <div class="orochi-form-group">
+
+        <div class="orochi-mb-4">
+          <h1>Inscription</h1>
+        </div>
+
+        <div class="orochi-mb-4">
+          <label class="orochi-form-label">Name:</label>
+          <input type="text" class="orochi-form-input"> 
+        </div>
+        
+        <div class="orochi-mb-4">
+          <label class="orochi-form-label">Email:</label>
+          <input type="email" class="orochi-form-input">
+        </div>
+        
+        <div class="orochi-mb-4">
+          <label class="orochi-form-label">Password:</label>
+          <input type="password" class="orochi-form-input">
+        </div>
+     
+        <div class="orochi-mb-4">
+          <label class="orochi-form-label">Confirm Password:</label>
+          <input type="password" class="orochi-form-input">
+        </div>
+
+        <div class="orochi-mb-4">
+          <label class="orochi-form-label">Confirm Password:</label>
+          <select class="orochi-form-select">
+            <option value="">Test</option>
+          </select>
+        </div>
+       
+        <button class="orochi-button orochi-button-primary">Envoyer</button>
+       </div>
+    </div>
+  </div>
+</div> -->
+
+
+</body>
+
+<script src="../orochi.js"></script>
+</html>
