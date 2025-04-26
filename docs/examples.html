@@ -1,130 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../orochi.css">
-</head>
+    <link rel="stylesheet" href="../orochi.css" />
+  </head>
 
-<body>
-  
-  <nav class="orochi-nav-wrapper orochi-sticky">
-    <div class="orochi-nav-container">
-      <div class="orochi-flex orochi-items-center">
-        <a href="#" class="orochi-brand">Orochi</a>
-        <button class="orochi-menu-toggler">
-          <span class="orochi-menu-toggler-icon"></span>
-        </button>
-        <ul class="orochi-menu">
-          <li class="orochi-menu-item">
-            <a href="#" class="orochi-menu-link">Accueil</a>
-          </li>
-          <li class="orochi-menu-item">
-            <a href="#" class="orochi-menu-link">Services</a>
-          </li>
-          <li class="orochi-menu-item orochi-dropdown">
-            <a href="#" class="orochi-menu-link">Services</a>
-            <ul class="orochi-dropdown-menu">
-              <li><a href="#" class="orochi-dropdown-item">Développement Web</a></li>
-              <li><a href="#" class="orochi-dropdown-item">Design UI</a></li>
-              <li><a href="#" class="orochi-dropdown-item">Consulting</a></li>
-            </ul>
-          </li>          
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="orochi-container orochi-bg-primary orochi-mt-5">
-    <h1>Bienvenue sur Orochi-Framework</h1>
-    <p>Ce conteneur a une largeur fixe selon la taille de l'écran.</p>
-  </div>
-  
-  <div class="orochi-container-fluid orochi-bg-primary orochi-mt-5">
-    <h2>Section pleine largeur</h2>
-    <p>Ce conteneur prend toujours 100% de la largeur.</p>
-  </div>
-
-   <div class="orochi-container orochi-text-center orochi-mt-5">
-    <div class="orochi-row ">
-        <div class="orochi-col">
-          1 of 2
+  <body>
+    <nav class="orochi-nav-wrapper orochi-sticky">
+      <div class="orochi-nav-container">
+        <div class="orochi-flex orochi-items-center">
+          <a href="#" class="orochi-brand">Orochi</a>
+          <button class="orochi-menu-toggler">
+            <span class="orochi-menu-toggler-icon"></span>
+          </button>
+          <ul class="orochi-menu">
+            <li class="orochi-menu-item">
+              <a href="#" class="orochi-menu-link">Accueil</a>
+            </li>
+            <li class="orochi-menu-item">
+              <a href="#" class="orochi-menu-link">Services</a>
+            </li>
+            <li class="orochi-menu-item orochi-dropdown">
+              <a href="#" class="orochi-menu-link">Services</a>
+              <ul class="orochi-dropdown-menu">
+                <li>
+                  <a href="#" class="orochi-dropdown-item">Développement Web</a>
+                </li>
+                <li><a href="#" class="orochi-dropdown-item">Design UI</a></li>
+                <li><a href="#" class="orochi-dropdown-item">Consulting</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="orochi-col">
-          2 of 2
+      </div>
+    </nav>
+
+    <div class="orochi-container orochi-bg-primary orochi-mt-5">
+      <h1>Bienvenue sur Orochi-Framework</h1>
+      <p>Ce conteneur a une largeur fixe selon la taille de l'écran.</p>
+    </div>
+
+    <div class="orochi-container-fluid orochi-bg-primary orochi-mt-5">
+      <h2>Section pleine largeur</h2>
+      <p>Ce conteneur prend toujours 100% de la largeur.</p>
+    </div>
+
+    <div class="orochi-container orochi-text-center orochi-mt-5">
+      <div class="orochi-row">
+        <div class="orochi-col">1 of 2</div>
+        <div class="orochi-col">2 of 2</div>
+      </div>
+      <div class="orochi-row">
+        <div class="orochi-col">1 of 3</div>
+        <div class="orochi-col">2 of 3</div>
+        <div class="orochi-col">3 of 3</div>
+      </div>
+    </div>
+
+    <div class="orochi-container orochi-text-center orochi-mt-5">
+      <div class="orochi-row">
+        <div class="orochi-col">1 of 3</div>
+        <div class="orochi-col-6">2 of 3 (wider)</div>
+        <div class="orochi-col">3 of 3</div>
+      </div>
+      <div class="orochi-row">
+        <div class="orochi-col">1 of 3</div>
+        <div class="orochi-col-5">2 of 3 (wider)</div>
+        <div class="orochi-col">3 of 3</div>
+      </div>
+    </div>
+
+    <div class="orochi-container orochi-text-center">
+      <div class="orochi-row orochi-justify-center-md">
+        <div
+          class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark"
+        >
+          1 of 3
         </div>
-    </div>
-    <div class="orochi-row">
-      <div class="orochi-col">
-        1 of 3
+        <div
+          class="orochi-col-md-auto orochi-bg-primary orochi-border orochi-border-dark"
+        >
+          Variable width content
+        </div>
+        <div
+          class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark"
+        >
+          3 of 3
+        </div>
       </div>
-      <div class="orochi-col">
-        2 of 3
-      </div>
-      <div class="orochi-col">
-        3 of 3
-      </div>
-  </div>
-  </div>
- 
-  <div class="orochi-container orochi-text-center orochi-mt-5">
-    <div class="orochi-row">
-      <div class="orochi-col">
-        1 of 3
-      </div>
-      <div class="orochi-col-6">
-        2 of 3 (wider)
-      </div>
-      <div class="orochi-col">
-        3 of 3
-      </div>
-    </div>
-    <div class="orochi-row">
-      <div class="orochi-col">
-        1 of 3
-      </div>
-      <div class="orochi-col-5">
-        2 of 3 (wider)
-      </div>
-      <div class="orochi-col">
-        3 of 3
-      </div>
-    </div>
-  </div>
-   
-  <div class="orochi-container orochi-text-center">
-    <div class="orochi-row orochi-justify-center-md">
-      <div class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark">1 of 3</div>
-      <div class="orochi-col-md-auto orochi-bg-primary orochi-border orochi-border-dark">Variable width content</div>
-      <div class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark">3 of 3</div>
-    </div>
-    
-    <div class="orochi-row orochi-mt-3">
-      <div class="orochi-col orochi-bg-primary orochi-border orochi-border-dark">1 of 3</div>
-      <div class="orochi-col-md-auto orochi-bg-primary orochi-border orochi-border-dark">Variable width content</div>
-      <div class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark">3 of 3</div>
-    </div>
-  </div>
 
-  <div class="orochi-container orochi-text-center orochi-mt-5">
-    <div class="orochi-row">
-      <div class="orochi-col">Column</div>
-      <div class="orochi-col">Column</div>
-      <div class="orochi-col">Column</div>
-      <div class="orochi-col">Column</div>
+      <div class="orochi-row orochi-mt-3">
+        <div
+          class="orochi-col orochi-bg-primary orochi-border orochi-border-dark"
+        >
+          1 of 3
+        </div>
+        <div
+          class="orochi-col-md-auto orochi-bg-primary orochi-border orochi-border-dark"
+        >
+          Variable width content
+        </div>
+        <div
+          class="orochi-col orochi-col-lg-2 orochi-bg-primary orochi-border orochi-border-dark"
+        >
+          3 of 3
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class=" orochi-container orochi-border  orochi-rounded-lg orochi-border-2 orochi-p-3">
-    Contenu avec bordure primaire, arrondie et épaisse.
-  </div>
-  
-  <div class="orochi-container orochi-border orochi-border-dashed orochi-rounded-lg orochi-border-2 orochi-p-3 orochi-mt-3">
-    Contenu avec bordure en pointillés, arrondie et épaisse.
-  </div>
-  
-<!-- <div class="orochi-container orochi-mt-9">
+    <div class="orochi-container orochi-text-center orochi-mt-5">
+      <div class="orochi-row">
+        <div class="orochi-col">Column</div>
+        <div class="orochi-col">Column</div>
+        <div class="orochi-col">Column</div>
+        <div class="orochi-col">Column</div>
+      </div>
+    </div>
+
+    <div
+      class="orochi-container orochi-border orochi-rounded-lg orochi-border-2 orochi-p-3"
+    >
+      Contenu avec bordure primaire, arrondie et épaisse.
+    </div>
+
+    <div
+      class="orochi-container orochi-border orochi-border-dashed orochi-rounded-lg orochi-border-2 orochi-p-3 orochi-mt-3"
+    >
+      Contenu avec bordure en pointillés, arrondie et épaisse.
+    </div>
+
+    <!-- Alertes -->
+    <div class="orochi-alert orochi-alert-primary">
+      Simple alerte primaire
+    </div>
+
+    <div class="orochi-container orochi-alert orochi-alert-primary orochi-alert-border-left">
+      <strong>Conseil d'accessibilité</strong> : L'utilisation de la couleur
+      pour ajouter du sens ne fournit qu'une indication visuelle, qui ne sera
+      pas transmise aux utilisateurs de technologies d'assistance comme les
+      lecteurs d'écran. Veuillez vous assurer que le sens ressort clairement du
+      contenu lui-même (par exemple, le texte visible avec un contraste de
+      couleur suffisant ) ou est inclus par d'autres moyens, comme du texte
+      supplémentaire masqué dans la .visually-hiddenclasse.
+    </div>
+
+    <div class="orochi-alert orochi-alert-secondary">
+      Simple alerte secondaire
+    </div>
+    <div class="orochi-alert orochi-alert-success">Simple alerte succès</div>
+    <div class="orochi-alert orochi-alert-danger">Simple alerte danger</div>
+    <div class="orochi-alert orochi-alert-warning">
+      Simple alerte avertissement
+    </div>
+    <div class="orochi-alert orochi-alert-info">Simple alerte info</div>
+
+    <div class="orochi-alert orochi-alert-success orochi-alert-icon">
+      <svg>...</svg>
+      Alerte avec icône
+    </div>
+
+    <div class="orochi-alert orochi-alert-danger orochi-alert-dismissible">
+      Alerte avec fermeture
+      <button class="orochi-alert-close">&times;</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div
+      class="orochi-container orochi-progress orochi-progress-striped orochi-progress-animated"
+    >
+      <div class="orochi-progress-bar" style="width: 65%">65%</div>
+    </div>
+
+    <div class="orochi-progress orochi-progress-danger">
+      <div class="orochi-progress-bar" style="width: 40%"></div>
+    </div>
+
+    <!-- <div class="orochi-container orochi-mt-9">
     <div class="orochi-grid">
       <div class="orochi-unit orochi-unit-6">
         <div class="orochi-card">
@@ -226,9 +279,7 @@
     </div>
   </div>
 </div> -->
+  </body>
 
-
-</body>
-
-<script src="../orochi.js"></script>
+  <script src="../orochi.js"></script>
 </html>
