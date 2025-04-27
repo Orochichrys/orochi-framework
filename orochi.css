@@ -847,9 +847,26 @@
   border-left-color: var(--orochi-primary);
 }
 
+.orochi-alert-secondary.orochi-alert-border-left {
+  border-left-color: var(--orochi-secondary);
+}
+
+.orochi-alert-success.orochi-alert-border-left {
+  border-left-color: var(--orochi-success);
+}
+
 .orochi-alert-danger.orochi-alert-border-left {
   border-left-color: var(--orochi-danger);
 }
+
+.orochi-alert-warning.orochi-alert-border-left {
+  border-left-color: var(--orochi-warning);
+}
+
+.orochi-alert-info.orochi-alert-border-left {
+  border-left-color: var(--orochi-info);
+}
+
 
 /* .orochi-alert-luminous {
   position: relative;
