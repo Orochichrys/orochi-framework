@@ -14,7 +14,7 @@
   --orochi-secondary: #4a148c;
   --orochi-danger: #dc143c;
   --orochi-dark: #2d2d2d;
-  --orochi-light: #f8f9fa;
+  --orochi-light: #e9ecef;
   --orochi-white: #ffffff;
   --orochi-success: #28a745;
   --orochi-warning: #ffc107;
@@ -24,7 +24,10 @@
   --orochi-success-rgb: 40, 167, 69;
   --orochi-danger-rgb: 220, 20, 60;
   --orochi-warning-rgb: 255, 193, 7;
-  --orochi-info-rgb: 23, 162, 184;  
+  --orochi-info-rgb: 23, 162, 184; 
+  --orochi-dark-rgb: 45, 45, 45;  
+  --orochi-light-rgb: 233, 236, 239;
+  --orochi-white-rgb: 255, 255, 255;
   --orochi-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --orochi-xs: 0;
   --orochi-sm: 576px;
@@ -797,46 +800,58 @@
   margin-bottom: var(--space-3);
   border: 1px solid transparent;
   border-radius: var(--orochi-rounded);
-  display: block;
+  /*display: block;*/
   width: 100%;
 }
 
 .orochi-alert-primary {
   color: var(--orochi-primary);
-  background-color: rgba(var(--orochi-primary-rgb), 0.08);
-  border-color: rgba(var(--orochi-primary-rgb), 0.15);
+  background-color: rgba(var(--orochi-primary-rgb), 0.15);
+  border-color: rgba(var(--orochi-primary-rgb), 0.3);
 }
 
 .orochi-alert-secondary {
   color: var(--orochi-secondary);
-  background-color: rgba(var(--orochi-secondary-rgb), 0.08);
-  border-color: rgba(var(--orochi-secondary-rgb), 0.15);
+  background-color: rgba(var(--orochi-secondary-rgb), 0.15);
+  border-color: rgba(var(--orochi-secondary-rgb), 0.3);
 }
 
 .orochi-alert-success {
   color: var(--orochi-success);
-  background-color: rgba(var(--orochi-success-rgb), 0.08);
-  border-color: rgba(var(--orochi-success-rgb), 0.15);
+  background-color: rgba(var(--orochi-success-rgb), 0.15);
+  border-color: rgba(var(--orochi-success-rgb), 0.3);
 }
 
 .orochi-alert-danger {
   color: var(--orochi-danger);
-  background-color: rgba(var(--orochi-danger-rgb), 0.08);
-  border-color: rgba(var(--orochi-danger-rgb), 0.15);
+  background-color: rgba(var(--orochi-danger-rgb), 0.15);
+  border-color: rgba(var(--orochi-danger-rgb), 0.3);
 }
 
 .orochi-alert-warning {
   color: var(--orochi-warning);
-  background-color: rgba(var(--orochi-warning-rgb), 0.08);
-  border-color: rgba(var(--orochi-warning-rgb), 0.15);
-  border-left-color: var(--orochi-warning);
+  background-color: rgba(var(--orochi-warning-rgb), 0.15);
+  border-color: rgba(var(--orochi-warning-rgb), 0.3);
 }
 
 .orochi-alert-info {
   color: var(--orochi-info);
-  background-color: rgba(var(--orochi-info-rgb), 0.08);
-  border-color: rgba(var(--orochi-info-rgb), 0.15);
+  background-color: rgba(var(--orochi-info-rgb), 0.15);
+  border-color: rgba(var(--orochi-info-rgb), 0.3);
 }
+
+.orochi-alert-light {
+  color: var(--orochi-dark);
+  background-color: rgba(var(--orochi-light-rgb), 0.6);
+  border-color: rgba(var(--orochi-light-rgb), 0.8);
+}
+.orochi-alert-dark {
+  color: var(--orochi-dark);
+  background-color: rgba(var(--orochi-dark-rgb), 0.15);
+  border-color: rgba(var(--orochi-dark-rgb), 0.3);
+}
+
+
 
 /* bordure latérale */
 .orochi-alert-border-left {
@@ -867,6 +882,28 @@
   border-left-color: var(--orochi-info);
 }
 
+.orochi-alert-light.orochi-alert-border-left {
+  border-left-color: #ced4da;  /* Gris moyen plus visible */
+}
+
+.orochi-alert-dark.orochi-alert-border-left {
+  border-left-color: var(--orochi-dark
+  );
+}
+
+/* Options supplémentaires */
+.orochi-alert .alert-link {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Icônes (optionnel) */
+.orochi-alert svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+  vertical-align: text-bottom;
+}
 
 /* .orochi-alert-luminous {
   position: relative;
