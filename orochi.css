@@ -892,10 +892,28 @@
 }
 
 /* Options supplémentaires */
-.orochi-alert .alert-link {
+.orochi-alert .orochi-alert-link {
   font-weight: 600;
   text-decoration: underline;
 }
+
+.orochi-alert-primary .orochi-alert-link{
+  color: var(--orochi-primary);
+}
+
+.orochi-alert-secondary .orochi-alert-link{
+  color: var(--orochi-secondary);
+}
+
+.orochi-alert-success .orochi-alert-link{
+  color: var(--orochi-success);
+}
+
+.orochi-alert-danger .orochi-alert-link{
+  color: var(--orochi-danger);
+}
+
+
 
 /* Icônes (optionnel) */
 .orochi-alert svg {
