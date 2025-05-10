@@ -819,9 +819,9 @@
 .orochi-d-block { display: block; }
 .orochi-d-inline { display: inline; }
 .orochi-d-inline-block { display: inline-block; }
-.orochi-flex { display: flex; }
+.orochi-d-flex { display: flex; }
 .orochi-inline-flex { display: inline-flex; }
-/* .orochi-grid { display: grid; } */
+.orochi-d-grid { display: grid; gap: 0.75rem; }
 
 .orochi-flex-row { flex-direction: row; }
 .orochi-flex-column { flex-direction: column; }
@@ -1000,6 +1000,7 @@ h1 {
 
 /* Responsive Breakpoint Suffixes */
 @media (min-width: 576px) {
+  .orochi-text-sm { font-size: 0.875rem; }
   .orochi-text-sm-start { text-align: left !important; }
   .orochi-d-sm-none { display: none !important; }
   .orochi-d-sm-block { display: block !important; }
@@ -1043,6 +1044,7 @@ h1 {
   padding-left: 0;
   margin-bottom: 0;
 }
+.orochi-list-unstyled li { border-bottom: 1px solid rgba(0,0,0,0.05); padding: 0.5rem 0; }
 
 /* Badges */
 .orochi-badge {
