@@ -28,6 +28,15 @@
   --orochi-dark-rgb: 45, 45, 45;  
   --orochi-light-rgb: 233, 236, 239;
   --orochi-white-rgb: 255, 255, 255;
+  --orochi-bg-primary: var(--orochi-primary);
+  --orochi-bg-secondary: var(--orochi-secondary);
+  --orochi-bg-success: var(--orochi-success);
+  --orochi-bg-danger: var(--orochi-danger);
+  --orochi-bg-warning: var(--orochi-warning);
+  --orochi-bg-info: var(--orochi-info);
+  --orochi-bg-light: var(--orochi-light);
+  --orochi-bg-dark: var(--orochi-dark);
+  --orochi-bg-white: var(--orochi-white);
   --orochi-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --orochi-xs: 0;
   --orochi-sm: 576px;
@@ -330,6 +339,75 @@
   display: block;
 }
 
+
+/* Hero “Bootstrap style” */
+/* .orochi-hero {
+  background-color: var(--orochi-bg-secondary);
+  padding: var(--space-5) 0;
+}
+
+.orochi-hero-content {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: var(--space-3);
+  padding-left: var(--space-3);
+  text-align: center;
+}
+
+.orochi-hero-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.orochi-hero-description {
+  font-size: 1.125rem;
+  margin-bottom: var(--space-4);
+  color: var(--orochi-dark);
+  opacity: 0.7;
+} */
+
+/* Responsive typography comme Bootstrap */
+@media (min-width: 768px) {
+  .orochi-hero-title {
+    font-size: 2.5rem;
+  }
+  .orochi-hero-description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .orochi-hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* Boutons alignés et espacés */
+.orochi-hero .orochi-button {
+  margin: 0 var(--space-1);
+}
+
+.orochi-hero .orochi-button-primary {
+  background-color: var(--orochi-primary);
+  color: var(--orochi-white);
+}
+
+.orochi-hero .orochi-button-secondary {
+  background-color: var(--orochi-secondary);
+  color: var(--orochi-white);
+}
+
+
+.orochi-hero .orochi-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+
 /* Composants Principaux */
 .orochi-button {
   display: inline-block;
@@ -343,28 +421,52 @@
 .orochi-button-primary {
   background: var(--orochi-primary);
   color: white;
+  text-decoration: none;
 }
 
 .orochi-button-primary:hover {
   background: var(--orochi-secondary); 
   color: white;
+  text-decoration: none;
 }
 
 .orochi-button-primary:focus {
   outline: 3px solid rgba(26, 35, 126, 0.5);
   background: var(--orochi-secondary);
   color: white;
+  text-decoration: none;
 }
 
 .orochi-button-danger {
   background: var(--orochi-danger);
   color: white;
+  text-decoration: none;
 }
+
+.orochi-button-light{
+  background-color: var(--orochi-light);
+  color: var(--orochi-dark);
+  text-decoration: none;
+}
+
+.orochi-border {
+  border: 2px solid var(--orochi-light) !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+  color:white;
+  text-decoration: none;
+}
+
+.orochi-border:hover {
+  background-color: var(--orochi-light) !important;
+  color: var(--orochi-dark) !important;
+}
+
 
 .orochi-card {
   background: white;
   border-radius: 8px;
-  box-shadow: var(--orochi-shadow);
+  border: 1px solid var(--orochi-light);
   overflow: hidden;
 }
 
@@ -665,6 +767,59 @@
 .orochi-py-9 { padding-top: var(--space-9); padding-bottom: var(--space-9); }
 .orochi-py-10 { padding-top: var(--space-10); padding-bottom: var(--space-10); }
 
+/* Hauteurs fixes */
+.orochi-h-25 { height: 25% !important; }
+.orochi-h-50 { height: 50% !important; }
+.orochi-h-75 { height: 75% !important; }
+.orochi-h-100 { height: 100% !important; }
+.orochi-h-auto { height: auto !important; }
+
+/* Hauteurs basées sur les variables d'espacement */
+.orochi-h-1 { height: var(--space-1) !important; }  /* 0.25rem */
+.orochi-h-2 { height: var(--space-2) !important; }  /* 0.5rem */
+.orochi-h-3 { height: var(--space-3) !important; }  /* 1rem */
+.orochi-h-4 { height: var(--space-4) !important; }  /* 1.5rem */
+.orochi-h-5 { height: var(--space-5) !important; }  /* 3rem */
+
+/* Hauteurs viewport */
+.orochi-vh-25 { height: 25vh !important; }
+.orochi-vh-50 { height: 50vh !important; }
+.orochi-vh-75 { height: 75vh !important; }
+.orochi-vh-100 { height: 100vh !important; }
+
+/* Min/Max Heights */
+.orochi-minh-0 { min-height: 0 !important; }
+.orochi-minh-100 { min-height: 100% !important; }
+.orochi-minh-vh-100 { min-height: 100vh !important; }
+
+.orochi-maxh-25 { max-height: 25% !important; }
+.orochi-maxh-50 { max-height: 50% !important; }
+.orochi-maxh-75 { max-height: 75% !important; }
+.orochi-maxh-100 { max-height: 100% !important; }
+
+/* Gap Utilities */
+.orochi-gap-0 { gap: var(--space-0); }  
+.orochi-gap-1 { gap: var(--space-1); } 
+.orochi-gap-2 { gap: var(--space-2); } 
+.orochi-gap-3 { gap: var(--space-3); }  
+.orochi-gap-4 { gap: var(--space-4); }  
+.orochi-gap-5 { gap: var(--space-5); }  
+.orochi-gap-6 { gap: var(--space-6); }  
+.orochi-gap-7 { gap: var(--space-7); }  
+.orochi-gap-8 { gap: var(--space-8); }  
+.orochi-gap-9 { gap: var(--space-9); } 
+.orochi-gap-10 { gap: var(--space-10); } 
+
+/* Column Gap */
+.orochi-column-gap-0 { column-gap: var(--space-0); }
+.orochi-column-gap-1 { column-gap: var(--space-1); }
+/* ... Répéter pour toutes les tailles ... */
+
+/* Row Gap */
+.orochi-row-gap-0 { row-gap: var(--space-0); }
+.orochi-row-gap-1 { row-gap: var(--space-1); }
+/* ... Répéter pour toutes les tailles ... */
+
 
 /* Affichage & Flexbox */
 .orochi-d-none { display: none; }
@@ -697,6 +852,12 @@
 .orochi-text-center { text-align: center; }
 .orochi-text-right { text-align: right; }
 
+h1 {
+  font-size: 2.5rem;  
+  line-height: 1.2;
+  font-weight: 700;
+}
+
 .orochi-text-bold { font-weight: bold; }
 .orochi-text-light { font-weight: lighter; }
 .orochi-text-italic { font-style: italic; }
@@ -717,6 +878,8 @@
 .orochi-text-danger { color: var(--orochi-danger); }
 .orochi-text-dark { color: var(--orochi-dark); }
 .orochi-text-light { color: var(--orochi-light); }
+.orochi-text-white { color: var(--orochi-white); }
+.orochi-text-black { color: var(--orochi-black); }
 
 /* position */
 .orochi-sticky{position: sticky; position: -webkit-sticky;}
@@ -911,6 +1074,22 @@
 
 .orochi-alert-danger .orochi-alert-link{
   color: var(--orochi-danger);
+}
+
+.orochi-alert-warning .orochi-alert-link {
+  color: var(--orochi-warning);
+}
+
+.orochi-alert-info .orochi-alert-link {
+  color: var(--orochi-info);
+}
+
+.orochi-alert-light .orochi-alert-link {
+  color: var(--orochi-dark);
+}
+
+.orochi-alert-dark .orochi-alert-link {
+  color: var(--orochi-light);
 }
 
 
