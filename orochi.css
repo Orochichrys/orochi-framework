@@ -19,6 +19,7 @@
   --orochi-success: #28a745;
   --orochi-warning: #ffc107;
   --orochi-info: #17a2b8;
+  --orochi-black: #000000;
   --orochi-primary-rgb: 26, 35, 126;
   --orochi-secondary-rgb: 74, 20, 140;
   --orochi-success-rgb: 40, 167, 69;
@@ -38,6 +39,7 @@
   --orochi-bg-dark: var(--orochi-dark);
   --orochi-bg-white: var(--orochi-white);
   --orochi-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --orochi-border: 1px solid rgba(0, 0, 0, 0.1); 
   --orochi-xs: 0;
   --orochi-sm: 576px;
   --orochi-md: 768px;
@@ -83,6 +85,7 @@
 .orochi-row {
   display: flex;
   flex-wrap: wrap;
+  width: calc(100% + var(--space-3)); 
   margin-right: calc(-0.5 * var(--space-3));
   margin-left: calc(-0.5 * var(--space-3));
 }
@@ -220,6 +223,25 @@
   .orochi-container-lg, .orochi-container-xl, .orochi-container-xxl { max-width: 1320px; }
 }
 
+/* Ajouter cette règle */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .orochi-container {
+    max-width: 540px;
+  }
+  
+  [class*="orochi-col-md-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  [class*="orochi-col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 /* Utilitaires de grille */
 .orochi-order-first { order: -1; }
 .orochi-order-last { order: 13; }
@@ -340,74 +362,6 @@
 }
 
 
-/* Hero “Bootstrap style” */
-/* .orochi-hero {
-  background-color: var(--orochi-bg-secondary);
-  padding: var(--space-5) 0;
-}
-
-.orochi-hero-content {
-  width: 100%;
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: var(--space-3);
-  padding-left: var(--space-3);
-  text-align: center;
-}
-
-.orochi-hero-title {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: var(--space-3);
-  line-height: 1.2;
-}
-
-.orochi-hero-description {
-  font-size: 1.125rem;
-  margin-bottom: var(--space-4);
-  color: var(--orochi-dark);
-  opacity: 0.7;
-} */
-
-/* Responsive typography comme Bootstrap */
-@media (min-width: 768px) {
-  .orochi-hero-title {
-    font-size: 2.5rem;
-  }
-  .orochi-hero-description {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .orochi-hero-title {
-    font-size: 3rem;
-  }
-}
-
-/* Boutons alignés et espacés */
-.orochi-hero .orochi-button {
-  margin: 0 var(--space-1);
-}
-
-.orochi-hero .orochi-button-primary {
-  background-color: var(--orochi-primary);
-  color: var(--orochi-white);
-}
-
-.orochi-hero .orochi-button-secondary {
-  background-color: var(--orochi-secondary);
-  color: var(--orochi-white);
-}
-
-
-.orochi-hero .orochi-button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-
 /* Composants Principaux */
 .orochi-button {
   display: inline-block;
@@ -464,10 +418,15 @@
 
 
 .orochi-card {
-  background: white;
-  border-radius: 8px;
-  border: 1px solid var(--orochi-light);
-  overflow: hidden;
+    background: white;
+    border-radius: var(--orochi-rounded-md); 
+    border: 1px solid rgba(0, 0, 0, 0.125); 
+    /* border: 1px solid var(--orochi-light); */
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* width: 100%;
+  min-width: 0;  */
+
 }
 
 .orochi-card-header {
@@ -796,6 +755,34 @@
 .orochi-maxh-50 { max-height: 50% !important; }
 .orochi-maxh-75 { max-height: 75% !important; }
 .orochi-maxh-100 { max-height: 100% !important; }
+
+
+/* ========= Correction du système de gouttières ========= */
+.orochi-g-1,
+.orochi-g-2,
+.orochi-g-3,
+.orochi-g-4,
+.orochi-g-5 {
+  --orochi-gutter-y: 0;
+  margin-right: calc(-0.5 * var(--orochi-gutter-x));
+  margin-left: calc(-0.5 * var(--orochi-gutter-x));
+  width: calc(100% + var(--orochi-gutter-x)); /* Correction importante */
+}
+
+/* Appliquer à toutes les gouttières */
+[class*="orochi-g-"] > [class*="orochi-col-"],
+[class*="orochi-g-"] > .orochi-col {
+  padding-right: calc(var(--orochi-gutter-x) * 0.5);
+  padding-left: calc(var(--orochi-gutter-x) * 0.5);
+  margin-top: var(--orochi-gutter-y); /* Gestion verticale */
+}
+
+/* Définition des gouttières pour tous les niveaux */
+.orochi-g-1 { --orochi-gutter-x: 0.25rem; --orochi-gutter-y: 0.25rem; }
+.orochi-g-2 { --orochi-gutter-x: 0.5rem; --orochi-gutter-y: 0.5rem; }
+.orochi-g-3 { --orochi-gutter-x: 1rem; --orochi-gutter-y: 1rem; }
+.orochi-g-4 { --orochi-gutter-x: 1.5rem; --orochi-gutter-y: 1.5rem; }
+.orochi-g-5 { --orochi-gutter-x: 3rem; --orochi-gutter-y: 3rem; }
 
 /* Gap Utilities */
 .orochi-gap-0 { gap: var(--space-0); }  
