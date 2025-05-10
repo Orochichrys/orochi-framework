@@ -861,9 +861,11 @@ h1 {
 /*Couleurs (Fond et Texte) */
 .orochi-bg-primary { background-color: var(--orochi-primary); }
 .orochi-bg-secondary { background-color: var(--orochi-secondary); }
+.orochi-bg-warning{ background-color: var(--orochi-warning); }
 .orochi-bg-success{ background-color: var(--orochi-success); }
 .orochi-bg-danger { background-color: var(--orochi-danger); }
 .orochi-bg-dark { background-color: var(--orochi-dark); }
+.orochi-bg-info { background-color: var(--orochi-info); }
 .orochi-bg-light { background-color: var(--orochi-light); }
 
 
