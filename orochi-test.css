@@ -429,6 +429,12 @@
 
 }
 
+.orochi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
 .orochi-card-header {
   padding: 1.5rem;
   background: var(--orochi-light);
@@ -941,6 +947,139 @@ h1 {
 .orochi-rounded-0         { border-radius: 0; }
 .orochi-rounded-top{border-top-left-radius: 0.25rem;border-top-right-radius: 0.25rem;}
 .orochi-rounded-end{border-top-right-radius: 0.25rem;border-bottom-right-radius: 0.25rem;}
+
+/* Width Utilities */
+.orochi-w-25 { width: 25% !important; }
+.orochi-w-50 { width: 50% !important; }
+.orochi-w-75 { width: 75% !important; }
+.orochi-w-100 { width: 100% !important; }
+.orochi-w-auto { width: auto !important; }
+.orochi-vw-100 { width: 100vw !important; }
+.orochi-minw-100 { min-width: 100% !important; }
+.orochi-maxw-100 { max-width: 100% !important; }
+
+/* Visibility */
+.orochi-visible { visibility: visible !important; }
+.orochi-invisible { visibility: hidden !important; }
+
+/* Shadows */
+.orochi-shadow-sm { box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
+.orochi-shadow { box-shadow: var(--orochi-shadow) !important; }
+.orochi-shadow-lg { box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
+.orochi-shadow-none { box-shadow: none !important; }
+
+/* Overflow */
+.orochi-overflow-auto { overflow: auto !important; }
+.orochi-overflow-hidden { overflow: hidden !important; }
+.orochi-overflow-visible { overflow: visible !important; }
+.orochi-overflow-scroll { overflow: scroll !important; }
+
+/* Interactivity */
+.orochi-cursor-pointer { cursor: pointer !important; }
+.orochi-cursor-wait { cursor: wait !important; }
+.orochi-cursor-move { cursor: move !important; }
+.orochi-cursor-not-allowed { cursor: not-allowed !important; }
+.orochi-user-select-none { user-select: none !important; }
+
+/* Opacity */
+.orochi-opacity-0 { opacity: 0 !important; }
+.orochi-opacity-25 { opacity: 0.25 !important; }
+.orochi-opacity-50 { opacity: 0.5 !important; }
+.orochi-opacity-75 { opacity: 0.75 !important; }
+.orochi-opacity-100 { opacity: 1 !important; }
+
+/* Flex Utilities supplémentaires */
+.orochi-flex-fill { flex: 1 1 auto !important; }
+.orochi-flex-grow-0 { flex-grow: 0 !important; }
+.orochi-flex-grow-1 { flex-grow: 1 !important; }
+.orochi-flex-shrink-0 { flex-shrink: 0 !important; }
+.orochi-flex-shrink-1 { flex-shrink: 1 !important; }
+
+/* Responsive Breakpoint Suffixes */
+@media (min-width: 576px) {
+  .orochi-text-sm-start { text-align: left !important; }
+  .orochi-d-sm-none { display: none !important; }
+  .orochi-d-sm-block { display: block !important; }
+  /* Ajouter toutes les variantes nécessaires pour chaque breakpoint */
+}
+
+@media (min-width: 768px) {
+  .orochi-text-md-center { text-align: center !important; }
+  .orochi-d-md-flex { display: flex !important; }
+  /* Continuer pour toutes les propriétés responsives */
+}
+
+/* États de validation de formulaire */
+.orochi-valid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: var(--orochi-success);
+}
+
+.orochi-invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: var(--orochi-danger);
+}
+
+.was-validated .orochi-form-control:valid ~ .orochi-valid-feedback {
+  display: block;
+}
+
+.was-validated .orochi-form-control:invalid ~ .orochi-invalid-feedback {
+  display: block;
+}
+
+/* Custom styles pour améliorer l'apparence */
+.orochi-list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Badges */
+.orochi-badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--orochi-rounded-pill);
+}
+
+.orochi-badge-primary { background-color: var(--orochi-primary); color: white; }
+.orochi-badge-secondary { background-color: var(--orochi-secondary); color: white; }
+
+/* Ratio */
+.orochi-ratio {
+  position: relative;
+  width: 100%;
+}
+.orochi-ratio::before {
+  display: block;
+  padding-top: var(--aspect-ratio);
+  content: "";
+}
+.orochi-ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Z-index */
+.orochi-z-0 { z-index: 0 !important; }
+.orochi-z-1 { z-index: 1 !important; }
+.orochi-z-2 { z-index: 2 !important; }
+.orochi-z-3 { z-index: 3 !important; }
 
 
 /* Alertes */
