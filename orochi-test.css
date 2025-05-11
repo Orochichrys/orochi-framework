@@ -366,12 +366,14 @@
 .orochi-button {
   display: inline-block;
   padding: 0.8rem 1.6rem;
-  border: none;
+  border-width: 1px;
+  border-style: solid;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .orochi-button-primary {
+  border-color: var(--orochi-primary) !important;
   background: var(--orochi-primary);
   color: white;
   text-decoration: none;
@@ -391,19 +393,21 @@
 }
 
 .orochi-button-danger {
+  border-color: var(--orochi-danger) !important;
   background: var(--orochi-danger);
   color: white;
   text-decoration: none;
 }
 
 .orochi-button-light{
+  border-color: var(--orochi-light) !important;
   background-color: var(--orochi-light);
   color: var(--orochi-dark);
   text-decoration: none;
 }
 
 .orochi-button-outline-light {
-  border: 2px solid var(--orochi-light) !important;
+  border-color: var(--orochi-light) !important;
   background-color: transparent !important;
   transition: all 0.3s ease;
   color:white;
