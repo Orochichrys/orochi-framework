@@ -367,7 +367,6 @@
   display: inline-block;
   padding: 0.8rem 1.6rem;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
@@ -402,6 +401,19 @@
   color: var(--orochi-dark);
   text-decoration: none;
 }
+
+.orochi-button-outline-light {
+  border: 2px solid var(--orochi-light) !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+  color:white;
+  text-decoration: none;
+}
+
+.orochi-button-outline-light:hover {
+  background-color: var(--orochi-light) !important;
+  color: var(--orochi-dark) !important;
+} 
 
 
 .orochi-card {
