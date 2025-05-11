@@ -363,62 +363,129 @@
 }
 
 
-/* Composants Principaux */
 .orochi-button {
   display: inline-block;
   padding: 0.8rem 1.6rem;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid transparent;
+  border-radius: 4px;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
+/* Couleurs principales */
 .orochi-button-primary {
-  border-color: var(--orochi-primary) !important;
-  background: var(--orochi-primary);
-  color: white;
-  text-decoration: none;
+  background-color: var(--orochi-primary);
+  color: var(--orochi-white);
+  border-color: var(--orochi-primary);
 }
 
-.orochi-button-primary:hover {
-  background: var(--orochi-secondary); 
-  color: white;
-  text-decoration: none;
-}
-
+.orochi-button-primary:hover,
 .orochi-button-primary:focus {
-  outline: 3px solid rgba(26, 35, 126, 0.5);
-  background: var(--orochi-secondary);
-  color: white;
-  text-decoration: none;
+  background-color: var(--orochi-secondary);
+  border-color: var(--orochi-secondary);
+  color: var(--orochi-white);
+  outline: none;
 }
 
+/* Bouton secondaire */
+.orochi-button-secondary {
+  background-color: var(--orochi-secondary);
+  color: var(--orochi-white);
+  border-color: var(--orochi-secondary);
+}
+
+.orochi-button-secondary:hover,
+.orochi-button-secondary:focus {
+  background-color: var(--orochi-primary);
+  border-color: var(--orochi-primary);
+  color: var(--orochi-white);
+}
+
+/* Bouton succès */
+.orochi-button-success {
+  background-color: var(--orochi-success);
+  color: var(--orochi-white);
+  border-color: var(--orochi-success);
+}
+
+.orochi-button-success:hover,
+.orochi-button-success:focus {
+  background-color: #1b5e20;
+}
+
+/* Bouton danger */
 .orochi-button-danger {
-  border-color: var(--orochi-danger) !important;
-  background: var(--orochi-danger);
-  color: white;
-  text-decoration: none;
+  background-color: var(--orochi-danger);
+  color: var(--orochi-white);
+  border-color: var(--orochi-danger);
 }
 
-.orochi-button-light{
-  border-color: var(--orochi-light) !important;
+.orochi-button-danger:hover,
+.orochi-button-danger:focus {
+  background-color: #b71c1c;
+}
+
+/* Bouton warning */
+.orochi-button-warning {
+  background-color: var(--orochi-warning);
+  color: var(--orochi-dark);
+  border-color: var(--orochi-warning);
+}
+
+.orochi-button-warning:hover,
+.orochi-button-warning:focus {
+  background-color: #f57f17;
+  color: var(--orochi-dark);
+}
+
+/* Bouton info */
+.orochi-button-info {
+  background-color: var(--orochi-info);
+  color: var(--orochi-white);
+  border-color: var(--orochi-info);
+}
+
+.orochi-button-info:hover,
+.orochi-button-info:focus {
+  background-color: #0277bd;
+}
+
+/* Bouton light */
+.orochi-button-light {
   background-color: var(--orochi-light);
   color: var(--orochi-dark);
-  text-decoration: none;
+  border-color: var(--orochi-light);
 }
 
+.orochi-button-light:hover,
+.orochi-button-light:focus {
+  background-color: #e0e0e0;
+}
+
+/* Bouton outline */
 .orochi-button-outline-light {
-  border-color: var(--orochi-light) !important;
-  background-color: transparent !important;
-  transition: all 0.3s ease;
-  color:white;
-  text-decoration: none;
+  background-color: transparent;
+  border-color: var(--orochi-light);
+  color: var(--orochi-white);
 }
 
 .orochi-button-outline-light:hover {
-  background-color: var(--orochi-light) !important;
-  color: var(--orochi-dark) !important;
-} 
+  background-color: var(--orochi-light);
+  color: var(--orochi-dark);
+}
+
+/* Désactivé */
+.orochi-button:disabled,
+.orochi-button[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 
 
 .orochi-card {

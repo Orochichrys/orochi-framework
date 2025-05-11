@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Installation - Orochi Framework</title>
+  <title>Système de Grille - Orochi Framework</title>
   <link rel="stylesheet" href="../../../orochi-test.css" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-
   <style>
     body {
       background-color: #f9f9f9;
@@ -28,7 +27,6 @@
 
   </style>
 </head>
-
 <body>
 
   <!-- Navigation -->
@@ -37,8 +35,8 @@
       <div class="orochi-d-flex orochi-items-center orochi-justify-between">
         <a href="../../../index.html" class="orochi-brand orochi-text-primary">Orochi</a>
         <button class="orochi-menu-toggler">
-            <span class="orochi-menu-toggler-icon"></span>
-          </button>
+          <span class="orochi-menu-toggler-icon"></span>
+        </button>
         <ul class="orochi-menu">
           <li class="orochi-menu-item"><a href="introduction.html" class="orochi-menu-link">Documentation</a></li>
           <li class="orochi-menu-item"><a href="#" class="orochi-menu-link">Exemples</a></li>
@@ -52,7 +50,6 @@
     <div class="orochi-row orochi-g-4">
 
       <!-- Sidebar -->
-
       <div class="orochi-col-12 orochi-col-md-3">
         <div class="orochi-card orochi-sticky orochi-p-4  orochi-rounded">
           <nav class="orochi-d-flex orochi-flex-column orochi-gap-2">
@@ -108,42 +105,101 @@
           </nav>
         </div>
       </div>
-      
 
       <!-- Contenu -->
       <div class="orochi-col-12 orochi-col-md-9">
         <div class="orochi-card orochi-p-4">
-          <h1 class="orochi-text-primary orochi-mb-4">Installation d'Orochi</h1>
+          <h1 class="orochi-title orochi-text-primary orochi-mb-4">📐 Système de Grille</h1>
           
-          <section class="orochi-mb-5">
-            <h2 class="orochi-text-dark orochi-mb-3">Via CDN</h2>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;link rel="stylesheet" href="https://orochi-css.vercel.app/orochi-test.css"&gt;</code></pre>
-          </section>
-
-          <section class="orochi-mb-5">
-            <h2 class="orochi-text-dark orochi-mb-3">Installation locale</h2>
-            <div class="orochi-alert orochi-alert-info orochi-mb-3">
-              Téléchargez la dernière version sur GitHub et incluez le CSS dans votre head :
+          <!-- Section Base -->
+          <section id="base" class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-3">Grille de base</h2>
+            <p class="orochi-mb-4">Utilisez les colonnes prédéfinies de 1 à 12 :</p>
+            
+            <div class="orochi-row orochi-mb-4 orochi-g-3">
+              <div class="orochi-col-12 orochi-bg-primary orochi-text-white orochi-p-3">.orochi-col-12</div>
             </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;link rel="stylesheet" href="/chemin/vers/orochi-test.css"&gt;</code></pre>
-          </section>
-
-          <section class="orochi-mb-5">
-            <h2 class="orochi-text-dark orochi-mb-3">Package NPM</h2>
-            <div class="orochi-alert orochi-alert-warning orochi-mb-3">
-              Disponible prochainement (v1.1+)
+            
+            <div class="orochi-row orochi-mb-4 orochi-g-3">
+              <div class="orochi-col-6 orochi-bg-primary orochi-text-white orochi-p-3">.orochi-col-6</div>
+              <div class="orochi-col-6 orochi-bg-secondary orochi-text-white orochi-p-3">.orochi-col-6</div>
             </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>npm install orochi-css</code></pre>
+            
+            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;div class="orochi-row"&gt;
+  &lt;div class="orochi-col-6"&gt;Colonne 1&lt;/div&gt;
+  &lt;div class="orochi-col-6"&gt;Colonne 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </section>
 
-          <div class="orochi-alert orochi-alert-success">
-            ✅ Vous êtes prêt à utiliser Orochi ! Consultez la documentation des composants pour commencer.
+          <!-- Section Responsive -->
+          <section id="responsive" class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-3">Grille Responsive</h2>
+            <p class="orochi-mb-4">Combinez les breakpoints pour différents écrans :</p>
+            
+            <div class="orochi-row orochi-mb-4 orochi-g-3">
+              <div class="orochi-col-12 orochi-col-md-8 orochi-bg-primary orochi-text-white orochi-p-3">.orochi-col-md-8</div>
+              <div class="orochi-col-6 orochi-col-md-4 orochi-bg-secondary orochi-text-white orochi-p-3">.orochi-col-md-4</div>
+            </div>
+            
+            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;div class="orochi-row"&gt;
+  &lt;div class="orochi-col-12 orochi-col-md-8"&gt;Contenu&lt;/div&gt;
+  &lt;div class="orochi-col-6 orochi-col-md-4"&gt;Sidebar&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <!-- Section Décalages -->
+          <section id="offsets" class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-3">Décalages de colonnes</h2>
+            <p class="orochi-mb-4">Déplacez les colonnes avec les classes offset :</p>
+            
+            <div class="orochi-row orochi-mb-4 orochi-g-3">
+              <div class="orochi-col-4 orochi-offset-4 orochi-bg-primary orochi-text-white orochi-p-3">.orochi-offset-4</div>
+            </div>
+            
+            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;div class="orochi-row"&gt;
+  &lt;div class="orochi-col-4 orochi-offset-4"&gt;Colonne centrée&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <!-- Section Imbrication -->
+          <section id="nesting" class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-3">Imbrication de grilles</h2>
+            <p class="orochi-mb-4">Imbriquez des lignes dans des colonnes :</p>
+            
+            <div class="orochi-row orochi-mb-4 orochi-g-3">
+              <div class="orochi-col-8 orochi-bg-primary orochi-text-white orochi-p-3">
+                Niveau 1
+                <div class="orochi-row orochi-mt-2 orochi-g-2">
+                  <div class="orochi-col-4 orochi-bg-secondary orochi-text-white orochi-p-2">Niveau 2</div>
+                  <div class="orochi-col-8 orochi-bg-secondary orochi-text-white orochi-p-2">Niveau 2</div>
+                </div>
+              </div>
+            </div>
+            
+            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;div class="orochi-row"&gt;
+  &lt;div class="orochi-col-8"&gt;
+    Niveau 1
+    &lt;div class="orochi-row"&gt;
+      &lt;div class="orochi-col-4"&gt;Niveau 2&lt;/div&gt;
+      &lt;div class="orochi-col-8"&gt;Niveau 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <!-- Notes -->
+          <div class="orochi-alert orochi-alert-info orochi-mt-5">
+            <strong>💡 Astuce :</strong> Utilisez les classes <code>.orochi-g-*</code> pour contrôler l'espacement entre les colonnes
           </div>
+
+          <footer class="orochi-mt-5 orochi-text-center orochi-text-secondary">
+            &copy; 2025 Orochi Framework — Documentation de la grille v1.0
+          </footer>
         </div>
       </div>
     </div>
   </div>
 
+  <script src="../../../orochi-test.js"></script>
 </body>
-<script src="../../../orochi-test.js"></script>
 </html>
