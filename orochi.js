@@ -1,44 +1,30 @@
-let orochiMenuToggler = document.querySelector('.orochi-menu-toggler');
-let orochiMenuLinkAllIcon = document.querySelectorAll('.orochi-dropdown .orochi-menu-link');
+let toggler = document.querySelector('.orochi-menu-toggler');
+let togglerIcon = document.createElement('span');
+togglerIcon.className = 'orochi-menu-toggler-icon';
+// Icône initiale
+togglerIcon.textContent = '☰';
+toggler.appendChild(togglerIcon);
 
-// let orochiMenuOverlay = document.querySelector('.orochi-menu-overlay');
-
-let orochiMenuTogglerIcon = document.querySelector('.orochi-menu-toggler-icon');
-orochiMenuTogglerIcon.textContent = '☰';
-
-orochiMenuLinkAllIcon.forEach(orochiDropdownItem => {
-    orochiDropdownItem.textContent = orochiDropdownItem.textContent + '▾';
-    
-    const toggleIcon = () => {
-        orochiDropdownItem.textContent = orochiDropdownItem.textContent.includes('▾') ? 
-        orochiDropdownItem.textContent.replace('▾', '▴') : 
-        orochiDropdownItem.textContent.replace('▴', '▾');
-    };
-
-    orochiDropdownItem.addEventListener('click', toggleIcon);
-    orochiDropdownItem.addEventListener('mouseover', toggleIcon);
-    orochiDropdownItem.addEventListener('mouseout', toggleIcon);
+// Dropdown arrows
+document.querySelectorAll('.orochi-dropdown > .orochi-menu-link').forEach(link => {
+  link.textContent += ' ▾';
+  const toggleArrow = () => {
+    link.textContent = link.textContent.includes('▾') ?
+      link.textContent.replace('▾','▴') : link.textContent.replace('▴','▾');
+  };
+  ['click','mouseover','mouseout'].forEach(evt =>
+    link.addEventListener(evt, toggleArrow)
+  );
 });
 
-orochiMenuToggler.addEventListener('click', () => {
-    let orochiMenu = document.querySelector('.orochi-menu');
-    if (orochiMenu.classList.contains('orochi-menu-active')){
-        orochiMenu.classList.remove('orochi-menu-active');
-        orochiMenuTogglerIcon.textContent = '☰';
-    }
-    else{
-        orochiMenu.classList.add('orochi-menu-active'); 
-        orochiMenuTogglerIcon.textContent = '✖';
-    }
+// Toggle mobile menu
+toggler.addEventListener('click', () => {
+  let menu = document.querySelector('.orochi-menu');
+  if(menu.classList.contains('orochi-menu-active')){
+    menu.classList.remove('orochi-menu-active');
+    togglerIcon.textContent = '☰';
+  } else {
+    menu.classList.add('orochi-menu-active');
+    togglerIcon.textContent = '✖';
+  }
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     document.querySelectorAll(".orochi-dropdown > .orochi-menu-link").forEach(link => {
-//       link.addEventListener("click", function (e) {
-//         e.preventDefault();
-//         let dropdownMenu = this.nextElementSibling;
-//         dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-//       });
-//     });
-//   });
-  

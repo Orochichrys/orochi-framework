@@ -403,19 +403,6 @@
   text-decoration: none;
 }
 
-.orochi-border {
-  border: 2px solid var(--orochi-light) !important;
-  background-color: transparent !important;
-  transition: all 0.3s ease;
-  color:white;
-  text-decoration: none;
-}
-
-.orochi-border:hover {
-  background-color: var(--orochi-light) !important;
-  color: var(--orochi-dark) !important;
-}
-
 
 .orochi-card {
     background: white;
@@ -820,7 +807,7 @@
 .orochi-d-inline { display: inline; }
 .orochi-d-inline-block { display: inline-block; }
 .orochi-d-flex { display: flex; }
-.orochi-inline-flex { display: inline-flex; }
+.orochi-d-inline-flex { display: inline-flex; }
 .orochi-d-grid { display: grid; gap: 0.75rem; }
 
 .orochi-flex-row { flex-direction: row; }
