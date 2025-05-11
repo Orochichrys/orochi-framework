@@ -283,6 +283,7 @@
   width: 100%;
   background: var(--orochi-light);
   border-bottom: var(--orochi-border);
+  z-index: 9999;
 }
 
 .orochi-nav {
