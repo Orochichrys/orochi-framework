@@ -6,8 +6,28 @@
   <title>Cartes - Orochi Framework</title>
   <link rel="stylesheet" href="../../../orochi-test.css" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <style>
+    body {
+      background-color: #f9f9f9;
+      color: #2d2d2d;
+      font-family: Arial, sans-serif;
+    }
+
+    pre {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: monospace;
+      color: #c7254e;
+    }
+
+  </style>
 </head>
-<body class="orochi-bg-light">
+<body>
 
   <!-- Navigation -->
   <nav class="orochi-nav-wrapper orochi-sticky orochi-bg-white orochi-shadow-sm">
@@ -29,8 +49,65 @@
   <div class="orochi-container orochi-mt-4">
     <div class="orochi-row orochi-g-4">
 
-      <!-- Sidebar -->
+       <!-- Sidebar -->
       <div class="orochi-col-12 orochi-col-md-3">
+        <div class="orochi-card orochi-sticky orochi-p-4  orochi-rounded">
+          <nav class="orochi-d-flex orochi-flex-column orochi-gap-2">
+      
+            <!-- Section : Commencer -->
+            <h4 class="orochi-text-primary orochi-mb-2 orochi-text-bold">📚 Commencer</h4>
+            <div class="orochi-ms-3">
+              <a href="introduction.html"
+                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
+                <i class="bx bx-chevron-right orochi-me-2"></i>Introduction
+              </a>
+              <a href="installation.html"
+                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
+                <i class="bx bx-chevron-right orochi-me-2"></i>Installation
+              </a>
+            </div>
+      
+            <!-- Section : Mise en page -->
+            <h4 class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold">🧱 Mise en page</h4>
+            <div class="orochi-ms-3">
+              <a href="grid.html"
+                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
+                <i class="bx bx-grid orochi-me-2"></i>Système de grille
+              </a>
+            </div>
+      
+            <!-- Section : Composants -->
+            <h4 class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold">🧩 Composants</h4>
+            <div class="orochi-ms-3">
+              <a href="buttons.html"
+                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
+                <i class="bx bx-square-rounded orochi-me-2"></i>Boutons
+              </a>
+              <a href="cards.html"
+                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
+                <i class="bx bx-layer orochi-me-2"></i>Cartes
+              </a>
+            </div>
+      
+            <!-- Section : Formulaires -->
+            <h4 class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold">📝 Formulaires</h4>
+            <div class="orochi-ms-3">
+              <a href="inputs.html"
+                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
+                <i class="bx bx-input orochi-me-2"></i>Champs de saisie
+              </a>
+              <a href="checkboxes.html"
+                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
+                <i class="bx bx-checkbox orochi-me-2"></i>Cases à cocher
+              </a>
+            </div>
+      
+          </nav>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <!-- <div class="orochi-col-12 orochi-col-md-3">
         <div class="orochi-card orochi-sticky orochi-p-4 orochi-rounded">
           <nav class="orochi-d-flex orochi-flex-column orochi-gap-2">
             <h4 class="orochi-text-primary orochi-mb-2 orochi-text-bold">🃏 Cartes</h4>
@@ -53,7 +130,7 @@
             </div>
           </nav>
         </div>
-      </div>
+      </div> -->
 
       <!-- Contenu -->
       <div class="orochi-col-12 orochi-col-md-9">
@@ -182,7 +259,7 @@
           </section>
 
           <!-- Personnalisation -->
-          <div class="orochi-alert orochi-alert-info orochi-mt-5">
+          <div class="orochi-alert orochi-alert-info orochi-alert-border-left orochi-mt-5">
             <strong>💡 Personnalisation :</strong> Modifiez l'apparence via les variables CSS :
             <pre class="orochi-mt-2"><code>.orochi-card {
   --orochi-card-radius: 0.5rem;
