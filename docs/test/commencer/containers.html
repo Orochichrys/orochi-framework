@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Démarrer avec Orochi - Orochi Framework</title>
+    <title>Conteneurs - Orochi Framework</title>
     <link rel="stylesheet" href="../../../orochi-test.css" />
     <link
       rel="stylesheet"
@@ -15,7 +15,6 @@
         color: #2d2d2d;
         font-family: Arial, sans-serif;
       }
-
       pre {
         background: #eee;
         padding: 1rem;
@@ -221,105 +220,152 @@
         <!-- Contenu -->
         <div class="orochi-col-12 orochi-col-md-9">
           <div class="orochi-card orochi-p-4">
-            <section id="intro">
-              <h1 class="orochi-title orochi-text-primary">
-                🚀 Démarrer avec Orochi
-              </h1>
+            <section id="containers-intro">
+              <h1 class="orochi-title orochi-text-primary">📦 Conteneurs</h1>
               <p class="orochi-lead">
-                Orochi Framework est un framework CSS moderne, léger et
-                responsive pour concevoir rapidement des interfaces web
-                élégantes et performantes.
+                Les conteneurs sont les éléments de base pour structurer vos
+                layouts. Ils permettent de centrer et de contraindre la largeur
+                du contenu.
               </p>
-              <div class="orochi-card orochi-mb-4">
-                <div class="orochi-card-header">Pourquoi choisir Orochi ?</div>
-                <div class="orochi-card-body">
-                  <ul class="orochi-list-unstyled">
-                    <li>
-                      <strong>Léger</strong> : Code optimisé, rapide à charger.
-                    </li>
-                    <li>
-                      <strong>Flexible</strong> : Inspiré de Bootstrap mais avec
-                      une touche personnelle.
-                    </li>
-                    <li>
-                      <strong>Complet</strong> : Grille, boutons, cartes,
-                      alertes, formulaires, etc.
-                    </li>
-                    <li>
-                      <strong>Moderne</strong> : Design propre, animations
-                      douces et classes utilitaires.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
 
-            <section id="installation" class="orochi-mt-5">
-              <h2 class="orochi-text-dark">📦 Installation</h2>
-              <p>Ajoutez l'un des liens suivants dans votre fichier HTML :</p>
-              <h4>✅ Lien local</h4>
-              <pre><code>&lt;link rel="stylesheet" href="/path/to/orochi-test.css"&gt;</code></pre>
-
-              <h4>✅ Lien CDN</h4>
-              <pre><code>&lt;link rel="stylesheet" href="https://orochi-css.vercel.app/orochi-test.css"&gt;</code></pre>
-            </section>
-
-            <section id="grid" class="orochi-mt-5">
-              <h2 class="orochi-text-dark">📐 Exemple de Grille</h2>
-              <div class="orochi-row orochi-gap-3">
-                <div
-                  class="orochi-col-6 orochi-bg-primary orochi-text-white orochi-p-3"
-                >
-                  Colonne 1
-                </div>
-                <div
-                  class="orochi-col-6 orochi-bg-secondary orochi-text-white orochi-p-3"
-                >
-                  Colonne 2
-                </div>
-              </div>
-              <pre><code>&lt;div class="orochi-row"&gt;
-  &lt;div class="orochi-col-6"&gt;Colonne 1&lt;/div&gt;
-  &lt;div class="orochi-col-6"&gt;Colonne 2&lt;/div&gt;
+              <!-- Conteneur de base -->
+              <section class="orochi-mt-5">
+                <h2 class="orochi-text-dark">Conteneur standard</h2>
+                <div class="orochi-code-block orochi-mb-3">
+                  <pre><code>&lt;div class="orochi-container"&gt;
+    Contenu centré avec largeur responsive
 &lt;/div&gt;</code></pre>
-            </section>
+                </div>
+                <div class="orochi-bg-light orochi-p-3 orochi-rounded">
+                  <div
+                    class="orochi-container orochi-bg-white orochi-p-3 orochi-border"
+                  >
+                    .orochi-container (largeur adaptative)
+                  </div>
+                </div>
+              </section>
 
-            <section id="btns" class="orochi-mt-5">
-              <h2 class="orochi-text-dark">🔘 Bouton</h2>
-              <button class="orochi-button orochi-button-primary">
-                Cliquez-moi
-              </button>
-              <pre><code>&lt;button class="orochi-button orochi-button-primary"&gt;Cliquez-moi&lt;/button&gt;</code></pre>
-            </section>
+              <!-- Conteneur fluide -->
+              <section class="orochi-mt-5">
+                <h2 class="orochi-text-dark">Conteneur fluide</h2>
+                <div class="orochi-code-block orochi-mb-3">
+                  <pre><code>&lt;div class="orochi-container-fluid"&gt;
+    Contenu pleine largeur
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="orochi-bg-light orochi-p-3 orochi-rounded">
+                  <div
+                    class="orochi-container-fluid orochi-bg-white orochi-p-3 orochi-border"
+                  >
+                    .orochi-container-fluid (100% de largeur)
+                  </div>
+                </div>
+              </section>
 
-            <section id="alerts" class="orochi-mt-5">
-              <h2 class="orochi-text-dark">🚨 Alerte</h2>
-              <div class="orochi-alert orochi-alert-warning">
-                Ceci est une alerte de test
+              <!-- Conteneurs responsives -->
+              <section class="orochi-mt-5">
+                <h2 class="orochi-text-dark">Conteneurs responsives</h2>
+                <div class="orochi-table-responsive">
+                  <table class="orochi-table orochi-table-bordered">
+                    <thead class="orochi-bg-light">
+                      <tr>
+                        <th>Classe</th>
+                        <th>Largeur max</th>
+                        <th>Breakpoint</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>.orochi-container</code></td>
+                        <td>100%</td>
+                        <td>Par défaut</td>
+                      </tr>
+                      <tr>
+                        <td><code>.orochi-container-sm</code></td>
+                        <td>540px</td>
+                        <td>≥576px</td>
+                      </tr>
+                      <tr>
+                        <td><code>.orochi-container-md</code></td>
+                        <td>720px</td>
+                        <td>≥768px</td>
+                      </tr>
+                      <tr>
+                        <td><code>.orochi-container-lg</code></td>
+                        <td>960px</td>
+                        <td>≥992px</td>
+                      </tr>
+                      <tr>
+                        <td><code>.orochi-container-xl</code></td>
+                        <td>1140px</td>
+                        <td>≥1200px</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <!-- Exemple combiné -->
+              <section class="orochi-mt-5">
+                <h2 class="orochi-text-dark">Exemple combiné</h2>
+                <div class="orochi-code-block orochi-mb-3">
+                  <pre><code>&lt;div class="orochi-container-lg orochi-bg-primary orochi-text-white orochi-p-4 orochi-rounded"&gt;
+    Conteneur large limité à 960px
+&lt;/div&gt;</code></pre>
+                </div>
+                <div
+                  class="orochi-container-lg orochi-bg-primary orochi-text-white orochi-p-4 orochi-rounded"
+                >
+                  .orochi-container-lg (960px max)
+                </div>
+              </section>
+
+              <!-- Bonnes pratiques -->
+              <section class="orochi-mt-5">
+                <h2 class="orochi-text-dark">💡 Bonnes pratiques</h2>
+                <div class="orochi-card orochi-bg-light">
+                  <div class="orochi-card-body">
+                    <ul class="orochi-list-unstyled">
+                      <li class="orochi-mb-2">
+                        <i
+                          class="bx bx-check-circle orochi-me-2 orochi-text-success"
+                        ></i>
+                        Utilisez toujours un conteneur comme élément racine
+                      </li>
+                      <li class="orochi-mb-2">
+                        <i
+                          class="bx bx-check-circle orochi-me-2 orochi-text-success"
+                        ></i>
+                        Combine avec le système de grille pour des layouts
+                        complexes
+                      </li>
+                      <li>
+                        <i
+                          class="bx bx-check-circle orochi-me-2 orochi-text-success"
+                        ></i>
+                        Préférez les conteneurs responsives pour le mobile-first
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Navigation -->
+              <div class="orochi-mt-5 orochi-d-flex orochi-justify-between">
+                <a
+                  href="breakpoints.html"
+                  class="orochi-button orochi-button-primary"
+                >
+                  ← Points d'arrêt
+                </a>
+                <a
+                  href="spacing.html"
+                  class="orochi-button orochi-button-primary"
+                >
+                  Espacement →
+                </a>
               </div>
-              <pre><code>&lt;div class="orochi-alert orochi-alert-warning"&gt;Ceci est une alerte de test&lt;/div&gt;</code></pre>
             </section>
-
-            <section id="forms" class="orochi-mt-5">
-              <h2 class="orochi-text-dark">📝 Formulaire</h2>
-              <div class="orochi-form-group">
-                <label class="orochi-form-label">Nom</label>
-                <input
-                  type="text"
-                  class="orochi-form-input"
-                  placeholder="Entrez votre nom"
-                />
-              </div>
-              <pre><code>&lt;input type="text" class="orochi-form-input" placeholder="Entrez votre nom"&gt;</code></pre>
-            </section>
-
-            <!-- Alerte info -->
-            <div
-              class="orochi-alert orochi-alert-info orochi-alert-border-left orochi-mt-5"
-            >
-              ℹ️ Cette documentation est en cours d'amélioration. N'hésitez pas
-              à consulter les autres composants.
-            </div>
 
             <!-- Footer -->
             <footer
@@ -332,6 +378,7 @@
         </div>
       </div>
     </div>
+
+    <script src="../../../orochi-test.js"></script>
   </body>
-  <script src="../../../orochi-test.js"></script>
 </html>
