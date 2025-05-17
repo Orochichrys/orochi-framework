@@ -64,6 +64,9 @@
   --space-8: 6rem;
   --space-9: 8rem;
   --space-10: 10rem;
+
+  --orochi-btn-padding:0.8rem 1.6rem;
+
   /* Transitions */
   --transition-form: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -333,7 +336,7 @@
 
 .orochi-btn {
   display: inline-block;
-  padding: 0.8rem 1.6rem;
+  padding: var(--orochi-btn-padding);
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
@@ -434,7 +437,85 @@
   background-color: #e0e0e0;
 }
 
-/* Bouton outline */
+/* Taille des boutons */
+.orochi-btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.orochi-btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+}
+
+
+/* Variante outline pour toutes les couleurs */
+.orochi-btn-outline-primary {
+  background-color: transparent;
+  border-color: var(--orochi-primary);
+  color: var(--orochi-primary);
+}
+
+.orochi-btn-outline-primary:hover {
+  background-color: var(--orochi-primary);
+  color: var(--orochi-white);
+}
+
+.orochi-btn-outline-secondary {
+  background-color: transparent;
+  border-color: var(--orochi-secondary);
+  color: var(--orochi-secondary);
+}
+
+.orochi-btn-outline-secondary:hover {
+  background-color: var(--orochi-secondary);
+  color: var(--orochi-white);
+}
+
+.orochi-btn-outline-success {
+  background-color: transparent;
+  border-color: var(--orochi-success);
+  color: var(--orochi-success);
+}
+
+.orochi-btn-outline-success:hover {
+  background-color: var(--orochi-success);
+  color: var(--orochi-white);
+}
+
+.orochi-btn-outline-danger {
+  background-color: transparent;
+  border-color: var(--orochi-danger);
+  color: var(--orochi-danger);
+}
+
+.orochi-btn-outline-danger:hover {
+  background-color: var(--orochi-danger);
+  color: var(--orochi-white);
+}
+
+.orochi-btn-outline-warning {
+  background-color: transparent;
+  border-color: var(--orochi-warning);
+  color: var(--orochi-warning);
+}
+
+.orochi-btn-outline-warning:hover {
+  background-color: var(--orochi-warning);
+  color: var(--orochi-dark);
+}
+
+.orochi-btn-outline-info {
+  background-color: transparent;
+  border-color: var(--orochi-info);
+  color: var(--orochi-info);
+}
+
+.orochi-btn-outline-info:hover {
+  background-color: var(--orochi-info);
+  color: var(--orochi-white);
+}
+
 .orochi-btn-outline-light {
   background-color: transparent;
   border-color: var(--orochi-light);
