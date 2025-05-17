@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Boutons - Orochi Framework</title>
     <link rel="stylesheet" href="../../../orochi-test.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -22,7 +23,7 @@
             <i class="bx bx-grid-alt"></i>
           </button>
           <a href="../../../index.html" class="orochi-brand orochi-text-primary"
-            >Orochi</a
+            ><i class="fas fa-dragon orochi-text-primary"></i>Orochi</a
           >
           <button class="orochi-menu-toggler">
             <span class="orochi-menu-toggler-icon"></span>
@@ -143,6 +144,7 @@
                   >
                     <i class="bx bx-message-alt-error orochi-me-2"></i>Alertes
                   </a>
+                  
                 </div>
               </div>
 
@@ -315,7 +317,7 @@
               <div
                 class="orochi-d-flex orochi-align-center orochi-gap-3 orochi-mb-4"
               >
-                <button class="orochi-btn orochi-btn-primary orochi-btn-sm">
+                <button class="orochi-btn orochi-btn-primary orochi-flex-wrap orochi-btn-sm">
                   Petit
                 </button>
                 <button class="orochi-btn orochi-btn-primary">Moyen</button>
@@ -345,6 +347,9 @@
                   <span class="orochi-btn-spinner"></span>
                   Chargement
                 </button>
+                <button class="orochi-btn orochi-btn-primary orochi-btn-loading-dots">
+                  Chargement
+                </button>
                 <a href="#" class="orochi-btn orochi-btn-primary"
                   >Lien bouton</a
                 >
@@ -358,7 +363,14 @@
 &lt;button class="orochi-btn orochi-btn-loading"&gt;
   &lt;span class="orochi-btn-spinner"&gt;&lt;/span&gt;
   Chargement
-&lt;/button&gt;</code></pre>
+&lt;/button&gt;
+
+&lt;button class="orochi-btn orochi-btn-loading-dots"&gt;
+  Chargement
+&lt;/button&gt;
+
+&lt;!-- Lien bouton --&gt;
+&lt;a href="#" class="orochi-btn"&gt;Lien bouton&lt;/a&gt;</code></pre>
             </section>
 
             <!-- Boutons Outline -->

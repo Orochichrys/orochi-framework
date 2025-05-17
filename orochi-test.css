@@ -1,4 +1,8 @@
-/* Orochi Framework v1.0 - beta-test */
+/*! 
+  Orochi CSS v1.0.0 
+  © 2025 Orochi Team - License: Proprietary
+  Marque déposée n°XXXXXXXX
+ */
 
 /* Reset et Base */
 * {
@@ -533,6 +537,58 @@
   opacity: 0.65;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+/* Animation du spinner */
+@keyframes orochi-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orochi-btn-loading {
+  position: relative;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  opacity: 0.8;
+}
+
+.orochi-btn-spinner {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: orochi-spin 0.8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  margin-right: 0;
+}
+
+.orochi-btn-loading .orochi-btn-spinner {
+  opacity: 1;
+}
+
+/* Version alternative avec point(s) */
+.orochi-btn-loading-dots::after {
+  content: '...';
+  display: inline-block;
+  width: 1em;
+  text-align: left;
+  animation: orochi-dots 1s infinite;
+}
+
+@keyframes orochi-dots {
+  0% { content: '.'; }
+  33% { content: '..'; }
+  66% { content: '...'; }
 }
 
 .orochi-card {
@@ -1378,6 +1434,20 @@
 .orochi-text-left { text-align: left; }
 .orochi-text-center { text-align: center; }
 .orochi-text-right { text-align: right; }
+.orochi-text-justify { text-align: justify; }
+
+.orochi-text-decoration-none { text-decoration: none; }
+.orochi-text-decoration-underline { text-decoration: underline; }
+.orochi-text-decoration-line-through { text-decoration: line-through; }
+
+/* Tailles de texte */
+.orochi-text-xs { font-size: 0.75rem; } /* 12px */
+.orochi-text-sm { font-size: 0.875rem; } /* 14px */
+.orochi-text-base { font-size: 1rem; } /* 16px */
+.orochi-text-lg { font-size: 1.125rem; } /* 18px */
+.orochi-text-xl { font-size: 1.25rem; } /* 20px */
+.orochi-text-2xl { font-size: 1.5rem; } /* 24px */
+.orochi-text-3xl { font-size: 1.875rem; } /* 30px */
 
 h1 {
   font-size: 2.5rem;  
