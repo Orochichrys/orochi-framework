@@ -45,22 +45,24 @@ code {
     margin-right: 0.5rem;
   }
 
-  /* Sidebar masquée hors-écran à gauche */
-  #sidebar {
+ #sidebar {
     position: fixed;
-    top: 60px;                    /* hauteur de la nav */
+    top: 0; /* Commence depuis le haut de l'écran */
     left: 0;
     width: 80%;
-    height: calc(100% - 60px);
+    height: 100vh; /* Prend toute la hauteur visible */
     background: white;
-    padding-top: 2rem;            /* espace en haut de la sidebar */
+    padding-top: 2rem;
     z-index: 2000;
     overflow-y: auto;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-
-    /* Slide hors-écran */
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+  }
+  
+  #sidebar {
+    top: 60px;
+    height: calc(100vh - 60px); 
   }
 
   /* Quand actif, ramène la sidebar dans l’écran */
