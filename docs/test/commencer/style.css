@@ -1,0 +1,70 @@
+/* Styles globaux */
+pre {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: monospace;
+  color: #c7254e;
+}
+
+.alert-example {
+  transition: all 0.3s ease;
+}
+
+/* Bouton toggle de la sidebar */
+.sidebar-toggler {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  margin: 0;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: inherit;
+  display: none;        /* caché par défaut sur desktop */
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-toggler:focus {
+  outline: none;
+}
+
+.sidebar-toggler:hover {
+  opacity: 0.8;
+}
+
+/* Responsive pour mobile (<768px) */
+@media (max-width: 767.98px) {
+  /* Affiche le bouton toggle */
+  .sidebar-toggler {
+    display: inline-flex;
+    margin-right: 0.5rem;
+  }
+
+  /* Sidebar masquée hors-écran à gauche */
+  #sidebar {
+    position: fixed;
+    top: 60px;                    /* hauteur de la nav */
+    left: 0;
+    width: 80%;
+    height: calc(100% - 60px);
+    background: white;
+    padding-top: 2rem;            /* espace en haut de la sidebar */
+    z-index: 2000;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+
+    /* Slide hors-écran */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  /* Quand actif, ramène la sidebar dans l’écran */
+  #sidebar.active {
+    transform: translateX(0);
+  }
+}
