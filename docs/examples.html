@@ -37,6 +37,50 @@
       </div>
     </nav>
 
+    <!-- HTML -->
+    <button
+      class="orochi-btn orochi-btn-primary"
+      data-orochi-modal-target="#orochiModal1"
+    >
+      Ouvrir Modal
+    </button>
+
+    <div class="orochi-modal" id="orochiModal1" aria-hidden="true">
+      <div class="orochi-modal-dialog">
+        <div class="orochi-modal-content">
+          <div class="orochi-modal-header">
+            <h3 class="orochi-modal-title">Titre de la Modal</h3>
+            <button
+              class="orochi-modal-close"
+              data-orochi-modal-close
+              aria-label="Fermer"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="orochi-modal-body">
+            <p>Contenu principal...</p>
+            <form class="orochi-form-group">
+              <input
+                type="text"
+                class="orochi-form-input"
+                placeholder="Exemple"
+              />
+            </form>
+          </div>
+          <div class="orochi-modal-footer">
+            <button
+              class="orochi-btn orochi-btn-secondary"
+              data-orochi-modal-close
+            >
+              Fermer
+            </button>
+            <button class="orochi-btn orochi-btn-primary">Valider</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="orochi-container orochi-bg-primary orochi-mt-5">
       <h1>Bienvenue sur Orochi-Framework</h1>
       <p>Ce conteneur a une largeur fixe selon la taille de l'écran.</p>
@@ -132,11 +176,11 @@
     </div>
 
     <!-- Alertes -->
-    <div class="orochi-alert orochi-alert-primary">
-      Simple alerte primaire
-    </div>
+    <div class="orochi-alert orochi-alert-primary">Simple alerte primaire</div>
 
-    <div class="orochi-container orochi-alert orochi-alert-primary orochi-alert-border-left">
+    <div
+      class="orochi-container orochi-alert orochi-alert-primary orochi-alert-border-left"
+    >
       <strong>Conseil d'accessibilité</strong> : L'utilisation de la couleur
       pour ajouter du sens ne fournit qu'une indication visuelle, qui ne sera
       pas transmise aux utilisateurs de technologies d'assistance comme les
@@ -149,16 +193,26 @@
     <div class="orochi-alert orochi-alert-secondary orochi-alert-border-left">
       Simple alerte secondaire
     </div>
-    
-    <div class="orochi-alert orochi-alert-success orochi-alert-border-left">Simple alerte succès <a href="#" class="orochi-alert-link">Lien</a></div>
-    
-    <div class="orochi-alert orochi-alert-danger orochi-alert-border-left">Simple alerte danger</div>
+
+    <div class="orochi-alert orochi-alert-success orochi-alert-border-left">
+      Simple alerte succès <a href="#" class="orochi-alert-link">Lien</a>
+    </div>
+
+    <div class="orochi-alert orochi-alert-danger orochi-alert-border-left">
+      Simple alerte danger
+    </div>
     <div class="orochi-alert orochi-alert-warning orochi-alert-border-left">
       Simple alerte avertissement
     </div>
-    <div class="orochi-alert orochi-alert-info orochi-alert-border-left">Simple alerte info</div>
-    <div class="orochi-alert orochi-alert-light orochi-alert-border-left">Simple alerte info</div>
-    <div class="orochi-alert orochi-alert-dark orochi-alert-border-left">Simple alerte info</div>
+    <div class="orochi-alert orochi-alert-info orochi-alert-border-left">
+      Simple alerte info
+    </div>
+    <div class="orochi-alert orochi-alert-light orochi-alert-border-left">
+      Simple alerte info
+    </div>
+    <div class="orochi-alert orochi-alert-dark orochi-alert-border-left">
+      Simple alerte info
+    </div>
 
     <div class="orochi-alert orochi-alert-success orochi-alert-icon">
       <svg>...</svg>
@@ -172,8 +226,7 @@
 
     <!-- Progress Bar -->
     <div
-      class="oro
-      orochi-progress orochi-progress-striped orochi-progress-animated"
+      class="oro orochi-progress orochi-progress-striped orochi-progress-animated"
     >
       <div class="orochi-progress-bar" style="width: 65%">65%</div>
     </div>
@@ -193,7 +246,7 @@
             <form class="orochi-form-group">
               <label class="orochi-form-label">Email</label>
               <input type="email" class="orochi-form-input">
-              <button class="orochi-button orochi-button-primary orochi-mt-2">Envoyer</button>
+              <button class="orochi-btn orochi-btn-primary orochi-mt-2">Envoyer</button>
             </form>
           </div>
         </div>
@@ -207,7 +260,7 @@
             <form class="orochi-form-group">
               <label class="orochi-form-label">Email</label>
               <input type="email" class="orochi-form-input">
-              <button class="orochi-button orochi-button-primary orochi-mt-2">Envoyer</button>
+              <button class="orochi-btn orochi-btn-primary orochi-mt-2">Envoyer</button>
             </form>
           </div>
         </div>
@@ -221,7 +274,7 @@
             <form class="orochi-form-group">
               <label class="orochi-form-label">Email</label>
               <input type="email" class="orochi-form-input">
-              <button class="orochi-button orochi-button-primary orochi-mt-2">Envoyer</button>
+              <button class="orochi-btn orochi-btn-primary orochi-mt-2">Envoyer</button>
             </form>
           </div>
         </div>
@@ -235,7 +288,7 @@
             <form class="orochi-form-group">
               <label class="orochi-form-label">Email</label>
               <input type="email" class="orochi-form-input">
-              <button class="orochi-button orochi-button-primary orochi-mt-2">Envoyer</button>
+              <button class="orochi-btn orochi-btn-primary orochi-mt-2">Envoyer</button>
             </form>
           </div>
         </div>
@@ -279,12 +332,11 @@
           </select>
         </div>
        
-        <button class="orochi-button orochi-button-primary">Envoyer</button>
+        <button class="orochi-btn orochi-btn-primary">Envoyer</button>
        </div>
     </div>
   </div>
 </div> -->
-
   </body>
 
   <script src="../orochi-test.js"></script>

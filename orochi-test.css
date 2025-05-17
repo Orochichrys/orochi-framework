@@ -331,7 +331,7 @@
 }
 
 
-.orochi-button {
+.orochi-btn {
   display: inline-block;
   padding: 0.8rem 1.6rem;
   border: 1px solid transparent;
@@ -345,14 +345,14 @@
 }
 
 /* Couleurs principales */
-.orochi-button-primary {
+.orochi-btn-primary {
   background-color: var(--orochi-primary);
   color: var(--orochi-white);
   border-color: var(--orochi-primary);
 }
 
-.orochi-button-primary:hover,
-.orochi-button-primary:focus {
+.orochi-btn-primary:hover,
+.orochi-btn-primary:focus {
   background-color: var(--orochi-secondary);
   border-color: var(--orochi-secondary);
   color: var(--orochi-white);
@@ -360,101 +360,99 @@
 }
 
 /* Bouton secondaire */
-.orochi-button-secondary {
+.orochi-btn-secondary {
   background-color: var(--orochi-secondary);
   color: var(--orochi-white);
   border-color: var(--orochi-secondary);
 }
 
-.orochi-button-secondary:hover,
-.orochi-button-secondary:focus {
+.orochi-btn-secondary:hover,
+.orochi-btn-secondary:focus {
   background-color: var(--orochi-primary);
   border-color: var(--orochi-primary);
   color: var(--orochi-white);
 }
 
 /* Bouton succès */
-.orochi-button-success {
+.orochi-btn-success {
   background-color: var(--orochi-success);
   color: var(--orochi-white);
   border-color: var(--orochi-success);
 }
 
-.orochi-button-success:hover,
-.orochi-button-success:focus {
+.orochi-btn-success:hover,
+.orochi-btn-success:focus {
   background-color: #1b5e20;
 }
 
 /* Bouton danger */
-.orochi-button-danger {
+.orochi-btn-danger {
   background-color: var(--orochi-danger);
   color: var(--orochi-white);
   border-color: var(--orochi-danger);
 }
 
-.orochi-button-danger:hover,
-.orochi-button-danger:focus {
+.orochi-btn-danger:hover,
+.orochi-btn-danger:focus {
   background-color: #b71c1c;
 }
 
 /* Bouton warning */
-.orochi-button-warning {
+.orochi-btn-warning {
   background-color: var(--orochi-warning);
   color: var(--orochi-dark);
   border-color: var(--orochi-warning);
 }
 
-.orochi-button-warning:hover,
-.orochi-button-warning:focus {
+.orochi-btn-warning:hover,
+.orochi-btn-warning:focus {
   background-color: #f57f17;
   color: var(--orochi-dark);
 }
 
 /* Bouton info */
-.orochi-button-info {
+.orochi-btn-info {
   background-color: var(--orochi-info);
   color: var(--orochi-white);
   border-color: var(--orochi-info);
 }
 
-.orochi-button-info:hover,
-.orochi-button-info:focus {
+.orochi-btn-info:hover,
+.orochi-btn-info:focus {
   background-color: #0277bd;
 }
 
 /* Bouton light */
-.orochi-button-light {
+.orochi-btn-light {
   background-color: var(--orochi-light);
   color: var(--orochi-dark);
   border-color: var(--orochi-light);
 }
 
-.orochi-button-light:hover,
-.orochi-button-light:focus {
+.orochi-btn-light:hover,
+.orochi-btn-light:focus {
   background-color: #e0e0e0;
 }
 
 /* Bouton outline */
-.orochi-button-outline-light {
+.orochi-btn-outline-light {
   background-color: transparent;
   border-color: var(--orochi-light);
   color: var(--orochi-white);
 }
 
-.orochi-button-outline-light:hover {
+.orochi-btn-outline-light:hover {
   background-color: var(--orochi-light);
   color: var(--orochi-dark);
 }
 
 /* Désactivé */
-.orochi-button:disabled,
-.orochi-button[disabled] {
+.orochi-btn:disabled,
+.orochi-btn[disabled] {
   opacity: 0.65;
   cursor: not-allowed;
   pointer-events: none;
 }
-
-
 
 .orochi-card {
     background: white;
@@ -847,6 +845,130 @@
 @keyframes orochi-progress-stripes {
   from { background-position: 1rem 0; }
   to { background-position: 0 0; }
+}
+
+/* moodal*/
+.orochi-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--orochi-dark-rgb), 0.5);
+  z-index: 9999;
+  display: none;
+  opacity: 0;
+  transition: opacity var(--transition-form);
+  padding: var(--space-4);
+}
+
+.orochi-modal[aria-hidden="false"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.orochi-modal-dialog {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+
+.orochi-modal-content {
+  background: var(--orochi-white);
+  border-radius: var(--orochi-rounded-md);
+  /* border: var(--orochi-border); */
+  box-shadow: var(--orochi-shadow-lg);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.orochi-modal[aria-hidden="false"] .orochi-modal-content {
+  transform: translateY(0);
+}
+
+.orochi-modal-header {
+  padding: var(--space-3);
+  border-bottom: var(--orochi-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--orochi-primary);
+  color: var(--orochi-white);
+  border-radius: var(--orochi-rounded-md) var(--orochi-rounded-md) 0 0;
+}
+
+.orochi-modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.orochi-modal-body {
+  padding: var(--space-3);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.orochi-modal-footer {
+  padding: var(--space-3);
+  border-top: var(--orochi-border);
+  display: flex;
+  gap: var(--space-2);
+  justify-content: flex-end;
+}
+
+.orochi-modal-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 var(--space-2);
+  line-height: 1;
+}
+
+/* Variantes de taille */
+.orochi-modal-sm .orochi-modal-dialog { max-width: 400px; }
+.orochi-modal-lg .orochi-modal-dialog { max-width: 800px; }
+.orochi-modal-full .orochi-modal-dialog { max-width: 100%; height: 100%; }
+
+/* Onglets */
+.orochi-tabs {
+  border-bottom: 2px solid var(--orochi-light);
+}
+
+.orochi-tab {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.orochi-tab-active {
+  border-bottom: 3px solid var(--orochi-primary);
+}
+
+/* Tooltips */
+.orochi-tooltip {
+  position: relative;
+}
+
+.orochi-tooltip-text {
+  visibility: hidden;
+  background: var(--orochi-dark);
+  color: var(--orochi-white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--orochi-rounded-sm);
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.orochi-tooltip:hover .orochi-tooltip-text {
+  visibility: visible;
 }
 
 /*       Utilitaires         */

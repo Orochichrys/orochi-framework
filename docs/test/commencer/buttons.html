@@ -1,216 +1,299 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boutons - Orochi Framework</title>
-  <link rel="stylesheet" href="../../../orochi-test.css" />
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-  <style>
-    body {
-      background-color: #f9f9f9;
-      color: #2d2d2d;
-      font-family: Arial, sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boutons - Orochi Framework</title>
+    <link rel="stylesheet" href="../../../orochi-test.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <style>
+      body {
+        background-color: #f9f9f9;
+        color: #2d2d2d;
+        font-family: Arial, sans-serif;
+      }
 
-    pre {
-      background: #eee;
-      padding: 1rem;
-      border-radius: 5px;
-      overflow-x: auto;
-    }
+      pre {
+        background: #eee;
+        padding: 1rem;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
 
-    code {
-      font-family: monospace;
-      color: #c7254e;
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="orochi-nav-wrapper orochi-sticky orochi-bg-white orochi-shadow-sm">
-    <div class="orochi-nav-container">
-      <div class="orochi-d-flex orochi-items-center orochi-justify-between">
-        <a href="../../../index.html" class="orochi-brand orochi-text-primary">Orochi</a>
-        <button class="orochi-menu-toggler">
-          <span class="orochi-menu-toggler-icon"></span>
-        </button>
-        <ul class="orochi-menu">
-          <li class="orochi-menu-item"><a href="introduction.html" class="orochi-menu-link">Documentation</a></li>
-          <li class="orochi-menu-item"><a href="#" class="orochi-menu-link">Exemples</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Contenu principal -->
-  <div class="orochi-container orochi-mt-4">
-    <div class="orochi-row orochi-g-4">
-
-      <!-- Sidebar -->
-      <div class="orochi-col-12 orochi-col-md-3">
-        <div class="orochi-card orochi-sticky orochi-p-4  orochi-rounded">
-          <nav class="orochi-d-flex orochi-flex-column orochi-gap-2">
-      
-            <!-- Section : Commencer -->
-            <h4 class="orochi-text-primary orochi-mb-2 orochi-text-bold">📚 Commencer</h4>
-            <div class="orochi-ms-3">
-              <a href="introduction.html"
-                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
-                <i class="bx bx-chevron-right orochi-me-2"></i>Introduction
-              </a>
-              <a href="installation.html"
-                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
-                <i class="bx bx-chevron-right orochi-me-2"></i>Installation
-              </a>
-            </div>
-      
-            <!-- Section : Mise en page -->
-            <h4 class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold">🧱 Mise en page</h4>
-            <div class="orochi-ms-3">
-              <a href="grid.html"
-                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
-                <i class="bx bx-grid orochi-me-2"></i>Système de grille
-              </a>
-            </div>
-      
-            <!-- Section : Composants -->
-            <h4 class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold">🧩 Composants</h4>
-            <div class="orochi-ms-3">
-              <a href="buttons.html"
-                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
-                <i class="bx bx-square-rounded orochi-me-2"></i>Boutons
-              </a>
-              <a href="cards.html"
-                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
-                <i class="bx bx-layer orochi-me-2"></i>Cartes
-              </a>
-            </div>
-      
-            <!-- Section : Formulaires -->
-            <h4 class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold">📝 Formulaires</h4>
-            <div class="orochi-ms-3">
-              <a href="inputs.html"
-                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
-                <i class="bx bx-input orochi-me-2"></i>Champs de saisie
-              </a>
-              <a href="checkboxes.html"
-                 class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3">
-                <i class="bx bx-checkbox orochi-me-2"></i>Cases à cocher
-              </a>
-            </div>
-      
-          </nav>
+      code {
+        font-family: monospace;
+        color: #c7254e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="orochi-nav-wrapper orochi-sticky orochi-bg-white orochi-shadow-sm"
+    >
+      <div class="orochi-nav-container">
+        <div class="orochi-d-flex orochi-items-center orochi-justify-between">
+          <a href="../../../index.html" class="orochi-brand orochi-text-primary"
+            >Orochi</a
+          >
+          <button class="orochi-menu-toggler">
+            <span class="orochi-menu-toggler-icon"></span>
+          </button>
+          <ul class="orochi-menu">
+            <li class="orochi-menu-item">
+              <a href="introduction.html" class="orochi-menu-link"
+                >Documentation</a
+              >
+            </li>
+            <li class="orochi-menu-item">
+              <a href="#" class="orochi-menu-link">Exemples</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <!-- Contenu -->
-      <div class="orochi-col-12 orochi-col-md-9">
-        <div class="orochi-card orochi-p-4">
-          <h1 class="orochi-title orochi-text-primary orochi-mb-4">🔘 Boutons Orochi</h1>
+    <!-- Contenu principal -->
+    <div class="orochi-container orochi-mt-4">
+      <div class="orochi-row orochi-g-4">
+        <!-- Sidebar -->
+        <div class="orochi-col-12 orochi-col-md-3">
+          <div class="orochi-card orochi-sticky orochi-p-4 orochi-rounded">
+            <nav class="orochi-d-flex orochi-flex-column orochi-gap-2">
+              <!-- Section : Commencer -->
+              <h4 class="orochi-text-primary orochi-mb-2 orochi-text-bold">
+                📚 Commencer
+              </h4>
+              <div class="orochi-ms-3">
+                <a
+                  href="introduction.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3"
+                >
+                  <i class="bx bx-chevron-right orochi-me-2"></i>Introduction
+                </a>
+                <a
+                  href="installation.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3"
+                >
+                  <i class="bx bx-chevron-right orochi-me-2"></i>Installation
+                </a>
+              </div>
 
-          <!-- Styles de base -->
-          <section id="styles" class="orochi-mb-6">
-            <h2 class="orochi-text-dark orochi-mb-4">Styles de base</h2>
-            <div class="orochi-d-flex orochi-gap-3 orochi-flex-wrap orochi-mb-4">
-              <button class="orochi-button orochi-button-primary">Primaire</button>
-              <button class="orochi-button orochi-button-secondary">Secondaire</button>
-              <button class="orochi-button orochi-button-success">Succès</button>
-              <button class="orochi-button orochi-button-danger">Danger</button>
-              <button class="orochi-button orochi-button-warning">Avertissement</button>
-              <button class="orochi-button orochi-button-info">Info</button>
-            </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;button class="orochi-button orochi-button-primary"&gt;Primaire&lt;/button&gt;
-&lt;button class="orochi-button orochi-button-secondary"&gt;Secondaire&lt;/button&gt;
-&lt;button class="orochi-button orochi-button-success"&gt;Succès&lt;/button&gt;
-&lt;button class="orochi-button orochi-button-danger"&gt;Danger&lt;/button&gt;</code></pre>
-          </section>
+              <!-- Section : Mise en page -->
+              <h4
+                class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold"
+              >
+                🧱 Mise en page
+              </h4>
+              <div class="orochi-ms-3">
+                <a
+                  href="grid.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3"
+                >
+                  <i class="bx bx-grid orochi-me-2"></i>Système de grille
+                </a>
+              </div>
 
-          <!-- Tailles -->
-          <section id="sizes" class="orochi-mb-6">
-            <h2 class="orochi-text-dark orochi-mb-4">Tailles disponibles</h2>
-            <div class="orochi-d-flex orochi-align-items-center orochi-gap-3 orochi-mb-4">
-              <button class="orochi-button orochi-button-primary orochi-button-sm">Petit</button>
-              <button class="orochi-button orochi-button-primary">Moyen</button>
-              <button class="orochi-button orochi-button-primary orochi-button-lg">Large</button>
-            </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;button class="orochi-button orochi-button-sm"&gt;Petit&lt;/button&gt;
-&lt;button class="orochi-button"&gt;Moyen&lt;/button&gt;
-&lt;button class="orochi-button-lg"&gt;Large&lt;/button&gt;</code></pre>
-          </section>
+              <!-- Section : Composants -->
+              <h4
+                class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold"
+              >
+                🧩 Composants
+              </h4>
+              <div class="orochi-ms-3">
+                <a
+                  href="buttons.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3"
+                >
+                  <i class="bx bx-square-rounded orochi-me-2"></i>Boutons
+                </a>
+                <a
+                  href="cards.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3"
+                >
+                  <i class="bx bx-layer orochi-me-2"></i>Cartes
+                </a>
+              </div>
 
-          <!-- États -->
-          <section id="states" class="orochi-mb-6">
-            <h2 class="orochi-text-dark orochi-mb-4">États spéciaux</h2>
-            <div class="orochi-d-flex orochi-gap-3 orochi-flex-wrap orochi-mb-4">
-              <button class="orochi-button orochi-button-primary" disabled>Désactivé</button>
-              <button class="orochi-button orochi-button-primary orochi-button-loading">
-                <span class="orochi-button-spinner"></span>
-                Chargement
-              </button>
-              <a href="#" class="orochi-button orochi-button-primary">Lien bouton</a>
-            </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;!-- Désactivé --&gt;
-&lt;button class="orochi-button" disabled&gt;Désactivé&lt;/button&gt;
+              <!-- Section : Formulaires -->
+              <h4
+                class="orochi-text-dark orochi-mt-4 orochi-mb-2 orochi-text-bold"
+              >
+                📝 Formulaires
+              </h4>
+              <div class="orochi-ms-3">
+                <a
+                  href="inputs.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3"
+                >
+                  <i class="bx bx-input orochi-me-2"></i>Champs de saisie
+                </a>
+                <a
+                  href="checkboxes.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3"
+                >
+                  <i class="bx bx-checkbox orochi-me-2"></i>Cases à cocher
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Contenu -->
+        <div class="orochi-col-12 orochi-col-md-9">
+          <div class="orochi-card orochi-p-4">
+            <h1 class="orochi-title orochi-text-primary orochi-mb-4">
+              🔘 Boutons Orochi
+            </h1>
+
+            <!-- Styles de base -->
+            <section id="styles" class="orochi-mb-6">
+              <h2 class="orochi-text-dark orochi-mb-4">Styles de base</h2>
+              <div
+                class="orochi-d-flex orochi-gap-3 orochi-flex-wrap orochi-mb-4"
+              >
+                <button class="orochi-btn orochi-btn-primary">Primaire</button>
+                <button class="orochi-btn orochi-btn-secondary">
+                  Secondaire
+                </button>
+                <button class="orochi-btn orochi-btn-success">Succès</button>
+                <button class="orochi-btn orochi-btn-danger">Danger</button>
+                <button class="orochi-btn orochi-btn-warning">
+                  Avertissement
+                </button>
+                <button class="orochi-btn orochi-btn-info">Info</button>
+              </div>
+              <pre
+                class="orochi-bg-light orochi-p-3 orochi-rounded"
+              ><code>&lt;button class="orochi-btn orochi-btn-primary"&gt;Primaire&lt;/button&gt;
+&lt;button class="orochi-btn orochi-btn-secondary"&gt;Secondaire&lt;/button&gt;
+&lt;button class="orochi-btn orochi-btn-success"&gt;Succès&lt;/button&gt;
+&lt;button class="orochi-btn orochi-btn-danger"&gt;Danger&lt;/button&gt;</code></pre>
+            </section>
+
+            <!-- Tailles -->
+            <section id="sizes" class="orochi-mb-6">
+              <h2 class="orochi-text-dark orochi-mb-4">Tailles disponibles</h2>
+              <div
+                class="orochi-d-flex orochi-align-items-center orochi-gap-3 orochi-mb-4"
+              >
+                <button class="orochi-btn orochi-btn-primary orochi-btn-sm">
+                  Petit
+                </button>
+                <button class="orochi-btn orochi-btn-primary">Moyen</button>
+                <button class="orochi-btn orochi-btn-primary orochi-btn-lg">
+                  Large
+                </button>
+              </div>
+              <pre
+                class="orochi-bg-light orochi-p-3 orochi-rounded"
+              ><code>&lt;button class="orochi-btn orochi-btn-sm"&gt;Petit&lt;/button&gt;
+&lt;button class="orochi-btn"&gt;Moyen&lt;/button&gt;
+&lt;button class="orochi-btn-lg"&gt;Large&lt;/button&gt;</code></pre>
+            </section>
+
+            <!-- États -->
+            <section id="states" class="orochi-mb-6">
+              <h2 class="orochi-text-dark orochi-mb-4">États spéciaux</h2>
+              <div
+                class="orochi-d-flex orochi-gap-3 orochi-flex-wrap orochi-mb-4"
+              >
+                <button class="orochi-btn orochi-btn-primary" disabled>
+                  Désactivé
+                </button>
+                <button
+                  class="orochi-btn orochi-btn-primary orochi-btn-loading"
+                >
+                  <span class="orochi-btn-spinner"></span>
+                  Chargement
+                </button>
+                <a href="#" class="orochi-btn orochi-btn-primary"
+                  >Lien bouton</a
+                >
+              </div>
+              <pre
+                class="orochi-bg-light orochi-p-3 orochi-rounded"
+              ><code>&lt;!-- Désactivé --&gt;
+&lt;button class="orochi-btn" disabled&gt;Désactivé&lt;/button&gt;
 
 &lt;!-- Chargement --&gt;
-&lt;button class="orochi-button orochi-button-loading"&gt;
-  &lt;span class="orochi-button-spinner"&gt;&lt;/span&gt;
+&lt;button class="orochi-btn orochi-btn-loading"&gt;
+  &lt;span class="orochi-btn-spinner"&gt;&lt;/span&gt;
   Chargement
 &lt;/button&gt;</code></pre>
-          </section>
+            </section>
 
-          <!-- Boutons Outline -->
-          <section id="outline" class="orochi-mb-6">
-            <h2 class="orochi-text-dark orochi-mb-4">Style Outline</h2>
-            <div class="orochi-d-flex orochi-gap-3 orochi-flex-wrap orochi-mb-4">
-              <button class="orochi-button orochi-border orochi-text-primary">Primaire</button>
-              <button class="orochi-button orochi-border orochi-text-secondary">Secondaire</button>
-              <button class="orochi-button orochi-border orochi-text-success">Succès</button>
-              <button class="orochi-button orochi-border orochi-text-danger">Danger</button>
-            </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;button class="orochi-button orochi-border orochi-text-primary"&gt;Primaire&lt;/button&gt;
-&lt;button class="orochi-button orochi-border orochi-text-danger"&gt;Danger&lt;/button&gt;</code></pre>
-          </section>
+            <!-- Boutons Outline -->
+            <section id="outline" class="orochi-mb-6">
+              <h2 class="orochi-text-dark orochi-mb-4">Style Outline</h2>
+              <div
+                class="orochi-d-flex orochi-gap-3 orochi-flex-wrap orochi-mb-4"
+              >
+                <button class="orochi-btn orochi-border orochi-text-primary">
+                  Primaire
+                </button>
+                <button class="orochi-btn orochi-border orochi-text-secondary">
+                  Secondaire
+                </button>
+                <button class="orochi-btn orochi-border orochi-text-success">
+                  Succès
+                </button>
+                <button class="orochi-btn orochi-border orochi-text-danger">
+                  Danger
+                </button>
+              </div>
+              <pre
+                class="orochi-bg-light orochi-p-3 orochi-rounded"
+              ><code>&lt;button class="orochi-btn orochi-border orochi-text-primary"&gt;Primaire&lt;/button&gt;
+&lt;button class="orochi-btn orochi-border orochi-text-danger"&gt;Danger&lt;/button&gt;</code></pre>
+            </section>
 
-          <!-- Boutons avec icônes -->
-          <section class="orochi-mb-6">
-            <h2 class="orochi-text-dark orochi-mb-4">Avec icônes</h2>
-            <div class="orochi-d-flex orochi-gap-3 orochi-flex-wrap orochi-mb-4">
-              <button class="orochi-button orochi-button-primary">
-                <i class="bx bx-download orochi-me-2"></i>
-                Télécharger
-              </button>
-              <button class="orochi-button orochi-button-danger">
-                <i class="bx bx-trash orochi-me-2"></i>
-                Supprimer
-              </button>
-            </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;button class="orochi-button orochi-button-primary"&gt;
+            <!-- Boutons avec icônes -->
+            <section class="orochi-mb-6">
+              <h2 class="orochi-text-dark orochi-mb-4">Avec icônes</h2>
+              <div
+                class="orochi-d-flex orochi-gap-3 orochi-flex-wrap orochi-mb-4"
+              >
+                <button class="orochi-btn orochi-btn-primary">
+                  <i class="bx bx-download orochi-me-2"></i>
+                  Télécharger
+                </button>
+                <button class="orochi-btn orochi-btn-danger">
+                  <i class="bx bx-trash orochi-me-2"></i>
+                  Supprimer
+                </button>
+              </div>
+              <pre
+                class="orochi-bg-light orochi-p-3 orochi-rounded"
+              ><code>&lt;button class="orochi-btn orochi-btn-primary"&gt;
   &lt;i class="bx bx-download orochi-me-2"&gt;&lt;/i&gt;
   Télécharger
 &lt;/button&gt;</code></pre>
-          </section>
+            </section>
 
-          <!-- Notes -->
-          <div class="orochi-alert orochi-alert-info orochi-mt-5">
-            <strong>💡 Personnalisation :</strong> Utilisez les variables CSS pour modifier les couleurs :
-            <pre class="orochi-mt-2"><code>:root {
+            <!-- Notes -->
+            <div class="orochi-alert orochi-alert-info orochi-mt-5">
+              <strong>💡 Personnalisation :</strong> Utilisez les variables CSS
+              pour modifier les couleurs :
+              <pre class="orochi-mt-2"><code>:root {
   --orochi-primary: #votre_couleur;
-  --orochi-button-padding: 0.5rem 1.5rem;
+  --orochi-btn-padding: 0.5rem 1.5rem;
 }</code></pre>
-          </div>
+            </div>
 
-          <footer class="orochi-mt-5 orochi-text-center orochi-text-secondary">
-            &copy; 2025 Orochi Framework - Documentation des boutons v1.1
-          </footer>
+            <footer
+              class="orochi-mt-5 orochi-text-center orochi-text-secondary"
+            >
+              &copy; 2025 Orochi Framework - Documentation des boutons v1.1
+            </footer>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="../../../orochi-test.js"></script>
-</body>
+    <script src="../../../orochi-test.js"></script>
+  </body>
 </html>
