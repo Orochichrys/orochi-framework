@@ -37,6 +37,8 @@ code {
   opacity: 0.8;
 }
 
+
+
 /* Responsive pour mobile (<768px) */
 @media (max-width: 767.98px) {
   /* Affiche le bouton toggle */
@@ -45,9 +47,13 @@ code {
     margin-right: 0.5rem;
   }
 
+ #sidebar .orochi-rounded-lg{
+    border: none;
+  }
+
  #sidebar {
     position: fixed;
-    top: 0; /* Commence depuis le haut de l'écran */
+    top: 60px; 
     left: 0;
     width: 80%;
     height: 100vh; /* Prend toute la hauteur visible */
