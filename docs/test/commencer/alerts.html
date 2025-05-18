@@ -277,99 +277,156 @@
         </div>
 
         <!-- Contenu -->
-        <div class="orochi-col-12 orochi-col-md-9">
-          <div class="orochi-card orochi-p-4">
-            <section id="alerts-intro">
-              <h1 class="orochi-title orochi-text-primary">🚨 Alertes</h1>
-              <p class="orochi-lead">
-                Les alertes permettent d'afficher des messages contextuels
-                importants à vos utilisateurs.
-              </p>
+<div class="orochi-col-12 orochi-col-md-9">
+  <div class="orochi-card orochi-p-4">
+    <section id="alerts-intro">
+      <h1 class="orochi-title orochi-text-primary">🚨 Alertes</h1>
+      <p class="orochi-lead">
+        Les alertes permettent d'afficher des messages contextuels importants à vos utilisateurs.
+      </p>
 
-              <!-- Alertes de base -->
-              <section class="orochi-mt-5">
-                <h2 class="orochi-text-dark">Types d'alertes</h2>
-                <div class="orochi-row orochi-g-3">
-                  <div class="orochi-col-12 orochi-col-md-6">
-                    <div
-                      class="orochi-alert orochi-alert-primary alert-example"
-                    >
-                      Alerte primaire
-                    </div>
-                    <pre><code>&lt;div class="orochi-alert orochi-alert-primary"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
+      <!-- Alertes normales -->
+      <section class="orochi-mt-5">
+        <h2 class="orochi-text-dark">Alertes standard</h2>
+        <div class="orochi-row orochi-g-3">
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-primary">Alerte Primaire</div>
+            <div class="orochi-alert orochi-alert-secondary">Alerte Secondaire</div>
+            <div class="orochi-alert orochi-alert-success">Alerte Succès</div>
+            <div class="orochi-alert orochi-alert-danger">Alerte Danger</div>
+          </div>
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-warning">Alerte Avertissement</div>
+            <div class="orochi-alert orochi-alert-info">Alerte Info</div>
+            <div class="orochi-alert orochi-alert-light">Alerte Light</div>
+            <div class="orochi-alert orochi-alert-dark">Alerte Dark</div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="orochi-alert orochi-alert-[type]"&gt;...&lt;/div&gt;
+/* Types disponibles : primary, secondary, success, danger, warning, info, light, dark */</code></pre>
+      </section>
 
-                  <div class="orochi-col-12 orochi-col-md-6">
-                    <div
-                      class="orochi-alert orochi-alert-success alert-example"
-                    >
-                      <i class="bx bx-check-circle orochi-me-2"></i>Alerte
-                      succès
-                    </div>
-                    <pre><code>&lt;div class="orochi-alert orochi-alert-success"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-
-                  <div class="orochi-col-12 orochi-col-md-6">
-                    <div class="orochi-alert orochi-alert-danger alert-example">
-                      <i class="bx bx-error orochi-me-2"></i>Alerte danger
-                    </div>
-                    <pre><code>&lt;div class="orochi-alert orochi-alert-danger"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-
-                  <div class="orochi-col-12 orochi-col-md-6">
-                    <div
-                      class="orochi-alert orochi-alert-warning alert-example"
-                    >
-                      <i class="bx bx-error-circle orochi-me-2"></i>Alerte
-                      avertissement
-                    </div>
-                    <pre><code>&lt;div class="orochi-alert orochi-alert-warning"&gt;...&lt;/div&gt;</code></pre>
-                  </div>
-                </div>
-              </section>
-
-              <!-- Alertes avec icônes -->
-              <section class="orochi-mt-5">
-                <h2 class="orochi-text-dark">Alertes avec icônes</h2>
-                <div class="orochi-alert orochi-alert-info alert-example">
-                  <i class="bx bx-info-circle orochi-me-2"></i>
-                  Alerte avec icône informative
-                </div>
-                <pre><code>&lt;div class="orochi-alert orochi-alert-info"&gt;
-    &lt;i class="bx bx-info-circle"&gt;&lt;/i&gt;
-    Message d'information
+      <!-- Alertes avec liens -->
+      <section class="orochi-mt-5">
+        <h2 class="orochi-text-dark">Alertes avec liens</h2>
+        <div class="orochi-row orochi-g-3">
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-primary">
+              Alerte avec <a href="#" class="orochi-alert-link">lien primaire</a>
+            </div>
+            <div class="orochi-alert orochi-alert-success">
+              Succès avec <a href="#" class="orochi-alert-link">lien vert</a>
+            </div>
+          </div>
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-danger">
+              Danger avec <a href="#" class="orochi-alert-link">lien rouge</a>
+            </div>
+            <div class="orochi-alert orochi-alert-info">
+              Info avec <a href="#" class="orochi-alert-link">lien bleu</a>
+            </div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="orochi-alert orochi-alert-info"&gt;
+    Message avec &lt;a class="orochi-alert-link" href="#"&gt;lien&lt;/a&gt;
 &lt;/div&gt;</code></pre>
-              </section>
+      </section>
 
-              <!-- Alertes dismissible -->
-              <section class="orochi-mt-5">
-                <h2 class="orochi-text-dark">Alertes fermables</h2>
-                <div
-                  class="orochi-alert orochi-alert-dark orochi-alert-dismissible alert-example"
-                >
-                  Message important
-                  <button class="orochi-alert-close">
-                    <i class="bx bx-x"></i>
-                  </button>
-                </div>
-                <pre><code>&lt;div class="orochi-alert orochi-alert-dark orochi-alert-dismissible"&gt;
+      <!-- Alertes avec icônes -->
+      <section class="orochi-mt-5">
+        <h2 class="orochi-text-dark">Alertes avec icônes</h2>
+        <div class="orochi-row orochi-g-3">
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-primary">
+              <i class="bx bx-info-circle orochi-me-2"></i>Alerte avec icône
+            </div>
+            <div class="orochi-alert orochi-alert-success">
+              <i class="bx bx-check-circle orochi-me-2"></i>Opération réussie
+            </div>
+          </div>
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-danger">
+              <i class="bx bx-error-circle orochi-me-2"></i>Erreur détectée
+            </div>
+            <div class="orochi-alert orochi-alert-warning">
+              <i class="bx bx-error orochi-me-2"></i>Avertissement important
+            </div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="orochi-alert orochi-alert-warning"&gt;
+    &lt;i class="bx bx-error"&gt;&lt;/i&gt;
+    Message avec icône
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <!-- Alertes avec bordures -->
+      <section class="orochi-mt-5">
+        <h2 class="orochi-text-dark">Alertes bordurées</h2>
+        <div class="orochi-row orochi-g-3">
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-primary orochi-alert-border-left">
+              Bordure gauche primaire
+            </div>
+            <div class="orochi-alert orochi-alert-success orochi-alert-border-left">
+              Bordure gauche succès
+            </div>
+          </div>
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-danger orochi-alert-border-left">
+              Bordure gauche danger
+            </div>
+            <div class="orochi-alert orochi-alert-info orochi-alert-border-left">
+              Bordure gauche info
+            </div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="orochi-alert orochi-alert-info orochi-alert-border-left"&gt;
+    Alerte avec bordure latérale
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <!-- Alertes fermables -->
+      <section class="orochi-mt-5">
+        <h2 class="orochi-text-dark">Alertes fermables</h2>
+        <div class="orochi-row orochi-g-3">
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-primary orochi-alert-dismissible">
+              Message important
+              <button class="orochi-alert-close">
+                <i class="bx bx-x"></i>
+              </button>
+            </div>
+            <div class="orochi-alert orochi-alert-success orochi-alert-dismissible">
+              Succès fermable
+              <button class="orochi-alert-close">
+                <i class="bx bx-x"></i>
+              </button>
+            </div>
+          </div>
+          <div class="orochi-col-12 orochi-col-md-6">
+            <div class="orochi-alert orochi-alert-danger orochi-alert-dismissible">
+              Danger fermable
+              <button class="orochi-alert-close">
+                <i class="bx bx-x"></i>
+              </button>
+            </div>
+            <div class="orochi-alert orochi-alert-warning orochi-alert-dismissible">
+              Avertissement fermable
+              <button class="orochi-alert-close">
+                <i class="bx bx-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="orochi-alert orochi-alert-danger orochi-alert-dismissible"&gt;
     Message
     &lt;button class="orochi-alert-close"&gt;
         &lt;i class="bx bx-x"&gt;&lt;/i&gt;
     &lt;/button&gt;
 &lt;/div&gt;</code></pre>
-              </section>
+      </section>
 
-              <!-- Alertes avec bordure -->
-              <section class="orochi-mt-5">
-                <h2 class="orochi-text-dark">Variantes de bordure</h2>
-                <div
-                  class="orochi-alert orochi-alert-light orochi-alert-border-left alert-example"
-                >
-                  Alerte avec bordure latérale
-                </div>
-                <pre><code>&lt;div class="orochi-alert orochi-alert-light orochi-alert-border-left"&gt;...&lt;/div&gt;</code></pre>
-              </section>
+          
 
               <!-- Bonnes pratiques -->
               <section class="orochi-mt-5">

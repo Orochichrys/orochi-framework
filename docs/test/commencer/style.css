@@ -1,4 +1,7 @@
 /* Styles globaux */
+body {
+  background-color: #f9f9f9;
+}
 pre {
   background: #eee;
   padding: 1rem;
@@ -24,7 +27,7 @@ code {
   cursor: pointer;
   font-size: 1.25rem;
   color: inherit;
-  display: none;        /* caché par défaut sur desktop */
+  display: none; /* caché par défaut sur desktop */
   align-items: center;
   justify-content: center;
 }
@@ -37,8 +40,6 @@ code {
   opacity: 0.8;
 }
 
-
-
 /* Responsive pour mobile (<768px) */
 @media (max-width: 767.98px) {
   /* Affiche le bouton toggle */
@@ -47,13 +48,13 @@ code {
     margin-right: 0.5rem;
   }
 
- #sidebar .orochi-rounded-lg{
+  #sidebar .orochi-rounded-lg {
     border: none;
   }
 
- #sidebar {
+  #sidebar {
     position: fixed;
-    top: 60px; 
+    top: 60px;
     left: 0;
     width: 80%;
     height: 100vh; /* Prend toute la hauteur visible */

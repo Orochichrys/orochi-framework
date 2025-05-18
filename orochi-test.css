@@ -603,20 +603,78 @@
 
 }
 
-/* .orochi-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-} */
+.orochi-card-img-top {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-top-left-radius: var(--orochi-rounded-md);
+  border-top-right-radius: var(--orochi-rounded-md);
+}
+
 
 .orochi-card-header {
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   background: var(--orochi-light);
   border-bottom: var(--orochi-border);
 }
 
+.orochi-card-footer {
+  padding: 1rem 1.5rem;
+  background-color: var(--orochi-light);
+  border-top: var(--orochi-border);
+}
+
 .orochi-card-body {
   padding: 1.5rem;
+}
+
+/* Effets de survol généraux */
+.orochi-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.orochi-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet de survol coloré */
+.orochi-card-hover-primary {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.orochi-card-hover-primary:hover {
+  border-color: var(--orochi-primary);
+  box-shadow: 0 0 0 3px rgba(var(--orochi-primary-rgb), 0.1);
+  background-color: rgba(var(--orochi-primary-rgb), 0.03);
+}
+
+/* Variantes supplémentaires */
+.orochi-card-hover-secondary:hover {
+  border-color: var(--orochi-secondary);
+  box-shadow: 0 0 0 3px rgba(var(--orochi-secondary-rgb), 0.1);
+}
+
+.orochi-card-hover-success:hover {
+  border-color: var(--orochi-success);
+  box-shadow: 0 0 0 3px rgba(var(--orochi-success-rgb), 0.1);
+}
+
+/* Effet "lift" accentué */
+.orochi-card-hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.orochi-card-hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+/* Effet de surbrillance */
+.orochi-card-hover-glow:hover {
+  box-shadow: 0 0 12px rgba(var(--orochi-primary-rgb), 0.2);
 }
 
 /* Formulaires */
@@ -1439,6 +1497,10 @@
 .orochi-text-decoration-none { text-decoration: none; }
 .orochi-text-decoration-underline { text-decoration: underline; }
 .orochi-text-decoration-line-through { text-decoration: line-through; }
+
+.orochi-text-muted {
+  color: rgba(var(--orochi-dark-rgb), 0.6);
+}
 
 /* Tailles de texte */
 .orochi-text-xs { font-size: 0.75rem; } /* 12px */
