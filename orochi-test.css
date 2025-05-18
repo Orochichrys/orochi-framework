@@ -643,6 +643,7 @@
   line-height: 1.5;
 }
 
+
 /* Variantes supplémentaires */
 .orochi-card-title-lg {
   font-size: 1.5rem;
@@ -705,6 +706,89 @@
   box-shadow: 0 0 12px rgba(var(--orochi-primary-rgb), 0.2);
 }
 
+
+/* Text Background System */
+[class*="orochi-text-bg-"] {
+  border: 1px solid transparent;
+  color: var(--orochi-white);
+  border-radius: var(--orochi-rounded-md);
+}
+
+[class*="orochi-text-bg-"] .orochi-card-title,
+[class*="orochi-text-bg-"] .orochi-card-text {
+  color: inherit;
+}
+
+/* Couleurs principales */
+.orochi-text-bg-primary {
+  background-color: var(--orochi-primary) !important;
+  border-color: var(--orochi-primary);
+}
+
+.orochi-text-bg-secondary {
+  background-color: var(--orochi-secondary) !important;
+  border-color: var(--orochi-secondary);
+}
+
+.orochi-text-bg-success {
+  background-color: var(--orochi-success) !important;
+  border-color: var(--orochi-success);
+}
+
+.orochi-text-bg-danger {
+  background-color: var(--orochi-danger) !important;
+  border-color: var(--orochi-danger);
+}
+
+/* Exceptions avec texte noir */
+.orochi-text-bg-warning {
+  background-color: var(--orochi-warning) !important;
+  border-color: var(--orochi-warning);
+  color: var(--orochi-dark) !important;
+}
+
+.orochi-text-bg-info {
+  background-color: var(--orochi-info) !important;
+  border-color: var(--orochi-info);
+  color: var(--orochi-dark) !important;
+}
+
+.orochi-text-bg-light {
+  background-color: var(--orochi-light) !important;
+  border-color: rgba(var(--orochi-dark-rgb), 0.1);
+  color: var(--orochi-dark) !important;
+}
+
+.orochi-text-bg-dark {
+  background-color: var(--orochi-dark) !important;
+  border-color: var(--orochi-dark);
+}
+
+/* Styles des sous-composants */
+[class*="orochi-text-bg-"] .orochi-card-header {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+[class*="orochi-text-bg-"] .orochi-card-footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Adaptation spécifique pour les fonds clairs */
+.orochi-text-bg-warning .orochi-card-header,
+.orochi-text-bg-info .orochi-card-header,
+.orochi-text-bg-light .orochi-card-header {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.orochi-text-bg-warning .orochi-card-footer,
+.orochi-text-bg-info .orochi-card-footer,
+.orochi-text-bg-light .orochi-card-footer {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top-color: rgba(0, 0, 0, 0.08);
+}
 /* Formulaires */
 .orochi-form-group {
   margin-bottom: 1rem;
