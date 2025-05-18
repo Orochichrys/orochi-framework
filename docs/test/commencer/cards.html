@@ -304,17 +304,20 @@
             <h2 class="orochi-text-dark orochi-mb-4">Carte simple</h2>
             <div class="orochi-row orochi-g-4">
               <div class="orochi-col-md-6">
-                <div class="orochi-card orochi-p-4">
-                  <h3 class="orochi-text-primary">Titre de la carte</h3>
-                  <p class="orochi-mt-2">Contenu de la carte avec texte basique et mise en forme simple.</p>
-                  <button class="orochi-btn orochi-btn-primary orochi-mt-3">Action</button>
+                <div class="orochi-card">
+                  <div class="orochi-card-body">
+                  <h3 class="orochi-card-title orochi-text-primary">Titre de la carte</h3>
+                  <p class="orochi-card-text">Contenu de la carte avec texte basique et mise en forme simple.</p>
+                  <button class="orochi-btn orochi-btn-primary">Action</button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded orochi-mt-4"><code>&lt;div class="orochi-card orochi-p-4"&gt;
-  &lt;h3&gt;Titre&lt;/h3&gt;
-  &lt;p&gt;Contenu&lt;/p&gt;
-  &lt;button class="orochi-btn orochi-btn-primary"&gt;Action&lt;/button&gt;
+            <pre class="orochi-bg-light orochi-p-3 orochi-rounded orochi-mt-4"><code>&lt;div class="orochi-card"&gt;
+  &lt;div class="orochi-card-body"&gt;
+    &lt;h3 class="orochi-card-title orochi-text-primary"&gt;Titre de la carte&lt;/h3&gt;
+    &lt;p class="orochi-card-text"&gt;Contenu de la carte avec texte basique et mise en forme simple.&lt;/p&gt;
+    &lt;button class="orochi-btn orochi-btn-primary"&gt;Action&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
           </section>
 
@@ -352,6 +355,7 @@
                 <div class="orochi-card-body">
                     <h4 class="orochi-card-title">Titre de la carte</h4>
                     <p class="orochi-card-text">Exemple de carte avec image en haut</p>
+                    <button class="orochi-btn orochi-btn-primary">Action</button>
                 </div>
             </div>
         </div>
@@ -361,6 +365,7 @@
   &lt;div class="orochi-card-body"&gt;
     &lt;h4 class="orochi-card-title"&gt;Titre&lt;/h4&gt;
     &lt;p class="orochi-card-text"&gt;Description&lt;/p&gt;
+    &lt;button class="orochi-btn orochi-btn-primary"&gt;Action&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </section>
@@ -394,21 +399,36 @@
             <h2 class="orochi-text-dark orochi-mb-4">Variantes de couleur</h2>
             <div class="orochi-row orochi-g-3">
               <div class="orochi-col-md-4">
-                <div class="orochi-card orochi-bg-primary orochi-text-white orochi-p-4">
-                  <h5>Carte Primaire</h5>
-                  <p>Avec fond coloré</p>
+                <div class="orochi-card orochi-bg-primary orochi-text-white">
+                  <div class="orochi-card-header">
+                    En-tête
+                  </div>
+                  <div class="orochi-card-body">
+                    <h5 class="orochi-card-title orochi-text-white">Carte Primaire</h5>
+                    <p class="orochi-card-text orochi-text-white">Avec fond coloré</p>
+                  </div>
                 </div>
               </div>
               <div class="orochi-col-md-4">
-                <div class="orochi-card orochi-bg-success orochi-text-white orochi-p-4">
-                  <h5>Carte Succès</h5>
-                  <p>Pour feedback positif</p>
+                <div class="orochi-card orochi-bg-success orochi-text-white">
+                  <div class="orochi-card-header">
+                    En-tête
+                  </div>
+                  <div class="orochi-card-body">
+                    <h5 class="orochi-card-title orochi-text-white">Carte Succès</h5>
+                    <p class="orochi-card-text orochi-text-white">Pour feedback positif</p>
+                  </div>
                 </div>
               </div>
               <div class="orochi-col-md-4">
-                <div class="orochi-card orochi-bg-danger orochi-text-white orochi-p-4">
-                  <h5>Carte Danger</h5>
-                  <p>Alerte importante</p>
+                <div class="orochi-card orochi-bg-danger orochi-text-white">
+                  <div class="orochi-card-header">
+                    En-tête
+                  </div>
+                  <div class="orochi-card-body">
+                    <h5 class="orochi-card-title orochi-text-white">Carte Danger</h5>
+                    <p class="orochi-card-text orochi-text-white">Alerte importante</p>
+                  </div>
                 </div>
               </div>
             </div>

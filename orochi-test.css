@@ -615,18 +615,46 @@
 
 .orochi-card-header {
   padding: 1rem 1.5rem;
-  background: var(--orochi-light);
   border-bottom: var(--orochi-border);
 }
 
 .orochi-card-footer {
   padding: 1rem 1.5rem;
-  background-color: var(--orochi-light);
   border-top: var(--orochi-border);
 }
 
 .orochi-card-body {
   padding: 1.5rem;
+}
+
+/* Ajouter ces styles dans la section des cartes */
+.orochi-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--orochi-dark);
+  line-height: 1.2;
+}
+
+.orochi-card-text {
+  font-size: 0.875rem;
+  color: rgba(var(--orochi-dark-rgb), 0.8);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Variantes supplémentaires */
+.orochi-card-title-lg {
+  font-size: 1.5rem;
+}
+
+
+.orochi-card-text-sm {
+  font-size: 0.8125rem;
+}
+
+.orochi-card-text-muted {
+  color: rgba(var(--orochi-dark-rgb), 0.6);
 }
 
 /* Effets de survol généraux */
