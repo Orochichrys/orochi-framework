@@ -37,9 +37,11 @@ npm install orochi-css
 ## Quick Example
 
 ```html
-<div class="orochi-container orochi-py-4 orochi-grid-12">
-  <div class="orochi-col-6">Column 1</div>
-  <div class="orochi-col-6">Column 2</div>
+<div class="orochi-container">
+  <div class="orochi-row orochi-g-2">
+    <div class="orochi-col-md-6">Colonne 1</div>
+    <div class="orochi-col-md-6">Colonne 2</div>
+  </div>
 </div>
 ```
 
