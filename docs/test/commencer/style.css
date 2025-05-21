@@ -2,16 +2,36 @@
 body {
   background-color: #f9f9f9;
 }
-pre {
-  background: #eee;
-  padding: 1rem;
-  border-radius: 5px;
-  overflow-x: auto;
+/* Custom code blocks */
+.orochi-code-block {
+  position: relative;
+  margin: 1.5rem 0;
+  border-radius: var(--orochi-rounded-md);
+  background: var(--orochi-dark) !important;
+  width: 100%;
 }
 
-code {
-  font-family: monospace;
-  color: #c7254e;
+.orochi-code-block pre[class*="language-"] {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  background: transparent;
+}
+
+.orochi-code-copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: var(--orochi-light);
+  cursor: pointer;
+  border-radius: var(--orochi-rounded-sm);
+  transition: all 0.2s ease;
+}
+
+.orochi-code-copy:hover {
+  background: var(--orochi-primary);
 }
 
 .alert-example {
