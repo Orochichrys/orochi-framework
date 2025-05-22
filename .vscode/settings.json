@@ -1,6 +1,12 @@
 {
-    "cSpell.words": [
-        "orochidropdown"
-    ],
-    "liveServer.settings.port": 5502
+  "cSpell.words": ["orochidropdown"],
+  "liveServer.settings.port": 5502,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
