@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navigation - Orochi Framework</title>
+  <link rel="stylesheet" href="../../../orochi-test.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+ <nav class="orochi-nav-wrapper orochi-sticky orochi-bg-white orochi-shadow-sm">
+    <div class="orochi-nav-container">
+        <button class="sidebar-toggler">
+          <i class="bx bx-grid-alt"></i>
+        </button>
+        <a href="../../../index.html" class="orochi-brand orochi-text-primary"><i
+            class="fas fa-dragon orochi-text-primary"></i>Orochi</a>
+        <button class="orochi-menu-toggler">
+          <span class="orochi-menu-toggler-icon"></span>
+        </button>
+        <ul class="orochi-menu">
+          <li class="orochi-menu-item">
+            <a href="introduction.html" class="orochi-menu-link">Documentation</a>
+          </li>
+          <li class="orochi-menu-item">
+            <a href="#" class="orochi-menu-link">Exemples</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="orochi-container orochi-mt-4">
+    <div class="orochi-row orochi-g-4">
+
+      <!-- Sidebar -->
+      <div class="orochi-col-12 orochi-col-md-3">
+        <div
+          id="sidebar"
+          class="orochi-card orochi-sticky orochi-p-4 orochi-rounded-lg"
+        >
+          <nav class="orochi-d-flex orochi-flex-column orochi-gap-3">
+            <div class="orochi-mb-3">
+              <h4 class="orochi-text-primary orochi-mb-2 orochi-text-bold orochi-text-uppercase">
+                🧭 Navigation
+              </h4>
+              <div class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2">
+                <a href="#basic" class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-menu orochi-me-2"></i>Base
+                </a>
+                <a href="#dropdown" class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-chevron-down orochi-me-2"></i>Dropdown
+                </a>
+                <a href="#colors" class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-palette orochi-me-2"></i>Couleurs
+                </a>
+                <a href="#position" class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-move orochi-me-2"></i>Positionnement
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Contenu -->
+      <div class="orochi-col-12 orochi-col-md-9">
+        <div class="orochi-card orochi-p-4">
+          <h1 class="orochi-title orochi-text-primary orochi-mb-4">🧭 Navigation Orochi</h1>
+          <p class="orochi-lead orochi-mb-5">Système de navigation flexible et personnalisable</p>
+
+          <!-- Navbar de base -->
+          <section id="basic" class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-4">Navigation de base</h2>
+            <div class="orochi-mb-4">
+              <nav class="orochi-nav-wrapper orochi-bg-light">
+                <div class="orochi-nav-container">
+                    <a href="#" class="orochi-brand">Logo</a>
+                    <ul class="orochi-menu">
+                      <li class="orochi-menu-item"><a href="#" class="orochi-menu-link">Accueil</a></li>
+                      <li class="orochi-menu-item"><a href="#" class="orochi-menu-link">Services</a></li>
+                      <li class="orochi-menu-item"><a href="#" class="orochi-menu-link">Contact</a></li>
+                    </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;nav class="orochi-nav-wrapper orochi-bg-light"&gt;
+  &lt;div class="orochi-nav-container"&gt;
+      &lt;a href="#" class="orochi-brand"&gt;Logo&lt;/a&gt;
+      &lt;ul class="orochi-menu"&gt;
+        &lt;li class="orochi-menu-item"&gt;&lt;a href="#" class="orochi-menu-link"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="orochi-menu-item"&gt;&lt;a href="#" class="orochi-menu-link"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="orochi-menu-item"&gt;&lt;a href="#" class="orochi-menu-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+          </section>
+
+          <!-- Dropdown -->
+          <section id="dropdown" class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-4">Avec dropdown</h2>
+            <div class="orochi-mb-4">
+              <nav class="orochi-nav-wrapper orochi-bg-primary orochi-text-bg-primary">
+                <div class="orochi-nav-container">
+                  <div class="orochi-d-flex orochi-items-center orochi-justify-between">
+                    <a href="#" class="orochi-brand">Menu</a>
+                    <ul class="orochi-menu">
+                      <li class="orochi-menu-item orochi-dropdown">
+                        <a href="#" class="orochi-menu-link">Produits</a>
+                        <ul class="orochi-dropdown-menu">
+                          <li><a href="#" class="orochi-dropdown-item">Logiciels</a></li>
+                          <li><a href="#" class="orochi-dropdown-item">Applications</a></li>
+                        </ul>
+                      </li>
+                      <li class="orochi-menu-item"><a href="#" class="orochi-menu-link">Support</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;nav class="orochi-nav-wrapper orochi-bg-primary orochi-text-bg-primary"&gt;
+  &lt;div class="orochi-nav-container"&gt;
+    &lt;div class="orochi-d-flex orochi-items-center orochi-justify-between"&gt;
+      &lt;a href="#" class="orochi-brand"&gt;Menu&lt;/a&gt;
+      &lt;ul class="orochi-menu"&gt;
+        &lt;li class="orochi-menu-item orochi-dropdown"&gt;
+          &lt;a href="#" class="orochi-menu-link"&gt;Produits&lt;/a&gt;
+          &lt;ul class="orochi-dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#" class="orochi-dropdown-item"&gt;Logiciels&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="orochi-dropdown-item"&gt;Applications&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="orochi-menu-item"&gt;&lt;a href="#" class="orochi-menu-link"&gt;Support&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+          </section>
+
+          <!-- Couleurs -->
+          <section id="colors" class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-4">Variantes de couleur</h2>
+            <div class="orochi-row orochi-g-3">
+              <div class="orochi-col-md-6">
+                <nav class="orochi-nav-wrapper orochi-bg-danger orochi-text-bg-danger">
+                  <div class="orochi-nav-container">
+                    <!-- Contenu navbar -->
+                  </div>
+                </nav>
+              </div>
+              <div class="orochi-col-md-6">
+                <nav class="orochi-nav-wrapper orochi-bg-dark orochi-text-bg-dark">
+                  <div class="orochi-nav-container">
+                    <!-- Contenu navbar -->
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;!-- Danger --&gt;
+&lt;nav class="orochi-nav-wrapper orochi-bg-danger orochi-text-bg-danger"&gt;...&lt;/nav&gt;
+
+&lt;!-- Dark --&gt;
+&lt;nav class="orochi-nav-wrapper orochi-bg-dark orochi-text-bg-dark"&gt;...&lt;/nav&gt;</code></pre>
+            </div>
+          </section>
+
+          <!-- Positionnement -->
+          <section id="position" class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-4">Position fixed</h2>
+            <div class="orochi-mb-4">
+              <nav class="orochi-nav-wrapper orochi-fixed orochi-top-0 orochi-w-100">
+                <!-- Contenu navbar -->
+              </nav>
+            </div>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;nav class="orochi-nav-wrapper orochi-fixed orochi-top-0 orochi-w-100"&gt;
+  &lt;!-- Contenu navigation --&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="orochi-bg-dark orochi-text-light orochi-py-4 orochi-mt-5">
+    <div class="orochi-d-flex orochi-justify-center orochi-gap-3">
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-facebook-circle orochi-text-h3"></i>
+      </a>
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-twitter orochi-text-h3"></i>
+      </a>
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-github orochi-text-h3"></i>
+      </a>
+    </div>
+    <div class="orochi-container orochi-mt-2">
+      <div class="orochi-text-center">
+        <p class="orochi-mb-0">
+          &copy; 2025 Orochi CSS - Tous droits réservés
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../orochi-test.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+</body>
+</html>
