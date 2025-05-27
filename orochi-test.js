@@ -1,33 +1,30 @@
 let toggler = document.querySelector('.orochi-nav-toggler');
-let togglerIcon = document.createElement('span');
-togglerIcon.className = 'orochi-nav-toggler-icon';
+let togglerIcon = document.querySelector('.orochi-nav-toggler-icon');
+
 // Icône initiale
 togglerIcon.textContent = '☰';
-toggler.appendChild(togglerIcon);
 
 // Dropdown arrows
-document
-  .querySelectorAll('.orochi-dropdown > .orochi-nav-link')
-  .forEach((link) => {
-    link.textContent += ' ▾';
-    const toggleArrow = () => {
-      link.textContent = link.textContent.includes('▾')
-        ? link.textContent.replace('▾', '▴')
-        : link.textContent.replace('▴', '▾');
-    };
-    ['click', 'mouseover', 'mouseout'].forEach((evt) =>
-      link.addEventListener(evt, toggleArrow)
-    );
-  });
+document.querySelectorAll('.orochi-dropdown > .orochi-nav-link').forEach(link => {
+  link.textContent += ' ▾';
+  const toggleArrow = () => {
+    link.textContent = link.textContent.includes('▾') ? 
+      link.textContent.replace('▾','▴') : link.textContent.replace('▴','▾');
+  };
+  ['click','mouseover','mouseout'].forEach(evt =>
+    link.addEventListener(evt, toggleArrow)
+  );
+});
 
-// Toggle mobile menu
+// Toggle mobile menu corrigé
 toggler.addEventListener('click', () => {
-  let menu = document.querySelector('.orochi-nav-wrapper');
-  if (menu.classList.contains('orochi-nav-active')) {
-    menu.classList.remove('orochi-nav-active');
+  let navWrapper = document.querySelector('.orochi-nav-wrapper');
+  
+  if(navWrapper.classList.contains('orochi-nav-wrapper-active')) {
+    navWrapper.classList.remove('orochi-nav-wrapper-active');
     togglerIcon.textContent = '☰';
   } else {
-    menu.classList.add('orochi-nav-active');
+    navWrapper.classList.add('orochi-nav-wrapper-active');
     togglerIcon.textContent = '✖';
   }
 });

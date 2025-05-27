@@ -15,7 +15,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="orochi-nav-wrapper orochi-sticky orochi-bg-white orochi-shadow-sm">
+    <nav class="orochi-navbar orochi-sticky orochi-bg-white orochi-shadow-sm">
     <div class="orochi-nav-container">
       <button class="sidebar-toggler">
         <i class="bx bx-grid-alt"></i>
@@ -25,6 +25,7 @@
       <button class="orochi-nav-toggler">
         <span class="orochi-nav-toggler-icon"></span>
       </button>
+      <div class="orochi-nav-wrapper">
       <ul class="orochi-nav">
         <li class="orochi-nav-item">
           <a href="introduction.html" class="orochi-nav-link">Documentation</a>
@@ -33,7 +34,12 @@
           <a href="#" class="orochi-nav-link">Exemples</a>
         </li>
       </ul>
+      <form class="orochi-d-flex">
+          <input type="search" class="orochi-form-input orochi-me-2">
+          <button class="orochi-btn orochi-btn-outline-primary">Recherche</button>
+        </form>
     </div>
+  </div>
   </nav>
 
   <!-- Contenu principal -->
@@ -81,7 +87,7 @@
           <section id="basic" class="orochi-mb-6">
             <h2 class="orochi-text-dark orochi-mb-4">Navigation de base</h2>
             <div class="orochi-mb-4">
-              <nav class="orochi-nav-wrapper orochi-bg-light">
+              <nav class="orochi-navbar orochi-bg-light">
                 <div class="orochi-nav-container">
                   <a href="#" class="orochi-brand">Logo</a>
                   <ul class="orochi-nav">
@@ -93,7 +99,7 @@
               </nav>
             </div>
             <div class="orochi-code-block">
-              <pre class="language-html"><code>&lt;nav class="orochi-nav-wrapper orochi-bg-light"&gt;
+              <pre class="language-html"><code>&lt;nav class="orochi-navbar orochi-bg-light"&gt;
   &lt;div class="orochi-nav-container"&gt;
       &lt;a href="#" class="orochi-brand"&gt;Logo&lt;/a&gt;
       &lt;ul class="orochi-nav"&gt;
@@ -110,7 +116,7 @@
           <section id="dropdown" class="orochi-mb-6">
             <h2 class="orochi-text-dark orochi-mb-4">Avec dropdown</h2>
             <div class="orochi-mb-4">
-              <nav class="orochi-nav-wrapper orochi-bg-primary orochi-text-bg-primary">
+              <nav class="orochi-navbar orochi-bg-primary orochi-text-bg-primary">
                 <div class="orochi-nav-container">
                   <div class="orochi-d-flex orochi-items-center orochi-justify-between">
                     <a href="#" class="orochi-brand">Menu</a>
@@ -129,7 +135,7 @@
               </nav>
             </div>
             <div class="orochi-code-block">
-              <pre class="language-html"><code>&lt;nav class="orochi-nav-wrapper orochi-bg-primary orochi-text-bg-primary"&gt;
+              <pre class="language-html"><code>&lt;nav class="orochi-navbar orochi-bg-primary orochi-text-bg-primary"&gt;
   &lt;div class="orochi-nav-container"&gt;
     &lt;div class="orochi-d-flex orochi-items-center orochi-justify-between"&gt;
       &lt;a href="#" class="orochi-brand"&gt;Menu&lt;/a&gt;
@@ -154,14 +160,14 @@
             <h2 class="orochi-text-dark orochi-mb-4">Variantes de couleur</h2>
             <div class="orochi-row orochi-g-3">
               <div class="orochi-col-md-6">
-                <nav class="orochi-nav-wrapper orochi-bg-danger orochi-text-bg-danger">
+                <nav class="orochi-navbar orochi-bg-danger orochi-text-bg-danger">
                   <div class="orochi-nav-container">
                     <!-- Contenu navbar -->
                   </div>
                 </nav>
               </div>
               <div class="orochi-col-md-6">
-                <nav class="orochi-nav-wrapper orochi-bg-dark orochi-text-bg-dark">
+                <nav class="orochi-navbar orochi-bg-dark orochi-text-bg-dark">
                   <div class="orochi-nav-container">
                     <!-- Contenu navbar -->
                   </div>
@@ -170,10 +176,10 @@
             </div>
             <div class="orochi-code-block">
               <pre class="language-html"><code>&lt;!-- Danger --&gt;
-&lt;nav class="orochi-nav-wrapper orochi-bg-danger orochi-text-bg-danger"&gt;...&lt;/nav&gt;
+&lt;nav class="orochi-navbar orochi-bg-danger orochi-text-bg-danger"&gt;...&lt;/nav&gt;
 
 &lt;!-- Dark --&gt;
-&lt;nav class="orochi-nav-wrapper orochi-bg-dark orochi-text-bg-dark"&gt;...&lt;/nav&gt;</code></pre>
+&lt;nav class="orochi-navbar orochi-bg-dark orochi-text-bg-dark"&gt;...&lt;/nav&gt;</code></pre>
             </div>
           </section>
 
@@ -181,12 +187,12 @@
           <section id="position" class="orochi-mb-6">
             <h2 class="orochi-text-dark orochi-mb-4">Position fixed</h2>
             <div class="orochi-mb-4">
-              <nav class="orochi-nav-wrapper orochi-fixed orochi-top-0 orochi-w-100">
+              <nav class="orochi-navbar orochi-fixed orochi-top-0 orochi-w-100">
                 <!-- Contenu navbar -->
               </nav>
             </div>
             <div class="orochi-code-block">
-              <pre class="language-html"><code>&lt;nav class="orochi-nav-wrapper orochi-fixed orochi-top-0 orochi-w-100"&gt;
+              <pre class="language-html"><code>&lt;nav class="orochi-navbar orochi-fixed orochi-top-0 orochi-w-100"&gt;
   &lt;!-- Contenu navigation --&gt;
 &lt;/nav&gt;</code></pre>
             </div>
