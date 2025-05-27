@@ -1,30 +1,33 @@
-let toggler = document.querySelector('.orochi-menu-toggler');
+let toggler = document.querySelector('.orochi-nav-toggler');
 let togglerIcon = document.createElement('span');
-togglerIcon.className = 'orochi-menu-toggler-icon';
+togglerIcon.className = 'orochi-nav-toggler-icon';
 // Icône initiale
 togglerIcon.textContent = '☰';
 toggler.appendChild(togglerIcon);
 
 // Dropdown arrows
-document.querySelectorAll('.orochi-dropdown > .orochi-menu-link').forEach(link => {
-  link.textContent += ' ▾';
-  const toggleArrow = () => {
-    link.textContent = link.textContent.includes('▾') ?
-      link.textContent.replace('▾','▴') : link.textContent.replace('▴','▾');
-  };
-  ['click','mouseover','mouseout'].forEach(evt =>
-    link.addEventListener(evt, toggleArrow)
-  );
-});
+document
+  .querySelectorAll('.orochi-dropdown > .orochi-nav-link')
+  .forEach((link) => {
+    link.textContent += ' ▾';
+    const toggleArrow = () => {
+      link.textContent = link.textContent.includes('▾')
+        ? link.textContent.replace('▾', '▴')
+        : link.textContent.replace('▴', '▾');
+    };
+    ['click', 'mouseover', 'mouseout'].forEach((evt) =>
+      link.addEventListener(evt, toggleArrow)
+    );
+  });
 
 // Toggle mobile menu
 toggler.addEventListener('click', () => {
-  let menu = document.querySelector('.orochi-menu');
-  if(menu.classList.contains('orochi-menu-active')){
-    menu.classList.remove('orochi-menu-active');
+  let menu = document.querySelector('.orochi-nav-wrapper');
+  if (menu.classList.contains('orochi-nav-active')) {
+    menu.classList.remove('orochi-nav-active');
     togglerIcon.textContent = '☰';
   } else {
-    menu.classList.add('orochi-menu-active');
+    menu.classList.add('orochi-nav-active');
     togglerIcon.textContent = '✖';
   }
 });
@@ -38,31 +41,35 @@ class OrochiModal {
 
   init() {
     // Ouverture modale
-    document.querySelectorAll('[data-orochi-modal-target]').forEach(trigger => {
-      const target = trigger.dataset.orochiModalTarget;
-      const modal = document.querySelector(target);
-      
-      if(modal) {
-        this.modals.push(modal);
-        trigger.addEventListener('click', () => this.open(modal));
-      }
-    });
+    document
+      .querySelectorAll('[data-orochi-modal-target]')
+      .forEach((trigger) => {
+        const target = trigger.dataset.orochiModalTarget;
+        const modal = document.querySelector(target);
+
+        if (modal) {
+          this.modals.push(modal);
+          trigger.addEventListener('click', () => this.open(modal));
+        }
+      });
 
     // Fermeture
-    document.querySelectorAll('[data-orochi-modal-close]').forEach(btn => {
-      btn.addEventListener('click', () => this.close(btn.closest('.orochi-modal')));
+    document.querySelectorAll('[data-orochi-modal-close]').forEach((btn) => {
+      btn.addEventListener('click', () =>
+        this.close(btn.closest('.orochi-modal'))
+      );
     });
 
     // Fermeture externe
-    document.addEventListener('click', e => {
-      if(e.target.classList.contains('orochi-modal')) {
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('orochi-modal')) {
         this.close(e.target);
       }
     });
 
     // Gestion ESC
-    document.addEventListener('keydown', e => {
-      if(e.key === 'Escape') this.closeAll();
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') this.closeAll();
     });
   }
 
@@ -78,17 +85,21 @@ class OrochiModal {
   }
 
   closeAll() {
-    this.modals.forEach(modal => this.close(modal));
+    this.modals.forEach((modal) => this.close(modal));
   }
 
   trapFocus(modal) {
-    const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-    if(focusable.length) focusable[0].focus();
+    const focusable = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusable.length) focusable[0].focus();
   }
 
   releaseFocus() {
-    const trigger = document.querySelector('[data-orochi-modal-target][aria-expanded="true"]');
-    if(trigger) trigger.focus();
+    const trigger = document.querySelector(
+      '[data-orochi-modal-target][aria-expanded="true"]'
+    );
+    if (trigger) trigger.focus();
   }
 }
 

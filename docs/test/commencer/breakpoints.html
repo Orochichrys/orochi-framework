@@ -1,316 +1,266 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Points d'arrêt - Orochi Framework</title>
-    <link rel="stylesheet" href="../../../orochi-test.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Points d'arrêt - Orochi Framework</title>
+  <link rel="stylesheet" href="../../../orochi-test.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav
-      class="orochi-nav-wrapper orochi-sticky orochi-bg-white orochi-shadow-sm"
-    >
-      <div class="orochi-nav-container">
-          <button class="sidebar-toggler">
-            <i class="bx bx-grid-alt"></i>
-          </button>
-          <a href="../../../index.html" class="orochi-brand orochi-text-primary"
-            ><i class="fas fa-dragon orochi-text-primary"></i>Orochi</a
-          >
-          <button class="orochi-menu-toggler">
-            <span class="orochi-menu-toggler-icon"></span>
-          </button>
-          <ul class="orochi-menu">
-            <li class="orochi-menu-item">
-              <a href="introduction.html" class="orochi-menu-link"
-                >Documentation</a
-              >
-            </li>
-            <li class="orochi-menu-item">
-              <a href="#" class="orochi-menu-link">Exemples</a>
-            </li>
-          </ul>
-      </div>
-    </nav>
+  <!-- Navigation -->
+  <nav class="orochi-nav-wrapper orochi-sticky orochi-bg-white orochi-shadow-sm">
+    <div class="orochi-nav-container">
+      <button class="sidebar-toggler">
+        <i class="bx bx-grid-alt"></i>
+      </button>
+      <a href="../../../index.html" class="orochi-brand orochi-text-primary"><i
+          class="fas fa-dragon orochi-text-primary"></i>Orochi</a>
+      <button class="orochi-nav-toggler">
+        <span class="orochi-nav-toggler-icon"></span>
+      </button>
+      <ul class="orochi-nav">
+        <li class="orochi-nav-item">
+          <a href="introduction.html" class="orochi-nav-link">Documentation</a>
+        </li>
+        <li class="orochi-nav-item">
+          <a href="#" class="orochi-nav-link">Exemples</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Contenu principal -->
-    <div class="orochi-container orochi-mt-4">
-        <div class="orochi-row orochi-g-4">
-        <!-- Sidebar -->
-        <div class="orochi-col-12 orochi-col-md-3">
-          <div
-            id="sidebar"
-            class="orochi-card orochi-sticky orochi-p-4 orochi-rounded-lg"
-          >
-            <nav class="orochi-d-flex orochi-flex-column orochi-gap-3">
-              <!-- Section : Commencer -->
-              <div class="orochi-mb-3">
-                <h4
-                  class="orochi-text-primary orochi-mb-2 orochi-text-bold orochi-text-uppercase"
-                >
-                  📚 Commencer
-                </h4>
-                <div
-                  class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2"
-                >
-                  <a
-                    href="introduction.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-chevron-right orochi-me-2"></i>Introduction
-                  </a>
-                  <a
-                    href="installation.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-chevron-right orochi-me-2"></i>Installation
-                  </a>
-                </div>
+  <!-- Contenu principal -->
+  <div class="orochi-container orochi-mt-4">
+    <div class="orochi-row orochi-g-4">
+      <!-- Sidebar -->
+      <div class="orochi-col-12 orochi-col-md-3">
+        <div id="sidebar" class="orochi-card orochi-sticky orochi-p-4 orochi-rounded-lg">
+          <nav class="orochi-d-flex orochi-flex-column orochi-gap-3">
+            <!-- Section : Commencer -->
+            <div class="orochi-mb-3">
+              <h4 class="orochi-text-primary orochi-mb-2 orochi-text-bold orochi-text-uppercase">
+                📚 Commencer
+              </h4>
+              <div class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2">
+                <a href="introduction.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-chevron-right orochi-me-2"></i>Introduction
+                </a>
+                <a href="installation.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-chevron-right orochi-me-2"></i>Installation
+                </a>
               </div>
+            </div>
 
-              <!-- Section : Mise en page -->
-              <div class="orochi-mb-3">
-                <h4
-                  class="orochi-text-dark orochi-mb-2 orochi-text-bold orochi-text-uppercase"
-                >
-                  🧱 Mise en page
-                </h4>
-                <div
-                  class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2"
-                >
-                  <a
-                    href="breakpoints.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-mobile-alt orochi-me-2"></i>Points d'arrêt
-                  </a>
-                  <a
-                    href="containers.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-box orochi-me-2"></i>Conteneurs
-                  </a>
+            <!-- Section : Mise en page -->
+            <div class="orochi-mb-3">
+              <h4 class="orochi-text-dark orochi-mb-2 orochi-text-bold orochi-text-uppercase">
+                🧱 Mise en page
+              </h4>
+              <div class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2">
+                <a href="breakpoints.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-mobile-alt orochi-me-2"></i>Points d'arrêt
+                </a>
+                <a href="containers.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-box orochi-me-2"></i>Conteneurs
+                </a>
 
-                  <a
-                    href="spacing.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-space-bar orochi-me-2"></i>Espacement
-                  </a>
-                  <a
-                    href="grid.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-grid orochi-me-2"></i>Système de grille
-                  </a>
-                </div>
+                <a href="spacing.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-space-bar orochi-me-2"></i>Espacement
+                </a>
+                <a href="grid.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-grid orochi-me-2"></i>Système de grille
+                </a>
               </div>
+            </div>
 
-              <!-- Section : Composants -->
-              <div class="orochi-mb-3">
-                <h4
-                  class="orochi-text-dark orochi-mb-2 orochi-text-bold orochi-text-uppercase"
-                >
-                  🧩 Composants
-                </h4>
-                <div
-                  class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2"
-                >
-                  <a
-                    href="buttons.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-square-rounded orochi-me-2"></i>Boutons
-                  </a>
-                  <a
-                    href="cards.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-layer orochi-me-2"></i>Cartes
-                  </a>
-                  <a
-                    href="alerts.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-message-alt-error orochi-me-2"></i>Alertes
-                  </a>
-                </div>
+            <!-- Section : Composants -->
+            <div class="orochi-mb-3">
+              <h4 class="orochi-text-dark orochi-mb-2 orochi-text-bold orochi-text-uppercase">
+                🧩 Composants
+              </h4>
+              <div class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2">
+                <a href="buttons.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-square-rounded orochi-me-2"></i>Boutons
+                </a>
+                <a href="cards.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-layer orochi-me-2"></i>Cartes
+                </a>
+                <a href="alerts.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-message-alt-error orochi-me-2"></i>Alertes
+                </a>
               </div>
+            </div>
 
-              <!-- Section : Formulaires -->
-              <div class="orochi-mb-3">
-                <h4
-                  class="orochi-text-dark orochi-mb-2 orochi-text-bold orochi-text-uppercase"
-                >
-                  📝 Formulaires
-                </h4>
-                <div
-                  class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2"
-                >
-                  <a
-                    href="inputs.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-input orochi-me-2"></i>Champs de saisie
-                  </a>
-                  <a
-                    href="checkboxes.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-checkbox orochi-me-2"></i>Cases à cocher
-                  </a>
-                  <a
-                    href="selects.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-list-ul orochi-me-2"></i>Listes déroulantes
-                  </a>
-                </div>
+            <!-- Section : Formulaires -->
+            <div class="orochi-mb-3">
+              <h4 class="orochi-text-dark orochi-mb-2 orochi-text-bold orochi-text-uppercase">
+                📝 Formulaires
+              </h4>
+              <div class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2">
+                <a href="inputs.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-input orochi-me-2"></i>Champs de saisie
+                </a>
+                <a href="checkboxes.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-checkbox orochi-me-2"></i>Cases à cocher
+                </a>
+                <a href="selects.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-list-ul orochi-me-2"></i>Listes déroulantes
+                </a>
               </div>
+            </div>
 
-              <!-- Section : Utilitaires -->
-              <div>
-                <h4
-                  class="orochi-text-dark orochi-mb-2 orochi-text-bold orochi-text-uppercase"
-                >
-                  ⚙️ Utilitaires
-                </h4>
-                <div
-                  class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2"
-                >
-                  <a
-                    href="spacing.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-space-bar orochi-me-2"></i>Espacement
-                  </a>
+            <!-- Section : Utilitaires -->
+            <div>
+              <h4 class="orochi-text-dark orochi-mb-2 orochi-text-bold orochi-text-uppercase">
+                ⚙️ Utilitaires
+              </h4>
+              <div class="orochi-ms-3 orochi-d-flex orochi-flex-column orochi-gap-2">
+                <a href="spacing.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-space-bar orochi-me-2"></i>Espacement
+                </a>
 
-                  <a
-                    href="flexbox.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-layout orochi-me-2"></i>Flexbox
-                  </a>
+                <a href="flexbox.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-layout orochi-me-2"></i>Flexbox
+                </a>
 
-                  <a
-                    href="grid.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-grid-alt orochi-me-2"></i>Grille CSS
-                  </a>
+                <a href="grid.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-grid-alt orochi-me-2"></i>Grille CSS
+                </a>
 
-                  <a
-                    href="position.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-move orochi-me-2"></i>Positionnement
-                  </a>
+                <a href="position.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-move orochi-me-2"></i>Positionnement
+                </a>
 
-                  <a
-                    href="visibility.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-show orochi-me-2"></i>Visibilité
-                  </a>
+                <a href="visibility.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-show orochi-me-2"></i>Visibilité
+                </a>
 
-                  <a
-                    href="shadows.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-shadow orochi-me-2"></i>Ombres
-                  </a>
+                <a href="shadows.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-shadow orochi-me-2"></i>Ombres
+                </a>
 
-                  <a
-                    href="borders.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-border-all orochi-me-2"></i>Bordures
-                  </a>
+                <a href="borders.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-border-all orochi-me-2"></i>Bordures
+                </a>
 
-                  <a
-                    href="interactivity.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-pointer orochi-me-2"></i>Interactions
-                  </a>
+                <a href="interactivity.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-pointer orochi-me-2"></i>Interactions
+                </a>
 
-                  <a
-                    href="typography.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-text orochi-me-2"></i>Typographie
-                  </a>
+                <a href="typography.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-text orochi-me-2"></i>Typographie
+                </a>
 
-                  <a
-                    href="opacity.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-low-vision orochi-me-2"></i>Opacité
-                  </a>
+                <a href="opacity.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-low-vision orochi-me-2"></i>Opacité
+                </a>
 
-                  <a
-                    href="overflow.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-collapse orochi-me-2"></i>Overflow
-                  </a>
+                <a href="overflow.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-collapse orochi-me-2"></i>Overflow
+                </a>
 
-                  <a
-                    href="z-index.html"
-                    class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded"
-                  >
-                    <i class="bx bx-layer orochi-me-2"></i>Z-index
-                  </a>
-                </div>
+                <a href="z-index.html"
+                  class="orochi-text-dark orochi-text-decoration-none orochi-hover-text-primary orochi-d-block orochi-ps-3 orochi-py-1 orochi-hover-bg-light orochi-rounded">
+                  <i class="bx bx-layer orochi-me-2"></i>Z-index
+                </a>
               </div>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
+      </div>
 
 
-            <!-- Contenu -->
-            <div class="orochi-col-12 orochi-col-md-9">
-                <div class="orochi-card orochi-p-4">
-                    <section id="breakpoints-intro">
-                        <h1 class="orochi-title orochi-text-primary">📱 Points d'arrêt</h1>
-                        <p class="orochi-lead">
-                            Les points d'arrêt (breakpoints) définissent les différentes tailles d'écran pour le design responsive.
-                        </p>
+      <!-- Contenu -->
+      <div class="orochi-col-12 orochi-col-md-9">
+        <div class="orochi-card orochi-p-4">
+          <section id="breakpoints-intro">
+            <h1 class="orochi-title orochi-text-primary">📱 Points d'arrêt</h1>
+            <p class="orochi-lead">
+              Les points d'arrêt (breakpoints) définissent les différentes tailles d'écran pour le design responsive.
+            </p>
 
-                        <!-- Tableau des breakpoints -->
-                        <section class="orochi-mt-5">
-                            <h2 class="orochi-text-dark">Échelle des breakpoints</h2>
-                            <div class="orochi-table-responsive">
-                                <table class="orochi-table orochi-table-bordered">
-                                    <thead class="orochi-bg-light">
-                                        <tr>
-                                            <th>Classe</th>
-                                            <th>Taille</th>
-                                            <th>Appareils</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td>xs</td><td>&lt;576px</td><td>Téléphones</td></tr>
-                                        <tr><td>sm</td><td>≥576px</td><td>Grands téléphones</td></tr>
-                                        <tr><td>md</td><td>≥768px</td><td>Tablettes</td></tr>
-                                        <tr><td>lg</td><td>≥992px</td><td>Ordinateurs portables</td></tr>
-                                        <tr><td>xl</td><td>≥1200px</td><td>Ordinateurs de bureau</td></tr>
-                                        <tr><td>xxl</td><td>≥1400px</td><td>Grands écrans</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
+            <!-- Tableau des breakpoints -->
+            <section class="orochi-mt-5">
+              <h2 class="orochi-text-dark">Échelle des breakpoints</h2>
+              <div class="orochi-table-responsive">
+                <table class="orochi-table orochi-table-bordered">
+                  <thead class="orochi-bg-light">
+                    <tr>
+                      <th>Classe</th>
+                      <th>Taille</th>
+                      <th>Appareils</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>xs</td>
+                      <td>&lt;576px</td>
+                      <td>Téléphones</td>
+                    </tr>
+                    <tr>
+                      <td>sm</td>
+                      <td>≥576px</td>
+                      <td>Grands téléphones</td>
+                    </tr>
+                    <tr>
+                      <td>md</td>
+                      <td>≥768px</td>
+                      <td>Tablettes</td>
+                    </tr>
+                    <tr>
+                      <td>lg</td>
+                      <td>≥992px</td>
+                      <td>Ordinateurs portables</td>
+                    </tr>
+                    <tr>
+                      <td>xl</td>
+                      <td>≥1200px</td>
+                      <td>Ordinateurs de bureau</td>
+                    </tr>
+                    <tr>
+                      <td>xxl</td>
+                      <td>≥1400px</td>
+                      <td>Grands écrans</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-                        <!-- Exemple de media queries -->
-                        <section class="orochi-mt-5">
-                          <h2 class="orochi-text-dark">Utilisation dans le CSS</h2>
-                          <div class="orochi-code-block">
-                            <pre class="language-css"><code>
+            <!-- Exemple de media queries -->
+            <section class="orochi-mt-5">
+              <h2 class="orochi-text-dark">Utilisation dans le CSS</h2>
+              <div class="orochi-code-block">
+                <pre class="language-css"><code>
 /* Exemple de media query */
 @media (min-width: 768px) {
   .orochi-container {
@@ -318,106 +268,107 @@
   }
 }
 </code></pre>
-</div>
-                        </section>
-                        </section>
+              </div>
+            </section>
+          </section>
 
-                        <!-- Exemple visuel -->
-                        <section class="orochi-mt-5">
-                            <h2 class="orochi-text-dark">Comportement responsive</h2>
-                            <div class="orochi-row orochi-g-3">
-                                <div class="orochi-col-12 orochi-col-md-6 orochi-col-xl-4">
-                                    <div class="breakpoint-visual">
-                                        <div class="orochi-d-none orochi-d-md-block orochi-text-center">
-                                            Visible à partir de md (≥768px)
-                                        </div>
-                                        <div class="orochi-d-md-none orochi-text-center">
-                                            Visible en dessous de md
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="orochi-col-12 orochi-col-md-6 orochi-col-xl-4">
-                                    <div class="breakpoint-visual">
-                                        <div class="orochi-d-none orochi-d-lg-block orochi-text-center">
-                                            Visible à partir de lg (≥992px)
-                                        </div>
-                                        <div class="orochi-d-lg-none orochi-text-center">
-                                            Visible en dessous de lg
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Utilitaires responsives -->
-                        <section class="orochi-mt-5">
-                            <h2 class="orochi-text-dark">Classes responsives</h2>
-                            <div class="orochi-alert orochi-alert-info">
-                                Combinez les suffixes de breakpoint avec les classes utilitaires :
-                            <div class="orochi-code-block">
-                              <pre class="language-html"><code>&lt;div class="orochi-col-md-6 orochi-d-none-sm"&gt;&lt;/div&gt;</code></pre>
-                            </div>
-                            <h4 class="orochi-mt-3">Exemples courants :</h4>
-                            <ul class="orochi-list-unstyled">
-                                <li><code>.orochi-col-md-*</code> - Colonnes pour tablettes</li>
-                                <li><code>.orochi-d-none-sm</code> - Masqué sur mobiles</li>
-                                <li><code>.orochi-text-center-lg</code> - Centrage sur desktop</li>
-                            </ul>
-                        </section>
-
-                        <!-- Bonnes pratiques -->
-                        <section class="orochi-mt-5">
-                            <h2 class="orochi-text-dark">💡 Bonnes pratiques</h2>
-                            <div class="orochi-card orochi-bg-light">
-                                <div class="orochi-card-body">
-                                    <ul class="orochi-list-unstyled">
-                                        <li class="orochi-mb-2">
-                                            <i class="bx bx-check-circle orochi-me-2 orochi-text-success"></i>
-                                            Développez en mobile-first (commencez par xs)
-                                        </li>
-                                        <li class="orochi-mb-2">
-                                            <i class="bx bx-check-circle orochi-me-2 orochi-text-success"></i>
-                                            Testez sur différents appareils
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle orochi-me-2 orochi-text-success"></i>
-                                            Utilisez les classes responsives avec modération
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Navigation -->
-                        <div class="orochi-mt-5 orochi-d-flex orochi-justify-between">
-                            <a href="containers.html" class="orochi-btn orochi-btn-primary">
-                                ← Conteneurs
-                            </a>
-                            <a href="spacing.html" class="orochi-btn orochi-btn-primary">
-                                Espacement →
-                            </a>
-                        </div>
-                    </section>
-
+          <!-- Exemple visuel -->
+          <section class="orochi-mt-5">
+            <h2 class="orochi-text-dark">Comportement responsive</h2>
+            <div class="orochi-row orochi-g-3">
+              <div class="orochi-col-12 orochi-col-md-6 orochi-col-xl-4">
+                <div class="breakpoint-visual">
+                  <div class="orochi-d-none orochi-d-md-block orochi-text-center">
+                    Visible à partir de md (≥768px)
+                  </div>
+                  <div class="orochi-d-md-none orochi-text-center">
+                    Visible en dessous de md
+                  </div>
                 </div>
+              </div>
+              <div class="orochi-col-12 orochi-col-md-6 orochi-col-xl-4">
+                <div class="breakpoint-visual">
+                  <div class="orochi-d-none orochi-d-lg-block orochi-text-center">
+                    Visible à partir de lg (≥992px)
+                  </div>
+                  <div class="orochi-d-lg-none orochi-text-center">
+                    Visible en dessous de lg
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
+          </section>
 
-    <footer class="orochi-bg-dark orochi-text-light orochi-py-4 orochi-mt-5"> 
-        <!-- Réseaux sociaux -->
-        <div class="orochi-d-flex orochi-justify-center orochi-gap-3 ">
-          <a href="#" class="orochi-text-white orochi-hover-text-primary">
-            <i class="bx bxl-facebook-circle orochi-text-h3"></i>
-          </a>
-          <a href="#" class="orochi-text-white orochi-hover-text-primary">
-            <i class="bx bxl-twitter orochi-text-h3"></i>
-          </a>
-          <a href="#" class="orochi-text-white orochi-hover-text-primary">
-            <i class="bx bxl-github orochi-text-h3"></i>
-          </a>
+          <!-- Utilitaires responsives -->
+          <section class="orochi-mt-5">
+            <h2 class="orochi-text-dark">Classes responsives</h2>
+            <div class="orochi-alert orochi-alert-info">
+              Combinez les suffixes de breakpoint avec les classes utilitaires :
+              <div class="orochi-code-block">
+                <pre
+                  class="language-html"><code>&lt;div class="orochi-col-md-6 orochi-d-none-sm"&gt;&lt;/div&gt;</code></pre>
+              </div>
+              <h4 class="orochi-mt-3">Exemples courants :</h4>
+              <ul class="orochi-list-unstyled">
+                <li><code>.orochi-col-md-*</code> - Colonnes pour tablettes</li>
+                <li><code>.orochi-d-none-sm</code> - Masqué sur mobiles</li>
+                <li><code>.orochi-text-center-lg</code> - Centrage sur desktop</li>
+              </ul>
+          </section>
+
+          <!-- Bonnes pratiques -->
+          <section class="orochi-mt-5">
+            <h2 class="orochi-text-dark">💡 Bonnes pratiques</h2>
+            <div class="orochi-card orochi-bg-light">
+              <div class="orochi-card-body">
+                <ul class="orochi-list-unstyled">
+                  <li class="orochi-mb-2">
+                    <i class="bx bx-check-circle orochi-me-2 orochi-text-success"></i>
+                    Développez en mobile-first (commencez par xs)
+                  </li>
+                  <li class="orochi-mb-2">
+                    <i class="bx bx-check-circle orochi-me-2 orochi-text-success"></i>
+                    Testez sur différents appareils
+                  </li>
+                  <li>
+                    <i class="bx bx-check-circle orochi-me-2 orochi-text-success"></i>
+                    Utilisez les classes responsives avec modération
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Navigation -->
+          <div class="orochi-mt-5 orochi-d-flex orochi-justify-between">
+            <a href="containers.html" class="orochi-btn orochi-btn-primary">
+              ← Conteneurs
+            </a>
+            <a href="spacing.html" class="orochi-btn orochi-btn-primary">
+              Espacement →
+            </a>
+          </div>
+          </section>
+
         </div>
       </div>
+    </div>
+  </div>
+
+  <footer class="orochi-bg-dark orochi-text-light orochi-py-4 orochi-mt-5">
+    <!-- Réseaux sociaux -->
+    <div class="orochi-d-flex orochi-justify-center orochi-gap-3 ">
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-facebook-circle orochi-text-h3"></i>
+      </a>
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-twitter orochi-text-h3"></i>
+      </a>
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-github orochi-text-h3"></i>
+      </a>
+    </div>
+    </div>
     </div>
     <div class="orochi-container orochi-mt-2">
       <div class="orochi-text-center">

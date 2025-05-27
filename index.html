@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orochi CSS Framework</title>
-  <link rel="stylesheet" href="orochi-test.css"/>
+  <link rel="stylesheet" href="orochi-test.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
 </head>
+
 <body>
 
   <!-- Navigation -->
   <nav class="orochi-nav-wrapper orochi-sticky">
     <div class="orochi-nav-container">
-        <a href="#" class="orochi-brand">
-          <i class="fas fa-dragon orochi-text-primary"></i>Orochi
-        </a>
-        <button class="orochi-menu-toggler">
-          <span class="orochi-menu-toggler-icon"></span>
-        </button>
-        <ul class="orochi-menu">
-          <li class="orochi-menu-item">
-            <a href="docs/test/commencer/introduction.html" class="orochi-menu-link">Documents</a>
-          </li>
-          <li class="orochi-menu-item">
-            <a href="indisponible.html" class="orochi-menu-link">Exemples</a>
-          </li>
-          <li class="orochi-menu-item">
-            <a href="indisponible.html" class="orochi-menu-link">Icones</a>
-          </li>
-        </ul>
+      <a href="#" class="orochi-brand">
+        <i class="fas fa-dragon orochi-text-primary"></i>Orochi
+      </a>
+      <button class="orochi-nav-toggler">
+        <span class="orochi-nav-toggler-icon"></span>
+      </button>
+      <ul class="orochi-nav">
+        <li class="orochi-nav-item">
+          <a href="docs/test/commencer/introduction.html" class="orochi-nav-link">Documents</a>
+        </li>
+        <li class="orochi-nav-item">
+          <a href="indisponible.html" class="orochi-nav-link">Exemples</a>
+        </li>
+        <li class="orochi-nav-item">
+          <a href="indisponible.html" class="orochi-nav-link">Icones</a>
+        </li>
+      </ul>
+      <form class="orochi-d-flex">
+        <input type="search" class="orochi-form-input orochi-me-2">
+        <button class="orochi-btn orochi-btn-outline-success">Recherche</button>
+      </form>
     </div>
   </nav>
 
@@ -44,7 +47,8 @@
           <h1 class="orochi-mb-4">Créez des sites modernes avec Orochi</h1>
           <p class="orochi-mb-5">Un framework CSS simple et personnalisable pour vos projets web</p>
           <div class="orochi-flex orochi-justify-center orochi-gap-4">
-            <a href="docs/test/commencer/introduction.html" class="orochi-btn orochi-btn-light orochi-rounded-lg">Commencer</a>
+            <a href="docs/test/commencer/introduction.html"
+              class="orochi-btn orochi-btn-light orochi-rounded-lg">Commencer</a>
             <a href="indisponible.html" class="orochi-btn orochi-btn-outline-light orochi-rounded-lg">En savoir plus</a>
           </div>
         </div>
@@ -53,32 +57,32 @@
   </section>
 
   <section class="orochi-py-5">
-  <div class="orochi-container">
-    <div class="orochi-row orochi-g-4">
-      <!-- Ajouter une classe sm pour les écrans intermédiaires -->
-      <div class="orochi-col-12 orochi-col-sm-6 orochi-col-md-4">
-        <div class="orochi-card orochi-h-100 orochi-p-4">
-          <h3 class="orochi-text-primary">Rapide</h3>
-          <p>Performance optimisée pour des chargements instantanés</p>
+    <div class="orochi-container">
+      <div class="orochi-row orochi-g-4">
+        <!-- Ajouter une classe sm pour les écrans intermédiaires -->
+        <div class="orochi-col-12 orochi-col-sm-6 orochi-col-md-4">
+          <div class="orochi-card orochi-h-100 orochi-p-4">
+            <h3 class="orochi-text-primary">Rapide</h3>
+            <p>Performance optimisée pour des chargements instantanés</p>
+          </div>
         </div>
-      </div>
-      
-      <div class="orochi-col-12 orochi-col-sm-6 orochi-col-md-4">
-        <div class="orochi-card orochi-h-100 orochi-bg-primary orochi-text-white orochi-p-4">
-          <h3>Responsive</h3>
-          <p>Adaptation parfaite à tous les écrans</p>
+
+        <div class="orochi-col-12 orochi-col-sm-6 orochi-col-md-4">
+          <div class="orochi-card orochi-h-100 orochi-bg-primary orochi-text-white orochi-p-4">
+            <h3>Responsive</h3>
+            <p>Adaptation parfaite à tous les écrans</p>
+          </div>
         </div>
-      </div>
-      
-      <div class="orochi-col-12 orochi-col-sm-6 orochi-col-md-4">
-        <div class="orochi-card orochi-h-100 orochi-p-4">
-          <h3 class="orochi-text-primary">Moderne</h3>
-          <p>Design épuré et composants flexibles</p>
+
+        <div class="orochi-col-12 orochi-col-sm-6 orochi-col-md-4">
+          <div class="orochi-card orochi-h-100 orochi-p-4">
+            <h3 class="orochi-text-primary">Moderne</h3>
+            <p>Design épuré et composants flexibles</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Section CTA -->
   <section class="orochi-bg-dark orochi-text-light orochi-py-8">
@@ -103,24 +107,25 @@
         <div class="orochi-col-md-4">
           <h4>Orochi</h4>
           <p>Un framework fait avec passion</p>
-           <p class="orochi-text-sm">
-        Code sous licence propriétaire - Documentation CC BY 3.0 - v1.0.0
-        </p>
+          <p class="orochi-text-sm">
+            Code sous licence propriétaire - Documentation CC BY 3.0 - v1.0.0
+          </p>
         </div>
         <div class="orochi-col-md-4">
           <h4>Liens utiles</h4>
-          <ul class="orochi-menu">
-            <li><a href="#" class="orochi-menu-link">Documentation</a></li>
-            <li><a href="https://github.com/Orochichrys/orochi-framework" class="orochi-menu-link">Github</a></li>
+          <ul class="orochi-nav">
+            <li><a href="#" class="orochi-nav-link">Documentation</a></li>
+            <li><a href="https://github.com/Orochichrys/orochi-framework" class="orochi-nav-link">Github</a></li>
           </ul>
         </div>
       </div>
-       <div class="orochi-text-center orochi-mt-5">
-      <p>© 2025 Orochi - Conçu avec passion par l'équipe Orochi</p>
-    </div>
+      <div class="orochi-text-center orochi-mt-5">
+        <p>© 2025 Orochi - Conçu avec passion par l'équipe Orochi</p>
+      </div>
     </div>
   </footer>
 
   <script src="orochi-test.js"></script>
 </body>
+
 </html>
