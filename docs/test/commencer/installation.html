@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../../../orochi-test.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -276,7 +277,9 @@
           
           <section class="orochi-mb-5">
             <h2 class="orochi-text-dark orochi-mb-3">Via CDN</h2>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;link rel="stylesheet" href="https://orochi-css.vercel.app/orochi-test.css"&gt;</code></pre>
+              <div class="orochi-code-block">
+               <pre class="language-html"><code>&lt;link rel="stylesheet" href="https://orochi-css.vercel.app/orochi-test.css"&gt;</code></pre>
+              </div>
           </section>
 
           <section class="orochi-mb-5">
@@ -284,15 +287,19 @@
             <div class="orochi-alert orochi-alert-info orochi-mb-3">
               Téléchargez la dernière version sur GitHub et incluez le CSS dans votre head :
             </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;link rel="stylesheet" href="/chemin/vers/orochi-test.css"&gt;</code></pre>
-          </section>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;link rel="stylesheet" href="/chemin/vers/orochi-test.css"&gt;</code></pre>
+            </div>
+            </section>
 
           <section class="orochi-mb-5">
             <h2 class="orochi-text-dark orochi-mb-3">Package NPM</h2>
             <div class="orochi-alert orochi-alert-warning orochi-mb-3">
               Disponible prochainement (v1.1+)
             </div>
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>npm install orochi-css</code></pre>
+            <div class="orochi-code-block">
+              <pre class="language-bash"><code>npm install orochi-css</code></pre>
+            </div>
           </section>
 
           <div class="orochi-alert orochi-alert-success">
@@ -328,4 +335,8 @@
 </body>
 <script src="../../../orochi-test.js"></script>
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
 </html>

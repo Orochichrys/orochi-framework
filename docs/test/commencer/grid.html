@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../../../orochi-test.css" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -282,12 +283,16 @@
             <div class="orochi-row orochi-mb-4 orochi-g-3">
               <div class="orochi-col-6 orochi-bg-primary orochi-text-white orochi-p-3">.orochi-col-6</div>
               <div class="orochi-col-6 orochi-bg-secondary orochi-text-white orochi-p-3">.orochi-col-6</div>
+            <div class="orochi-code-block">
+              <pre class="language-html">
+                <code>
+            &lt;div class="orochi-row"&gt;
+              &lt;div class="orochi-col-6"&gt;Colonne 1&lt;/div&gt;
+              &lt;div class="orochi-col-6"&gt;Colonne 2&lt;/div&gt;
+            &lt;/div&gt;
+                </code>
+              </pre>
             </div>
-            
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;div class="orochi-row"&gt;
-  &lt;div class="orochi-col-6"&gt;Colonne 1&lt;/div&gt;
-  &lt;div class="orochi-col-6"&gt;Colonne 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
           </section>
 
           <!-- Section Responsive -->
@@ -298,12 +303,16 @@
             <div class="orochi-row orochi-mb-4 orochi-g-3">
               <div class="orochi-col-12 orochi-col-md-8 orochi-bg-primary orochi-text-white orochi-p-3">.orochi-col-md-8</div>
               <div class="orochi-col-6 orochi-col-md-4 orochi-bg-secondary orochi-text-white orochi-p-3">.orochi-col-md-4</div>
+            <div class="orochi-code-block">
+              <pre class="language-html">
+                <code>
+            &lt;div class="orochi-row"&gt;
+              &lt;div class="orochi-col-12 orochi-col-md-8"&gt;Contenu&lt;/div&gt;
+              &lt;div class="orochi-col-6 orochi-col-md-4"&gt;Sidebar&lt;/div&gt;
+            &lt;/div&gt;
+                </code>
+              </pre>
             </div>
-            
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;div class="orochi-row"&gt;
-  &lt;div class="orochi-col-12 orochi-col-md-8"&gt;Contenu&lt;/div&gt;
-  &lt;div class="orochi-col-6 orochi-col-md-4"&gt;Sidebar&lt;/div&gt;
-&lt;/div&gt;</code></pre>
           </section>
 
           <!-- Section Décalages -->
@@ -313,11 +322,15 @@
             
             <div class="orochi-row orochi-mb-4 orochi-g-3">
               <div class="orochi-col-4 orochi-offset-4 orochi-bg-primary orochi-text-white orochi-p-3">.orochi-offset-4</div>
+            <div class="orochi-code-block">
+              <pre class="language-html">
+                <code>
+            &lt;div class="orochi-row"&gt;
+              &lt;div class="orochi-col-4 orochi-offset-4"&gt;Colonne centrée&lt;/div&gt;
+            &lt;/div&gt;
+                </code>
+              </pre>
             </div>
-            
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;div class="orochi-row"&gt;
-  &lt;div class="orochi-col-4 orochi-offset-4"&gt;Colonne centrée&lt;/div&gt;
-&lt;/div&gt;</code></pre>
           </section>
 
           <!-- Section Imbrication -->
@@ -333,17 +346,21 @@
                   <div class="orochi-col-8 orochi-bg-secondary orochi-text-white orochi-p-2">Niveau 2</div>
                 </div>
               </div>
+            <div class="orochi-code-block">
+              <pre class="language-html">
+                <code>
+            &lt;div class="orochi-row"&gt;
+              &lt;div class="orochi-col-8"&gt;
+                Niveau 1
+                &lt;div class="orochi-row"&gt;
+                  &lt;div class="orochi-col-4"&gt;Niveau 2&lt;/div&gt;
+                  &lt;div class="orochi-col-8"&gt;Niveau 2&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+                </code>
+              </pre>
             </div>
-            
-            <pre class="orochi-bg-light orochi-p-3 orochi-rounded"><code>&lt;div class="orochi-row"&gt;
-  &lt;div class="orochi-col-8"&gt;
-    Niveau 1
-    &lt;div class="orochi-row"&gt;
-      &lt;div class="orochi-col-4"&gt;Niveau 2&lt;/div&gt;
-      &lt;div class="orochi-col-8"&gt;Niveau 2&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
           </section>
 
           <!-- Notes -->
@@ -375,7 +392,13 @@
           &copy; 2025 Orochi CSS - Tous droits réservés
         </p>
   </footer>
-  <script src="../../../orochi-test.js"></script>
-  <script src="script.js"></script>
+  
 </body>
+<script src="../../../orochi-test.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
 </html>

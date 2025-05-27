@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <style>
       .spacing-visual {
@@ -305,29 +306,37 @@
                   <div class="orochi-col-12 orochi-col-md-6">
                     <div class="orochi-card orochi-p-3">
                       <h4>Marges</h4>
-                      <pre><code>.orochi-m-{n}  /* Tous côtés */
-.orochi-mt-{n} /* Haut */
-.orochi-mb-{n} /* Bas */
-.orochi-ms-{n} /* Gauche */
-.orochi-me-{n} /* Droite */
-.orochi-mx-{n}  /* Gauche & Droite */
-.orochi-my-{n}  /* Haut & Bas */</code></pre>
+                      <div class="orochi-code-block">
+                        <pre class="language-html"><code>
+                    .orochi-m-{n}  /* Tous côtés */
+                    .orochi-mt-{n} /* Haut */
+                    .orochi-mb-{n} /* Bas */
+                    .orochi-ms-{n} /* Gauche */
+                    .orochi-me-{n} /* Droite */
+                    .orochi-mx-{n}  /* Gauche & Droite */
+                    .orochi-my-{n}  /* Haut & Bas */
+                        </code></pre>
+                      </div>
                     </div>
                   </div>
 
                   <div class="orochi-col-12 orochi-col-md-6">
                     <div class="orochi-card orochi-p-3">
                       <h4>Paddings</h4>
-                      <pre><code>.orochi-p-{n}  /* Tous côtés */
-.orochi-pt-{n} /* Haut */
-.orochi-pb-{n} /* Bas */
-.orochi-ps-{n} /* Gauche */
-.orochi-pe-{n} /* Droite */
-.orochi-px-{n}  /* Gauche & Droite */
-.orochi-py-{n}  /* Haut & Bas */</code></pre>
+                      <div class="orochi-code-block">
+                      <pre class="language-html"><code>
+          .orochi-p-{n}  /* Tous côtés */
+          .orochi-pt-{n} /* Haut */
+          .orochi-pb-{n} /* Bas */
+          .orochi-ps-{n} /* Gauche */
+          .orochi-pe-{n} /* Droite */
+          .orochi-px-{n}  /* Gauche & Droite */
+          .orochi-py-{n}  /* Haut & Bas */
+                      </code></pre>
+                      </div>
+                    </div>
                     </div>
                   </div>
-                </div>
               </section>
 
               <!-- Échelle des espacements -->
@@ -387,7 +396,9 @@
                   <div class="spacing-visual orochi-m-3 orochi-p-2">
                     .orochi-m-3 (margin: 1rem)
                   </div>
-                  <pre><code>&lt;div class="orochi-m-3"&gt;&lt;/div&gt;</code></pre>
+                  <div class="orochi-code-block">
+                    <pre class="language-html"><code>&lt;div class="orochi-m-3"&gt;&lt;/div&gt;</code></pre>
+                  </div>
                 </div>
 
                 <div class="orochi-mb-4">
@@ -395,7 +406,11 @@
                   <div class="spacing-visual orochi-p-4">
                     .orochi-p-4 (padding: 1.5rem)
                   </div>
-                  <pre><code>&lt;div class="orochi-p-4"&gt;&lt;/div&gt;</code></pre>
+                    <div class="orochi-code-block">
+                    <pre class="language-html"><code>
+          &lt;div class="orochi-p-4"&gt;&lt;/div&gt;
+                    </code></pre>
+                    </div>
                 </div>
 
                 <div class="orochi-mb-4">
@@ -405,7 +420,11 @@
                   >
                     .orochi-mt-2 .orochi-mb-5 .orochi-ps-3 .orochi-pe-4
                   </div>
-                  <pre><code>&lt;div class="orochi-mt-2 orochi-mb-5 orochi-ps-3 orochi-pe-4"&gt;&lt;/div&gt;</code></pre>
+                  <div class="orochi-code-block">
+                    <pre class="language-html"><code>
+                  &lt;div class="orochi-mt-2 orochi-mb-5 orochi-ps-3 orochi-pe-4"&gt;&lt;/div&gt;
+                    </code></pre>
+                  </div>
                 </div>
               </section>
 
@@ -478,7 +497,13 @@
         </p>
   </footer>
 
+  </body>
+  
     <script src="../../../orochi-test.js"></script>
     <script src="script.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
 </html>
