@@ -163,7 +163,7 @@
 
 /* Icône Téléverser */
 .orochi-icon-upload {
-  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9v4h-2V9h-4V7h4V3h2v4h4v2h-4zM12 15l-4-4h3V5h2v6h3l-4 4zM5 19h14v2H5z"/></svg>');
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='black' d='M5 20h14v-2H5v2zm7-16l5 5h-3v6h-4v-6H7l5-5z'/></svg>");
 }
 
 /* Icône Actualiser */
