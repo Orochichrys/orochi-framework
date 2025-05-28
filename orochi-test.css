@@ -508,9 +508,20 @@
 }
 
 @media (max-width: 575.98px) {
-  [class*='orochi-col-'] {
+  /*[class*='orochi-col-'] {
     flex: 0 0 100%;
     max-width: 100%;
+  }*/
+  .orochi-col-xs-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media (max-width: 359px) {
+  .orochi-col-xs-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
@@ -2588,6 +2599,15 @@ h1 {
 }
 .orochi-text-danger {
   color: var(--orochi-danger);
+}
+.orochi-text-success{
+  color:var(--orochi-success);
+}
+.orochi-text-warning{
+  color:var(--orochi-warning);
+}
+.orochi-text-info {
+  color: var(--orochi-info);
 }
 .orochi-text-dark {
   color: var(--orochi-dark);
