@@ -1,19 +1,18 @@
 /* Icônes de base */
 .oi {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    background-color: currentColor;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+  display: inline-block;
+  width: 20px;  /* au lieu de 24px */
+  height: 20px;
+  vertical-align: middle;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
 }
+
 
 /* icônes avec mask-image */
 .oi-menu {
