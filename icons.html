@@ -7,6 +7,8 @@
     <title>Icônes Orochi</title>
     <link rel="stylesheet" href="orochi-test.css">
     <link rel="stylesheet" href="orochi-icons.css">
+    <link rel="stylesheet" href="docs/test/commencer/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -46,7 +48,16 @@
         <div class="orochi-alert orochi-alert-info orochi-mb-4">
             <h3>Utilisation des icônes</h3>
             <p class="orochi-mb-2">Balise générique :</p>
-            <code>&lt;i class="oi oi-[nom]"&gt;&lt;/i&gt;</code>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;i class="oi oi-[nom]"&gt;&lt;/i&gt;</code></pre>
+           </div>
+        </div>
+        <div class="orochi-alert orochi-alert-warning orochi-mb-4">
+            <h3>CDN Orochi Icons</h3>
+            <p>Ajoutez ce lien dans la balise <code>&lt;head&gt;</code> de votre page :</p>
+            <div class="orochi-code-block">
+            <pre class="language-html"><code>&lt;link rel="stylesheet" href="https://orochi-css.vercel.app/orochi-icons.css"&gt;</code></pre>
+            </div>
         </div>
 
         <div class="orochi-row orochi-g-4">
@@ -293,13 +304,13 @@
                 <div class="orochi-text-sm orochi-text-center orochi-mt-2">trash</div>
             </div>
 
-            <!-- Icône Poubelle outline 
+            <!-- Icône Poubelle 2-->
             <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
                 <div class="orochi-card orochi-p-4 orochi-text-center">
-                    <i class="oi oi-trash-outline"></i>
+                    <i class="oi oi-trash-2"></i>
                 </div>
-                <div class="orochi-text-sm orochi-text-center orochi-mt-2">trash-outline</div>
-            </div>-->
+                <div class="orochi-text-sm orochi-text-center orochi-mt-2">trash-2</div>
+            </div>
 
             <!-- Icône Partager -->
             <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
@@ -485,6 +496,38 @@
                 <div class="orochi-text-sm orochi-text-center orochi-mt-2">refresh-cw</div>
             </div>
 
+            <!-- Icône Actualiser -->
+            <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
+                <div class="orochi-card orochi-p-4 orochi-text-center">
+                    <i class="oi oi-refresh-ccw"></i>
+                </div>
+                <div class="orochi-text-sm orochi-text-center orochi-mt-2">refresh-ccw</div>
+            </div>
+
+            <!-- Icône Actualiser -->
+            <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
+                <div class="orochi-card orochi-p-4 orochi-text-center">
+                    <i class="oi oi-refresh-ccw"></i>
+                </div>
+                <div class="orochi-text-sm orochi-text-center orochi-mt-2">refresh-ccw</div>
+            </div>
+
+            <!-- Icône Actualiser -->
+            <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
+                <div class="orochi-card orochi-p-4 orochi-text-center">
+                    <i class="oi oi-rotate-cw"></i>
+                </div>
+                <div class="orochi-text-sm orochi-text-center orochi-mt-2">rotate-cw</div>
+            </div>
+
+            <!-- Icône Actualiser -->
+            <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
+                <div class="orochi-card orochi-p-4 orochi-text-center">
+                    <i class="oi oi-rotate-ccw"></i>
+                </div>
+                <div class="orochi-text-sm orochi-text-center orochi-mt-2">rotate-ccw</div>
+            </div>
+
             <!-- Icône Imprimante -->
             <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
                 <div class="orochi-card orochi-p-4 orochi-text-center">
@@ -515,7 +558,17 @@
                     <i class="oi oi-clock"></i>
                 </div>
                 <div class="orochi-text-sm orochi-text-center orochi-mt-2">clock</div>
-            </div><!-- Icône Graphique 
+            </div>
+
+            <!-- Icône copy -->
+            <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
+                <div class="orochi-card orochi-p-4 orochi-text-center">
+                    <i class="oi oi-copy"></i>
+                </div>
+                <div class="orochi-text-sm orochi-text-center orochi-mt-2">copy</div>
+            </div>
+            
+            <!-- Icône Graphique 
 <div class="orochi-col-12 orochi-col-xs-4 orochi-col-sm-4 orochi-col-md-4 orochi-col-lg-3">
   <div class="orochi-card orochi-p-4 orochi-text-center">
     <i class="oi oi-chart"></i>
@@ -552,6 +605,11 @@
     </footer>
 
     <script src="orochi-test.js"></script>
+    <script src="docs/test/commencer/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
 
 </body>
 <script>
