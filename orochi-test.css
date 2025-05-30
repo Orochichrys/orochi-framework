@@ -541,7 +541,7 @@
   padding: 15px 6.5%;
   top: 0;
   width: 100%;
-  background: var(--orochi-light);
+  background: var(--orochi-white);
   /* border-bottom: var(--orochi-primary) 2px solid; */
   z-index: 9999;
 }
