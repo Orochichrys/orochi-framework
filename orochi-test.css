@@ -3104,3 +3104,7 @@ h1 {
 .orochi-z-9999 {
   z-index: 9999 !important;
 }
+
+.orochi-object-fit-cover{
+  object-fit: cover !important;
+}
