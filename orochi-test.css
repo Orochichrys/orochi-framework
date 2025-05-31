@@ -2584,6 +2584,9 @@ h1 {
 .orochi-bg-dark {
   background-color: var(--orochi-dark);
 }
+.orochi-bg-dark {
+  background-color: var(--orochi-black);
+}
 .orochi-bg-info {
   background-color: var(--orochi-info);
 }
@@ -2825,6 +2828,34 @@ h1 {
 }
 .orochi-overflow-scroll {
   overflow: scroll !important;
+}
+
+/* Overflow X */
+.orochi-overflow-x-auto {
+  overflow-x: auto !important;
+}
+.orochi-overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+.orochi-overflow-x-visible {
+  overflow-x: visible !important;
+}
+.orochi-overflow-x-scroll {
+  overflow-x: scroll !important;
+}
+
+/* Overflow Y */
+.orochi-overflow-y-auto {
+  overflow-y: auto !important;
+}
+.orochi-overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+.orochi-overflow-y-visible {
+  overflow-y: visible !important;
+}
+.orochi-overflow-y-scroll {
+  overflow-y: scroll !important;
 }
 
 /* Interactivity */
