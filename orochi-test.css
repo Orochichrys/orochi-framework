@@ -2643,6 +2643,67 @@ h1 {
   position: static;
 }
 
+.orochi-top-0 {
+  top: 0 !important;
+}
+.orochi-top-25 {
+  top: 25% !important;
+}
+.orochi-top-50 {
+  top: 50% !important;
+}
+.orochi-top-75 {
+  top: 75% !important;
+}
+.orochi-top-100 {
+  top: 100% !important;
+}
+.orochi-bottom-0 {
+  bottom: 0 !important;
+}
+.orochi-bottom-25 {
+  bottom: 25% !important;
+}
+.orochi-bottom-50 {
+  bottom: 50% !important;
+}
+.orochi-bottom-75 {
+  bottom: 75% !important;
+}
+.orochi-bottom-100 {
+  bottom: 100% !important;
+}
+.orochi-start-0 {
+  left: 0 !important;
+}
+.orochi-start-25 {
+  left: 25% !important;
+}
+.orochi-start-50 {
+  left: 50% !important;
+}
+.orochi-start-75 {
+  left: 75% !important;
+}
+.orochi-start-100 {
+  left: 100% !important;
+}
+.orochi-end-0 {
+  right: 0 !important;
+}
+.orochi-end-25 {
+  right: 25% !important;
+}
+.orochi-end-50 {
+  right: 50% !important;
+}
+.orochi-end-75 {
+  right: 75% !important;
+}
+.orochi-end-100 {
+  right: 100% !important;
+}
+
 /* Bordures standardisées */
 .orochi-border {
   border-width: 1px;
