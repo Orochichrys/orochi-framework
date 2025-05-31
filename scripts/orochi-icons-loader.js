@@ -13,6 +13,13 @@ const iconNames = [
         "clock", "copy", "spark", "inbox", "plus-circle", "compass"
     ];
 
+    // let numberOfIcons = iconNames.length;
+    // let iconsDisponibles = document.getElementById("iconsDisponibles");
+    // if (iconsDisponibles) {
+    //     iconsDisponibles.innerHTML = `<h2>Nombre d'icônes disponibles : ${numberOfIcons}</h2>`;
+    // }
+
+
     const container = document.querySelector(".orochi-row");
 
     iconNames.forEach(name => {
