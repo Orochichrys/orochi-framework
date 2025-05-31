@@ -3086,3 +3086,21 @@ h1 {
 .orochi-z-3 {
   z-index: 3 !important;
 }
+.orochi-z-10 {
+  z-index: 10 !important;
+}
+.orochi-z-50 {
+  z-index: 50 !important;
+}
+.orochi-z-100 {
+  z-index: 100 !important;
+}
+.orochi-z-500 {
+  z-index: 500 !important;
+}
+.orochi-z-1000 {
+  z-index: 1000 !important;
+}
+.orochi-z-9999 {
+  z-index: 9999 !important;
+}
