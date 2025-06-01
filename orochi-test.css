@@ -613,7 +613,7 @@
 }
 
 .orochi-dropdown-item {
-  /* padding: 10px 15px; */
+  padding: 10px 15px;
   display: block;
   text-decoration: none;
   color: var(--orochi-dark);
