@@ -3106,6 +3106,18 @@ h1 {
   z-index: 9999 !important;
 }
 
-.orochi-object-fit-cover{
+.orochi-object-fit-contain {
+  object-fit: contain !important;
+}
+.orochi-object-fit-cover {
   object-fit: cover !important;
+}
+.orochi-object-fit-fill {
+  object-fit: fill !important;
+}
+.orochi-object-fit-none {
+  object-fit: none !important;
+}
+.orochi-object-fit-scale-down {
+  object-fit: scale-down !important;
 }
