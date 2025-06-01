@@ -1,8 +1,8 @@
 /* Icônes de base */
 .oi {
   display: inline-block;
-  width: 20px;  /* au lieu de 24px */
-  height: 20px;
+  width: 24px;  
+  height: 24px;
   vertical-align: middle;
   background-color: currentColor;
   mask-repeat: no-repeat;

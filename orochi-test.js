@@ -2,7 +2,7 @@ let toggler = document.querySelector('.orochi-nav-toggler');
 let togglerIcon = document.querySelector('.orochi-nav-toggler-icon');
 
 // Icône initiale
-togglerIcon.textContent = '☰';
+togglerIcon.innerHTML = '<i class="oi oi-menu"></i>'
 
 // Dropdown arrows
 document.querySelectorAll('.orochi-dropdown > .orochi-nav-link').forEach(link => {
@@ -22,10 +22,10 @@ toggler.addEventListener('click', () => {
   
   if(navWrapper.classList.contains('orochi-nav-wrapper-active')) {
     navWrapper.classList.remove('orochi-nav-wrapper-active');
-    togglerIcon.textContent = '☰';
+    togglerIcon.innerHTML = '<i class="oi oi-menu"></i>';
   } else {
     navWrapper.classList.add('orochi-nav-wrapper-active');
-    togglerIcon.textContent = '✖';
+    togglerIcon.innerHTML = '<i class="oi oi-close"></i>';
   }
 });
 
