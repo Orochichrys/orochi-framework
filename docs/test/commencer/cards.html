@@ -130,7 +130,7 @@
               </div>
             </div>
             <div class="o-code-block">
-              <pre class="language-html"><code>&lt;div class="o-card" style="18rem;"&gt;
+              <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
   &lt;div class="o-card-body"&gt;
     &lt;img src="..." class="o-card-img-top" alt="..."&gt;
     &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
@@ -154,7 +154,7 @@
               <img src="https://picsum.photos/400/200" class="o-card-img-bottom" alt="Image en bas">
             </div>
             <div class="o-code-block">
-              <pre class="language-html"><code>&lt;div class="o-card" style="18rem;"&gt;
+              <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
   &lt;div class="o-card-body"&gt;
     &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
     &lt;p class="o-card-text"&gt;Texte descriptif&lt;/p&gt;
@@ -461,7 +461,7 @@
               Placez un <code>.o-card-badge</code> dans une carte pour indiquer une étiquette
               (nouveau, promo…) positionnée en haut à droite.
             </p>
-            <div class="o-card">
+            <div class="o-card" style="width: 18rem;">
               <span class="o-card-badge">Nouveau</span>
               <img src="https://picsum.photos/200/200" class="o-card-img-top" alt="...">
               <div class="o-card-body">
@@ -470,9 +470,12 @@
             </div>
             </div>
             <div class="o-code-block">
-              <pre class="language-html"><code>&lt;div class="o-card"&gt;
+              <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
   &lt;span class="o-card-badge"&gt;Nouveau&lt;/span&gt;
-  …contenu…
+  &lt;div class="o-card-body"&gt;
+    &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
+    &lt;p class="o-card-text"&gt;Texte descriptif&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
           </section>
@@ -484,7 +487,7 @@
               Utilisez <code>.o-card-actions</code> pour aligner plusieurs boutons
               ou liens dans le pied de carte.
             </p>
-            <div class="o-card">
+            <div class="o-card" style="width: 18rem;">
               <span class="o-card-badge">Nouveau</span>
               <img src="https://picsum.photos/200/200" class="o-card-img-top" alt="...">
               <div class="o-card-body">
@@ -497,9 +500,15 @@
             </div>
             </div>
             <div class="o-code-block">
-              <pre class="language-html"><code>&lt;div class="o-card"&gt;
+              <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
+  &lt;span class="o-card-badge"&gt;Nouveau&lt;/span&gt;
+  &lt;div class="o-card-body"&gt;
+    &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
+    &lt;p class="o-card-text"&gt;Texte descriptif&lt;/p&gt;
+  &lt;/div&gt;
   &lt;div class="o-card-actions"&gt;
-    &lt;button&gt;…&lt;/button&gt;
+    &lt;button class="o-btn o-btn-primary"&gt;Oui&lt;/button&gt;
+    &lt;button class="o-btn o-btn-secondary"&gt;Non&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
