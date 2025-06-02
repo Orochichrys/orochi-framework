@@ -11,7 +11,7 @@
   padding: 0;
   line-height: 1.5;
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Variables CSS */
