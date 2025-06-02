@@ -1265,55 +1265,265 @@
 }
 
 /* =====================================================
-   ANIMATIONS D'APPARITION
+   ANIMATIONS D'APPARITION AU SCROLL
    ===================================================== */
 
-/* Animation de fondu */
-@keyframes o-fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Animation de base - glissement vers le haut */
+.o-card-scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.o-fade-in {
-  animation: o-fadeIn 0.6s ease-out;
+.o-card-scroll-animate.o-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Animation de glissement */
-@keyframes o-slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Animation de fondu simple */
+.o-fade-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
 }
 
-.o-slide-up {
-  animation: o-slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+.o-fade-animate.o-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animations de glissement latéral */
+.o-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-slide-left.o-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.o-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-slide-right.o-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.o-slide-down {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-slide-down.o-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Animation de zoom */
-@keyframes o-zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.o-zoom-animate {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.o-zoom-in {
-  animation: o-zoomIn 0.5s ease-out;
+.o-zoom-animate.o-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.o-zoom-out-animate {
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-zoom-out-animate.o-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animation de rotation */
+.o-rotate-animate {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.9);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-rotate-animate.o-visible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.o-rotate-left {
+  opacity: 0;
+  transform: rotate(-15deg);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-rotate-left.o-visible {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.o-rotate-right {
+  opacity: 0;
+  transform: rotate(15deg);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-rotate-right.o-visible {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Animation de flip */
+.o-flip-x {
+  opacity: 0;
+  transform: perspective(1000px) rotateX(-90deg);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-flip-x.o-visible {
+  opacity: 1;
+  transform: perspective(1000px) rotateX(0deg);
+}
+
+.o-flip-y {
+  opacity: 0;
+  transform: perspective(1000px) rotateY(-90deg);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-flip-y.o-visible {
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Animation de rebond */
+.o-bounce-animate {
+  opacity: 0;
+  transform: translateY(40px) scale(0.8);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.o-bounce-animate.o-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Animation de balancement */
+.o-swing-animate {
+  opacity: 0;
+  transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(-5deg);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-swing-animate.o-visible {
+  opacity: 1;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* Animation de dépliage */
+.o-unfold-animate {
+  opacity: 0;
+  transform: scaleY(0) translateY(-20px);
+  transform-origin: top;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-unfold-animate.o-visible {
+  opacity: 1;
+  transform: scaleY(1) translateY(0);
+}
+
+/* Animation de glissement diagonal */
+.o-slide-diagonal-tl {
+  opacity: 0;
+  transform: translate(-30px, -30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-slide-diagonal-tl.o-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.o-slide-diagonal-tr {
+  opacity: 0;
+  transform: translate(30px, -30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-slide-diagonal-tr.o-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.o-slide-diagonal-bl {
+  opacity: 0;
+  transform: translate(-30px, 30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-slide-diagonal-bl.o-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.o-slide-diagonal-br {
+  opacity: 0;
+  transform: translate(30px, 30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-slide-diagonal-br.o-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Délais pour effet de cascade */
+.o-delay-1 { transition-delay: 0.1s; }
+.o-delay-2 { transition-delay: 0.2s; }
+.o-delay-3 { transition-delay: 0.3s; }
+.o-delay-4 { transition-delay: 0.4s; }
+.o-delay-5 { transition-delay: 0.5s; }
+.o-delay-6 { transition-delay: 0.6s; }
+.o-delay-7 { transition-delay: 0.7s; }
+.o-delay-8 { transition-delay: 0.8s; }
+.o-delay-9 { transition-delay: 0.9s; }
+.o-delay-10 { transition-delay: 1s; }
+
+/* Durées personnalisées */
+.o-duration-fast { 
+  transition-duration: 0.4s !important; 
+}
+
+.o-duration-slow { 
+  transition-duration: 1.2s !important; 
+}
+
+.o-duration-slower { 
+  transition-duration: 1.6s !important; 
+}
+
+/* Courbes d'animation personnalisées */
+.o-ease-bounce {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.o-ease-back {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.o-ease-elastic {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
 }
 
 /* =====================================================
@@ -1560,18 +1770,6 @@
 /* Card avec bordure épaisse */
 .o-card-thick-border {
   border-width: 3px;
-}
-
-/* Animation au scroll (à utiliser avec JavaScript) */
-.o-card-scroll-animate {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.o-card-scroll-animate.o-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* États d'interaction */
