@@ -3,35 +3,35 @@ body {
   background-color: #f9f9f9;
 }
 /* Custom code blocks */
-.orochi-code-block {
+.o-code-block {
   position: relative;
   margin: 1.5rem 0;
-  border-radius: var(--orochi-rounded-md);
-  background: var(--orochi-dark) !important;
+  border-radius: var(--o-rounded-md);
+  background: var(--o-dark) !important;
   width: 100%;
 }
 
-.orochi-code-block pre[class*="language-"] {
+.o-code-block pre[class*='language-'] {
   margin: 0;
   padding: 2rem 1.5rem;
   background: transparent;
 }
 
-.orochi-code-copy {
+.o-code-copy {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
   padding: 0.25rem 0.75rem;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: none;
-  color: var(--orochi-light);
+  color: var(--o-light);
   cursor: pointer;
-  border-radius: var(--orochi-rounded-sm);
+  border-radius: var(--o-rounded-sm);
   transition: all 0.2s ease;
 }
 
-.orochi-code-copy:hover {
-  background: var(--orochi-primary);
+.o-code-copy:hover {
+  background: var(--o-primary);
 }
 
 .alert-example {
@@ -68,7 +68,7 @@ body {
     margin-right: 0.5rem;
   }
 
-  #sidebar .orochi-rounded-lg {
+  #sidebar .o-rounded-lg {
     border: none;
   }
 

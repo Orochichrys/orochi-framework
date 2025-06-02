@@ -9,11 +9,11 @@ It combines the power of CSS Grid, Flexbox, and smart utility classes with a sim
 
 ## Key Features
 
-- Responsive grid system based on CSS Grid + Flexbox  
-- Clear and powerful utility classes  
-- Dynamic spacing with `clamp()`, `%`, `em`, etc.  
-- Customizable theme system  
-- Accessibility built-in by default  
+- Responsive grid system based on CSS Grid + Flexbox
+- Clear and powerful utility classes
+- Dynamic spacing with `clamp()`, `%`, `em`, etc.
+- Customizable theme system
+- Accessibility built-in by default
 - Designed to work with Orochi UI, Forge, and the Orochi ecosystem
 
 ---
@@ -23,10 +23,10 @@ It combines the power of CSS Grid, Flexbox, and smart utility classes with a sim
 ### Via CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.orochi.dev/css/orochi.min.css">
+<link rel="stylesheet" href="https://cdn.orochi.dev/css/orochi.min.css" />
 ```
 
-### Via NPM *(coming soon)*
+### Via NPM _(coming soon)_
 
 ```bash
 npm install orochi-css
@@ -37,10 +37,10 @@ npm install orochi-css
 ## Quick Example
 
 ```html
-<div class="orochi-container">
-  <div class="orochi-row orochi-g-2">
-    <div class="orochi-col-md-6">Colonne 1</div>
-    <div class="orochi-col-md-6">Colonne 2</div>
+<div class="o-container">
+  <div class="o-row o-g-2">
+    <div class="o-col-md-6">Colonne 1</div>
+    <div class="o-col-md-6">Colonne 2</div>
   </div>
 </div>
 ```
@@ -51,15 +51,15 @@ See the [full documentation](https://orochi.dev/docs) for more examples and adva
 
 ## Documentation
 
-- [Official Documentation](https://orochi.dev/docs)  
-- Interactive playground *(coming soon)*  
-- Available in: English, French, Spanish *(in progress)*
+- [Official Documentation](https://orochi.dev/docs)
+- Interactive playground _(coming soon)_
+- Available in: English, French, Spanish _(in progress)_
 
 ---
 
 ## Browser Compatibility
 
-- Chrome, Firefox, Edge, Safari, Brave  
+- Chrome, Firefox, Edge, Safari, Brave
 - Works with plain HTML, React, Vue, Svelte, and more
 
 ---
@@ -76,9 +76,9 @@ See the [LICENSE](./LICENSE) file for full terms.
 
 Orochi is building a full suite of tools for modern developers:
 
-- **Orochi UI** – Ready-to-use interface components  
-- **Orochi Forge** – Visual web project generator  
-- **Orochi AI Tools** – AI tools to assist coding  
+- **Orochi UI** – Ready-to-use interface components
+- **Orochi Forge** – Visual web project generator
+- **Orochi AI Tools** – AI tools to assist coding
 - **Orochi Challenges** – Learn through coding challenges
 
 ---
@@ -92,8 +92,8 @@ You can still suggest ideas, report bugs, or open issues via [GitHub Issues](htt
 
 ## Contact
 
-- Website: [https://orochi.dev](https://orochi.dev)  
-- Email: contact@orochi.dev  
+- Website: [https://orochi.dev](https://orochi.dev)
+- Email: contact@orochi.dev
 - Twitter/X: [@orochi_dev](https://twitter.com/orochi_dev)
 
 ---

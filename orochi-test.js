@@ -1,30 +1,31 @@
-let toggler = document.querySelector('.orochi-nav-toggler');
-let togglerIcon = document.querySelector('.orochi-nav-toggler-icon');
+let toggler = document.querySelector('.o-nav-toggler');
+let togglerIcon = document.querySelector('.o-nav-toggler-icon');
 
 // Icône initiale
-togglerIcon.innerHTML = '<i class="oi oi-menu"></i>'
+togglerIcon.innerHTML = '<i class="oi oi-menu"></i>';
 
 // Dropdown arrows
-document.querySelectorAll('.orochi-dropdown > .orochi-nav-link').forEach(link => {
+document.querySelectorAll('.o-dropdown > .o-nav-link').forEach((link) => {
   link.textContent += ' ▾';
   const toggleArrow = () => {
-    link.textContent = link.textContent.includes('▾') ? 
-      link.textContent.replace('▾','▴') : link.textContent.replace('▴','▾');
+    link.textContent = link.textContent.includes('▾')
+      ? link.textContent.replace('▾', '▴')
+      : link.textContent.replace('▴', '▾');
   };
-  ['click','mouseover','mouseout'].forEach(evt =>
+  ['click', 'mouseover', 'mouseout'].forEach((evt) =>
     link.addEventListener(evt, toggleArrow)
   );
 });
 
 // Toggle mobile menu corrigé
 toggler.addEventListener('click', () => {
-  let navWrapper = document.querySelector('.orochi-nav-wrapper');
-  
-  if(navWrapper.classList.contains('orochi-nav-wrapper-active')) {
-    navWrapper.classList.remove('orochi-nav-wrapper-active');
+  let navWrapper = document.querySelector('.o-nav-wrapper');
+
+  if (navWrapper.classList.contains('o-nav-wrapper-active')) {
+    navWrapper.classList.remove('o-nav-wrapper-active');
     togglerIcon.innerHTML = '<i class="oi oi-menu"></i>';
   } else {
-    navWrapper.classList.add('orochi-nav-wrapper-active');
+    navWrapper.classList.add('o-nav-wrapper-active');
     togglerIcon.innerHTML = '<i class="oi oi-close"></i>';
   }
 });
@@ -38,28 +39,24 @@ class OrochiModal {
 
   init() {
     // Ouverture modale
-    document
-      .querySelectorAll('[data-orochi-modal-target]')
-      .forEach((trigger) => {
-        const target = trigger.dataset.orochiModalTarget;
-        const modal = document.querySelector(target);
+    document.querySelectorAll('[data-o-modal-target]').forEach((trigger) => {
+      const target = trigger.dataset.orochiModalTarget;
+      const modal = document.querySelector(target);
 
-        if (modal) {
-          this.modals.push(modal);
-          trigger.addEventListener('click', () => this.open(modal));
-        }
-      });
+      if (modal) {
+        this.modals.push(modal);
+        trigger.addEventListener('click', () => this.open(modal));
+      }
+    });
 
     // Fermeture
-    document.querySelectorAll('[data-orochi-modal-close]').forEach((btn) => {
-      btn.addEventListener('click', () =>
-        this.close(btn.closest('.orochi-modal'))
-      );
+    document.querySelectorAll('[data-o-modal-close]').forEach((btn) => {
+      btn.addEventListener('click', () => this.close(btn.closest('.o-modal')));
     });
 
     // Fermeture externe
     document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('orochi-modal')) {
+      if (e.target.classList.contains('o-modal')) {
         this.close(e.target);
       }
     });
@@ -94,7 +91,7 @@ class OrochiModal {
 
   releaseFocus() {
     const trigger = document.querySelector(
-      '[data-orochi-modal-target][aria-expanded="true"]'
+      '[data-o-modal-target][aria-expanded="true"]'
     );
     if (trigger) trigger.focus();
   }
