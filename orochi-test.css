@@ -70,14 +70,34 @@
   --space-10: 10rem;
   --space-11: 12rem;
 
+  /* Transitions */
+  --transition-form: border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
   /* padding btn*/
   --o-btn-padding: 0.5rem 1rem;
   --o-btn-sm-padding: 0.375rem 0.75rem;
   --o-btn-lg-padding: 1rem 2rem;
 
-  /* Transitions */
-  --transition-form: border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  /* Timing des animations */
+  --o-card-transition-fast: 0.15s ease-out;
+  --o-card-transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --o-card-transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Ombres pour cards */
+  --o-card-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --o-card-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --o-card-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --o-card-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.04);
+  
+  /* Transformations */
+  --o-card-scale-sm: scale(1.02);
+  --o-card-scale-md: scale(1.05);
+  --o-card-scale-lg: scale(1.08);
+  --o-card-translate-sm: translateY(-2px);
+  --o-card-translate-md: translateY(-4px);
+  --o-card-translate-lg: translateY(-8px);
+
 }
 
 /* Conteneurs */
@@ -983,46 +1003,103 @@
   }
 }
 
+/* =====================================================
+   STRUCTURE DE BASE DES CARDS
+   ===================================================== */
+
 .o-card {
-  background: white;
+  background: var(--o-white);
   border-radius: var(--o-rounded-md);
   border: 1px solid rgba(0, 0, 0, 0.125);
-  /* border: 1px solid var(--o-light); */
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  /* width: 100%;
-    min-width: 0;  */
+  transition: var(--o-card-transition-normal);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
 }
 
+/* =====================================================
+   COMPOSANTS DE CARD
+   ===================================================== */
+
+/* Image de card */
 .o-card-img-top {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
-  border-top-left-radius: var(--o-rounded-md);
-  border-top-right-radius: var(--o-rounded-md);
+  border-top-left-radius: calc(var(--o-rounded-md) - 1px);
+  border-top-right-radius: calc(var(--o-rounded-md) - 1px);
 }
 
+.o-card-img-bottom {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-bottom-left-radius: calc(var(--o-rounded-md) - 1px);
+  border-bottom-right-radius: calc(var(--o-rounded-md) - 1px);
+}
+
+.o-card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  border-radius: calc(var(--o-rounded-md) - 1px);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  color: var(--o-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* En-tête et pied de page */
 .o-card-header {
   padding: 1rem 1.5rem;
   border-bottom: var(--o-border);
+  background-color: rgba(var(--o-dark-rgb), 0.03);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .o-card-footer {
   padding: 1rem 1.5rem;
   border-top: var(--o-border);
+  background-color: rgba(var(--o-dark-rgb), 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
 }
 
+/* Corps de la card */
 .o-card-body {
   padding: 1.5rem;
+  flex: 1 1 auto;
 }
 
+/* Titre et texte */
 .o-card-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: var(--o-dark);
   line-height: 1.2;
+}
+
+.o-card-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: rgba(var(--o-dark-rgb), 0.6);
+  line-height: 1.4;
 }
 
 .o-card-text {
@@ -1032,148 +1109,501 @@
   line-height: 1.5;
 }
 
-/* Variantes supplémentaires */
-.o-card-title-lg {
-  font-size: 1.5rem;
+.o-card-link {
+  color: var(--o-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--o-card-transition-fast);
 }
 
-.o-card-text-sm {
+.o-card-link:hover {
+  color: var(--o-secondary);
+  text-decoration: underline;
+}
+
+/* =====================================================
+   VARIANTES DE TAILLE
+   ===================================================== */
+
+/* Card compacte */
+.o-card-sm .o-card-body {
+  padding: 1rem;
+}
+
+.o-card-sm .o-card-header,
+.o-card-sm .o-card-footer {
+  padding: 0.75rem 1rem;
+}
+
+.o-card-sm .o-card-title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.o-card-sm .o-card-text {
   font-size: 0.8125rem;
+  margin-bottom: 0.75rem;
 }
 
-.o-card-text-muted {
-  color: rgba(var(--o-dark-rgb), 0.6);
+/* Card large */
+.o-card-lg .o-card-body {
+  padding: 2rem;
 }
 
-/* Effets de survol généraux */
-.o-card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
+.o-card-lg .o-card-header,
+.o-card-lg .o-card-footer {
+  padding: 1.5rem 2rem;
 }
 
-.o-card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.o-card-lg .o-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Effet de survol coloré */
-.o-card-hover-primary {
-  transition: all 0.3s ease;
+.o-card-lg .o-card-text {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* =====================================================
+   SYSTÈME D'ANIMATIONS RÉUTILISABLES
+   ===================================================== */
+
+/* Classe de base pour les animations */
+.o-animate {
+  transition: all var(--o-card-transition-normal);
+}
+
+/* Animations de survol */
+.o-hover-lift {
+  transition: transform var(--o-card-transition-normal), box-shadow var(--o-card-transition-normal);
+}
+
+.o-hover-lift:hover {
+  transform: var(--o-card-translate-md);
+  box-shadow: var(--o-card-shadow-lg);
+}
+
+.o-hover-lift-sm:hover {
+  transform: var(--o-card-translate-sm);
+  box-shadow: var(--o-card-shadow-md);
+}
+
+.o-hover-lift-lg:hover {
+  transform: var(--o-card-translate-lg);
+  box-shadow: var(--o-card-shadow-xl);
+}
+
+/* Animations de zoom */
+.o-hover-zoom {
+  transition: transform var(--o-card-transition-normal);
+  overflow: hidden;
+}
+
+.o-hover-zoom:hover {
+  transform: var(--o-card-scale-sm);
+}
+
+.o-hover-zoom-md:hover {
+  transform: var(--o-card-scale-md);
+}
+
+.o-hover-zoom-lg:hover {
+  transform: var(--o-card-scale-lg);
+}
+
+/* Animation de rotation subtile */
+.o-hover-tilt {
+  transition: transform var(--o-card-transition-normal);
+}
+
+.o-hover-tilt:hover {
+  transform: perspective(1000px) rotateX(-10deg) rotateY(5deg) scale(1.02);
+}
+
+/* Animation de lueur */
+.o-hover-glow {
+  transition: box-shadow var(--o-card-transition-normal);
+}
+
+.o-hover-glow:hover {
+  box-shadow: 0 0 20px rgba(var(--o-primary-rgb), 0.3);
+}
+
+.o-hover-glow-secondary:hover {
+  box-shadow: 0 0 20px rgba(var(--o-secondary-rgb), 0.3);
+}
+
+.o-hover-glow-success:hover {
+  box-shadow: 0 0 20px rgba(var(--o-success-rgb), 0.3);
+}
+
+/* Animation de bordure colorée */
+.o-hover-border {
   border: 2px solid transparent;
+  transition: all var(--o-card-transition-normal);
 }
 
-.o-card-hover-primary:hover {
+.o-hover-border-primary:hover {
   border-color: var(--o-primary);
   box-shadow: 0 0 0 3px rgba(var(--o-primary-rgb), 0.1);
-  background-color: rgba(var(--o-primary-rgb), 0.03);
 }
 
-/* Variantes supplémentaires */
-.o-card-hover-secondary:hover {
+.o-hover-border-secondary:hover {
   border-color: var(--o-secondary);
   box-shadow: 0 0 0 3px rgba(var(--o-secondary-rgb), 0.1);
 }
 
-.o-card-hover-success:hover {
-  border-color: var(--o-success);
-  box-shadow: 0 0 0 3px rgba(var(--o-success-rgb), 0.1);
+/* Animation de fond gradient */
+.o-hover-gradient {
+  background: linear-gradient(135deg, var(--o-white) 0%, var(--o-white) 100%);
+  transition: background var(--o-card-transition-slow);
 }
 
-/* Effet "lift" accentué */
-.o-card-hover-lift {
-  transition: transform 0.3s ease;
+.o-hover-gradient-primary:hover {
+  background: linear-gradient(135deg, var(--o-white) 0%, rgba(var(--o-primary-rgb), 0.05) 100%);
 }
 
-.o-card-hover-lift:hover {
-  transform: translateY(-8px);
+/* =====================================================
+   ANIMATIONS D'APPARITION
+   ===================================================== */
+
+/* Animation de fondu */
+@keyframes o-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Effet de surbrillance */
-.o-card-hover-glow:hover {
-  box-shadow: 0 0 12px rgba(var(--o-primary-rgb), 0.2);
+.o-fade-in {
+  animation: o-fadeIn 0.6s ease-out;
 }
 
-/* Text Background System */
-[class*='o-text-bg-'] {
-  border: 1px solid transparent;
+/* Animation de glissement */
+@keyframes o-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.o-slide-up {
+  animation: o-slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation de zoom */
+@keyframes o-zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.o-zoom-in {
+  animation: o-zoomIn 0.5s ease-out;
+}
+
+/* =====================================================
+   VARIANTES DE COULEUR ÉTENDUES
+   ===================================================== */
+
+/* Cards avec couleurs de fond */
+.o-card-primary {
+  background-color: var(--o-primary);
   color: var(--o-white);
-  border-radius: var(--o-rounded-md);
-}
-
-[class*='o-text-bg-'] .o-card-title,
-[class*='o-text-bg-'] .o-card-text {
-  color: inherit;
-}
-
-/* Couleurs principales */
-.o-text-bg-primary {
-  background-color: var(--o-primary) !important;
   border-color: var(--o-primary);
 }
 
-.o-text-bg-secondary {
-  background-color: var(--o-secondary) !important;
+.o-card-secondary {
+  background-color: var(--o-secondary);
+  color: var(--o-white);
   border-color: var(--o-secondary);
 }
 
-.o-text-bg-success {
-  background-color: var(--o-success) !important;
+.o-card-success {
+  background-color: var(--o-success);
+  color: var(--o-white);
   border-color: var(--o-success);
 }
 
-.o-text-bg-danger {
-  background-color: var(--o-danger) !important;
+.o-card-danger {
+  background-color: var(--o-danger);
+  color: var(--o-white);
   border-color: var(--o-danger);
 }
 
-/* Exceptions avec texte noir */
-.o-text-bg-warning {
-  background-color: var(--o-warning) !important;
+.o-card-warning {
+  background-color: var(--o-warning);
+  color: var(--o-dark);
   border-color: var(--o-warning);
-  color: var(--o-dark) !important;
 }
 
-.o-text-bg-info {
-  background-color: var(--o-info) !important;
+.o-card-info {
+  background-color: var(--o-info);
+  color: var(--o-white);
   border-color: var(--o-info);
-  color: var(--o-dark) !important;
 }
 
-.o-text-bg-light {
-  background-color: var(--o-light) !important;
-  border-color: rgba(var(--o-dark-rgb), 0.1);
-  color: var(--o-dark) !important;
+.o-card-light {
+  background-color: var(--o-light);
+  color: var(--o-dark);
+  border-color: var(--o-light);
 }
 
-.o-text-bg-dark {
-  background-color: var(--o-dark) !important;
+.o-card-dark {
+  background-color: var(--o-dark);
+  color: var(--o-white);
   border-color: var(--o-dark);
 }
 
-/* Styles des sous-composants */
-[class*='o-text-bg-'] .o-card-header {
-  background-color: rgba(0, 0, 0, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+/* Cards avec bordures colorées */
+.o-card-outline-primary {
+  border: 2px solid var(--o-primary);
+  color: var(--o-primary);
 }
 
-[class*='o-text-bg-'] .o-card-footer {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+.o-card-outline-secondary {
+  border: 2px solid var(--o-secondary);
+  color: var(--o-secondary);
 }
 
-/* Adaptation spécifique pour les fonds clairs */
-.o-text-bg-warning .o-card-header,
-.o-text-bg-info .o-card-header,
-.o-text-bg-light .o-card-header {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-bottom-color: rgba(0, 0, 0, 0.1);
+.o-card-outline-success {
+  border: 2px solid var(--o-success);
+  color: var(--o-success);
 }
 
-.o-text-bg-warning .o-card-footer,
-.o-text-bg-info .o-card-footer,
-.o-text-bg-light .o-card-footer {
-  background-color: rgba(0, 0, 0, 0.03);
-  border-top-color: rgba(0, 0, 0, 0.08);
+.o-card-outline-danger {
+  border: 2px solid var(--o-danger);
+  color: var(--o-danger);
+}
+
+/* =====================================================
+   LAYOUTS SPÉCIAUX
+   ===================================================== */
+
+/* Card horizontale */
+.o-card-horizontal {
+  flex-direction: row;
+}
+
+.o-card-horizontal .o-card-img-top {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: calc(var(--o-rounded-md) - 1px) 0 0 calc(var(--o-rounded-md) - 1px);
+}
+
+.o-card-horizontal .o-card-body {
+  flex: 1;
+}
+
+/* Card avec image de fond */
+.o-card-bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--o-white);
+  position: relative;
+}
+
+.o-card-bg-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+  border-radius: calc(var(--o-rounded-md) - 1px);
+}
+
+.o-card-bg-image > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card en groupe */
+.o-card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.o-card-group .o-card {
+  margin-bottom: 0;
+  border-radius: 0;
+  border-bottom: none;
+}
+
+.o-card-group .o-card:first-child {
+  border-top-left-radius: var(--o-rounded-md);
+  border-top-right-radius: var(--o-rounded-md);
+}
+
+.o-card-group .o-card:last-child {
+  border-bottom-left-radius: var(--o-rounded-md);
+  border-bottom-right-radius: var(--o-rounded-md);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Card deck (grille responsive) */
+.o-card-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.o-card-deck .o-card {
+  height: 100%;
+}
+
+/* =====================================================
+   COMPOSANTS SUPPLÉMENTAIRES
+   ===================================================== */
+
+/* Badge dans card */
+.o-card-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--o-primary);
+  color: var(--o-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--o-rounded-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Actions de card */
+.o-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.o-card-actions .o-btn {
+  margin: 0;
+}
+
+/* Liste dans card */
+.o-card .o-list-group {
+  border: none;
+  border-radius: 0;
+}
+
+.o-card .o-list-group:first-child {
+  border-top-left-radius: calc(var(--o-rounded-md) - 1px);
+  border-top-right-radius: calc(var(--o-rounded-md) - 1px);
+}
+
+.o-card .o-list-group:last-child {
+  border-bottom-left-radius: calc(var(--o-rounded-md) - 1px);
+  border-bottom-right-radius: calc(var(--o-rounded-md) - 1px);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 576px) {
+  .o-card-horizontal {
+    flex-direction: column;
+  }
+  
+  .o-card-horizontal .o-card-img-top {
+    width: 100%;
+    height: 200px;
+    border-radius: calc(var(--o-rounded-md) - 1px) calc(var(--o-rounded-md) - 1px) 0 0;
+  }
+  
+  .o-card-deck {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .o-card-lg .o-card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* =====================================================
+   UTILITAIRES SUPPLÉMENTAIRES
+   ===================================================== */
+
+/* Suppression des ombres */
+.o-card-no-shadow {
+  box-shadow: none !important;
+}
+
+/* Card transparente */
+.o-card-transparent {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Card avec bordure épaisse */
+.o-card-thick-border {
+  border-width: 3px;
+}
+
+/* Animation au scroll (à utiliser avec JavaScript) */
+.o-card-scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.o-card-scroll-animate.o-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* États d'interaction */
+.o-card-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.o-card-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.o-card-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: o-shimmer 1.5s infinite;
+}
+
+@keyframes o-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 /* Formulaires */
 .o-form-group {
