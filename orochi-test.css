@@ -1533,74 +1533,87 @@
    VARIANTES DE COULEUR ÉTENDUES
    ===================================================== */
 
-/* Cards avec couleurs de fond */
-.o-card-primary {
-  background-color: var(--o-primary);
+/* Text Background System */
+[class*='o-text-bg-'] {
+  border: 1px solid transparent;
   color: var(--o-white);
+  border-radius: var(--o-rounded-md);
+}
+
+[class*='o-text-bg-'] .o-card-title,
+[class*='o-text-bg-'] .o-card-text {
+  color: inherit;
+}
+
+/* Couleurs principales */
+.o-text-bg-primary {
+  background-color: var(--o-primary) !important;
   border-color: var(--o-primary);
 }
 
-.o-card-secondary {
-  background-color: var(--o-secondary);
-  color: var(--o-white);
+.o-text-bg-secondary {
+  background-color: var(--o-secondary) !important;
   border-color: var(--o-secondary);
 }
 
-.o-card-success {
-  background-color: var(--o-success);
-  color: var(--o-white);
+.o-text-bg-success {
+  background-color: var(--o-success) !important;
   border-color: var(--o-success);
 }
 
-.o-card-danger {
-  background-color: var(--o-danger);
-  color: var(--o-white);
+.o-text-bg-danger {
+  background-color: var(--o-danger) !important;
   border-color: var(--o-danger);
 }
 
-.o-card-warning {
-  background-color: var(--o-warning);
-  color: var(--o-dark);
+/* Exceptions avec texte noir */
+.o-text-bg-warning {
+  background-color: var(--o-warning) !important;
   border-color: var(--o-warning);
+  color: var(--o-dark) !important;
 }
 
-.o-card-info {
-  background-color: var(--o-info);
-  color: var(--o-white);
+.o-text-bg-info {
+  background-color: var(--o-info) !important;
   border-color: var(--o-info);
+  color: var(--o-dark) !important;
 }
 
-.o-card-light {
-  background-color: var(--o-light);
-  color: var(--o-dark);
-  border-color: var(--o-light);
+.o-text-bg-light {
+  background-color: var(--o-light) !important;
+  border-color: rgba(var(--o-dark-rgb), 0.1);
+  color: var(--o-dark) !important;
 }
 
-.o-card-dark {
-  background-color: var(--o-dark);
-  color: var(--o-white);
+.o-text-bg-dark {
+  background-color: var(--o-dark) !important;
   border-color: var(--o-dark);
 }
 
-/* Cards avec bordures colorées */
-.o-card-outline-primary {
-  border: 2px solid var(--o-primary);
-  color: var(--o-primary);
+/* Styles des sous-composants */
+[class*='o-text-bg-'] .o-card-header {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.o-card-outline-secondary {
-  border: 2px solid var(--o-secondary);
-  color: var(--o-secondary);
+[class*='o-text-bg-'] .o-card-footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.o-card-outline-success {
-  border: 2px solid var(--o-success);
-  color: var(--o-success);
+/* Adaptation spécifique pour les fonds clairs */
+.o-text-bg-warning .o-card-header,
+.o-text-bg-info .o-card-header,
+.o-text-bg-light .o-card-header {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
-.o-card-outline-danger {
-  border: 2px solid var(--o-danger);
-  color: var(--o-danger);
+.o-text-bg-warning .o-card-footer,
+.o-text-bg-info .o-card-footer,
+.o-text-bg-light .o-card-footer {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top-color: rgba(0, 0, 0, 0.08);
 }
 
 /* =====================================================
