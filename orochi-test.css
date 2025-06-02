@@ -1265,6 +1265,58 @@
 }
 
 /* =====================================================
+   ANIMATIONS D'APPARITION
+   ===================================================== */
+
+/* Animation de fondu */
+@keyframes o-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.o-fade-in {
+  animation: o-fadeIn 0.6s ease-out;
+}
+
+/* Animation de glissement */
+@keyframes o-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.o-slide-up {
+  animation: o-slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation de zoom */
+@keyframes o-zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.o-zoom-in {
+  animation: o-zoomIn 0.5s ease-out;
+}
+
+/* =====================================================
    ANIMATIONS D'APPARITION AU SCROLL
    ===================================================== */
 
@@ -1771,6 +1823,7 @@
 .o-card-thick-border {
   border-width: 3px;
 }
+
 
 /* États d'interaction */
 .o-card-disabled {

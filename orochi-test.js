@@ -1,32 +1,42 @@
-let toggler = document.querySelector('.o-nav-toggler');
-let togglerIcon = document.querySelector('.o-nav-toggler-icon');
+document.addEventListener('DOMContentLoaded', () => {
+  const toggler = document.querySelector('.o-nav-toggler');
+  const togglerIcon = document.querySelector('.o-nav-toggler-icon');
 
-// Icône initiale
-togglerIcon.innerHTML = '<i class="oi oi-menu"></i>';
-
-// Dropdown arrows
-document.querySelectorAll('.o-dropdown > .o-nav-link').forEach((link) => {
-  link.textContent += ' ▾';
-  const toggleArrow = () => {
-    link.textContent = link.textContent.includes('▾')
-      ? link.textContent.replace('▾', '▴')
-      : link.textContent.replace('▴', '▾');
-  };
-  ['click', 'mouseover', 'mouseout'].forEach((evt) =>
-    link.addEventListener(evt, toggleArrow)
-  );
-});
-
-// Toggle mobile menu corrigé
-toggler.addEventListener('click', () => {
-  let navWrapper = document.querySelector('.o-nav-wrapper');
-
-  if (navWrapper.classList.contains('o-nav-wrapper-active')) {
-    navWrapper.classList.remove('o-nav-wrapper-active');
+  // Icône initiale
+  if (togglerIcon) {
     togglerIcon.innerHTML = '<i class="oi oi-menu"></i>';
-  } else {
-    navWrapper.classList.add('o-nav-wrapper-active');
-    togglerIcon.innerHTML = '<i class="oi oi-close"></i>';
+  }
+
+  // Dropdown arrows
+  document.querySelectorAll('.o-dropdown > .o-nav-link').forEach((link) => {
+    if (!link.textContent.includes('▾') && !link.textContent.includes('▴')) {
+      link.textContent += ' ▾';
+    }
+
+    const toggleArrow = () => {
+      link.textContent = link.textContent.includes('▾')
+        ? link.textContent.replace('▾', '▴')
+        : link.textContent.replace('▴', '▾');
+    };
+
+    ['click', 'mouseover', 'mouseout'].forEach((evt) =>
+      link.addEventListener(evt, toggleArrow)
+    );
+  });
+
+  // Menu mobile toggle
+  if (toggler) {
+    toggler.addEventListener('click', () => {
+      const navWrapper = document.querySelector('.o-nav-wrapper');
+      if (!navWrapper || !togglerIcon) return;
+
+      const isActive = navWrapper.classList.contains('o-nav-wrapper-active');
+      navWrapper.classList.toggle('o-nav-wrapper-active');
+
+      togglerIcon.innerHTML = isActive
+        ? '<i class="oi oi-menu"></i>'
+        : '<i class="oi oi-close"></i>';
+    });
   }
 });
 
@@ -95,7 +105,6 @@ function triggerAnimation(element) {
         element.classList.add('o-visible');
     }
 }
-
 
 //  Orochi Modal
 class OrochiModal {
