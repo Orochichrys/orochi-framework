@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Overflow - Orochi Framework</title>
+  <link rel="stylesheet" href="../../../orochi-test.css" />
+  <link rel="stylesheet" href="../../../orochi-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="orochi-navbar orochi-sticky orochi-bg-light">
+    <div class="orochi-nav-container">
+      <button class="sidebar-toggler">
+        <i class="bx bx-grid-alt"></i>
+      </button>
+      <a href="../../../index.html" class="orochi-brand orochi-text-primary">
+        <i class="fas fa-dragon orochi-text-primary"></i>Orochi
+      </a>
+      <button class="orochi-nav-toggler">
+        <span class="orochi-nav-toggler-icon"></span>
+      </button>
+      <div class="orochi-nav-wrapper">
+        <ul class="orochi-nav">
+          <li class="orochi-nav-item">
+            <a href="introduction.html" class="orochi-nav-link">Documentation</a>
+          </li>
+          <li class="orochi-nav-item">
+            <a href="#" class="orochi-nav-link">Exemples</a>
+          </li>
+        </ul>
+        <form class="orochi-d-flex">
+          <input type="search" class="orochi-form-input orochi-me-2">
+          <button class="orochi-btn orochi-btn-outline-primary">Recherche</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="orochi-container orochi-mt-4">
+    <div class="orochi-row orochi-g-4">
+
+      <!-- Sidebar -->
+      <div class="orochi-col-12 orochi-col-md-3">
+        <div id="sidebar" class="orochi-card orochi-sticky orochi-p-4 orochi-rounded-lg">
+          <!-- Liens de navigation latéraux -->
+        </div>
+      </div>
+
+      <!-- Contenu -->
+      <div class="orochi-col-12 orochi-col-md-9">
+        <div class="orochi-card orochi-p-4">
+          <h1 class="orochi-title orochi-text-primary orochi-mb-4">
+            📦 Overflow Orochi
+          </h1>
+
+          <!-- Overflow visible -->
+          <section class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-4">Overflow visible</h2>
+            <div class="orochi-bg-light orochi-p-3 orochi-mb-4 orochi-w-200 orochi-h-100 orochi-border orochi-overflow-visible">
+              <div class="orochi-bg-primary orochi-text-white orochi-p-3 orochi-w-300">
+                Texte dépassant la boîte.
+              </div>
+            </div>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;div class="orochi-w-200 orochi-h-100 orochi-border orochi-overflow-visible"&gt;
+  &lt;div class="orochi-bg-primary orochi-text-white orochi-p-3 orochi-w-300"&gt;
+    Texte dépassant la boîte.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+          <!-- Overflow hidden -->
+          <section class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-4">Overflow caché</h2>
+            <div class="orochi-bg-light orochi-p-3 orochi-mb-4 orochi-w-200 orochi-h-100 orochi-border orochi-overflow-hidden">
+              <div class="orochi-bg-danger orochi-text-white orochi-p-3 orochi-w-300">
+                Ce contenu est tronqué.
+              </div>
+            </div>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;div class="orochi-w-200 orochi-h-100 orochi-border orochi-overflow-hidden"&gt;
+  &lt;div class="orochi-bg-danger orochi-text-white orochi-p-3 orochi-w-300"&gt;
+    Ce contenu est tronqué.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+          <!-- Overflow scroll -->
+          <section class="orochi-mb-6">
+            <h2 class="orochi-text-dark orochi-mb-4">Overflow scroll</h2>
+            <div class="orochi-bg-light orochi-p-3 orochi-mb-4 orochi-w-200 orochi-h-100 orochi-border orochi-overflow-scroll">
+              <div class="orochi-bg-success orochi-text-white orochi-p-3 orochi-w-300 orochi-h-150">
+                Ce contenu est scrollable.
+              </div>
+            </div>
+            <div class="orochi-code-block">
+              <pre class="language-html"><code>&lt;div class="orochi-w-200 orochi-h-100 orochi-border orochi-overflow-scroll"&gt;
+  &lt;div class="orochi-bg-success orochi-text-white orochi-p-3 orochi-w-300 orochi-h-150"&gt;
+    Ce contenu est scrollable.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+          <!-- Astuce -->
+          <div class="orochi-alert orochi-alert-info orochi-mt-5">
+            <strong>💡 Conseil :</strong> Utilisez les classes utilitaires <code>.orochi-overflow-hidden</code>, <code>.orochi-overflow-scroll</code>, etc., pour contrôler facilement le comportement de dépassement.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="orochi-bg-dark orochi-text-light orochi-py-4 orochi-mt-5">
+    <div class="orochi-d-flex orochi-justify-center orochi-gap-3">
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-facebook-circle orochi-text-h3"></i>
+      </a>
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-twitter orochi-text-h3"></i>
+      </a>
+      <a href="#" class="orochi-text-white orochi-hover-text-primary">
+        <i class="bx bxl-github orochi-text-h3"></i>
+      </a>
+    </div>
+    <div class="orochi-container orochi-mt-2">
+      <div class="orochi-text-center">
+        <p class="orochi-mb-0">&copy; 2025 Orochi CSS - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../orochi-test.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+</body>
+
+</html>
