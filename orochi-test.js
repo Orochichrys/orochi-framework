@@ -30,6 +30,20 @@ toggler.addEventListener('click', () => {
   }
 });
 
+
+// Animation au scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('o-visible');
+        }
+    });
+});
+
+document.querySelectorAll('.o-card-scroll-animate')
+    .forEach(card => observer.observe(card));
+
+
 //  Orochi Modal
 class OrochiModal {
   constructor() {
