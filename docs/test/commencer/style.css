@@ -2,10 +2,14 @@
 body {
   background-color: #f9f9f9;
 }
+code {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--o-danger);
+}
 /* Custom code blocks */
 .o-code-block {
   position: relative;
-  margin: 1.5rem 0;
+  /* margin: 1.5rem 0; */
   border-radius: var(--o-rounded-md);
   background: var(--o-dark) !important;
   width: 100%;

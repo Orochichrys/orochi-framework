@@ -59,34 +59,114 @@
       <!-- Contenu -->
       <div class="o-col-12 o-col-md-9">
         <div class="o-card o-p-4">
-          <h1 class="o-title o-text-primary o-mb-4">🃏 Cartes Orochi</h1>
-          <p class="o-lead o-mb-5">Composants flexibles pour organiser et présenter du contenu en utilisant uniquement les classes <code>.o-</code> du framework.</p>
-
-          <!-- 1. Carte simple -->
-          <section id="basic" class="o-mb-6">
-            <h2 class="o-text-dark o-mb-3">Carte simple</h2>
-            <p class="o-card-text">
-              Le composant de base <code>.o-card</code> crée un conteneur avec bordures, ombre et fonds blancs.
-              Ajoutez <code>.o-card-body</code> pour encapsuler votre contenu (titre, texte, boutons).
-              Utilisez <code>.o-card-title</code> et <code>.o-card-text</code> pour formater titres et paragraphes.
+          <h1 class="o-title o-text-primary ">🃏 Cartes Orochi</h1>
+            <p class="o-lead o-mb-5">
+              Les cartes Orochi sont des conteneurs flexibles et extensibles pour organiser et présenter du contenu, avec de nombreuses variantes et options, similaires à celles de Bootstrap, mais conçues pour le framework Orochi.
             </p>
-            <div class="o-card">
+
+          <h2 class="o-mb-4">Type de contenu</h1>
+          <p class="o-mb-4">Les cartes sont des conteneurs polyvalents pour afficher du contenu de manière structurée et esthétique. Elles peuvent inclure des images, des titres, des textes, des boutons et plus encore.</p>
+
+          <!--coprs -->
+          <section id="corps" class="o-mb-4">
+            <h2 class="o-text-dark o-mb-3">Corps</h2>
+            <p class="o-card-text">
+                L'élément de base d'une carte est le <code>.o-card-body</code>. Utilisez-le chaque fois que vous avez besoin d'une section rembourrée dans une carte.
+            </p>
+            <div class="o-card o-mb-3">
               <div class="o-card-body">
-                <h3 class="o-card-title o-text-primary">Titre de la carte</h3>
-                <p class="o-card-text">Contenu de la carte simple.</p>
-                <button class="o-btn o-btn-primary">Action</button>
+                Il s'agit d'un texte dans le corps d'une carte.
               </div>
             </div>
             <div class="o-code-block">
               <pre class="language-html"><code>&lt;div class="o-card"&gt;
   &lt;div class="o-card-body"&gt;
-    &lt;h3 class="o-card-title o-text-primary"&gt;Titre&lt;/h3&gt;
-    &lt;p class="o-card-text"&gt;Contenu&lt;/p&gt;
-    &lt;button class="o-btn o-btn-primary"&gt;Action&lt;/button&gt;
+    Il s'agit d'un texte dans le corps d'une carte.
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
           </section>
+
+          <!-- Carte simple -->
+          <section id="basic" class="o-mb-4">
+            <h2 class="o-text-dark o-mb-3">Titres, textes et liens</h2>
+            <p class="o-card-text">
+              Les titres de carte s’ajoutent en appliquant <code>.o-card-title</code> à une balise <code>&lt;h*&gt;</code>. Les sous-titres utilisent <code>.o-card-subtitle</code> sur une balise <code>&lt;h*&gt;</code> également. Placez titres et sous-titres dans un <code>.o-card-body</code> pour garantir un alignement optimal.<br>
+              Les liens sont ajoutés avec <code>.o-card-link</code> sur une balise <code>&lt;a&gt;</code> ; ils s’affichent côte à côte dans la carte.
+            </p>
+            <div class="o-card  o-mb-3">
+              <div class="o-card-body">
+                <h5 class="o-card-title">Titre de la carte</h5>
+                <h6 class="o-card-subtitle">Titre de la carte</h6>
+                <p class="o-card-text">Contenu de la carte simple.</p>
+                <a class="o-card-link">Lien de la carte</a>
+                <a class="o-card-link">Un autre lien</a>
+              </div>
+            </div>
+            <div class="o-code-block">
+              <pre class="language-html"><code>&lt;div class="o-card"&gt;
+  &lt;div class="o-card-body"&gt;
+    &lt;h5 class="o-card-title"&gt;Titre&lt;/h5&gt;
+    &lt;h6 class="o-card-title"&gt;Titre&lt;/h6&gt;
+    &lt;p class="o-card-text"&gt;Contenu&lt;/p&gt;
+    &lt;a class="o-card-link"&gt;Lien de la carte &lt;/a&gt;
+    &lt;a class="o-card-link"&gt;Un autre lien &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+           <!-- Image en haut -->
+          <section id="img-top" class="o-mb-4">
+            <h2 class="o-text-dark o-mb-3">Carte avec image en haut</h2>
+            <p class="o-card-text">
+              La classe <code>.o-card-img-top</code> permet d’insérer une image en haut de la carte,
+              avec les coins supérieurs arrondis automatiquement.
+            </p>
+            <div class="o-card  o-mb-3" style="width: 18rem;">
+              <img src="https://picsum.photos/400/200" class="o-card-img-top" alt="Image en haut">
+              <div class="o-card-body">
+                <h4 class="o-card-title">Titre</h4>
+                <p class="o-card-text">Texte descriptif</p>
+              </div>
+            </div>
+            <div class="o-code-block">
+              <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
+  &lt;div class="o-card-body"&gt;
+    &lt;img src="..." class="o-card-img-top" alt="..."&gt;
+    &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
+    &lt;p class="o-card-text"&gt;Texte descriptif&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+          <!--Image en bas -->
+          <section id="img-bottom" class="o-mb-4">
+            <h2 class="o-text-dark o-mb-3">Carte avec image en bas</h2>
+            <p class="o-card-text">
+              Utilisez <code>.o-card-img-bottom</code> pour positionner l’image après le corps de la carte.
+            </p>
+            <div class="o-card o-mb-3" style="width: 18rem;">
+              <div class="o-card-body">
+                <h4 class="o-card-title">Titre</h4>
+                <p class="o-card-text">Texte descriptif</p>
+              </div>
+              <img src="https://picsum.photos/400/200" class="o-card-img-bottom" alt="Image en bas">
+            </div>
+            <div class="o-code-block">
+              <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
+  &lt;div class="o-card-body"&gt;
+    &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
+    &lt;p class="o-card-text"&gt;Texte descriptif&lt;/p&gt;
+  &lt;/div&gt;
+    &lt;img src="..." class="o-card-img-bottom" alt="..."&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </section>
+
+
+         
 
           <!-- 2. En-tête et pied -->
           <section id="header-footer" class="o-mb-6">
@@ -115,55 +195,7 @@
             </div>
           </section>
 
-          <!-- 3. Image en haut -->
-          <section id="img-top" class="o-mb-6">
-            <h2 class="o-text-dark o-mb-3">Carte avec image en haut</h2>
-            <p class="o-card-text">
-              La classe <code>.o-card-img-top</code> permet d’insérer une image en haut de la carte,
-              avec les coins supérieurs arrondis automatiquement.
-            </p>
-            <div class="o-card" style="width: 18rem;">
-              <img src="https://picsum.photos/400/200" class="o-card-img-top" alt="Image en haut">
-              <div class="o-card-body">
-                <h4 class="o-card-title">Titre</h4>
-                <p class="o-card-text">Texte descriptif</p>
-              </div>
-            </div>
-            <div class="o-code-block">
-              <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
-  &lt;div class="o-card-body"&gt;
-    &lt;img src="..." class="o-card-img-top" alt="..."&gt;
-    &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
-    &lt;p class="o-card-text"&gt;Texte descriptif&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </section>
-
-          <!-- 4. Image en bas -->
-          <section id="img-bottom" class="o-mb-6">
-            <h2 class="o-text-dark o-mb-3">Carte avec image en bas</h2>
-            <p class="o-card-text">
-              Utilisez <code>.o-card-img-bottom</code> pour positionner l’image après le corps de la carte.
-            </p>
-            <div class="o-card" style="width: 18rem;">
-              <div class="o-card-body">
-                <h4 class="o-card-title">Titre</h4>
-                <p class="o-card-text">Texte descriptif</p>
-              </div>
-              <img src="https://picsum.photos/400/200" class="o-card-img-bottom" alt="Image en bas">
-            </div>
-            <div class="o-code-block">
-              <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
-  &lt;div class="o-card-body"&gt;
-    &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
-    &lt;p class="o-card-text"&gt;Texte descriptif&lt;/p&gt;
-  &lt;/div&gt;
-    &lt;img src="..." class="o-card-img-bottom" alt="..."&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </section>
-
+         
           <!-- 5. Overlay sur image -->
           <section id="overlay" class="o-mb-6">
             <h2 class="o-text-dark o-mb-3">Carte avec overlay</h2>

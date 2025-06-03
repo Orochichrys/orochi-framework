@@ -3150,100 +3150,85 @@
   justify-content: space-around;
 }
 
-.o-align-start {
-  align-items: flex-start;
-}
-.o-align-center {
-  align-items: center;
-}
-.o-align-end {
-  align-items: flex-end;
-}
-.o-align-stretch {
-  align-items: stretch;
+/* =====================================================
+   TYPOGRAPHIE & TEXTES
+   ===================================================== */
+
+/* Lead paragraph */
+.o-lead {
+  font-size: 1.25rem;                    /* 20px */
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  color: rgba(var(--o-dark-rgb), 0.85);
 }
 
-/* Textes & Alignements */
-.o-text-start {
-  text-align: start;
-}
-.o-text-end {
-  text-align: end;
-}
-.o-text-left {
-  text-align: left;
-}
-.o-text-center {
-  text-align: center;
-}
-.o-text-right {
-  text-align: right;
-}
-.o-text-justify {
-  text-align: justify;
-}
-
-.o-text-decoration-none {
-  text-decoration: none;
-}
-.o-text-decoration-underline {
-  text-decoration: underline;
-}
-.o-text-decoration-line-through {
-  text-decoration: line-through;
-}
-
-.o-text-muted {
-  color: rgba(var(--o-dark-rgb), 0.6);
-}
-
-/* Tailles de texte */
-.o-text-xs {
-  font-size: 0.75rem;
-} /* 12px */
-.o-text-sm {
-  font-size: 0.875rem;
-} /* 14px */
-.o-text-base {
-  font-size: 1rem;
-} /* 16px */
-.o-text-lg {
-  font-size: 1.125rem;
-} /* 18px */
-.o-text-xl {
-  font-size: 1.25rem;
-} /* 20px */
-.o-text-2xl {
-  font-size: 1.5rem;
-} /* 24px */
-.o-text-3xl {
-  font-size: 1.875rem;
-} /* 30px */
-
-h1 {
-  font-size: 2.5rem;
+/* Titles */
+.o-title {
+  font-size: 2rem;                       /* 32px */
   line-height: 1.2;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.o-text-bold {
-  font-weight: bold;
-}
-.o-text-light {
-  font-weight: lighter;
-}
-.o-text-italic {
-  font-style: italic;
-}
-.o-text-uppercase {
-  text-transform: uppercase;
-}
-.o-text-lowercase {
-  text-transform: lowercase;
-}
-.o-text-capitalize {
-  text-transform: capitalize;
-}
+/* Font size utilities */
+.o-fs-xs { font-size: 0.75rem !important; }   /* 12px */
+.o-fs-sm { font-size: 0.875rem !important; }  /* 14px */
+.o-fs-base { font-size: 1rem !important; }    /* 16px */
+.o-fs-lg { font-size: 1.125rem !important; }  /* 18px */
+.o-fs-xl { font-size: 1.25rem !important; }   /* 20px */
+.o-fs-2xl { font-size: 1.5rem !important; }   /* 24px */
+.o-fs-3xl { font-size: 1.875rem !important; } /* 30px */
+
+/* Font weight utilities */
+.o-text-bold { font-weight: 700 !important; }
+.o-text-semibold { font-weight: 600 !important; }
+.o-text-light { font-weight: 300 !important; }
+
+/* Font style utilities */
+.o-text-italic { font-style: italic !important; }
+.o-text-uppercase { text-transform: uppercase !important; }
+.o-text-lowercase { text-transform: lowercase !important; }
+.o-text-capitalize { text-transform: capitalize !important; }
+
+/* Text color utilities */
+.o-text-primary { color: var(--o-primary) !important; }
+.o-text-secondary { color: var(--o-secondary) !important; }
+.o-text-success { color: var(--o-success) !important; }
+.o-text-danger { color: var(--o-danger) !important; }
+.o-text-warning { color: var(--o-warning) !important; }
+.o-text-info { color: var(--o-info) !important; }
+.o-text-light { color: var(--o-light) !important; }
+.o-text-dark { color: var(--o-dark) !important; }
+.o-text-white { color: var(--o-white) !important; }
+.o-text-muted { color: rgba(var(--o-dark-rgb), 0.6) !important; }
+
+/* Text alignment utilities */
+.o-text-start { text-align: start !important; }
+.o-text-left { text-align: left !important; }
+.o-text-center { text-align: center !important; }
+.o-text-right { text-align: right !important; }
+.o-text-end { text-align: end !important; }
+.o-text-justify { text-align: justify !important; }
+
+/* Text decoration utilities */
+.o-text-decoration-none { text-decoration: none !important; }
+.o-text-decoration-underline { text-decoration: underline !important; }
+.o-text-decoration-line-through { text-decoration: line-through !important; }
+
+/* Line height utilities */
+.o-line-height-sm { line-height: 1.2 !important; }
+.o-line-height-base { line-height: 1.5 !important; }
+.o-line-height-lg { line-height: 1.75 !important; }
+
+/* Letter spacing utilities */
+.o-letter-spacing-tight { letter-spacing: -0.5px !important; }
+.o-letter-spacing-normal { letter-spacing: normal !important; }
+.o-letter-spacing-wide { letter-spacing: 0.5px !important; }
+
+/* =====================================================
+   COULEURS & POSITIONNEMENT 
+   ===================================================== */
 
 /*Couleurs (Fond et Texte) */
 .o-bg-primary {
