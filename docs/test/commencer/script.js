@@ -204,3 +204,13 @@ document.querySelectorAll('.o-code-block').forEach((block) => {
 
   block.appendChild(copyBtn);
 });
+
+
+//message alert
+
+let alertMessage = document.getElementById('alert-message');
+if (alertMessage) {
+  alertMessage.innerHTML = `
+    Cette page est en cours de construction. Merci de votre patience ! <a href="../../../soutenir.html" class="o-alert-link">Soutenir Orochi</a>
+  `;
+}

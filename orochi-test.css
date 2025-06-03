@@ -1099,26 +1099,25 @@
   font-weight: 400;
   margin-bottom: 0.5rem;
   color: rgba(var(--o-dark-rgb), 0.6);
-  line-height: 1.4;
+  /* line-height: 1.4; */
 }
 
 .o-card-text {
   font-size: 0.875rem;
   color: rgba(var(--o-dark-rgb), 0.8);
   margin-bottom: 1rem;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 .o-card-link {
   color: var(--o-primary);
-  text-decoration: none;
   font-weight: 500;
   transition: color var(--o-card-transition-fast);
 }
 
 .o-card-link:hover {
   color: var(--o-secondary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* =====================================================
@@ -1726,21 +1725,102 @@
   margin: 0;
 }
 
-/* Liste dans card */
-.o-card .o-list-group {
-  border: none;
+/* =====================================================
+   LIST GROUP - Orochi Framework 
+   ===================================================== */
+
+/* Conteneur de liste : bordure par défaut */
+.o-list-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(var(--o-dark-rgb), 0.1);
+}
+
+/* Liste flush : coins carrés, bordure du conteneur supprimée */
+.o-list-group-flush {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;            /* supprime la bordure du conteneur */
+}
+
+/* Élément de liste : bordure inférieure uniquement */
+.o-list-group-item {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--o-white);
+  border-bottom: 1px solid rgba(var(--o-dark-rgb), 0.1);
+  color: var(--o-dark);
+  text-decoration: none;
+  transition: background var(--o-card-transition-fast);
+}
+
+/* Supprimer la bordure du dernier item */
+.o-list-group-item:last-child {
+  border-bottom: none;
+}
+
+/* Coins arrondis sur items flush pour s'adapter au conteneur */
+.o-list-group-flush .o-list-group-item:first-child {
+  border-top-left-radius: var(--o-rounded-md);
+  border-top-right-radius: var(--o-rounded-md);
+}
+.o-list-group-flush .o-list-group-item:last-child {
+  border-bottom-left-radius: var(--o-rounded-md);
+  border-bottom-right-radius: var(--o-rounded-md);
+}
+
+/* Élément cliquable */
+.o-list-group-item-action {
+  cursor: pointer;
+}
+.o-list-group-item-action:hover,
+.o-list-group-item-action:focus {
+  background-color: rgba(var(--o-dark-rgb), 0.05);
+  text-decoration: none;
+}
+
+/* État actif */
+.o-list-group-item-active {
+  background-color: var(--o-primary);
+  color: var(--o-white);
+  font-weight: 600;
+}
+
+/* État désactivé */
+.o-list-group-item-disabled {
+  color: rgba(var(--o-dark-rgb), 0.4);
+  background-color: rgba(var(--o-dark-rgb), 0.03);
+  cursor: not-allowed;
+}
+
+/* Variantes de contexte */
+.o-list-group-item-primary   { background-color: var(--o-primary);   color: var(--o-white); }
+.o-list-group-item-secondary { background-color: var(--o-secondary); color: var(--o-white); }
+.o-list-group-item-success   { background-color: var(--o-success);   color: var(--o-white); }
+.o-list-group-item-danger    { background-color: var(--o-danger);    color: var(--o-white); }
+.o-list-group-item-warning   { background-color: var(--o-warning);   color: var(--o-dark);  }
+.o-list-group-item-info      { background-color: var(--o-info);      color: var(--o-white); }
+
+/* Liste horizontale (items côte-à-côte) */
+.o-list-group-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.o-list-group-horizontal .o-list-group-item {
+  border-bottom: none;        /* plus de bordure inférieure */
+  border-right: 1px solid rgba(var(--o-dark-rgb), 0.1);
   border-radius: 0;
 }
-
-.o-card .o-list-group:first-child {
-  border-top-left-radius: calc(var(--o-rounded-md) - 1px);
-  border-top-right-radius: calc(var(--o-rounded-md) - 1px);
+.o-list-group-horizontal .o-list-group-item:last-child {
+  border-right: none;
 }
 
-.o-card .o-list-group:last-child {
-  border-bottom-left-radius: calc(var(--o-rounded-md) - 1px);
-  border-bottom-right-radius: calc(var(--o-rounded-md) - 1px);
+/* Flush + horizontal : suppression totale des bordures */
+.o-list-group-flush.o-list-group-horizontal .o-list-group-item {
+  border: none;
 }
+
 
 /* =====================================================
    RESPONSIVE DESIGN
