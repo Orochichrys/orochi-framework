@@ -62,44 +62,44 @@
         <div class="o-card o-p-4">
           <section id="containers-intro">
             <h1 class="o-title o-text-primary">📦 Conteneurs</h1>
-            <p class="o-lead">
-              Les conteneurs sont les éléments de base pour structurer vos
-              layouts. Ils permettent de centrer et de contraindre la largeur
-              du contenu.
+            <p class="o-lead o-mb-5">
+                Les conteneurs sont un composant clé d’Orochi : ils servent à centrer, limiter la largeur et structurer votre contenu de façon responsive sur tous les appareils.
+            </p>
+
+            <h2 class="o-mb-3">Comment ils fonctionnent</h2>
+            <p>Les conteneurs sont l'élément de mise en page le plus basique d’Orochi et sont indispensables à l'utilisation de notre système de grille par défaut. Ils servent à contenir, remplir et (parfois) centrer le contenu. Bien que les conteneurs puissent être imbriqués, la plupart des mises en page n'en nécessitent pas.<br><br>
+            Orochi est livré avec trois conteneurs différents :
+            <ul class="o-list-unstyled">
+              <li><code>.o-container</code>, qui définit un max-width à chaque point d'arrêt réactif</li>
+              <li><code>.o-container-{breakpoint}</code>, qui dure width: 100% jusqu'au point d'arrêt spécifié</li>
+              <li><code>.o-container-fluid</code>, qui est width: 100% à tous les points d'arrêt</li>
+            </ul>
             </p>
 
             <!-- Conteneur de base -->
-            <section class="o-mt-5">
-              <h2 class="o-text-dark">Conteneur standard</h2>
+            <section class="o-mt-4">
+              <h2 class="o-text-dark o-mb-3">Conteneur standard</h2>
+              <p class="o-mb-3">Notre .containerclasse par défaut est un conteneur réactif à largeur fixe, ce qui signifie qu'il max-widthchange à chaque point d'arrêt.</p>
               <div class="o-code-block">
                 <pre class="language-html"><code>&lt;div class="o-container"&gt;
     Contenu centré avec largeur responsive
 &lt;/div&gt;</code></pre>
               </div>
-              <div class="o-bg-light o-p-3 o-rounded">
-                <div class="o-container o-bg-white o-p-3 o-border">
-                  .o-container (largeur adaptative)
-                </div>
-              </div>
             </section>
 
             <!-- Conteneur fluide -->
-            <section class="o-mt-5">
-              <h2 class="o-text-dark">Conteneur fluide</h2>
+            <section class="o-mt-4">
+              <h2 class="o-text-dark o-mb-3">Conteneur fluide</h2>
+              <p class="o-mb-3">À utiliser .container-fluid pour un conteneur pleine largeur, couvrant toute la largeur de la fenêtre d'affichage.</p>
               <div class="o-code-block">
                 <pre class="language-html"><code>&lt;div class="o-container-fluid"&gt;
     Contenu pleine largeur
 &lt;/div&gt;</code></pre>
               </div>
-              <div class="o-bg-light o-p-3 o-rounded">
-                <div class="o-container-fluid o-bg-white o-p-3 o-border">
-                  .o-container-fluid (100% de largeur)
-                </div>
-              </div>
             </section>
 
             <!-- Conteneurs responsives -->
-            <section class="o-mt-5">
+            <!-- <section class="o-mt-5">
               <h2 class="o-text-dark">Conteneurs responsives</h2>
               <div class="o-table-responsive">
                 <table class="o-table o-table-bordered">
@@ -139,24 +139,11 @@
                   </tbody>
                 </table>
               </div>
-            </section>
-
-            <!-- Exemple combiné -->
-            <section class="o-mt-5">
-              <h2 class="o-text-dark">Exemple combiné</h2>
-              <div class="o-code-block">
-                <pre class="language-html"><code>&lt;div class="o-container-lg o-bg-primary o-text-white o-p-4 o-rounded"&gt;
-    Conteneur large limité à 960px
-&lt;/div&gt;</code></pre>
-              </div>
-              <div class="o-container-lg o-bg-primary o-text-white o-p-4 o-rounded">
-                .o-container-lg (960px max)
-              </div>
-            </section>
+            </section> -->
 
             <!-- Bonnes pratiques -->
-            <section class="o-mt-5">
-              <h2 class="o-text-dark">💡 Bonnes pratiques</h2>
+            <section class="o-mt-4">
+              <h2 class="o-text-dark o-mb-3">💡 Bonnes pratiques</h2>
               <div class="o-card o-bg-light">
                 <div class="o-card-body">
                   <ul class="o-list-unstyled">
