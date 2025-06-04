@@ -706,7 +706,7 @@
     left: 0;
     width: 100%;
     padding: 10px 6.5%;
-    background-color: inherit;
+    background-color:  var(--o-white);
   }
 
   .o-nav-wrapper-active {
