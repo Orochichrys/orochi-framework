@@ -3230,9 +3230,23 @@
   justify-content: space-around;
 }
 
-.o-align-center {
-  align-items: center;
+.o-align-start {
+  align-items: flex-start !important;
 }
+.o-align-center {
+  align-items: center !important;
+}
+.o-align-end {
+  align-items: flex-end !important;
+}
+.o-align-stretch {
+  align-items: stretch !important;
+}
+.o-align-baseline {
+  align-items: baseline !important;
+}
+.o-align-self-center {
+  align-self: center !important;
 
 /* === Centering Shortcut === */
 .o-center-content {
