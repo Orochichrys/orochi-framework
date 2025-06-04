@@ -3249,7 +3249,7 @@
   align-self: center !important;
 }
 
-/* === Centering Shortcut === */
+/* Centering Shortcut */
 .o-center-content {
   display: flex !important;
   justify-content: center !important;

@@ -1,6 +1,7 @@
 name: Minify CSS & JS and Deploy
 
 on:
+  workflow_dispatch:  # permet de lancer le workflow manuellement
   push:
     branches: [main]
     paths:
