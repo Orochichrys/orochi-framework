@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Conteneurs - Orochi Framework</title>
-  <link rel="stylesheet" href="../../../orochi-test.css" />
-  <link rel="stylesheet" href="../../../orochi-icons.css" />
+  <link rel="stylesheet" href="../../../src/orochi.css" />
+  <link rel="stylesheet" href="../../../src/orochi-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -63,12 +63,16 @@
           <section id="containers-intro">
             <h1 class="o-title o-text-primary">📦 Conteneurs</h1>
             <p class="o-lead o-mb-5">
-                Les conteneurs sont un composant clé d’Orochi : ils servent à centrer, limiter la largeur et structurer votre contenu de façon responsive sur tous les appareils.
+              Les conteneurs sont un composant clé d’Orochi : ils servent à centrer, limiter la largeur et structurer
+              votre contenu de façon responsive sur tous les appareils.
             </p>
 
             <h2 class="o-mb-3">Comment ils fonctionnent</h2>
-            <p>Les conteneurs sont l'élément de mise en page le plus basique d’Orochi et sont indispensables à l'utilisation de notre système de grille par défaut. Ils servent à contenir, remplir et (parfois) centrer le contenu. Bien que les conteneurs puissent être imbriqués, la plupart des mises en page n'en nécessitent pas.<br><br>
-            Orochi est livré avec trois conteneurs différents :
+            <p>Les conteneurs sont l'élément de mise en page le plus basique d’Orochi et sont indispensables à
+              l'utilisation de notre système de grille par défaut. Ils servent à contenir, remplir et (parfois) centrer
+              le contenu. Bien que les conteneurs puissent être imbriqués, la plupart des mises en page n'en nécessitent
+              pas.<br><br>
+              Orochi est livré avec trois conteneurs différents :
             <ul class="o-list-unstyled">
               <li><code>.o-container</code>, qui définit un max-width à chaque point d'arrêt réactif</li>
               <li><code>.o-container-{breakpoint}</code>, qui dure width: 100% jusqu'au point d'arrêt spécifié</li>
@@ -79,7 +83,8 @@
             <!-- Conteneur de base -->
             <section class="o-mt-4">
               <h2 class="o-text-dark o-mb-3">Conteneur standard</h2>
-              <p class="o-mb-3">Notre .containerclasse par défaut est un conteneur réactif à largeur fixe, ce qui signifie qu'il max-widthchange à chaque point d'arrêt.</p>
+              <p class="o-mb-3">Notre .containerclasse par défaut est un conteneur réactif à largeur fixe, ce qui
+                signifie qu'il max-widthchange à chaque point d'arrêt.</p>
               <div class="o-code-block">
                 <pre class="language-html"><code>&lt;div class="o-container"&gt;
     Contenu centré avec largeur responsive
@@ -90,7 +95,8 @@
             <!-- Conteneur fluide -->
             <section class="o-mt-4">
               <h2 class="o-text-dark o-mb-3">Conteneur fluide</h2>
-              <p class="o-mb-3">À utiliser .container-fluid pour un conteneur pleine largeur, couvrant toute la largeur de la fenêtre d'affichage.</p>
+              <p class="o-mb-3">À utiliser .container-fluid pour un conteneur pleine largeur, couvrant toute la largeur
+                de la fenêtre d'affichage.</p>
               <div class="o-code-block">
                 <pre class="language-html"><code>&lt;div class="o-container-fluid"&gt;
     Contenu pleine largeur
