@@ -173,5 +173,5 @@ class OrochiModal {
   }
 }
 
-// Initialisation
+// Initialisation au chargement du DOM
 document.addEventListener('DOMContentLoaded', () => new OrochiModal());
