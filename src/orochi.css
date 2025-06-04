@@ -37,6 +37,39 @@
   --o-light-rgb: 233, 236, 239;
   --o-white-rgb: 255, 255, 255;
   --o-black-rgb: 0, 0, 0;
+  /* background color */
+  --o-bg-primary: var(--o-primary);
+  --o-bg-secondary: var(--o-secondary);
+  --o-bg-success: var(--o-success);
+  --o-bg-danger: var(--o-danger);
+  --o-bg-warning: var(--o-warning);
+  --o-bg-info: var(--o-info);
+  --o-bg-dark: var(--o-dark);
+  --o-bg-light: var(--o-light);
+  --o-bg-white: var(--o-white);
+  --o-bg-black: var(--o-black);
+  /* Couleurs de texte */
+  --o-text-primary: var(--o-primary);
+  --o-text-secondary: var(--o-secondary);
+  --o-text-success: var(--o-success);
+  --o-text-danger: var(--o-danger);
+  --o-text-warning: var(--o-warning);
+  --o-text-info: var(--o-info);
+  --o-text-dark: var(--o-dark);
+  --o-text-light: var(--o-light);
+  --o-text-white: var(--o-white);
+  --o-text-black: var(--o-black);
+  /* Couleurs de bordure */
+  --o-border-primary: var(--o-primary);
+  --o-border-secondary: var(--o-secondary);
+  --o-border-success: var(--o-success);
+  --o-border-danger: var(--o-danger);
+  --o-border-warning: var(--o-warning);
+  --o-border-info: var(--o-info);
+  --o-border-dark: var(--o-dark);
+  --o-border-light: var(--o-light);
+  --o-border-white: var(--o-white);
+  --o-border-black: var(--o-black);
   /* Ombres */
   /* --o-light-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
   --o-dark-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px; */
@@ -3338,62 +3371,62 @@
 
 /*Couleurs (Fond et Texte) */
 .o-bg-primary {
-  background-color: var(--o-primary);
+  background-color: var(--o-bg-primary);
 }
 .o-bg-secondary {
-  background-color: var(--o-secondary);
+  background-color: var(--o-bg-secondary);
 }
 .o-bg-warning {
-  background-color: var(--o-warning);
+  background-color: var(--o-bg-warning);
 }
 .o-bg-success {
-  background-color: var(--o-success);
+  background-color: var(--o-bg-success);
 }
 .o-bg-danger {
-  background-color: var(--o-danger);
+  background-color: var(--o-bg-danger);
 }
 .o-bg-dark {
-  background-color: var(--o-dark);
+  background-color: var(--o-bg-dark);
 }
 .o-bg-black {
-  background-color: var(--o-black);
+  background-color: var(--o-bg-black);
 }
 .o-bg-info {
-  background-color: var(--o-info);
+  background-color: var(--o-bg-info);
 }
 .o-bg-light {
-  background-color: var(--o-light);
+  background-color: var(--o-bg-light);
 }
 
 .o-text-primary {
-  color: var(--o-primary);
+  color: var(--o-text-primary);
 }
 .o-text-secondary {
-  color: var(--o-secondary);
+  color: var(--o-text-secondary);
 }
 .o-text-danger {
-  color: var(--o-danger);
+  color: var(--o-text-danger);
 }
 .o-text-success {
-  color: var(--o-success);
+  color: var(--o-text-success);
 }
 .o-text-warning {
-  color: var(--o-warning);
+  color: var(--o-text-warning);
 }
 .o-text-info {
-  color: var(--o-info);
+  color: var(--o-text-info);
 }
 .o-text-dark {
-  color: var(--o-dark);
+  color: var(--o-text-dark);
 }
 .o-text-light {
-  color: var(--o-light);
+  color: var(--o-text-light);
 }
 .o-text-white {
-  color: var(--o-white);
+  color: var(--o-text-white);
 }
 .o-text-black {
-  color: var(--o-black);
+  color: var(--o-text-black);
 }
 
 /* position */
@@ -3479,23 +3512,38 @@
 .o-border {
   border-width: 1px;
   border-style: solid;
-  border-color: var(--o-primary);
+  /* border-color: var(--o-primary); */
 }
 
 .o-border-primary {
-  border-color: var(--o-primary);
+  border-color: var(--o-border-primary);
 }
 .o-border-secondary {
-  border-color: var(--o-secondary);
+  border-color: var(--o-border-secondary);
+}
+.o-border-success {
+  border-color: var(--o-border-success);
 }
 .o-border-danger {
-  border-color: var(--o-danger);
+  border-color: var(--o-border-danger);
+}
+.o-border-warning {
+  border-color: var(--o-border-warning);
+}
+.o-border-info {
+  border-color: var(--o-border-info);
 }
 .o-border-dark {
-  border-color: var(--o-dark);
+  border-color: var(--o-border-dark);
 }
 .o-border-light {
-  border-color: var(--o-light);
+  border-color: var(--o-border-light);
+}
+.o-border-white {
+  border-color: var(--o-border-white);
+}
+.o-border-black {
+  border-color: var(--o-border-black);
 }
 
 .o-border-solid {

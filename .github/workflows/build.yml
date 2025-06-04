@@ -7,6 +7,7 @@ on:
     paths:
       - 'src/orochi.css'
       - 'src/orochi.js'
+      - 'src/orochi-icons.css'  # 👈 ajout pour surveiller ce fichier aussi
 
 jobs:
   build:
@@ -21,7 +22,9 @@ jobs:
         npm install -g clean-css-cli terser
 
     - name: 🎨 Minifier le CSS
-      run: cleancss -o dist/orochi.min.css src/orochi.css
+      run: |
+        cleancss -o dist/orochi.min.css src/orochi.css
+        cleancss -o dist/orochi-icons.min.css src/orochi-icons.css  # 👈 nouvelle ligne
 
     - name: ⚙️ Minifier le JavaScript
       run: terser src/orochi.js -o dist/orochi.min.js -c -m
@@ -33,11 +36,9 @@ jobs:
         git config --global user.name "Orochichrys"
         git config --global user.email "emmanuelbissa0000@gmail.com"
 
-        git add dist/orochi.min.css dist/orochi.min.js
+        git add dist/orochi.min.css dist/orochi.min.js dist/orochi-icons.min.css  # 👈 fichier ajouté
 
-        # Évite l’erreur si rien n’a changé
-        git diff --cached --quiet || git commit -m "🔄 Auto-minify CSS & JS on push"
+        git diff --cached --quiet || git commit -m "🔄 Auto-minify CSS, JS & Icons on push"
 
         git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
         git push origin HEAD:main
-    
