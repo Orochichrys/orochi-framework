@@ -1,0 +1,34 @@
+name: Minify CSS & JS and Deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/orochi.css'
+      - 'src/orochi.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout le repo
+      uses: actions/checkout@v3
+
+    - name: Installer les outils de minification
+      run: |
+        npm install -g clean-css-cli terser
+
+    - name: Minifier le CSS
+      run: cleancss -o dist/orochi.min.css src/orochi.css
+
+    - name: Minifier le JavaScript
+      run: terser src/orochi.js -o dist/orochi.min.js -c -m
+
+    - name: Commit les fichiers minifiés
+      run: |
+        git config --global user.name 'Orochichrys'
+        git config --global user.email 'emmanuelbissa0000@gmail.com'
+        git add dist/orochi.min.css dist/orochi.min.js
+        git commit -m "🔄 Auto-minify CSS & JS on push"
+        git push
