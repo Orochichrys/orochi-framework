@@ -7,8 +7,7 @@ on:
     paths:
       - 'src/orochi.css'
       - 'src/orochi.js'
-      - 'src/orochi-icons.css'  # 👈 ajout pour surveiller ce fichier aussi
-
+      - 'src/orochi-icons.css'  
 jobs:
   build:
     runs-on: ubuntu-latest
