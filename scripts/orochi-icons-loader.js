@@ -69,11 +69,13 @@ const iconNames = [
   'compass',
 ];
 
-// let numberOfIcons = iconNames.length;
-// let iconsDisponibles = document.getElementById("iconsDisponibles");
-// if (iconsDisponibles) {
-//     iconsDisponibles.innerHTML = `<h2>Nombre d'icônes disponibles : ${numberOfIcons}</h2>`;
-// }
+const numberOfIcons = iconNames.length;
+const searchInput = document.querySelector('input[type="search"]');
+
+if (searchInput) {
+  searchInput.placeholder = `Rechercher parmi ${numberOfIcons} icônes...`;
+}
+
 
 const container = document.querySelector('.o-row');
 
