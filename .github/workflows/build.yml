@@ -26,10 +26,14 @@ jobs:
     - name: Minifier le JavaScript
       run: terser src/orochi.js -o dist/orochi.min.js -c -m
 
-    - name: Commit les fichiers minifiés
+    - name: Commit les fichiers minifiés et push
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         git config --global user.name 'Orochichrys'
         git config --global user.email 'emmanuelbissa0000@gmail.com'
         git add dist/orochi.min.css dist/orochi.min.js
-        git commit -m "🔄 Auto-minify CSS & JS on push"
-        git push
+        git commit -m "🔄 Auto-minify CSS & JS on push" || echo "No changes to commit"
+        git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+        git push origin HEAD:main
+
