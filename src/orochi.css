@@ -3230,6 +3230,17 @@
   justify-content: space-around;
 }
 
+.o-align-center {
+  align-items: center;
+}
+
+/* === Centering Shortcut === */
+.o-center-content {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
 /* =====================================================
    TYPOGRAPHIE & TEXTES
    ===================================================== */

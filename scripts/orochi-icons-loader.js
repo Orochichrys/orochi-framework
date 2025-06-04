@@ -82,7 +82,7 @@ iconNames.forEach((name) => {
   col.className = 'o-col-12 o-col-xs-4 o-col-sm-4 o-col-md-4 o-col-lg-3';
 
   col.innerHTML = `
-            <div class="o-card o-p-4 o-text-center">
+            <div class="o-card o-p-4 o-center-content">
                 <i class="oi oi-${name}"></i>
             </div>
             <div class="o-text-sm o-text-center o-mt-2">${name}</div>
