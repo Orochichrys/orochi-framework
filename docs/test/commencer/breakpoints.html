@@ -17,9 +17,8 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="o-navbar o-sticky o-bg-light">
-    <div class="o-alert o-alert-warning o-text-center" id="alert-message"></div>
-    <div class="o-nav-container">
+  <nav class="o-navbar o-sticky o-bg-light o-top-0">
+    <div class="o-container-fluid">
       <button class="sidebar-toggler">
         <i class="bx bx-grid-alt"></i>
       </button>
@@ -47,6 +46,7 @@
 
   <!-- Contenu principal -->
   <div class="o-container o-mt-4">
+    <div class="o-alert o-alert-warning o-text-center" id="alert-message"></div>
     <div class="o-row o-g-4">
       <!-- Sidebar -->
       <div class="o-col-12 o-col-md-3">
@@ -62,149 +62,405 @@
           <section id="breakpoints-intro">
             <h1 class="o-title o-text-primary">📱 Points d'arrêt</h1>
             <p class="o-lead">
-              Les points d'arrêt (breakpoints) définissent les différentes tailles d'écran pour le design responsive.
+              Les points d'arrêt sont des largeurs personnalisables qui déterminent le comportement de votre mise en
+              page réactive sur les tailles d'appareil ou de fenêtre d'affichage dans Orochi CSS.
+            </p>
+          </section>
+
+          <section id="" class="o-mb-3">
+            <h2 class="o-mb-3">Concepts de base</h2>
+            <p>Les points d'arrêt sont les éléments fondamentaux du responsive design. Utilisez-les pour contrôler
+              l'adaptation de votre mise en page à une fenêtre d'affichage ou à une taille d'appareil spécifique.
+              Utilisez des requêtes média pour structurer votre CSS par point d'arrêt. Les requêtes média sont une
+              fonctionnalité CSS qui permet d'appliquer conditionnellement des styles en fonction d'un ensemble de
+              paramètres de navigateur et de système d'exploitation. Nous les utilisons le plus souvent
+              <code>min-width</code> dans
+              nos requêtes média.
+              L'objectif est de privilégier le mobile et le responsive design. Le CSS d'Orochi vise à appliquer le
+              strict minimum de styles pour qu'une mise en page fonctionne au plus petit point d'arrêt, puis à
+              superposer des styles pour adapter le design aux appareils plus grands. Cela optimise votre CSS,
+              améliore le temps de rendu et offre une expérience utilisateur optimale à vos visiteurs.
             </p>
 
-            <!-- Tableau des breakpoints -->
-            <section class="o-mt-5">
-              <h2 class="o-text-dark">Échelle des breakpoints</h2>
-              <div class="o-table-responsive">
-                <table class="o-table o-table-bordered">
-                  <thead class="o-bg-light">
-                    <tr>
-                      <th>Classe</th>
-                      <th>Taille</th>
-                      <th>Appareils</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>xs</td>
-                      <td>&lt;576px</td>
-                      <td>Téléphones</td>
-                    </tr>
-                    <tr>
-                      <td>sm</td>
-                      <td>≥576px</td>
-                      <td>Grands téléphones</td>
-                    </tr>
-                    <tr>
-                      <td>md</td>
-                      <td>≥768px</td>
-                      <td>Tablettes</td>
-                    </tr>
-                    <tr>
-                      <td>lg</td>
-                      <td>≥992px</td>
-                      <td>Ordinateurs portables</td>
-                    </tr>
-                    <tr>
-                      <td>xl</td>
-                      <td>≥1200px</td>
-                      <td>Ordinateurs de bureau</td>
-                    </tr>
-                    <tr>
-                      <td>xxl</td>
-                      <td>≥1400px</td>
-                      <td>Grands écrans</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
 
-            <!-- Exemple de media queries -->
-            <section class="o-mt-5">
-              <h2 class="o-text-dark">Utilisation dans le CSS</h2>
-              <div class="o-code-block">
-                <pre class="language-css"><code>
-/* Exemple de media query */
-@media (min-width: 768px) {
-  .o-container {
-    max-width: 720px;
+          </section>
+
+          <!-- Tableau des breakpoints -->
+          <section class="o-mb-4">
+            <h2 class="o-text-dark o-mb-3">Points d'arrêt disponibles</h2>
+            <p class="o-mb-3">Orochi CSS inclut six points d'arrêt par défaut, parfois appelés « niveaux de grille »,
+              pour une
+              construction réactive. Ces points d'arrêt peuvent être personnalisés via les variables CSS.</p>
+            <div class="o-table-responsive o-mb-3">
+              <table class="o-table o-table-bordered">
+                <thead class="o-bg-light">
+                  <tr>
+                    <th>Point d'arrêt</th>
+                    <th>Infixe de classe</th>
+                    <th>Dimensions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Très petit</td>
+                    <td>Aucun</td>
+                    <td>&lt;576px</td>
+                  </tr>
+                  <tr>
+                    <td>Petit</td>
+                    <td>sm</td>
+                    <td>≥576px</td>
+                  </tr>
+                  <tr>
+                    <td>Moyen</td>
+                    <td>md</td>
+                    <td>≥768px</td>
+                  </tr>
+                  <tr>
+                    <td>Grand</td>
+                    <td>lg</td>
+                    <td>≥992px</td>
+                  </tr>
+                  <tr>
+                    <td>Très grand</td>
+                    <td>xl</td>
+                    <td>≥1200px</td>
+                  </tr>
+                  <tr>
+                    <td>Très très grand</td>
+                    <td>xxl</td>
+                    <td>≥1400px</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3 class="o-mb-3">Variables CSS des breakpoints :</h3>
+            <p class="o-mb-3">Chaque point d'arrêt a été choisi pour accueillir confortablement des conteneurs dont la
+              largeur est un
+              multiple de 12. Les points d'arrêt sont également représentatifs d'un sous-ensemble de tailles d'appareils
+              et de dimensions de fenêtre d'affichage courantes ; ils ne ciblent pas spécifiquement chaque cas
+              d'utilisation ou appareil. Au contraire, les plages offrent une base solide et cohérente sur laquelle
+              s'appuyer pour presque tous les appareils.
+              Ces points d'arrêt sont personnalisables via les variables CSS : vous les trouverez dans la section
+              <code>:root</code>
+              de votre feuille de style Orochi.
+            </p>
+
+            <div class="o-code-block">
+              <pre class="language-css"><code>
+:root {
+  --o-xs: 0;
+  --o-sm: 576px;
+  --o-md: 768px;
+  --o-lg: 992px;
+  --o-xl: 1200px;
+  --o-xxl: 1400px;
+}
+</code></pre>
+            </div>
+
+          </section>
+
+          <section class="o-mb-4">
+            <h2 class="o-mb-3">Requêtes des médias</h2>
+            <p class="o-mb-3">Orochi CSS étant conçu pour être mobile-first, nous utilisons plusieurs requêtes média
+              pour créer des
+              points d'arrêt pertinents pour nos mises en page et interfaces. Ces points d'arrêt sont principalement
+              basés sur la largeur minimale de la fenêtre d'affichage et nous permettent d'agrandir les éléments à
+              mesure que celle-ci évolue.</p>
+
+            <h3 class="o-mb-3">Largeur minimale</h3>
+            <p class="o-mb-3">Orochi CSS utilise principalement les plages de requêtes multimédias suivantes (ou points
+              d'arrêt) pour
+              notre mise en page, notre système de grille et nos composants.</p>
+
+            <h4 class="o-mb-3">Structure des media queries :</h4>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+/* Pas de media query nécessaire pour xs car c'est effectivement `@media (min-width: 0) { ... }` */
+
+/* Petits appareils (téléphones en mode paysage, 576px et plus) */
+@media (min-width: 576px) { 
+  .o-col-sm-6 { width: 50%; }
+}
+
+/* Appareils moyens (tablettes, 768px et plus) */
+@media (min-width: 768px) { 
+  .o-col-md-4 { width: 33.33%; }
+}
+
+/* Grands appareils (ordinateurs de bureau, 992px et plus) */
+@media (min-width: 992px) { 
+  .o-col-lg-3 { width: 25%; }
+}
+
+/* Très grands appareils (grands ordinateurs de bureau, 1200px et plus) */
+@media (min-width: 1200px) { 
+  .o-col-xl-2 { width: 16.67%; }
+}
+
+/* Très très grands appareils (ordinateurs de bureau plus larges, 1400px et plus) */
+@media (min-width: 1400px) { 
+  .o-col-xxl-1 { width: 8.33%; }
+}
+</code></pre>
+            </div>
+
+            <h4 class="o-mb-3">Exemple d'utilisation :</h4>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+/* Exemple : Masquer à partir de `min-width: 0`, puis afficher au point d'arrêt `sm` */
+.custom-class {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .custom-class {
+    display: block;
   }
 }
 </code></pre>
-              </div>
-            </section>
-          </section>
-
-          <!-- Exemple visuel -->
-          <section class="o-mt-5">
-            <h2 class="o-text-dark">Comportement responsive</h2>
-            <div class="o-row o-g-3">
-              <div class="o-col-12 o-col-md-6 o-col-xl-4">
-                <div class="breakpoint-visual">
-                  <div class="o-d-none o-d-md-block o-text-center">
-                    Visible à partir de md (≥768px)
-                  </div>
-                  <div class="o-d-md-none o-text-center">
-                    Visible en dessous de md
-                  </div>
-                </div>
-              </div>
-              <div class="o-col-12 o-col-md-6 o-col-xl-4">
-                <div class="breakpoint-visual">
-                  <div class="o-d-none o-d-lg-block o-text-center">
-                    Visible à partir de lg (≥992px)
-                  </div>
-                  <div class="o-d-lg-none o-text-center">
-                    Visible en dessous de lg
-                  </div>
-                </div>
-              </div>
             </div>
+
+            <h3 class="o-mb-3">Largeur maximale</h3>
+            <p class="o-mb-3">Nous utilisons parfois des requêtes multimédias qui vont dans l'autre sens (la taille
+              d'écran donnée ou plus petite) :</p>
+
+            <h4 class="o-mb-3">Structure des media queries :</h4>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+/* `xs` ne retourne qu'un ensemble de règles et aucune requête média */
+/* ... { ... } */
+
+/* `sm` s'applique aux très petits appareils (téléphones portrait, moins de 576px) */
+@media (max-width: 575.98px) { ... }
+
+/* `md` s'applique aux petits appareils (téléphones paysage, moins de 768px) */
+@media (max-width: 767.98px) { ... }
+
+/* `lg` s'applique aux appareils moyens (tablettes, moins de 992px) */
+@media (max-width: 991.98px) { ... }
+
+/* `xl` s'applique aux grands appareils (ordinateurs de bureau, moins de 1200px) */
+@media (max-width: 1199.98px) { ... }
+
+/* `xxl` s'applique aux très grands appareils (grands ordinateurs de bureau, moins de 1400px) */
+@media (max-width: 1399.98px) { ... }
+
+</code></pre>
+            </div>
+
+            <h4 class="o-mb-3">Exemple d'utilisation :</h4>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+/* Exemple : Style du point d'arrêt moyen vers le bas */
+@media (max-width: 767.98px) {
+  .custom-class {
+    display: block;
+    font-size: 14px;
+  }
+}
+</code></pre>
+            </div>
+            <p class="o-mb-3">Pourquoi soustraire 0,02px ? Les navigateurs ne prennent actuellement pas en charge les
+              requêtes
+              contextuelles de plage. Nous contournons donc les limitations des préfixes<code> min- </code>
+              et<code> max- </code> et des fenêtres
+              d'affichage avec des largeurs fractionnaires (qui peuvent survenir dans certaines conditions sur les
+              appareils haute résolution, par exemple) en utilisant des valeurs plus précises.</p>
+
+            <h3 class="o-mb-3">Point d'arrêt unique</h3>
+            <p class="o-mb-3">Il existe également des requêtes multimédias permettant de cibler un seul segment de
+              tailles d'écran à l'aide des largeurs de point d'arrêt minimales et maximales.</p>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+/* Cibler uniquement les très petits écrans */
+@media (max-width: 575.98px) { ... }
+
+/* Cibler uniquement les petits écrans */
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+/* Cibler uniquement les écrans moyens */
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+/* Cibler uniquement les grands écrans */
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+/* Cibler uniquement les très grands écrans */
+@media (min-width: 1200px) and (max-width: 1399.98px) { ... }
+
+/* Cibler uniquement les très très grands écrans */
+@media (min-width: 1400px) { ... }
+</code></pre>
+            </div>
+            <h4 class="o-mb-3">Exemple pratique :</h4>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+/* Styles spécifiques aux tablettes uniquement */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .tablet-only {
+    padding: 2rem;
+    font-size: 18px;
+  }
+}
+</code></pre>
+            </div>
+            <h3 class="o-mb-3">Entre les points d'arrêt</h3>
+            <p class="o-mb-3">De même, les requêtes multimédias peuvent s'étendre sur plusieurs largeurs de points
+              d'arrêt:</p>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+/* Appliquer des styles en partant des appareils moyens jusqu'aux très grands appareils */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .between-md-xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* De petit à grand */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .between-sm-lg {
+    flex-direction: column;
+  }
+}
+</code></pre>
+            </div>
+
+            <h3 class="o-mb-3">Variables CSS personnalisables</h3>
+            <p class="o-mb-3">Orochi CSS utilise des variables CSS personnalisables pour tous ses points d'arrêt. Vous
+              pouvez les modifier facilement :</p>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+:root {
+  /* Points d'arrêt par défaut */
+  --o-xs: 0;
+  --o-sm: 576px;
+  --o-md: 768px;
+  --o-lg: 992px;
+  --o-xl: 1200px;
+  --o-xxl: 1400px;
+
+  /* Exemple de personnalisation */
+  /*
+  --o-sm: 600px;
+  --o-md: 800px;
+  --o-lg: 1024px;
+  */
+}
+</code></pre>
+            </div>
+
+            <h3 class="o-mb-3">Exemples pratiques</h3>
+
+            <h4 class="o-mb-3">Navigation responsive</h4>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+/* Navigation mobile par défaut */
+.o-navbar {
+  flex-direction: column;
+}
+
+.o-navbar-nav {
+  display: none;
+}
+
+/* Navigation desktop à partir de md */
+@media (min-width: 768px) {
+  .o-navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .o-navbar-nav {
+    display: flex;
+  }
+}
+</code></pre>
+            </div>
+
+            <h4 class="o-mb-3">Grille de cartes adaptative</h4>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr; /* 1 colonne sur mobile */
+}
+
+@media (min-width: 576px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur sm */
+  }
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur md */
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur xl */
+  }
+}
+</code></pre>
+            </div>
+
+            <h4 class="o-mb-3">Typographie responsive</h4>
+            <div class="o-code-block o-mb-3">
+              <pre class="language-css"><code>
+.hero-title {
+  font-size: 2rem; /* 32px sur mobile */
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem; /* 48px sur tablette */
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 4rem; /* 64px sur desktop */
+  }
+}
+</code></pre>
+            </div>
+
           </section>
 
-          <!-- Utilitaires responsives -->
-          <section class="o-mt-5">
-            <h2 class="o-text-dark">Classes responsives</h2>
-            <div class="o-alert o-alert-info">
-              Combinez les suffixes de breakpoint avec les classes utilitaires :
-              <div class="o-code-block">
-                <pre class="language-html"><code>&lt;div class="o-col-md-6 o-d-none-sm"&gt;&lt;/div&gt;</code></pre>
-              </div>
-              <h4 class="o-mt-3">Exemples courants :</h4>
-              <ul class="o-list-unstyled">
-                <li><code>.o-col-md-*</code> - Colonnes pour tablettes</li>
-                <li><code>.o-d-none-sm</code> - Masqué sur mobiles</li>
-                <li><code>.o-text-center-lg</code> - Centrage sur desktop</li>
-              </ul>
-          </section>
 
           <!-- Bonnes pratiques -->
-          <section class="o-mt-5">
-            <h2 class="o-text-dark">💡 Bonnes pratiques</h2>
+          <section>
+            <h2 class="o-text-dark o-mb-3">💡 Bonnes pratiques</h2>
             <div class="o-card o-bg-light">
               <div class="o-card-body">
                 <ul class="o-list-unstyled">
                   <li class="o-mb-2">
                     <i class="bx bx-check-circle o-me-2 o-text-success"></i>
-                    Développez en mobile-first (commencez par xs)
+                    Mobile-first : Commencez toujours par les styles mobiles, puis ajoutez les media queries pour les
+                    écrans plus larges.
                   </li>
                   <li class="o-mb-2">
                     <i class="bx bx-check-circle o-me-2 o-text-success"></i>
-                    Testez sur différents appareils
+                    Test multi-appareils : Testez votre design sur différentes tailles d'écran pour vous assurer de la
+                    cohérence.
                   </li>
                   <li>
                     <i class="bx bx-check-circle o-me-2 o-text-success"></i>
-                    Utilisez les classes responsives avec modération
+                    Performance : Évitez d'avoir trop de media queries complexes qui peuvent impacter les performances.
+                  </li>
+                  <li>
+                    <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                    Lisibilité : Organisez vos media queries de manière logique dans votre CSS pour faciliter la
+                    maintenance.
                   </li>
                 </ul>
               </div>
             </div>
           </section>
 
-          <!-- Navigation -->
-          <div class="o-mt-5 o-d-flex o-justify-between">
-            <a href="containers.html" class="o-btn o-btn-primary">
-              ← Conteneurs
-            </a>
-            <a href="spacing.html" class="o-btn o-btn-primary">
-              Espacement →
-            </a>
-          </div>
-          </section>
 
         </div>
       </div>

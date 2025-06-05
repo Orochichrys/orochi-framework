@@ -66,7 +66,11 @@ const iconNames = [
   'spark',
   'inbox',
   'plus-circle',
-  'compass',
+  'compass','facebook',
+  'twitter','instagram',
+  'linkedin','youtube',
+  'github','gitlab','tiktok','discord',
+  'twitch','reddit',
 ];
 
 const numberOfIcons = iconNames.length;
