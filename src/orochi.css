@@ -762,12 +762,16 @@
 
 /* Navigation */
 .o-navbar {
-  padding: var(--space-2) 6.5%;
   background: var(--o-white);
   z-index: 9999;
 }
 
-.o-navbar .o-container-fluid {
+.o-navbar .o-container-fluid,
+.o-navbar .o-container,
+.o-navbar .o-container-sm,
+.o-navbar .o-container-lg,
+.o-navbar .o-container-xl,
+.o-navbar .o-container-xxl{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3310,17 +3314,6 @@
   order: 12;
 }
 
-
-.o-align-self-start {
-  align-self: flex-start;
-}
-.o-align-self-center {
-  align-self: center;
-}
-.o-align-self-end {
-  align-self: flex-end;
-}
-
 /* système de gouttières */
 .o-g-1,
 .o-g-2,
@@ -3502,35 +3495,35 @@
   flex-wrap: wrap;
 }
 
-.o-justify-start {
+.o-justify-content-start {
   justify-content: flex-start;
 }
-.o-justify-center {
+.o-justify-content-center {
   justify-content: center;
 }
-.o-justify-end {
+.o-justify-content-end {
   justify-content: flex-end;
 }
-.o-justify-between {
+.o-justify-content-between {
   justify-content: space-between;
 }
-.o-justify-around {
+.o-justify-content-around {
   justify-content: space-around;
 }
 
-.o-align-start {
+.o-align-items-start {
   align-items: flex-start !important;
 }
-.o-align-center {
+.o-align-items-center {
   align-items: center !important;
 }
-.o-align-end {
+.o-align-items-end {
   align-items: flex-end !important;
 }
-.o-align-stretch {
+.o-align-items-stretch {
   align-items: stretch !important;
 }
-.o-align-baseline {
+.o-align-items-baseline {
   align-items: baseline !important;
 }
 .o-align-self-center {
