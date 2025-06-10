@@ -11,6 +11,21 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6881388964812065"
     crossorigin="anonymous"></script>
+
+  <style>
+    .card-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--o-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: var(--o-white);
+        }
+  </style>
 </head>
 
 <body>
@@ -18,14 +33,14 @@
   <!-- Navigation -->
   <nav class="o-navbar o-sticky o-bg-light o-top-0">
     <div class="o-container">
-      <a href="#" class="o-brand">
+      <a href="#" class="o-navbar-brand">
         <i class="fas fa-dragon o-text-primary"></i>Orochi
       </a>
-      <button class="o-nav-toggler">
-        <span class="o-nav-toggler-icon"></span>
+      <button class="o-navbar-toggler">
+        <span class="o-navbar-toggler-icon"></span>
       </button>
-      <div class="o-nav-wrapper">
-        <ul class="o-nav">
+      <div class="o-navbar-nav-wrapper">
+        <ul class="o-navbar-nav">
           <li class="o-nav-item">
             <a href="docs/test/commencer/introduction.html" class="o-nav-link">Documents</a>
           </li>
@@ -41,43 +56,72 @@
   </nav>
 
   <!-- Section Hero -->
-  <section class="o-bg-primary o-text-white o-py-8">
-    <div class="o-container">
-      <div class="o-row o-justify-content-center">
-        <div class="o-col-md-8 o-text-center">
-          <h1 class="o-mb-4">Créez des sites modernes avec Orochi</h1>
-          <p class="o-mb-5">Un framework CSS simple et personnalisable pour vos projets web</p>
-          <div class="o-flex o-justify-content-center o-gap-4">
-            <a href="docs/test/commencer/introduction.html" class="o-btn o-btn-light o-rounded-lg">Commencer</a>
-            <a href="indisponible.html" class="o-btn o-btn-outline-light o-rounded-lg">En savoir plus</a>
-          </div>
+  <div class="o-hero o-hero-lg o-hero-gradient-flow o-text-white" 
+         style="background: linear-gradient(135deg, var(--o-dark), var(--o-primary));">
+        <div class="o-hero-container">
+            <h1 class="o-hero-title o-hero-title-xl o-hero-scale-in" style="font-weight: 900;">
+                OROCHI
+            </h1>
+            <p class="o-hero-subtitle o-hero-subtitle-lg o-hero-slide-up">
+                Framework CSS Moderne & Puissant
+            </p>
+            <div class="o-hero-fade-in">
+                <a href="#" class="o-hero-btn o-hero-btn-primary">Documentation</a>
+                <a href="#" class="o-hero-btn">GitHub</a>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
 
   <section class="o-py-5">
     <div class="o-container">
+      <h2 class="o-text-center">Fonctionnalités Avancées</h2>
       <div class="o-row o-g-4">
         <!-- Ajouter une classe sm pour les écrans intermédiaires -->
         <div class="o-col-12 o-col-sm-6 o-col-md-4">
           <div class="o-card o-h-100 o-p-4">
-            <h3 class="o-text-primary">Rapide</h3>
+            <div class="card-icon"><i class="oi oi-zap"></i></div>
+            <h3 class="o-mb-2">Performance Ultra-Rapide</h3>
             <p>Performance optimisée pour des chargements instantanés</p>
           </div>
         </div>
 
         <div class="o-col-12 o-col-sm-6 o-col-md-4">
-          <div class="o-card o-h-100 o-bg-primary o-text-white o-p-4">
-            <h3>Responsive</h3>
-            <p>Adaptation parfaite à tous les écrans</p>
+          <div class="o-card o-h-100  o-p-4">
+            <div class="card-icon"><i class="oi oi-palette"></i></div>
+            <h3 class="o-mb-2">Design Époustouflant</h3>
+            <p>Composants pré-stylisés avec animations fluides et effets visuels impressionnants prêts à l'emploi.</p>
           </div>
         </div>
 
         <div class="o-col-12 o-col-sm-6 o-col-md-4">
           <div class="o-card o-h-100 o-p-4">
-            <h3 class="o-text-primary">Moderne</h3>
-            <p>Design épuré et composants flexibles</p>
+            <div class="card-icon"><i class="oi oi-wrench"></i></div>
+            <h3 class="o-mb-2">Personnalisation Totale</h3>
+            <p>Variables CSS complètes pour adapter chaque aspect du design à votre marque.</p>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-p-4">
+            <div class="card-icon"><i class="oi oi-smartphone"></i></div>
+            <h3 class="o-mb-2">Responsive First</h3>
+            <p>Conçu mobile-first avec des utilitaires responsive pour tous les appareils.</p>
+          </div>
+        </div>
+
+         <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-p-4">
+            <div class="card-icon"><i class="oi oi-globe"></i></div>
+            <h3 class="o-mb-2">Navigateurs Modernes</h3>
+            <p>Support complet des dernières fonctionnalités CSS pour des designs futuristes.</p>
+          </div>
+        </div>
+
+         <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-p-4">
+            <div class="card-icon"><i class="oi oi-refresh-cw"></i></div>
+            <h3 class="o-mb-2">Mises à Jour Constantes</h3>
+            <p>Évolution permanente avec de nouveaux composants et améliorations chaque mois.</p>
           </div>
         </div>
       </div>
@@ -103,7 +147,7 @@
   <!-- Footer -->
   <footer class="o-bg-light o-py-5">
     <div class="o-container">
-      <div class="o-row o-justify-between">
+      <div class="o-row o-justify-content-between">
         <div class="o-col-md-4">
           <h4>Orochi</h4>
           <p>Un framework fait avec passion</p>
@@ -113,7 +157,7 @@
         </div>
         <div class="o-col-md-4">
           <h4>Liens utiles</h4>
-          <ul class="o-nav">
+          <ul class="o-navbar-nav">
             <li><a href="#" class="o-nav-link">Documentation</a></li>
             <li><a href="https://github.com/Orochichrys/o-framework" class="o-nav-link">Github</a></li>
           </ul>
