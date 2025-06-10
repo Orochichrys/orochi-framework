@@ -4055,13 +4055,210 @@
   align-self: center !important;
 }
 
-/* Centering Shortcut*/
+/* ================================================= */
+/* FRAMEWORK DE CENTRAGE - MULTI-VARIANTES */
+/* ================================================= */
+
+/* 
+  [STRATÉGIE GLOBALE]
+  Toutes les classes commencent par .o-center- (o = object)
+  Utilisation de !important pour garantir la priorité dans les systèmes complexes
+  Compatibilité : navigateurs modernes (IE11+ pour flexbox)
+*/
+
+/* ------------------------------------------------- */
+/* VERSION DE BASE (Flexbox - Centrage complet) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Centrage horizontal ET vertical des enfants directs
+  Comportement : Conteneur en block flex
+  Remarque : Solution la plus universelle pour les interfaces modernes
+*/
 .o-center-content {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
 }
 
+/* ------------------------------------------------- */
+/* CENTRAGE HORIZONTAL UNIQUEMENT */
+/* ------------------------------------------------- */
+/* 
+  Usage : Alignement horizontal des enfants sur l'axe principal
+  Idéal pour : Barres de navigation, groupes de boutons
+*/
+.o-center-h {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* ------------------------------------------------- */
+/* CENTRAGE VERTICAL UNIQUEMENT */
+/* ------------------------------------------------- */
+/* 
+  Usage : Alignement vertical des enfants sur l'axe secondaire
+  Idéal pour : Sidebars, cartes de profil
+*/
+.o-center-v {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* ------------------------------------------------- */
+/* VERSION SANS !IMPORTANT (Utilisation contrôlée) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Environnements CSS bien structurés où la spécificité est maîtrisée
+  Avantage : Permet des surcharges plus faciles
+*/
+/* .o-center-content-clean {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* ------------------------------------------------- */
+/* MODE COLONNE (Direction verticale) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Centrage dans des layouts verticaux
+  Comportement : Les enfants s'empilent verticalement
+  Idéal pour : Formulaires, listes centrées
+*/
+.o-center-column {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* ------------------------------------------------- */
+/* TECHNIQUE GRID (Alternative moderne) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Centrage bidirectionnel en 1 propriété
+  Avantage : Syntaxe ultra concise, puissance du grid layout
+  Attention : Comportement différent de flex pour les enfants multiples
+*/
+.o-center-grid {
+  display: grid !important;
+  place-items: center !important;
+}
+
+/* ------------------------------------------------- */
+/* CENTRAGE ABSOLU (Hors flux) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Éléments superposés ou de dimension fixe
+  Prérequis : Parent en position relative/absolute
+  Comportement : L'élément est retiré du flux normal
+*/
+.o-center-absolute {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* ------------------------------------------------- */
+/* VERSION INLINE-FLEX (Comportement en ligne) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Éléments en ligne nécessitant un centrage
+  Comportement : Maintient le flux inline (comme un span)
+  Idéal pour : Icônes dans du texte, boutons inline
+*/
+.o-center-inline {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* ------------------------------------------------- */
+/* CENTRAGE AVEC ESPACEMENT AUTO (Distribution intelligente) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Distribuer plusieurs enfants avec espacement égal
+  Comportement : Les enfants occupent tout l'espace disponible
+  Idéal pour : Menus, grilles de navigation
+*/
+.o-center-justified {
+  display: flex !important;
+  align-items: center !important;
+}
+.o-center-justified > * {
+  flex: 1 1 auto !important;
+  text-align: center !important;
+}
+
+/* ------------------------------------------------- */
+/* VERSION TEXTE + FLEX (Hybride) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Combinaison de centrage flex et textuel
+  Idéal pour : Cartes, bannières avec contenu mixte
+*/
+.o-center-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* ------------------------------------------------- */
+/* VERSION RESPONSIVE (Mobile first) */
+/* ------------------------------------------------- */
+/* 
+  Usage : Adapte le centrage aux différentes résolutions
+  Comportement :
+    - Mobile : Colonne centrée verticalement
+    - Desktop : Ligne centrée horizontalement
+*/
+.o-center-responsive {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+}
+@media (min-width: 768px) {
+  .o-center-responsive {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+}
+
+/* ------------------------------------------------- */
+/* UTILITAIRES COMPLÉMENTAIRES */
+/* ------------------------------------------------- */
+/* Reset des marges pour conteneurs de centrage */
+.o-center-wrapper > :first-child { margin-top: 0 !important; }
+.o-center-wrapper > :last-child { margin-bottom: 0 !important; }
+
+/* Gestion du débordement */
+.o-center-scroll {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* ------------------------------------------------- */
+/* NOTES D'UTILISATION AVANCÉE */
+/* ------------------------------------------------- */
+/*
+  1. Combinaisons possibles :
+     <div class="o-center-h o-center-v">...</div>
+     <div class="o-center-grid o-center-text">...</div>
+  
+  2. Pour IE11, ajouter :
+     .o-center-ie {
+        display: -ms-flexbox !important;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+     }
+  
+  3. Performance : 
+     - Préférer Flexbox pour les composants UI
+     - Préférer Grid pour les layouts complexes
+     - Réserver l'absolu pour les cas spécifiques
+*/
 /* =====================================================
    TYPOGRAPHIE & TEXTES
    ===================================================== */
