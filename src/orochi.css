@@ -3046,7 +3046,14 @@
   }
 }
 
-/* Modal System - Orochi Framework*/
+/* Modal System - Orochi Framework - Version Corrigée avec blocage du scroll */
+
+/* Classe utilitaire pour bloquer le scroll du body */
+.o-modal-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .o-modal {
   position: fixed;
   top: 0;
@@ -3062,6 +3069,8 @@
   pointer-events: none;
   transition: opacity var(--transition-form);
   padding: var(--space-4);
+  /* Empêche le scroll à l'intérieur de la modale elle-même */
+  overflow-y: auto;
 }
 
 .o-modal[aria-hidden='false'] {

@@ -107,7 +107,8 @@ function triggerAnimation(element) {
   }
 }
 
-// Orochi Modal System
+// Orochi Modal System – Fichier 100% JS complet
+
 class OrochiModal {
   constructor() {
     this.modals = [];
@@ -117,58 +118,51 @@ class OrochiModal {
   }
 
   init() {
-    // Initialiser toutes les modales
+    // Initialiser toutes les modales existantes
     document.querySelectorAll('.o-modal').forEach(modal => {
       this.modals.push(modal);
       modal.setAttribute('aria-hidden', 'true');
       modal.setAttribute('role', 'dialog');
       modal.setAttribute('aria-modal', 'true');
-      
-      // Ajouter un ID si manquant
       if (!modal.id) {
         modal.id = `modal-${Math.random().toString(36).substr(2, 9)}`;
       }
     });
 
-    // Gestionnaires d'ouverture
+    // Triggers d'ouverture
     document.querySelectorAll('[data-o-modal-target]').forEach(trigger => {
-      const targetSelector = trigger.dataset.oModalTarget;
-      const modal = document.querySelector(targetSelector);
-
-      if (modal) {
-        trigger.addEventListener('click', (e) => {
-          e.preventDefault();
-          this.open(modal, trigger);
-        });
-        
-        // Ajouter les attributs d'accessibilité
-        trigger.setAttribute('aria-haspopup', 'dialog');
-        trigger.setAttribute('aria-controls', modal.id);
-      } else {
-        console.warn(`Modal target "${targetSelector}" not found for trigger:`, trigger);
+      const selector = trigger.dataset.oModalTarget;
+      const modal = document.querySelector(selector);
+      if (!modal) {
+        console.warn(`Modal target "${selector}" not found for:`, trigger);
+        return;
       }
-    });
-
-    // Gestionnaires de fermeture
-    document.querySelectorAll('[data-o-modal-close]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      trigger.setAttribute('aria-haspopup', 'dialog');
+      trigger.setAttribute('aria-controls', modal.id);
+      trigger.addEventListener('click', e => {
         e.preventDefault();
-        const modal = btn.closest('.o-modal');
-        if (modal) {
-          this.close(modal);
-        }
+        this.open(modal, trigger);
       });
     });
 
-    // Fermeture par clic sur l'overlay
-    document.addEventListener('click', (e) => {
+    // Boutons de fermeture
+    document.querySelectorAll('[data-o-modal-close]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const m = btn.closest('.o-modal');
+        if (m) this.close(m);
+      });
+    });
+
+    // Clic sur overlay
+    document.addEventListener('click', e => {
       if (e.target.classList.contains('o-modal')) {
         this.close(e.target);
       }
     });
 
-    // Gestion de la touche Escape
-    document.addEventListener('keydown', (e) => {
+    // Échap pour fermer
+    document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && this.activeModal) {
         this.close(this.activeModal);
       }
@@ -176,174 +170,140 @@ class OrochiModal {
   }
 
   open(modal, trigger = null) {
-    // Fermer toute modal active
+    // Ferme toutes les modales avant d’en rouvrir une
     this.closeAll();
 
-    // Stocker l'élément actif pour y revenir
+    // Sauvegarde et attributs
     this.previousActiveElement = trigger || document.activeElement;
-
-    // Ouvrir la modal
     this.activeModal = modal;
     modal.setAttribute('aria-hidden', 'false');
-    
-    // Mettre à jour l'attribut du trigger
-    if (trigger) {
-      trigger.setAttribute('aria-expanded', 'true');
-    }
+    if (trigger) trigger.setAttribute('aria-expanded', 'true');
 
-    // Bloquer le scroll du body
-    document.body.style.overflow = 'hidden';
+    // Bloquer le scroll
+    document.body.classList.add('o-modal-open');
 
-    // Gérer le focus
-    setTimeout(() => {
-      this.trapFocus(modal);
-    }, 100);
+    // Focus trap
+    setTimeout(() => this.trapFocus(modal), 100);
 
-    // Événement personnalisé
+    // Événement custom
     modal.dispatchEvent(new CustomEvent('modalOpen', {
       detail: { modal, trigger }
     }));
   }
 
   close(modal) {
-    if (!modal || modal.getAttribute('aria-hidden') === 'true') {
-      return;
-    }
+    if (!modal || modal.getAttribute('aria-hidden') === 'true') return;
 
     modal.setAttribute('aria-hidden', 'true');
-    
-    // Restaurer le scroll du body
-    document.body.style.overflow = '';
 
-    // Réinitialiser les attributs des triggers
+    // Rétablir scroll
+    document.body.classList.remove('o-modal-open');
+
+    // Reset aria-expanded sur tous les triggers liés
     document.querySelectorAll('[data-o-modal-target]').forEach(trigger => {
-      const targetSelector = trigger.dataset.oModalTarget;
-      if (document.querySelector(targetSelector) === modal) {
+      if (document.querySelector(trigger.dataset.oModalTarget) === modal) {
         trigger.setAttribute('aria-expanded', 'false');
       }
     });
 
-    // Restaurer le focus
+    // Rendre le focus
     this.releaseFocus();
 
-    // Réinitialiser la modal active
-    if (this.activeModal === modal) {
-      this.activeModal = null;
-    }
+    // Clear active
+    if (this.activeModal === modal) this.activeModal = null;
 
-    // Événement personnalisé
+    // Événement custom
     modal.dispatchEvent(new CustomEvent('modalClose', {
       detail: { modal }
     }));
   }
 
   closeAll() {
-    this.modals.forEach(modal => {
-      if (modal.getAttribute('aria-hidden') === 'false') {
-        this.close(modal);
+    this.modals.forEach(m => {
+      if (m.getAttribute('aria-hidden') === 'false') {
+        this.close(m);
       }
     });
   }
 
   trapFocus(modal) {
-    const focusableElements = modal.querySelectorAll(
+    const focusables = modal.querySelectorAll(
       'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"]):not([disabled]), details, summary'
     );
-    
-    const firstFocusable = focusableElements[0];
-    const lastFocusable = focusableElements[focusableElements.length - 1];
+    const first = focusables[0];
+    const last  = focusables[focusables.length - 1];
+    first?.focus();
 
-    if (firstFocusable) {
-      firstFocusable.focus();
-    }
-
-    // Gérer la navigation par Tab
-    const handleTabKey = (e) => {
+    const handler = e => {
       if (e.key !== 'Tab') return;
-
-      if (e.shiftKey) {
-        // Shift + Tab
-        if (document.activeElement === firstFocusable) {
-          e.preventDefault();
-          lastFocusable?.focus();
-        }
-      } else {
-        // Tab
-        if (document.activeElement === lastFocusable) {
-          e.preventDefault();
-          firstFocusable?.focus();
-        }
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last?.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first?.focus();
       }
     };
 
-    // Supprimer l'ancien listener s'il existe
     if (modal._tabListener) {
       modal.removeEventListener('keydown', modal._tabListener);
     }
-
-    // Ajouter le nouveau listener
-    modal._tabListener = handleTabKey;
-    modal.addEventListener('keydown', handleTabKey);
+    modal._tabListener = handler;
+    modal.addEventListener('keydown', handler);
   }
 
   releaseFocus() {
-    // Restaurer le focus sur l'élément précédent
-    if (this.previousActiveElement && typeof this.previousActiveElement.focus === 'function') {
-      try {
-        this.previousActiveElement.focus();
-      } catch (e) {
-        // Ignorer les erreurs de focus
-      }
+    if (this.previousActiveElement?.focus) {
+      try { this.previousActiveElement.focus(); } catch {}
     }
     this.previousActiveElement = null;
   }
 
-  // Méthodes utilitaires publiques
-  isOpen(modal) {
-    return modal.getAttribute('aria-hidden') === 'false';
+  // API publique
+  isOpen(modal) { return modal.getAttribute('aria-hidden') === 'false'; }
+  getActiveModal() { return this.activeModal; }
+
+  openById(id) {
+    const m = document.getElementById(id);
+    if (m) this.open(m);
+    else console.warn(`Modal with ID "${id}" not found`);
   }
 
-  getActiveModal() {
-    return this.activeModal;
-  }
-
-  openById(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      this.open(modal);
-    } else {
-      console.warn(`Modal with ID "${modalId}" not found`);
-    }
-  }
-
-  closeById(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      this.close(modal);
-    }
+  closeById(id) {
+    const m = document.getElementById(id);
+    if (m) this.close(m);
   }
 
   destroy() {
-    // Nettoyer tous les event listeners
     this.closeAll();
-    document.body.style.overflow = '';
-    
-    // Supprimer les event listeners des modales
-    this.modals.forEach(modal => {
-      if (modal._tabListener) {
-        modal.removeEventListener('keydown', modal._tabListener);
-      }
+    document.body.classList.remove('o-modal-open');
+    this.modals.forEach(m => {
+      if (m._tabListener) m.removeEventListener('keydown', m._tabListener);
     });
   }
 }
 
 // Initialisation automatique
 let orochiModalInstance = null;
-
 document.addEventListener('DOMContentLoaded', () => {
   orochiModalInstance = new OrochiModal();
 });
 
-// Exporter pour utilisation globale
+// Fonctions globales simples
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return console.warn(`Modal "${modalId}" introuvable`);
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('o-modal-open');
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return console.warn(`Modal "${modalId}" introuvable`);
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('o-modal-open');
+}
+
+// Exports globaux
 window.OrochiModal = OrochiModal;
-window.orochiModal = () => orochiModalInstance;
+window.orochiModal  = () => orochiModalInstance;
+window.openModal    = openModal;
+window.closeModal   = closeModal;
