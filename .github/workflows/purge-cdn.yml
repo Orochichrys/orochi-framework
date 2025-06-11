@@ -1,0 +1,50 @@
+name: Purge CDN
+on:
+  push:
+    paths:
+      - 'src/orochi.css'
+      - 'dist/orochi.min.css'
+      - 'src/orochi.js'
+      - 'dist/orochi.min.js'
+      - 'src/orochi-icons.css'
+      - 'dist/orochi-icons.min.css'
+    branches:
+      - main
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge jsDelivr CSS
+        run: |
+          curl -X POST "https://purge.jsdelivr.net/gh/Orochichrys/orochi-framework@main/src/orochi.css"
+          
+      - name: Purge jsDelivr CSS Min
+        run: |
+          curl -X POST "https://purge.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.css"
+          
+      - name: Purge jsDelivr JS
+        run: |
+          curl -X POST "https://purge.jsdelivr.net/gh/Orochichrys/orochi-framework@main/src/orochi.js"
+          
+      - name: Purge jsDelivr JS Min
+        run: |
+          curl -X POST "https://purge.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.js"
+          
+      - name: Purge jsDelivr Icons CSS
+        run: |
+          curl -X POST "https://purge.jsdelivr.net/gh/Orochichrys/orochi-framework@main/src/orochi-icons.css"
+          
+      - name: Purge jsDelivr Icons CSS Min
+        run: |
+          curl -X POST "https://purge.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi-icons.min.css"
+          
+      - name: Show completion message
+        run: |
+          echo "✅ All CDN files have been purged successfully!"
+          echo "🔗 CSS: https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/src/orochi.css"
+          echo "🔗 CSS Min: https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.css" 
+          echo "🔗 JS: https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/src/orochi.js"
+          echo "🔗 JS Min: https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.js"
+          echo "🔗 Icons: https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/src/orochi-icons.css"
+          echo "🔗 Icons Min: https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi-icons.min.css"
