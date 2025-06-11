@@ -64,6 +64,77 @@
             </div>
         </div>
     </nav>
+
+    <!-- Section Billetterie -->
+  <section id="billetterie" class="o-bg-dark">
+    <h2 class="section-title o-text-center">Billetterie</h2>
+    <div class="o-container">
+      <div class="o-row o-justify-content-center 9
+      o-g-4">
+        <div class="o-col-md-4">
+          <div class="o-card  o-text-white o-fade-animate">
+            <div class="o-card-body">
+              <h3 class="o-card-title">Pass VIP</h3>
+              <p class="o-card-text">30,000 FCFA – Accès total + cocktails + VR premium + rencontres exclusives</p>
+              <a href="https://www.akwabaci.com/events/345/paiement" class="o-btn o-btn-primary">Réserver</a>
+            </div>
+          </div>
+        </div>
+        <div class="o-col-md-4">
+          <div class="o-card o-text-white o-fade-animate o-delay-1">
+            <div class="o-card-body">
+              <h3 class="o-card-title">Pass Découverte</h3>
+              <p class="o-card-text">Gratuit (sur réservation) – Accès à l'exposition et performances artistiques</p>
+              <a href="#" class="o-btn o-btn-primary" data-o-modal-target="#modal-pass-decouverte">Réserver</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="o-modal" id="modal-pass-decouverte" aria-hidden="true">
+  <div class="o-modal-dialog">
+    <div class="o-modal-content">
+      <div class="o-modal-header">
+        <h5 class="o-modal-title">Réservation Pass Découverte</h5>
+        <button type="button" class="o-modal-close" data-o-modal-close aria-label="Fermer">
+          &times;
+        </button>
+      </div>
+      <div class="o-modal-body">
+        <form class="o-form-group">
+          <div class="o-form-group">
+            <label class="o-form-label">Nom complet</label>
+            <input type="text" class="o-form-input" required>
+          </div>
+          <div class="o-form-group">
+            <label class="o-form-label">Email</label>
+            <input type="email" class="o-form-input" required>
+          </div>
+          <div class="o-form-group">
+            <label class="o-form-label">Date de visite</label>
+            <input type="date" class="o-form-input" required>
+          </div>
+          <div class="o-form-group">
+            <label class="o-form-label">Nombre de personnes</label>
+            <select class="o-form-select">
+              <option>1 personne</option>
+              <option>2 personnes</option>
+              <option>3 personnes</option>
+              <option>4 personnes</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="o-modal-footer">
+        <button type="button" class="o-btn o-btn-secondary" data-o-modal-close>Annuler</button>
+        <button type="submit" class="o-btn o-btn-primary">Confirmer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 <script src="src/orochi.js"></script>
 

@@ -3046,7 +3046,7 @@
   }
 }
 
-/* Modal System - Orochi Framework */
+/* Modal System - Orochi Framework - Version Corrigée */
 .o-modal {
   position: fixed;
   top: 0;
@@ -3055,17 +3055,18 @@
   height: 100%;
   background: rgba(var(--o-dark-rgb), 0.5);
   z-index: 9999;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--transition-form);
   padding: var(--space-4);
 }
 
 .o-modal[aria-hidden='false'] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .o-modal-dialog {
