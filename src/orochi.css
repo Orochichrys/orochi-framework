@@ -795,6 +795,77 @@
   margin-left: 91.6667%;
 }
 
+/* 6. Media queries pour les colonnes offset (décalage) - manquantes dans votre système */
+@media (min-width: 576px) {
+  .o-offset-sm-1 { margin-left: 8.3333%; }
+  .o-offset-sm-2 { margin-left: 16.6667%; }
+  .o-offset-sm-3 { margin-left: 25%; }
+  .o-offset-sm-4 { margin-left: 33.3333%; }
+  .o-offset-sm-5 { margin-left: 41.6667%; }
+  .o-offset-sm-6 { margin-left: 50%; }
+  .o-offset-sm-7 { margin-left: 58.3333%; }
+  .o-offset-sm-8 { margin-left: 66.6667%; }
+  .o-offset-sm-9 { margin-left: 75%; }
+  .o-offset-sm-10 { margin-left: 83.3333%; }
+  .o-offset-sm-11 { margin-left: 91.6667%; }
+}
+
+@media (min-width: 768px) {
+  .o-offset-md-1 { margin-left: 8.3333%; }
+  .o-offset-md-2 { margin-left: 16.6667%; }
+  .o-offset-md-3 { margin-left: 25%; }
+  .o-offset-md-4 { margin-left: 33.3333%; }
+  .o-offset-md-5 { margin-left: 41.6667%; }
+  .o-offset-md-6 { margin-left: 50%; }
+  .o-offset-md-7 { margin-left: 58.3333%; }
+  .o-offset-md-8 { margin-left: 66.6667%; }
+  .o-offset-md-9 { margin-left: 75%; }
+  .o-offset-md-10 { margin-left: 83.3333%; }
+  .o-offset-md-11 { margin-left: 91.6667%; }
+}
+
+@media (min-width: 992px) {
+  .o-offset-lg-1 { margin-left: 8.3333%; }
+  .o-offset-lg-2 { margin-left: 16.6667%; }
+  .o-offset-lg-3 { margin-left: 25%; }
+  .o-offset-lg-4 { margin-left: 33.3333%; }
+  .o-offset-lg-5 { margin-left: 41.6667%; }
+  .o-offset-lg-6 { margin-left: 50%; }
+  .o-offset-lg-7 { margin-left: 58.3333%; }
+  .o-offset-lg-8 { margin-left: 66.6667%; }
+  .o-offset-lg-9 { margin-left: 75%; }
+  .o-offset-lg-10 { margin-left: 83.3333%; }
+  .o-offset-lg-11 { margin-left: 91.6667%; }
+}
+
+@media (min-width: 1200px) {
+  .o-offset-xl-1 { margin-left: 8.3333%; }
+  .o-offset-xl-2 { margin-left: 16.6667%; }
+  .o-offset-xl-3 { margin-left: 25%; }
+  .o-offset-xl-4 { margin-left: 33.3333%; }
+  .o-offset-xl-5 { margin-left: 41.6667%; }
+  .o-offset-xl-6 { margin-left: 50%; }
+  .o-offset-xl-7 { margin-left: 58.3333%; }
+  .o-offset-xl-8 { margin-left: 66.6667%; }
+  .o-offset-xl-9 { margin-left: 75%; }
+  .o-offset-xl-10 { margin-left: 83.3333%; }
+  .o-offset-xl-11 { margin-left: 91.6667%; }
+}
+
+@media (min-width: 1400px) {
+  .o-offset-xxl-1 { margin-left: 8.3333%; }
+  .o-offset-xxl-2 { margin-left: 16.6667%; }
+  .o-offset-xxl-3 { margin-left: 25%; }
+  .o-offset-xxl-4 { margin-left: 33.3333%; }
+  .o-offset-xxl-5 { margin-left: 41.6667%; }
+  .o-offset-xxl-6 { margin-left: 50%; }
+  .o-offset-xxl-7 { margin-left: 58.3333%; }
+  .o-offset-xxl-8 { margin-left: 66.6667%; }
+  .o-offset-xxl-9 { margin-left: 75%; }
+  .o-offset-xxl-10 { margin-left: 83.3333%; }
+  .o-offset-xxl-11 { margin-left: 91.6667%; }
+}
+
 /* 7. Media query pour l'impression */
 @media print {
   .o-container,
@@ -2975,7 +3046,7 @@
   }
 }
 
-/* moodal*/
+/* Modal System - Orochi Framework */
 .o-modal {
   position: fixed;
   top: 0;
@@ -3001,15 +3072,19 @@
   max-width: 600px;
   width: 100%;
   margin: auto;
+  position: relative;
 }
 
 .o-modal-content {
   background: var(--o-white);
   border-radius: var(--o-rounded-md);
-  /* border: var(--o-border); */
   box-shadow: var(--o-shadow-lg);
   transform: translateY(-20px);
   transition: transform 0.3s ease;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .o-modal[aria-hidden='false'] .o-modal-content {
@@ -3025,17 +3100,20 @@
   background: var(--o-primary);
   color: var(--o-white);
   border-radius: var(--o-rounded-md) var(--o-rounded-md) 0 0;
+  flex-shrink: 0;
 }
 
 .o-modal-title {
   margin: 0;
   font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .o-modal-body {
   padding: var(--space-3);
   max-height: 70vh;
   overflow-y: auto;
+  flex-grow: 1;
 }
 
 .o-modal-footer {
@@ -3044,6 +3122,7 @@
   display: flex;
   gap: var(--space-2);
   justify-content: flex-end;
+  flex-shrink: 0;
 }
 
 .o-modal-close {
@@ -3052,20 +3131,106 @@
   color: inherit;
   font-size: 1.5rem;
   cursor: pointer;
-  padding: 0 var(--space-2);
+  padding: var(--space-1);
   line-height: 1;
+  border-radius: var(--o-rounded-sm);
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.o-modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.o-modal-close:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
 }
 
 /* Variantes de taille */
 .o-modal-sm .o-modal-dialog {
   max-width: 400px;
 }
+
 .o-modal-lg .o-modal-dialog {
   max-width: 800px;
 }
+
+.o-modal-xl .o-modal-dialog {
+  max-width: 1200px;
+}
+
 .o-modal-full .o-modal-dialog {
-  max-width: 100%;
+  max-width: calc(100% - var(--space-4));
+  max-height: calc(100% - var(--space-4));
+}
+
+.o-modal-full .o-modal-content {
   height: 100%;
+  max-height: 100%;
+}
+
+.o-modal-full .o-modal-body {
+  max-height: none;
+  flex-grow: 1;
+}
+
+/* Animation d'entrée */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.o-modal[aria-hidden='false'] {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.o-modal[aria-hidden='false'] .o-modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .o-modal {
+    padding: var(--space-2);
+  }
+  
+  .o-modal-dialog {
+    max-width: 100%;
+  }
+  
+  .o-modal-content {
+    max-height: 95vh;
+  }
+  
+  .o-modal-header,
+  .o-modal-body,
+  .o-modal-footer {
+    padding: var(--space-2);
+  }
+  
+  .o-modal-title {
+    font-size: 1.125rem;
+  }
 }
 
 /* Onglets */

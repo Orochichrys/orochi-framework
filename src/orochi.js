@@ -107,72 +107,243 @@ function triggerAnimation(element) {
   }
 }
 
-//  Orochi Modal
+// Orochi Modal System
 class OrochiModal {
   constructor() {
     this.modals = [];
+    this.activeModal = null;
+    this.previousActiveElement = null;
     this.init();
   }
 
   init() {
-    // Ouverture modale
-    document.querySelectorAll('[data-o-modal-target]').forEach((trigger) => {
-      const target = trigger.dataset.orochiModalTarget;
-      const modal = document.querySelector(target);
-
-      if (modal) {
-        this.modals.push(modal);
-        trigger.addEventListener('click', () => this.open(modal));
+    // Initialiser toutes les modales
+    document.querySelectorAll('.o-modal').forEach(modal => {
+      this.modals.push(modal);
+      modal.setAttribute('aria-hidden', 'true');
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      
+      // Ajouter un ID si manquant
+      if (!modal.id) {
+        modal.id = `modal-${Math.random().toString(36).substr(2, 9)}`;
       }
     });
 
-    // Fermeture
-    document.querySelectorAll('[data-o-modal-close]').forEach((btn) => {
-      btn.addEventListener('click', () => this.close(btn.closest('.o-modal')));
+    // Gestionnaires d'ouverture
+    document.querySelectorAll('[data-o-modal-target]').forEach(trigger => {
+      const targetSelector = trigger.dataset.oModalTarget;
+      const modal = document.querySelector(targetSelector);
+
+      if (modal) {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.open(modal, trigger);
+        });
+        
+        // Ajouter les attributs d'accessibilité
+        trigger.setAttribute('aria-haspopup', 'dialog');
+        trigger.setAttribute('aria-controls', modal.id);
+      } else {
+        console.warn(`Modal target "${targetSelector}" not found for trigger:`, trigger);
+      }
     });
 
-    // Fermeture externe
+    // Gestionnaires de fermeture
+    document.querySelectorAll('[data-o-modal-close]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modal = btn.closest('.o-modal');
+        if (modal) {
+          this.close(modal);
+        }
+      });
+    });
+
+    // Fermeture par clic sur l'overlay
     document.addEventListener('click', (e) => {
       if (e.target.classList.contains('o-modal')) {
         this.close(e.target);
       }
     });
 
-    // Gestion ESC
+    // Gestion de la touche Escape
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') this.closeAll();
+      if (e.key === 'Escape' && this.activeModal) {
+        this.close(this.activeModal);
+      }
     });
   }
 
-  open(modal) {
+  open(modal, trigger = null) {
+    // Fermer toute modal active
     this.closeAll();
+
+    // Stocker l'élément actif pour y revenir
+    this.previousActiveElement = trigger || document.activeElement;
+
+    // Ouvrir la modal
+    this.activeModal = modal;
     modal.setAttribute('aria-hidden', 'false');
-    this.trapFocus(modal);
+    
+    // Mettre à jour l'attribut du trigger
+    if (trigger) {
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    // Bloquer le scroll du body
+    document.body.style.overflow = 'hidden';
+
+    // Gérer le focus
+    setTimeout(() => {
+      this.trapFocus(modal);
+    }, 100);
+
+    // Événement personnalisé
+    modal.dispatchEvent(new CustomEvent('modalOpen', {
+      detail: { modal, trigger }
+    }));
   }
 
   close(modal) {
+    if (!modal || modal.getAttribute('aria-hidden') === 'true') {
+      return;
+    }
+
     modal.setAttribute('aria-hidden', 'true');
+    
+    // Restaurer le scroll du body
+    document.body.style.overflow = '';
+
+    // Réinitialiser les attributs des triggers
+    document.querySelectorAll('[data-o-modal-target]').forEach(trigger => {
+      const targetSelector = trigger.dataset.oModalTarget;
+      if (document.querySelector(targetSelector) === modal) {
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Restaurer le focus
     this.releaseFocus();
+
+    // Réinitialiser la modal active
+    if (this.activeModal === modal) {
+      this.activeModal = null;
+    }
+
+    // Événement personnalisé
+    modal.dispatchEvent(new CustomEvent('modalClose', {
+      detail: { modal }
+    }));
   }
 
   closeAll() {
-    this.modals.forEach((modal) => this.close(modal));
+    this.modals.forEach(modal => {
+      if (modal.getAttribute('aria-hidden') === 'false') {
+        this.close(modal);
+      }
+    });
   }
 
   trapFocus(modal) {
-    const focusable = modal.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    const focusableElements = modal.querySelectorAll(
+      'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"]):not([disabled]), details, summary'
     );
-    if (focusable.length) focusable[0].focus();
+    
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    if (firstFocusable) {
+      firstFocusable.focus();
+    }
+
+    // Gérer la navigation par Tab
+    const handleTabKey = (e) => {
+      if (e.key !== 'Tab') return;
+
+      if (e.shiftKey) {
+        // Shift + Tab
+        if (document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable?.focus();
+        }
+      } else {
+        // Tab
+        if (document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable?.focus();
+        }
+      }
+    };
+
+    // Supprimer l'ancien listener s'il existe
+    if (modal._tabListener) {
+      modal.removeEventListener('keydown', modal._tabListener);
+    }
+
+    // Ajouter le nouveau listener
+    modal._tabListener = handleTabKey;
+    modal.addEventListener('keydown', handleTabKey);
   }
 
   releaseFocus() {
-    const trigger = document.querySelector(
-      '[data-o-modal-target][aria-expanded="true"]'
-    );
-    if (trigger) trigger.focus();
+    // Restaurer le focus sur l'élément précédent
+    if (this.previousActiveElement && typeof this.previousActiveElement.focus === 'function') {
+      try {
+        this.previousActiveElement.focus();
+      } catch (e) {
+        // Ignorer les erreurs de focus
+      }
+    }
+    this.previousActiveElement = null;
+  }
+
+  // Méthodes utilitaires publiques
+  isOpen(modal) {
+    return modal.getAttribute('aria-hidden') === 'false';
+  }
+
+  getActiveModal() {
+    return this.activeModal;
+  }
+
+  openById(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      this.open(modal);
+    } else {
+      console.warn(`Modal with ID "${modalId}" not found`);
+    }
+  }
+
+  closeById(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      this.close(modal);
+    }
+  }
+
+  destroy() {
+    // Nettoyer tous les event listeners
+    this.closeAll();
+    document.body.style.overflow = '';
+    
+    // Supprimer les event listeners des modales
+    this.modals.forEach(modal => {
+      if (modal._tabListener) {
+        modal.removeEventListener('keydown', modal._tabListener);
+      }
+    });
   }
 }
 
-// Initialisation au chargement du DOM
-document.addEventListener('DOMContentLoaded', () => new OrochiModal());
+// Initialisation automatique
+let orochiModalInstance = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+  orochiModalInstance = new OrochiModal();
+});
+
+// Exporter pour utilisation globale
+window.OrochiModal = OrochiModal;
+window.orochiModal = () => orochiModalInstance;
