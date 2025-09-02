@@ -6,7 +6,7 @@ Although this project is under a **proprietary license**, we gladly accept **pub
 ## ✅ What You Can Do
 
 - Report bugs or unexpected behavior
-- Suggest new features or utilities
+- Suggest new feature or utilities
 - Propose improvements to existing components via pull requests
 - Fix typos or improve documentation
 - Optimize code without altering the core architecture

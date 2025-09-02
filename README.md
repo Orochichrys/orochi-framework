@@ -7,7 +7,7 @@ It combines the power of CSS Grid, Flexbox, and smart utility classes with a sim
 
 ---
 
-## Key Features
+## Key feature
 
 - Responsive grid system based on CSS Grid + Flexbox
 - Clear and powerful utility classes
@@ -37,7 +37,7 @@ npm install orochi-css
 ## Quick Example
 
 ```html
-<div class="o-container">
+<div class="o-box-fluid">
   <div class="o-row o-g-2">
     <div class="o-col-md-6">Colonne 1</div>
     <div class="o-col-md-6">Colonne 2</div>

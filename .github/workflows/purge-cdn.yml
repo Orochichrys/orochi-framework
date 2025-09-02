@@ -13,7 +13,7 @@ on:
 
 jobs:
   purge:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-lav.1.0.0
     steps:
       - name: Purge jsDelivr CSS
         run: |

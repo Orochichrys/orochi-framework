@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Typographie - Orochi Framework</title>
+    <title>Overflow - Orochi Framework</title>
     <link rel="stylesheet" href="../../../src/orochi.css" />
     <link rel="stylesheet" href="../../../src/orochi-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,19 +15,19 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="o-navbar o-sticky o-bg-light o-top-0">
-        <div class="o-container">
+    <nav class="o-nav o-sticky o-bg-light o-top-0">
+        <div class="o-box-fluid">
             <button class="sidebar-toggler">
                 <i class="bx bx-grid-alt"></i>
             </button>
-            <a href="../../../index.html" class="o-navbar-brand o-text-primary">
+            <a href="../../../index.html" class="o-nav-logo o-text-primary">
                 <i class="fas fa-dragon o-text-primary"></i>Orochi
             </a>
-            <button class="o-navbar-toggler">
-                <span class="o-navbar-toggler-icon"></span>
+            <button class="o-burger">
+                <span class="o-burger-icon"></span>
             </button>
-            <div class="o-navbar-nav-wrapper">
-                <ul class="o-navbar-nav">
+            <div class="o-menu">
+                <ul class="o-list">
                     <li class="o-nav-item">
                         <a href="introduction.html" class="o-nav-link">Documentation</a>
                     </li>
@@ -44,7 +44,7 @@
     </nav>
 
     <!-- Contenu principal -->
-    <div class="o-container o-mt-4">
+    <div class="o-box o-mt-4">
         <div class="o-alert o-alert-warning o-text-center" id="alert-message"></div>
         <div class="o-row o-g-4">
 
@@ -58,67 +58,68 @@
             <!-- Contenu -->
             <div class="o-col-12 o-col-md-9">
                 <div class="o-card o-p-4">
-                    <h1 class="o-title o-text-primary o-mb-4">📝 Typographie Orochi</h1>
+                    <h1 class="o-title o-text-primary o-mb-4">
+                        📦 Overflow Orochi
+                    </h1>
 
-                    <!-- Titres -->
+                    <!-- Overflow visible -->
                     <section class="o-mb-6">
-                        <h2 class="o-text-dark o-mb-4">Titres</h2>
-                        <h1 class="o-h1">Titre h1</h1>
-                        <h2 class="o-h2">Titre h2</h2>
-                        <h3 class="o-h3">Titre h3</h3>
-                        <h4 class="o-h4">Titre h4</h4>
-                        <h5 class="o-h5">Titre h5</h5>
-                        <h6 class="o-h6">Titre h6</h6>
+                        <h2 class="o-text-dark o-mb-4">Overflow visible</h2>
+                        <div class="o-bg-light o-p-3 o-mb-4 o-w-200 o-h-100 o-border o-overflow-visible">
+                            <div class="o-bg-primary o-text-white o-p-3 o-w-300">
+                                Texte dépassant la boîte.
+                            </div>
+                        </div>
                         <div class="o-code-block">
-                            <pre class="language-html"><code>&lt;h1 class="o-h1"&gt;Titre h1&lt;/h1&gt;
-&lt;h2 class="o-h2"&gt;Titre h2&lt;/h2&gt;
-&lt;h3 class="o-h3"&gt;Titre h3&lt;/h3&gt;
-&lt;h4 class="o-h4"&gt;Titre h4&lt;/h4&gt;
-&lt;h5 class="o-h5"&gt;Titre h5&lt;/h5&gt;
-&lt;h6 class="o-h6"&gt;Titre h6&lt;/h6&gt;</code></pre>
+                            <pre class="language-html"><code>&lt;div class="o-w-200 o-h-100 o-border o-overflow-visible"&gt;
+  &lt;div class="o-bg-primary o-text-white o-p-3 o-w-300"&gt;
+    Texte dépassant la boîte.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </section>
 
-                    <!-- Texte -->
+                    <!-- Overflow hidden -->
                     <section class="o-mb-6">
-                        <h2 class="o-text-dark o-mb-4">Texte</h2>
-                        <p class="o-text-base">Ceci est un paragraphe de base utilisant la classe
-                            <code>o-text-base</code>.
-                        </p>
-                        <p class="o-text-muted">Texte atténué avec <code>o-text-muted</code>.</p>
-                        <p><strong class="o-text-bold">Texte en gras</strong> avec <code>o-text-bold</code>.</p>
-                        <p><em class="o-text-italic">Texte en italique</em> avec <code>o-text-italic</code>.</p>
-                        <p><u class="o-text-underline">Texte souligné</u> avec <code>o-text-underline</code>.</p>
+                        <h2 class="o-text-dark o-mb-4">Overflow caché</h2>
+                        <div class="o-bg-light o-p-3 o-mb-4 o-w-200 o-h-100 o-border o-overflow-hidden">
+                            <div class="o-bg-danger o-text-white o-p-3 o-w-300">
+                                Ce contenu est tronqué.
+                            </div>
+                        </div>
                         <div class="o-code-block">
-                            <pre class="language-html"><code>&lt;p class="o-text-base"&gt;Texte de base&lt;/p&gt;
-&lt;p class="o-text-muted"&gt;Texte atténué&lt;/p&gt;
-&lt;strong class="o-text-bold"&gt;Gras&lt;/strong&gt;
-&lt;em class="o-text-italic"&gt;Italique&lt;/em&gt;
-&lt;u class="o-text-underline"&gt;Souligné&lt;/u&gt;</code></pre>
+                            <pre class="language-html"><code>&lt;div class="o-w-200 o-h-100 o-border o-overflow-hidden"&gt;
+  &lt;div class="o-bg-danger o-text-white o-p-3 o-w-300"&gt;
+    Ce contenu est tronqué.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </section>
 
-                    <!-- Alignement -->
+                    <!-- Overflow scroll -->
                     <section class="o-mb-6">
-                        <h2 class="o-text-dark o-mb-4">Alignement du texte</h2>
-                        <p class="o-text-start">Aligné à gauche</p>
-                        <p class="o-text-center">Centré</p>
-                        <p class="o-text-end">Aligné à droite</p>
+                        <h2 class="o-text-dark o-mb-4">Overflow scroll</h2>
+                        <div class="o-bg-light o-p-3 o-mb-4 o-w-200 o-h-100 o-border o-overflow-scroll">
+                            <div class="o-bg-success o-text-white o-p-3 o-w-300 o-h-150">
+                                Ce contenu est scrollable.
+                            </div>
+                        </div>
                         <div class="o-code-block">
-                            <pre class="language-html"><code>&lt;p class="o-text-start"&gt;Aligné à gauche&lt;/p&gt;
-&lt;p class="o-text-center"&gt;Centré&lt;/p&gt;
-&lt;p class="o-text-end"&gt;Aligné à droite&lt;/p&gt;</code></pre>
+                            <pre class="language-html"><code>&lt;div class="o-w-200 o-h-100 o-border o-overflow-scroll"&gt;
+  &lt;div class="o-bg-success o-text-white o-p-3 o-w-300 o-h-150"&gt;
+    Ce contenu est scrollable.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                         </div>
                     </section>
 
                     <!-- Astuce -->
                     <div class="o-alert o-alert-info o-mt-5">
-                        <strong>💡 Astuce :</strong> Combine les classes <code>o-h*</code>, <code>o-text-*</code> pour
-                        créer des blocs typographiques cohérents dans ton interface.
+                        <strong>💡 Conseil :</strong> Utilisez les classes utilitaires <code>.o-overflow-hidden</code>,
+                        <code>.o-overflow-scroll</code>, etc., pour contrôler facilement le comportement de dépassement.
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -135,7 +136,7 @@
                 <i class="bx bxl-github o-text-h3"></i>
             </a>
         </div>
-        <div class="o-container o-mt-2">
+        <div class="o-box o-mt-2">
             <div class="o-text-center">
                 <p class="o-mb-0">&copy; 2025 Orochi CSS - Tous droits réservés</p>
             </div>

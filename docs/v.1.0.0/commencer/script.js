@@ -35,7 +35,7 @@ sidebar.innerHTML = `
                   class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
                   <i class="bx bx-mobile-alt o-me-2"></i>Points d'arrêt
                 </a>
-                <a href="containers.html"
+                <a href="boxs.html"
                   class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
                   <i class="bx bx-box o-me-2"></i>Conteneurs
                 </a>

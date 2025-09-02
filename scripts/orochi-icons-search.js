@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Sélection des éléments
   const searchInput = document.querySelector('input[type="search"]');
   const searchForm = document.querySelector('form.o-d-flex');
-  const iconContainers = document.querySelectorAll(
+  const iconboxs = document.querySelectorAll(
     '.o-row > [class*="o-col-"]'
   );
 
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let found = false;
 
     // Réinitialiser tous les conteneurs
-    iconContainers.forEach((container) => {
-      container.style.display = 'block';
+    iconboxs.forEach((box) => {
+      box.style.display = 'block';
     });
 
     // Si le terme est vide, on affiche tout et supprime le message d'erreur
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Filtrer les icônes
-    iconContainers.forEach((container) => {
-      const iconNameElement = container.querySelector('.o-text-sm');
+    iconboxs.forEach((box) => {
+      const iconNameElement = box.querySelector('.o-text-sm');
 
       // Vérifier si l'élément existe avant d'accéder à ses propriétés
       if (iconNameElement) {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (iconName.includes(term)) {
           found = true;
         } else {
-          container.style.display = 'none';
+          box.style.display = 'none';
         }
       }
     });

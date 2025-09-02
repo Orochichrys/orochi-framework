@@ -9,167 +9,370 @@
   <link rel="stylesheet" href="src/orochi-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link rel="stylesheet" href="docs/v.1.0.0/commencer/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6881388964812065"
     crossorigin="anonymous"></script>
-
-  <style>
-    .card-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--o-primary);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: var(--o-white);
-        }
-  </style>
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="o-navbar o-sticky o-bg-light o-top-0">
-    <div class="o-container">
-      <a href="#" class="o-navbar-brand">
-        <i class="fas fa-dragon o-text-primary"></i>Orochi
-      </a>
-      <button class="o-navbar-toggler">
-        <span class="o-navbar-toggler-icon"></span>
+  <nav class="o-nav o-nav-fixed o-shadow">
+    <div class="o-box-fluid">
+      <a href="#" class="o-nav-logo"><i class="fas fa-dragon o-text-primary"></i>Orochi</a>
+      <button class="o-burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+        <span class="o-burger-icon"></span>
       </button>
-      <div class="o-navbar-nav-wrapper">
-        <ul class="o-navbar-nav">
-          <li class="o-nav-item">
-            <a href="docs/test/commencer/introduction.html" class="o-nav-link">Documents</a>
+      <div class="o-menu">
+        <ul class="o-nav-list">
+          <li class="o-nav-item"><a href="docs/v.1.0.0/commencer/introduction.html" class="o-nav-link">Documents</a>
           </li>
-          <li class="o-nav-item">
-            <a href="indisponible.html" class="o-nav-link">Exemples</a>
-          </li>
-          <li class="o-nav-item">
-            <a href="icons.html" class="o-nav-link">Icones</a>
-          </li>
+          <li class="o-nav-item"><a href="indisponible.html" class="o-nav-link">Exemples</a></li>
+          <li class="o-nav-item"><a href="icons.html" class="o-nav-link">Icones</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Section Hero -->
-  <div class="o-hero o-hero-lg o-hero-gradient-flow o-text-white" 
-         style="background: linear-gradient(135deg, var(--o-dark), var(--o-primary));">
-        <div class="o-hero-container">
-            <h1 class="o-hero-title o-hero-title-xl o-hero-scale-in" style="font-weight: 900;">
-                OROCHI
-            </h1>
-            <p class="o-hero-subtitle o-hero-subtitle-lg o-hero-slide-up">
-                Framework CSS Moderne & Puissant
-            </p>
-            <div class="o-hero-fade-in">
-                <a href="#" class="o-hero-btn o-hero-btn-primary">Documentation</a>
-                <a href="#" class="o-hero-btn">GitHub</a>
-            </div>
-        </div>
+  <div class="o-hero o-hero-lg o-hero-gradient-flow o-text-white"
+    style="background: linear-gradient(135deg, var(--o-dark), var(--o-primary));">
+    <div class="o-hero-box">
+      <h1 class="o-hero-title o-hero-title-xl o-hero-scale-in" style="font-weight: 900;">
+        OROCHI
+      </h1>
+      <p class="o-hero-subtitle o-hero-subtitle-lg o-hero-slide-up">
+        Framework CSS Moderne & Puissant
+      </p>
+      <div class="o-hero-fade-in">
+        <a href="#" class="o-hero-btn o-hero-btn-primary">Documentation</a>
+        <a href="#" class="o-hero-btn">GitHub</a>
+      </div>
     </div>
+  </div>
 
   <section class="o-py-5">
-    <div class="o-container">
-      <h2 class="o-text-center">Fonctionnalités Avancées</h2>
+    <div class="o-box-fluid">
+      <div class="title">
+        <h2>Pourquoi choisir Orochi ?</h2>
+        <p>Découvrez les fonctionnalités qui font d'Orochi le framework CSS de choix pour vos projets</p>
+      </div>
       <div class="o-row o-g-4">
         <!-- Ajouter une classe sm pour les écrans intermédiaires -->
         <div class="o-col-12 o-col-sm-6 o-col-md-4">
-          <div class="o-card o-h-100 o-p-4">
-            <div class="card-icon"><i class="oi oi-zap"></i></div>
-            <h3 class="o-mb-2">Performance Ultra-Rapide</h3>
-            <p>Performance optimisée pour des chargements instantanés</p>
+          <div class="feature o-card o-h-100 o-center-content o-text-center o-shadow  o-p-6">
+            <div class="feature-icon"><i class="oi oi-zap"></i></div>
+            <h3>Ultra Léger</h3>
+            <p>Avec seulement 66KB minifié, Orochi garantit des temps de chargement rapides et une expérience
+              utilisateur optimale.</p>
           </div>
         </div>
 
         <div class="o-col-12 o-col-sm-6 o-col-md-4">
-          <div class="o-card o-h-100  o-p-4">
-            <div class="card-icon"><i class="oi oi-palette"></i></div>
-            <h3 class="o-mb-2">Design Époustouflant</h3>
-            <p>Composants pré-stylisés avec animations fluides et effets visuels impressionnants prêts à l'emploi.</p>
+          <div class="feature o-card o-h-100 o-center-content o-text-center o-shadow o-p-6">
+            <div class="feature-icon"><i class="oi oi-smartphone"></i></div>
+            <h3>Responsive Design</h3>
+            <p>Conçu avec l'approche mobile-first, Orochi s'adapte parfaitement à tous les appareils et tailles d'écran.
+            </p>
           </div>
         </div>
 
         <div class="o-col-12 o-col-sm-6 o-col-md-4">
-          <div class="o-card o-h-100 o-p-4">
-            <div class="card-icon"><i class="oi oi-wrench"></i></div>
+          <div class="feature o-card o-h-100 o-center-content o-text-center o-shadow o-p-6">
+            <div class="feature-icon"><i class="oi oi-wrench"></i></div>
+            <h3>Composants Modulaires</h3>
+            <p>Utilisez uniquement les composants dont vous avez besoin grâce à une architecture modulaire et flexible.
+            </p>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="feature o-card o-h-100 o-center-content o-text-center o-shadow o-p-6">
+            <div class="feature-icon"><i class="oi oi-palette"></i></div>
+            <h3>Personnalisation Facile</h3>
+            <p>Personnalisez facilement les couleurs, les espacements et plus grâce aux variables CSS modernes.</p>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="feature o-card o-h-100 o-center-content o-text-center o-shadow o-p-6">
+            <div class="feature-icon"><i class="oi oi-zap"></i></div>
+            <h3>Performances Optimisées</h3>
+            <p>Code optimisé pour des performances maximales, avec un impact minimal sur la taille de votre application.
+            </p>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="feature o-card o-h-100 o-center-content o-text-center o-shadow o-p-6">
+            <div class="feature-icon"><i class="oi oi-refresh-cw"></i></div>
+            <h3>Design Élégant</h3>
+            <p>Un design moderne et épuré avec des animations subtiles pour une expérience utilisateur raffinée.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="o-box-fluid">
+      <div class="title">
+        <h2>Code Élégant, Résultats Exceptionnels</h2>
+        <p>Découvrez la simplicité et la puissance de la syntaxe Orochi</p>
+      </div>
+      <div class="o-code-block">
+        <pre class="language-html">
+<code>&lt;!--Boutons--&gt;
+&lt;button class="o-btn o-btn-primary"&gt;Primaire&lt;/button&gt;
+&lt;button class="o-btn o-btn-outline-success"&gt;Outline Succès&lt;/button&gt;
+&lt;button class="o-btn o-btn-lg o-btn-danger"&gt;Grand Danger&lt;/button&gt;
+&lt;button class="o-btn o-btn-sm o-btn-warning"&gt;Petit Avertissement&lt;/button&gt;
+&lt;button class="o-btn o-btn-info" disabled&gt;Désactivé&lt;/button&gt;
+
+&lt;!--Grille--&gt;
+&lt;div class="o-row"&gt;
+  &lt;div class="o-col-12 o-col-md-6"&gt;Colonne 1&lt;/div&gt;
+  &lt;div class="o-col-12 o-col-md-6"&gt;Colonne 2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Carte--&gt;
+&lt;div class="o-card"&gt;
+  &lt;div class="o-card-header"&gt;Titre&lt;/div&gt;
+  &lt;div class="o-card-body"&gt;Contenu de la carte&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Formulaire--&gt;
+&lt;input class="o-form-input" type="email" placeholder="Email"&gt;
+&lt;select class="o-form-select"&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
+&lt;button class="o-btn o-btn-success"&gt;Envoyer&lt;/button&gt;
+</code></pre>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Installation Section -->
+  <section class="o-bg-light">
+    <div class="o-box-fluid">
+      <div class="title">
+        <h2>Installation Simple et Rapide</h2>
+        <p>Intégrez Orochi à votre projet en quelques minutes</p>
+      </div>
+      <div class="o-row o-g-4">
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-shadow o-border-none o-p-4">
+            <div class="card-icon">1</div>
+            <h3 class="o-mb-2">Via CDN</h3>
+            <p class="o-mb-2">Ajoutez simplement cette ligne dans le head de votre HTML :</p>
+            <div class="o-code-block">
+              <pre
+                class="language-html"><code>&lt;link rel="stylesheet" href="https://cdn.orochi-css.com/orochi.min.css"&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-shadow o-border-none o-p-4">
+            <div class="card-icon">2</div>
+            <h3 class="o-mb-2">Installation avec NPM</h3>
+            <p class="o-mb-2">Installez Orochi via npm pour une intégration avec vos outils de build :</p>
+            <div class="o-code-block">
+              <pre class="language-html"><code>npm install orochi-css</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-shadow o-border-none o-p-4">
+            <div class="card-icon">3</div>
             <h3 class="o-mb-2">Personnalisation Totale</h3>
-            <p>Variables CSS complètes pour adapter chaque aspect du design à votre marque.</p>
+            <p class="o-mb-2">Téléchargez les fichiers CSS et JS et liez-les localement :</p>
+            <div class="o-code-block">
+              <pre class="language-html"><code>&lt;link rel="stylesheet" href="chemin/vers/orochi.css"&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Components Showcase -->
+  <section class="">
+    <div class="o-box-fluid">
+      <div class="title">
+        <h2>Composants Intégrés</h2>
+        <p>Une collection complète de composants prêts à l'emploi</p>
+      </div>
+      <div class="o-row o-g-4">
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="component o-card o-h-100 o-border-top o-shadow o-border-top-4 o-p-4">
+            <h3 class="o-text-primary o-mb-3">Système de Grille Flexbox</h3>
+            <p>Une grille responsive basée sur Flexbox avec des breakpoints personnalisables pour tous vos besoins de
+              mise en page.</p>
           </div>
         </div>
 
         <div class="o-col-12 o-col-sm-6 o-col-md-4">
-          <div class="o-card o-h-100 o-p-4">
-            <div class="card-icon"><i class="oi oi-smartphone"></i></div>
-            <h3 class="o-mb-2">Responsive First</h3>
-            <p>Conçu mobile-first avec des utilitaires responsive pour tous les appareils.</p>
+          <div class="component o-card o-h-100 o-border-top o-shadow o-border-top-4 o-p-4">
+            <h3 class="o-text-primary o-mb-3">Composants de Formulaire</h3>
+            <p>Des champs de formulaire stylisés, des cases à cocher, des boutons radio et des sélecteurs modernes et
+              accessibles.</p>
           </div>
         </div>
 
-         <div class="o-col-12 o-col-sm-6 o-col-md-4">
-          <div class="o-card o-h-100 o-p-4">
-            <div class="card-icon"><i class="oi oi-globe"></i></div>
-            <h3 class="o-mb-2">Navigateurs Modernes</h3>
-            <p>Support complet des dernières fonctionnalités CSS pour des designs futuristes.</p>
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="component o-card o-h-100 o-border-top o-shadow o-border-top-4 o-p-4">
+            <h3 class="o-text-primary o-mb-3">Navigation Responsive</h3>
+            <p>Des barres de navigation élégantes qui s'adaptent parfaitement aux appareils mobiles avec un menu
+              hamburger.</p>
           </div>
         </div>
 
-         <div class="o-col-12 o-col-sm-6 o-col-md-4">
-          <div class="o-card o-h-100 o-p-4">
-            <div class="card-icon"><i class="oi oi-refresh-cw"></i></div>
-            <h3 class="o-mb-2">Mises à Jour Constantes</h3>
-            <p>Évolution permanente avec de nouveaux composants et améliorations chaque mois.</p>
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="component o-card o-h-100 o-border-top o-shadow o-border-top-4 o-p-4">
+            <h3 class="o-text-primary o-mb-3">Cartes et Panneaux</h3>
+            <p>Des composants de carte modernes avec des ombres portées et des animations au survol pour présenter votre
+              contenu.</p>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="component o-card o-h-100 o-border-top o-shadow o-border-top-4 o-p-4">
+            <h3 class="o-text-primary o-mb-3">Alertes et Notifications</h3>
+            <p>Des alertes contextuelles avec des styles pour le succès, les avertissements, les erreurs et les
+              informations.</p>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="component o-card o-h-100 o-border-top o-shadow o-border-top-4 o-p-4">
+            <h3 class="o-text-primary o-mb-3">Utilities CSS</h3>
+            <p>Des classes utilitaires pour les espacements, la typographie, les couleurs et les displays pour un
+              développement rapide.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="o-bg-light">
+    <div class="o-box-fluid">
+      <div class="title">
+        <h2>Ils utilisent Orochi</h2>
+        <p>Découvrez ce que les développeurs disent de notre framework</p>
+      </div>
+      <div class="o-row o-g-4">
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-shadow o-border-none o-p-4">
+            <p class="o-text-italic o-mb-4">"Orochi a considérablement accéléré notre processus de développement. Sa
+              simplicité et sa légèreté en font un choix parfait pour nos projets web."</p>
+            <div class="o-d-flex o-align-items-center">
+              <div class="author-avatar">SD</div>
+              <div>
+                <h4>Sophie Dubois</h4>
+                <p>Développeuse Front-end</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-shadow o-border-none o-p-4">
+            <p class="o-text-italic o-mb-4">"La documentation claire et les composants modulaires nous ont permis
+              d'intégrer Orochi facilement dans notre workflow existant. Un framework vraiment bien pensé."</p>
+            <div class="o-d-flex o-align-items-center">
+              <div class="author-avatar">TM</div>
+              <div>
+                <h4>Thomas Martin</h4>
+                <p>Lead Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="o-col-12 o-col-sm-6 o-col-md-4">
+          <div class="o-card o-h-100 o-shadow o-border-none o-p-4">
+            <p class="o-text-italic o-mb-4">"Nous cherchions une alternative légère à Bootstrap pour nos projets. Orochi
+              a dépassé nos attentes avec ses performances et son design moderne."</p>
+            <div class="o-d-flex o-align-items-center">
+              <div class="author-avatar">LJ</div>
+              <div>
+                <h4>Laura Jensen</h4>
+                <p>CTO, TechSolutions</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section CTA -->
-  <section class="o-bg-dark o-text-light o-py-8">
-    <div class="o-container">
-      <div class="o-row o-align-center">
-        <div class="o-col-md-6">
-          <h2>Prêt à commencer ?</h2>
-          <p>Téléchargez Orochi et commencez dès maintenant</p>
-        </div>
-        <div class="o-col-md-6 o-text-end">
-          <a href="indisponible.html" class="o-btn o-btn-primary o-btn-lg">Télécharger</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
 
 
   <!-- Footer -->
   <footer class="o-bg-light o-py-5">
-    <div class="o-container">
-      <div class="o-row o-justify-content-between">
-        <div class="o-col-md-4">
-          <h4>Orochi</h4>
-          <p>Un framework fait avec passion</p>
-          <p class="o-text-sm">
-            Code sous licence propriétaire - Documentation CC BY 3.0 - v1.0.0
-          </p>
+    <div class="o-box-fluid">
+      <div class="o-row">
+        <div class="footer-column o-col-sm-6 o-col-md-3 o-mb-4">
+          <h3>Orochi CSS</h3>
+          <p>Un framework CSS moderne et léger pour créer des interfaces web élégantes et performantes.</p>
+          <div class="social-links">
+            <a href="#"><i class="oi oi-github"></i></a>
+            <a href="#"><i class="oi oi-facebook"></i></a>
+            <a href="#"><i class="oi oi-instagram"></i></a>
+            <a href="#"><i class="oi oi-linkedin"></i></a>
+          </div>
         </div>
-        <div class="o-col-md-4">
-          <h4>Liens utiles</h4>
-          <ul class="o-navbar-nav">
-            <li><a href="#" class="o-nav-link">Documentation</a></li>
-            <li><a href="https://github.com/Orochichrys/o-framework" class="o-nav-link">Github</a></li>
+        <div class="footer-column o-col-sm-6 o-col-md-3 o-mb-4">
+          <h3>Ressources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Tutoriels</a></li>
+            <li><a href="#">Exemples</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </div>
+        <div class="footer-column o-col-sm-6 o-col-md-3 o-mb-4">
+          <h3>Communauté</h3>
+          <ul class="footer-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Contribuer</a></li>
+          </ul>
+        </div>
+        <div class="footer-column o-col-sm-6 o-col-md-3 o-mb-4">
+          <h3>Légal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Licence MIT</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Conditions d'utilisation</a></li>
           </ul>
         </div>
       </div>
-      <div class="o-text-center o-mt-5">
+      <div class="o-text-center o-pt-5 o-mt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);">
         <p>© 2025 Orochi - Conçu avec passion par l'équipe Orochi</p>
       </div>
     </div>
   </footer>
 
-  <script src="src/orochi.js"></script>
 </body>
+<script src="src/orochi.js"></script>
+<script src="docs/v.1.0.0/commencer/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
 
 </html>

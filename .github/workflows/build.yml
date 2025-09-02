@@ -10,7 +10,7 @@ on:
       - 'src/orochi-icons.css'  
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-lav.1.0.0
 
     steps:
     - name: 🛎️ Checkout le repo
@@ -36,6 +36,51 @@ jobs:
         git config --global user.email "emmanuelbissa0000@gmail.com"
 
         git add dist/orochi.min.css dist/orochi.min.js dist/orochi-icons.min.css  # 👈 fichier ajouté
+
+        git diff --cached --quiet || git commit -m "🔄 Auto-minify CSS, JS & Icons on push"
+
+        git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+        git push origin HEAD:main
+name: Minify CSS & JS and Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'src/orochi.css'
+      - 'src/orochi.js'
+      - 'src/orochi-icons.css'
+
+jobs:
+  build:
+    runs-on: ubuntu-lav.1.0.0
+
+    steps:
+    - name: 🛎️ Checkout le repo
+      uses: actions/checkout@v3
+
+    - name: 📦 Installer les outils de minification
+      run: |
+        npm install -g clean-css-cli terser
+
+    - name: 🎨 Minifier les fichiers CSS
+      run: |
+        cleancss -o dist/orochi.min.css src/orochi.css
+        cleancss -o dist/orochi-icons.min.css src/orochi-icons.css
+
+    - name: ⚙️ Minifier le fichier JavaScript
+      run: |
+        terser src/orochi.js -o dist/orochi.min.js -c -m
+
+    - name: 🔐 Configurer Git et push les fichiers minifiés
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        git config --global user.name "Orochichrys"
+        git config --global user.email "emmanuelbissa0000@gmail.com"
+
+        git add dist/orochi.min.css dist/orochi-icons.min.css dist/orochi.min.js
 
         git diff --cached --quiet || git commit -m "🔄 Auto-minify CSS, JS & Icons on push"
 

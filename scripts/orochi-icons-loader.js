@@ -81,7 +81,7 @@ if (searchInput) {
 }
 
 
-const container = document.querySelector('.o-row');
+const box = document.querySelector('.o-row');
 
 iconNames.forEach((name) => {
   const col = document.createElement('div');
@@ -94,5 +94,5 @@ iconNames.forEach((name) => {
             <div class="o-text-sm o-text-center o-mt-2">${name}</div>
         `;
 
-  container.appendChild(col);
+  box.appendChild(col);
 });

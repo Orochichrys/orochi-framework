@@ -1,6 +1,44 @@
 /* Styles globaux */
-body {
+/* body {
   background-color: #f9f9f9;
+} */
+.o-box-fluid.layout-box{
+  padding-left: 0;
+  padding-right:0;
+}
+.main-content{
+  min-height: calc(100vh - 56px - 120px);
+  padding-bottom: 2rem;
+}
+footer{
+  position: relative;
+  z-index: 1000;
+}
+@media (min-width:992px) {
+  .sidebar-left{
+    position: fixed;
+    top: 56px;
+    left: 0;
+    height: calc(100vh - 56px);
+    width: 16.6667%;
+    padding: 1rem;
+    z-index: 100;
+}
+  .sidebar-right{
+    position: fixed;
+    top: 56px;
+    right: 0;
+    height: calc(100vh - 56px);
+    width: 16.6667%;
+    padding: 1rem;
+    z-index: 100;
+}
+.main-content{
+  margin-left:16.6667%;
+  margin-right: 16.6667%;
+  width: 66.6667%;
+}
+
 }
 code {
   font-family: 'Courier New', Courier, monospace;

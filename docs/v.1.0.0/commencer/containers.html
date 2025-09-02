@@ -17,18 +17,18 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="o-navbar o-sticky o-bg-light o-top-0">
-    <div class="o-container">
+  <nav class="o-nav o-sticky o-bg-light o-top-0">
+    <div class="o-box-fluid">
       <button class="sidebar-toggler">
         <i class="bx bx-grid-alt"></i>
       </button>
-      <a href="../../../index.html" class="o-navbar-brand o-text-primary"><i
+      <a href="../../../index.html" class="o-nav-logo o-text-primary"><i
           class="fas fa-dragon o-text-primary"></i>Orochi</a>
-      <button class="o-navbar-toggler">
-        <span class="o-navbar-toggler-icon"></span>
+      <button class="o-burger">
+        <span class="o-burger-icon"></span>
       </button>
-      <div class="o-navbar-nav-wrapper">
-        <ul class="o-navbar-nav">
+      <div class="o-menu">
+        <ul class="o-list">
           <li class="o-nav-item">
             <a href="introduction.html" class="o-nav-link">Documentation</a>
           </li>
@@ -45,7 +45,7 @@
   </nav>
 
   <!-- Contenu principal -->
-  <div class="o-container o-mt-4">
+  <div class="o-box o-mt-4">
     <div class="o-alert o-alert-warning o-text-center" id="alert-message"></div>
     <div class="o-row o-g-4">
       <!-- Sidebar -->
@@ -60,7 +60,7 @@
       <!-- Contenu -->
       <div class="o-col-12 o-col-md-9">
         <div class="o-card o-p-4">
-          <section id="containers-intro">
+          <section id="boxs-intro">
             <h1 class="o-title o-text-primary">📦 Conteneurs</h1>
             <p class="o-lead o-mb-5">
               Les conteneurs sont un composant clé d’Orochi : ils servent à centrer, limiter la largeur et structurer
@@ -74,19 +74,19 @@
               pas.<br><br>
               Orochi est livré avec trois conteneurs différents :
             <ul class="o-list-unstyled">
-              <li><code>.o-container</code>, qui définit un max-width à chaque point d'arrêt réactif</li>
-              <li><code>.o-container-{breakpoint}</code>, qui dure width: 100% jusqu'au point d'arrêt spécifié</li>
-              <li><code>.o-container-fluid</code>, qui est width: 100% à tous les points d'arrêt</li>
+              <li><code>.o-box</code>, qui définit un max-width à chaque point d'arrêt réactif</li>
+              <li><code>.o-box-{breakpoint}</code>, qui dure width: 100% jusqu'au point d'arrêt spécifié</li>
+              <li><code>.o-box-fluid</code>, qui est width: 100% à tous les points d'arrêt</li>
             </ul>
             </p>
 
             <!-- Conteneur de base -->
             <section class="o-mt-4">
               <h2 class="o-text-dark o-mb-3">Conteneur standard</h2>
-              <p class="o-mb-3">Notre .containerclasse par défaut est un conteneur réactif à largeur fixe, ce qui
+              <p class="o-mb-3">Notre .boxclasse par défaut est un conteneur réactif à largeur fixe, ce qui
                 signifie qu'il max-widthchange à chaque point d'arrêt.</p>
               <div class="o-code-block">
-                <pre class="language-html"><code>&lt;div class="o-container"&gt;
+                <pre class="language-html"><code>&lt;div class="o-box-fluid"&gt;
     Contenu centré avec largeur responsive
 &lt;/div&gt;</code></pre>
               </div>
@@ -95,10 +95,10 @@
             <!-- Conteneur fluide -->
             <section class="o-mt-4">
               <h2 class="o-text-dark o-mb-3">Conteneur fluide</h2>
-              <p class="o-mb-3">À utiliser .container-fluid pour un conteneur pleine largeur, couvrant toute la largeur
+              <p class="o-mb-3">À utiliser .box-fluid pour un conteneur pleine largeur, couvrant toute la largeur
                 de la fenêtre d'affichage.</p>
               <div class="o-code-block">
-                <pre class="language-html"><code>&lt;div class="o-container-fluid"&gt;
+                <pre class="language-html"><code>&lt;div class="o-box-fluid"&gt;
     Contenu pleine largeur
 &lt;/div&gt;</code></pre>
               </div>
@@ -118,27 +118,27 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><code>.o-container</code></td>
+                      <td><code>.o-box</code></td>
                       <td>100%</td>
                       <td>Par défaut</td>
                     </tr>
                     <tr>
-                      <td><code>.o-container-sm</code></td>
+                      <td><code>.o-box-sm</code></td>
                       <td>540px</td>
                       <td>≥576px</td>
                     </tr>
                     <tr>
-                      <td><code>.o-container-md</code></td>
+                      <td><code>.o-box-md</code></td>
                       <td>720px</td>
                       <td>≥768px</td>
                     </tr>
                     <tr>
-                      <td><code>.o-container-lg</code></td>
+                      <td><code>.o-box-lg</code></td>
                       <td>960px</td>
                       <td>≥992px</td>
                     </tr>
                     <tr>
-                      <td><code>.o-container-xl</code></td>
+                      <td><code>.o-box-xl</code></td>
                       <td>1140px</td>
                       <td>≥1200px</td>
                     </tr>
@@ -202,7 +202,7 @@
     </div>
     </div>
     </div>
-    <div class="o-container o-mt-2">
+    <div class="o-box o-mt-2">
       <div class="o-text-center">
         <p class="o-mb-0">
           &copy; 2025 Orochi CSS - Tous droits réservés

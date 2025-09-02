@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,19 +65,19 @@
             --o-rounded-pill: 9999px;
 
             /* NOUVELLES VARIABLES POUR HERO BANNERS */
-            
+
             /* Hauteurs des hero banners */
             --o-hero-sm: 60vh;
             --o-hero-md: 80vh;
             --o-hero-lg: 100vh;
             --o-hero-xl: 120vh;
-            
+
             /* Durées d'animation spécifiques */
             --o-hero-duration-ultra-slow: 15s;
             --o-hero-duration-slow: 8s;
             --o-hero-duration-normal: 4s;
             --o-hero-duration-fast: 2s;
-            
+
             /* Gradients avancés pour hero banners */
             --o-gradient-sunset: linear-gradient(135deg, #ff6b6b, #ffa500, #ff69b4, #4a148c);
             --o-gradient-ocean: linear-gradient(135deg, #0077be, #17a2b8, #4ecdc4, #96ceb4);
@@ -85,25 +86,25 @@
             --o-gradient-fire: linear-gradient(135deg, #ff0000, #ff4500, #ffd700, #ff69b4);
             --o-gradient-aurora: linear-gradient(135deg, #00c9ff, #92fe9d, #ff9a9e, #fecfef);
             --o-gradient-neon: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff, #06ffa5);
-            
+
             /* Overlays pour images */
             --o-overlay-dark: rgba(0, 0, 0, 0.5);
             --o-overlay-light: rgba(255, 255, 255, 0.2);
             --o-overlay-colored: rgba(var(--o-primary-rgb), 0.3);
-            
+
             /* Effets de particules et lumière */
             --o-glow-intense: 0 0 30px rgba(255, 255, 255, 0.5);
             --o-glow-colored: 0 0 40px rgba(var(--o-primary-rgb), 0.6);
             --o-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             --o-text-glow: 0 0 10px rgba(255, 255, 255, 0.8);
-            
+
             /* Tailles de police héro */
             --o-hero-title-xs: 1.5rem;
             --o-hero-title-sm: 2rem;
             --o-hero-title-md: 3rem;
             --o-hero-title-lg: 4rem;
             --o-hero-title-xl: 5rem;
-            
+
             --o-hero-subtitle-xs: 0.875rem;
             --o-hero-subtitle-sm: 1rem;
             --o-hero-subtitle-md: 1.25rem;
@@ -112,9 +113,17 @@
 
         /* Keyframes pour animations héro */
         @keyframes heroFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         @keyframes heroSlideUp {
@@ -122,6 +131,7 @@
                 transform: translateY(100px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateY(0);
                 opacity: 1;
@@ -133,6 +143,7 @@
                 transform: translateY(-100px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateY(0);
                 opacity: 1;
@@ -140,8 +151,13 @@
         }
 
         @keyframes heroFadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         @keyframes heroScale {
@@ -149,6 +165,7 @@
                 transform: scale(0.8);
                 opacity: 0;
             }
+
             100% {
                 transform: scale(1);
                 opacity: 1;
@@ -160,6 +177,7 @@
                 transform: rotate(-5deg) scale(0.9);
                 opacity: 0;
             }
+
             100% {
                 transform: rotate(0deg) scale(1);
                 opacity: 1;
@@ -167,23 +185,49 @@
         }
 
         @keyframes heroPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         @keyframes heroFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         @keyframes heroWave {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(3deg); }
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
         }
 
         @keyframes heroShimmer {
-            0% { background-position: -200px 0; }
-            100% { background-position: 200px 0; }
+            0% {
+                background-position: -200px 0;
+            }
+
+            100% {
+                background-position: 200px 0;
+            }
         }
 
         @keyframes heroParticles {
@@ -191,6 +235,7 @@
                 transform: translateY(0) rotate(0deg);
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-100vh) rotate(360deg);
                 opacity: 0;
@@ -198,9 +243,17 @@
         }
 
         @keyframes heroZoom {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* Classes de base pour hero banners */
@@ -215,7 +268,7 @@
         }
 
         /* Conteneur héro */
-        .o-hero-container {
+        .o-hero-box {
             max-width: 1200px;
             padding: var(--space-4);
             z-index: 2;
@@ -223,10 +276,21 @@
         }
 
         /* Tailles des hero banners */
-        .o-hero-sm { height: var(--o-hero-sm); }
-        .o-hero-md { height: var(--o-hero-md); }
-        .o-hero-lg { height: var(--o-hero-lg); }
-        .o-hero-xl { height: var(--o-hero-xl); }
+        .o-hero-sm {
+            height: var(--o-hero-sm);
+        }
+
+        .o-hero-md {
+            height: var(--o-hero-md);
+        }
+
+        .o-hero-lg {
+            height: var(--o-hero-lg);
+        }
+
+        .o-hero-xl {
+            height: var(--o-hero-xl);
+        }
 
         /* Styles de fond */
         .o-hero-gradient-flow {
@@ -315,11 +379,25 @@
             letter-spacing: 1px;
         }
 
-        .o-hero-title-xs { font-size: var(--o-hero-title-xs); }
-        .o-hero-title-sm { font-size: var(--o-hero-title-sm); }
-        .o-hero-title-md { font-size: var(--o-hero-title-md); }
-        .o-hero-title-lg { font-size: var(--o-hero-title-lg); }
-        .o-hero-title-xl { font-size: var(--o-hero-title-xl); }
+        .o-hero-title-xs {
+            font-size: var(--o-hero-title-xs);
+        }
+
+        .o-hero-title-sm {
+            font-size: var(--o-hero-title-sm);
+        }
+
+        .o-hero-title-md {
+            font-size: var(--o-hero-title-md);
+        }
+
+        .o-hero-title-lg {
+            font-size: var(--o-hero-title-lg);
+        }
+
+        .o-hero-title-xl {
+            font-size: var(--o-hero-title-xl);
+        }
 
         /* Sous-titres héro */
         .o-hero-subtitle {
@@ -327,10 +405,21 @@
             opacity: 0.9;
         }
 
-        .o-hero-subtitle-xs { font-size: var(--o-hero-subtitle-xs); }
-        .o-hero-subtitle-sm { font-size: var(--o-hero-subtitle-sm); }
-        .o-hero-subtitle-md { font-size: var(--o-hero-subtitle-md); }
-        .o-hero-subtitle-lg { font-size: var(--o-hero-subtitle-lg); }
+        .o-hero-subtitle-xs {
+            font-size: var(--o-hero-subtitle-xs);
+        }
+
+        .o-hero-subtitle-sm {
+            font-size: var(--o-hero-subtitle-sm);
+        }
+
+        .o-hero-subtitle-md {
+            font-size: var(--o-hero-subtitle-md);
+        }
+
+        .o-hero-subtitle-lg {
+            font-size: var(--o-hero-subtitle-lg);
+        }
 
         /* Animations d'entrée pour contenu */
         .o-hero-fade-in {
@@ -355,7 +444,7 @@
         }
 
         .o-hero-text-shimmer {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
             background-size: 200px 100%;
             background-repeat: no-repeat;
             animation: heroShimmer 3s infinite;
@@ -446,23 +535,55 @@
         }
 
         /* Couleurs de texte */
-        .o-text-white { color: var(--o-white); }
-        .o-text-light { color: var(--o-light); }
-        .o-text-dark { color: var(--o-dark); }
-        .o-text-primary { color: var(--o-primary); }
-        .o-text-secondary { color: var(--o-secondary); }
+        .o-text-white {
+            color: var(--o-white);
+        }
+
+        .o-text-light {
+            color: var(--o-light);
+        }
+
+        .o-text-dark {
+            color: var(--o-dark);
+        }
+
+        .o-text-primary {
+            color: var(--o-primary);
+        }
+
+        .o-text-secondary {
+            color: var(--o-secondary);
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .o-hero-title-xl { font-size: var(--o-hero-title-lg); }
-            .o-hero-title-lg { font-size: var(--o-hero-title-md); }
-            .o-hero-title-md { font-size: var(--o-hero-title-sm); }
-            
-            .o-hero-logo { height: 80px; }
-            .o-hero-container { padding: var(--space-2); }
-            
-            .o-hero-xl { height: var(--o-hero-lg); }
-            .o-hero-lg { height: var(--o-hero-md); }
+            .o-hero-title-xl {
+                font-size: var(--o-hero-title-lg);
+            }
+
+            .o-hero-title-lg {
+                font-size: var(--o-hero-title-md);
+            }
+
+            .o-hero-title-md {
+                font-size: var(--o-hero-title-sm);
+            }
+
+            .o-hero-logo {
+                height: 80px;
+            }
+
+            .o-hero-box {
+                padding: var(--space-2);
+            }
+
+            .o-hero-xl {
+                height: var(--o-hero-lg);
+            }
+
+            .o-hero-lg {
+                height: var(--o-hero-md);
+            }
         }
 
         /* Styles pour démonstration */
@@ -482,8 +603,9 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <!-- Modèle 1: Banner Gradient Flow (Style FACA) -->
     <div class="o-hero o-hero-lg o-hero-gradient-flow o-text-white">
         <div class="o-hero-particles">
@@ -493,7 +615,7 @@
             <div class="o-hero-particle"></div>
             <div class="o-hero-particle"></div>
         </div>
-        <div class="o-hero-container">
+        <div class="o-hero-box">
             <!-- <img src="https://picsum.photos/400/200" 
                  alt="Logo" class="o-hero-logo o-hero-logo-pulse o-hero-fade-in"> -->
             <h1 class="o-hero-title o-hero-title-lg o-hero-slide-up">
@@ -513,7 +635,7 @@
 
     <!-- Modèle 2: Ocean Gradient -->
     <div class="o-hero o-hero-md o-hero-gradient-ocean o-text-white">
-        <div class="o-hero-container">
+        <div class="o-hero-box">
             <!-- <img src="https://picsum.photos/400/200" 
                  alt="Ocean Logo" class="o-hero-logo o-hero-logo-float o-hero-fade-in"> -->
             <h1 class="o-hero-title o-hero-title-md o-hero-slide-down o-hero-text-glow">
@@ -532,7 +654,7 @@
 
     <!-- Modèle 3: Cosmic Background -->
     <div class="o-hero o-hero-lg o-hero-gradient-cosmic o-text-white">
-        <div class="o-hero-container">
+        <div class="o-hero-box">
             <h1 class="o-hero-title o-hero-title-xl o-hero-scale-in o-hero-text-shimmer">
                 COSMIC EXPERIENCE
             </h1>
@@ -549,9 +671,9 @@
     <div class="demo-spacer">Modèle 4: Hero avec Image de Fond</div>
 
     <!-- Modèle 4: Hero avec Image -->
-    <div class="o-hero o-hero-md o-hero-image o-hero-zoom o-text-white" 
-         style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
-        <div class="o-hero-container">
+    <div class="o-hero o-hero-md o-hero-image o-hero-zoom o-text-white"
+        style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+        <div class="o-hero-box">
             <h1 class="o-hero-title o-hero-title-lg o-hero-slide-up">
                 Aventure Extrême
             </h1>
@@ -568,7 +690,7 @@
 
     <!-- Modèle 5: Aurora Style Sans Logo -->
     <div class="o-hero o-hero-sm o-hero-gradient-aurora o-text-dark">
-        <div class="o-hero-container">
+        <div class="o-hero-box">
             <h1 class="o-hero-title o-hero-title-md o-hero-slide-down">
                 ✨ Créativité Pure ✨
             </h1>
@@ -591,7 +713,7 @@
             <div class="o-hero-particle"></div>
             <div class="o-hero-particle"></div>
         </div>
-        <div class="o-hero-container">
+        <div class="o-hero-box">
             <!-- <img src="https://picsum.photos/400/200" 
                  alt="Rocket Logo" class="o-hero-logo o-hero-logo-rotate o-hero-fade-in"> -->
             <h1 class="o-hero-title o-hero-title-lg o-hero-slide-up o-hero-text-glow">
@@ -610,9 +732,9 @@
     <div class="demo-spacer">Modèle 7: Style Minimal avec Grande Typographie</div>
 
     <!-- Modèle 7: Style Minimal -->
-    <div class="o-hero o-hero-lg o-hero-gradient-flow o-text-white" 
-         style="background: linear-gradient(135deg, var(--o-dark), var(--o-primary));">
-        <div class="o-hero-container">
+    <div class="o-hero o-hero-lg o-hero-gradient-flow o-text-white"
+        style="background: linear-gradient(135deg, var(--o-dark), var(--o-primary));">
+        <div class="o-hero-box">
             <h1 class="o-hero-title o-hero-title-xl o-hero-scale-in" style="font-weight: 900;">
                 OROCHI
             </h1>
@@ -630,7 +752,7 @@
 
     <!-- Modèle 8: Version Compacte -->
     <div class="o-hero o-hero-sm o-hero-gradient-ocean o-text-white">
-        <div class="o-hero-container">
+        <div class="o-hero-box">
             <h1 class="o-hero-title o-hero-title-sm o-hero-slide-down">
                 🎯 Action Rapide
             </h1>
@@ -643,9 +765,11 @@
         </div>
     </div>
 
-    <div style="height: 100px; background: var(--o-light); display: flex; align-items: center; justify-content: center;">
+    <div
+        style="height: 100px; background: var(--o-light); display: flex; align-items: center; justify-content: center;">
         <p style="color: var(--o-dark); font-weight: bold;">🎌 Orochi CSS Framework - Hero Banners Collection</p>
     </div>
 
 </body>
+
 </html>

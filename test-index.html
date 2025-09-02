@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orochi Framework - Framework CSS Moderne et Léger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --primary-dark: #000051;
+            --primary-light: #534bae;
+            --secondary: #4a148c;
+            --accent: #00b0ff;
+            --text: #2d3748;
+            --text-light: #718096;
+            --light: #f8f9fa;
+            --lighter: #ffffff;
+            --border: #e2e8f0;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc143c;
+            --info: #17a2b8;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--lighter);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: #0091ea;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* feature Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Code Example */
+        .code-section {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            border-radius: var(--radius);
+            padding: 30px;
+            margin: 40px 0;
+            overflow-x: auto;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .code-comment {
+            color: #6a9955;
+        }
+
+        .code-selector {
+            color: #d7ba7d;
+        }
+
+        .code-property {
+            color: #9cdcfe;
+        }
+
+        .code-value {
+            color: #ce9178;
+        }
+
+        /* Installation Section */
+        .installation {
+            background-color: var(--light);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            counter-reset: step-counter;
+        }
+
+        .step {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            position: relative;
+            counter-increment: step-counter;
+        }
+
+        .step:before {
+            content: counter(step-counter);
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Components Showcase */
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .component-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary);
+        }
+
+        .component-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .header-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 200px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dragon"></i>
+            </div>
+            <h1>Orochi Framework</h1>
+            <p class="tagline">Un framework CSS moderne, léger et intuitif pour des interfaces web élégantes et
+                performantes</p>
+            <div class="header-buttons">
+                <a href="#installation" class="btn btn-primary">Commencer</a>
+                <a href="#feature" class="btn btn-outline">Voir les fonctionnalités</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- feature Section -->
+    <section class="section" id="feature">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pourquoi choisir Orochi ?</h2>
+                <p>Découvrez les fonctionnalités qui font d'Orochi le framework CSS de choix pour vos projets</p>
+            </div>
+            <div class="feature">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Ultra Léger</h3>
+                    <p>Avec seulement 45KB minifié, Orochi garantit des temps de chargement rapides et une expérience
+                        utilisateur optimale.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Conçu avec l'approche mobile-first, Orochi s'adapte parfaitement à tous les appareils et tailles
+                        d'écran.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Composants Modulaires</h3>
+                    <p>Utilisez uniquement les composants dont vous avez besoin grâce à une architecture modulaire et
+                        flexible.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Personnalisation Facile</h3>
+                    <p>Personnalisez facilement les couleurs, les espacements et plus grâce aux variables CSS modernes.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Performances Optimisées</h3>
+                    <p>Code optimisé pour des performances maximales, avec un impact minimal sur la taille de votre
+                        application.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Design Élégant</h3>
+                    <p>Un design moderne et épuré avec des animations subtiles pour une expérience utilisateur raffinée.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Example -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Code Élégant, Résultats Exceptionnels</h2>
+                <p>Découvrez la simplicité et la puissance de la syntaxe Orochi</p>
+            </div>
+            <div class="code-section">
+                <pre><code><span class="code-comment">/* Définition des couleurs principales */</span>
+<span class="code-selector">:root</span> {
+  <span class="code-property">--primary</span>: <span class="code-value">#1a237e</span>;
+  <span class="code-property">--secondary</span>: <span class="code-value">#4a148c</span>;
+  <span class="code-property">--accent</span>: <span class="code-value">#00b0ff</span>;
+}
+
+<span class="code-comment">/* Utilisation des classes Orochi */</span>
+<span class="code-selector">.hero-section</span> {
+  <span class="code-property">background</span>: <span class="code-value">linear-gradient(135deg, var(--primary), var(--secondary))</span>;
+  <span class="code-property">padding</span>: <span class="code-value">5rem 0</span>;
+  <span class="code-property">color</span>: <span class="code-value">white</span>;
+}
+
+<span class="code-selector">.card</span> {
+  <span class="code-property">border-radius</span>: <span class="code-value">var(--radius)</span>;
+  <span class="code-property">box-shadow</span>: <span class="code-value">var(--shadow)</span>;
+  <span class="code-property">transition</span>: <span class="code-value">var(--transition)</span>;
+}
+
+<span class="code-selector">.btn-primary</span> {
+  <span class="code-property">background-color</span>: <span class="code-value">var(--accent)</span>;
+  <span class="code-property">color</span>: <span class="code-value">white</span>;
+  <span class="code-property">border-radius</span>: <span class="code-value">50px</span>;
+  <span class="code-property">padding</span>: <span class="code-value">0.75rem 2rem</span>;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section class="section installation" id="installation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Installation Simple et Rapide</h2>
+                <p>Intégrez Orochi à votre projet en quelques minutes</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <h3>Via CDN</h3>
+                    <p>Ajoutez simplement cette ligne dans le head de votre HTML :</p>
+                    <p><code>&lt;link rel="stylesheet" href="https://cdn.orochi-css.com/orochi.min.css"&gt;</code></p>
+                </div>
+                <div class="step">
+                    <h3>Installation avec NPM</h3>
+                    <p>Installez Orochi via npm pour une intégration avec vos outils de build :</p>
+                    <p><code>npm install orochi-css</code></p>
+                </div>
+                <div class="step">
+                    <h3>Téléchargement Direct</h3>
+                    <p>Téléchargez les fichiers CSS et JS et liez-les localement :</p>
+                    <p><code>&lt;link rel="stylesheet" href="chemin/vers/orochi.css"&gt;</code></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Showcase -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Composants Intégrés</h2>
+                <p>Une collection complète de composants prêts à l'emploi</p>
+            </div>
+            <div class="components-grid">
+                <div class="component-card">
+                    <h3>Système de Grille Flexbox</h3>
+                    <p>Une grille responsive basée sur Flexbox avec des breakpoints personnalisables pour tous vos
+                        besoins de mise en page.</p>
+                </div>
+                <div class="component-card">
+                    <h3>Composants de Formulaire</h3>
+                    <p>Des champs de formulaire stylisés, des cases à cocher, des boutons radio et des sélecteurs
+                        modernes et accessibles.</p>
+                </div>
+                <div class="component-card">
+                    <h3>Navigation Responsive</h3>
+                    <p>Des barres de navigation élégantes qui s'adaptent parfaitement aux appareils mobiles avec un menu
+                        hamburger.</p>
+                </div>
+                <div class="component-card">
+                    <h3>Cartes et Panneaux</h3>
+                    <p>Des composants de carte modernes avec des ombres portées et des animations au survol pour
+                        présenter votre contenu.</p>
+                </div>
+                <div class="component-card">
+                    <h3>Alertes et Notifications</h3>
+                    <p>Des alertes contextuelles avec des styles pour le succès, les avertissements, les erreurs et les
+                        informations.</p>
+                </div>
+                <div class="component-card">
+                    <h3>Utilities CSS</h3>
+                    <p>Des classes utilitaires pour les espacements, la typographie, les couleurs et les displays pour
+                        un développement rapide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ils utilisent Orochi</h2>
+                <p>Découvrez ce que les développeurs disent de notre framework</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Orochi a considérablement accéléré notre processus de développement. Sa
+                        simplicité et sa légèreté en font un choix parfait pour nos projets web."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SD</div>
+                        <div>
+                            <h4>Sophie Dubois</h4>
+                            <p>Développeuse Front-end</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"La documentation claire et les composants modulaires nous ont permis
+                        d'intégrer Orochi facilement dans notre workflow existant. Un framework vraiment bien pensé."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TM</div>
+                        <div>
+                            <h4>Thomas Martin</h4>
+                            <p>Lead Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Nous cherchions une alternative légère à Bootstrap pour nos projets.
+                        Orochi a dépassé nos attentes avec ses performances et son design moderne."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LJ</div>
+                        <div>
+                            <h4>Laura Jensen</h4>
+                            <p>CTO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Orochi Framework</h3>
+                    <p>Un framework CSS moderne et léger pour créer des interfaces web élégantes et performantes.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Ressources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutoriels</a></li>
+                        <li><a href="#">Exemples</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Communauté</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Contribuer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Légal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Licence MIT</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Orochi Framework. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for feature cards on scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const featureCards = document.querySelectorAll('.feature-card');
+
+            featureCards.forEach((card, index) => {
+                // Add slight delay for staggered animation
+                card.style.transitionDelay = ${ index * 0.1 } s;
+            });
+
+            // Animate header elements
+            const headerElements = document.querySelectorAll('header h1, .tagline, .header-buttons');
+            headerElements.forEach((el, index) => {
+                el.style.o

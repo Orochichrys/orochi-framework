@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggler = document.querySelector('.o-navbar-toggler');
-  const togglerIcon = document.querySelector('.o-navbar-toggler-icon');
+  const toggler = document.querySelector('.o-burger');
+  const togglerIcon = document.querySelector('.o-burger-icon');
 
   // Icône initiale
   if (togglerIcon) {
@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Menu mobile toggle
   if (toggler) {
     toggler.addEventListener('click', () => {
-      const navWrapper = document.querySelector('.o-navbar-nav-wrapper');
+      const navWrapper = document.querySelector('.o-menu');
       if (!navWrapper || !togglerIcon) return;
 
       const isActive = navWrapper.classList.contains(
-        'o-navbar-nav-wrapper-active'
+        'o-menu-active'
       );
-      navWrapper.classList.toggle('o-navbar-nav-wrapper-active');
+      navWrapper.classList.toggle('o-menu-active');
 
       togglerIcon.innerHTML = isActive
         ? '<i class="oi oi-menu"></i>'
