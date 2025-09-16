@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const term = searchTerm.toLowerCase().trim();
     let found = false;
 
-    // Réinitialiser tous les conteneurs
+    // Réinitialiser tous les Boxs
     iconboxs.forEach((box) => {
       box.style.display = 'block';
     });

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alertes - Orochi Framework</title>
+  <link rel="stylesheet" href="../../../src/orochi.css" />
+  <link rel="stylesheet" href="../../../src/orochi-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6881388964812065"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <!-- Navigation -->
+  <nav class="o-nav o-nav-sm o-shadow o-nav-fixed">
+    <div class="o-box-fluid">
+      <button class="sidebar-toggler">
+        <i class="bx bx-grid-alt"></i>
+      </button>
+      <a href="#" class="o-nav-logo"><i class="fas fa-dragon o-text-primary"></i>Orochi</a>
+      <button class="o-burger">
+        <span class="o-burger-icon"></span>
+      </button>
+
+      <div class="o-menu">
+        <ul class="o-nav-list">
+          <li class="o-nav-item">
+            <a href="introduction.html" class="o-nav-link">Documentation</a>
+          </li>
+          <li class="o-nav-item">
+            <a href="#" class="o-nav-link">Exemples</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Barre de recherche -->
+      <form class="o-d-flex" role="search">
+        <input type="text" class="o-form-input o-me-2 o-form-search" placeholder="Rechercher..."
+          aria-label="Rechercher" />
+        <button type="submit" class="o-btn o-btn-primary">🔍</button>
+      </form>
+    </div>
+  </nav>
+
+    <!-- Contenu principal avec 3 colonnes -->
+  <div class="o-box-fluid layout-box">
+    <div class="o-row">
+
+<!-- Colonne gauche (cachée sur petit écran) -->
+      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
+        
+         <!-- Section : Commencer -->
+            <div class="o-mb-3">
+              <h4 class="o-text-primary o-mb-2 o-text-bold o-text-uppercase">
+                📚 Commencer
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/commencer/introduction.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-chevron-right o-me-2"></i>Introduction
+                </a>
+                <a href="/docs/v1.0.0/commencer/installation.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-chevron-right o-me-2"></i>Installation
+                </a>
+              </div>
+            </div>
+
+            <!-- Section : Mise en page -->
+            <div class="o-mb-3">
+              <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
+                🧱 Mise en page
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/mise-en-page/breakpoints.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-mobile-alt o-me-2"></i>Points d'arrêt
+                </a>
+                <a href="/docs/v1.0.0/mise-en-page/boxs.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-box o-me-2"></i>Boxs
+                </a>
+
+                <a href="/docs/v1.0.0/mise-en-page/spacing.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-space-bar o-me-2"></i>Espacement
+                </a>
+                <a href="/docs/v1.0.0/mise-en-page/grid.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-grid o-me-2"></i>Système de grille
+                </a>
+              </div>
+            </div>
+
+            <!-- Section : Composants -->
+            <div class="o-mb-3">
+              <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
+                🧩 Composants
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/composants/buttons.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-square-rounded o-me-2"></i>Boutons
+                </a>
+                <a href="/docs/v1.0.0/composants/cards.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-layer o-me-2"></i>Cartes
+                </a>
+                <a href="/docs/v1.0.0/composants/alerts.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-message-alt-error o-me-2"></i>Alertes
+                </a>
+
+                <!-- Composants de navigation -->
+                <a href="/docs/v1.0.0/composants/navbar.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-menu o-me-2"></i>Navigation
+                </a>
+                <a href="/docs/v1.0.0/composants/breadcrumbs.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-chevron-right o-me-2"></i>Fil d'Ariane
+                </a>
+                <a href="/docs/v1.0.0/composants/modals.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-window-open o-me-2"></i>Modales
+                </a>
+                <a href="/docs/v1.0.0/composants/tabs.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-tab o-me-2"></i>Onglets
+                </a>
+                <a href="/docs/v1.0.0/composants/accordions.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-list-plus o-me-2"></i>Accordéons
+                </a>
+                <a href="/docs/v1.0.0/composants/progress.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-loader-circle o-me-2"></i>Barres de progression
+                </a>
+              </div>
+            </div>
+
+            <!-- Section : Formulaires -->
+            <div class="o-mb-3">
+              <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
+                📝 Formulaires
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/formulaires/inputs.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-input o-me-2"></i>Champs de saisie
+                </a>
+                <a href="/docs/v1.0.0/formulaires/checkboxes.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-checkbox o-me-2"></i>Cases à cocher
+                </a>
+                <a href="/docs/v1.0.0/formulaires/selects.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-list-ul o-me-2"></i>Listes déroulantes
+                </a>
+              </div>
+            </div>
+
+            <!-- Section : Utilitaires -->
+            <div>
+              <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
+                ⚙️ Utilitaires
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/utilitaires/spacing.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-space-bar o-me-2"></i>Espacement
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/flexbox.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-layout o-me-2"></i>Flexbox
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/grid.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-grid-alt o-me-2"></i>Grille CSS
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/position.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-move o-me-2"></i>Positionnement
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/visibility.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-show o-me-2"></i>Visibilité
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/shadows.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-shadow o-me-2"></i>Ombres
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/borders.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-border-all o-me-2"></i>Bordures
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/interactivity.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-pointer o-me-2"></i>Interactions
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/typography.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-text o-me-2"></i>Typographie
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/opacity.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-low-vision o-me-2"></i>Opacité
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/overflow.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-collapse o-me-2"></i>Overflow
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/z-index.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-layer o-me-2"></i>Z-index
+                </a>
+              </div>
+            </div>
+      </div>
+
+<!-- Contenu principal -->
+<main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6">
+    <section id="alerts-intro" class="o-mb-6">
+        <h1 class="o-title o-text-primary">🚨 Alertes Orochi</h1>
+        <p class="o-lead">
+            Les alertes permettent d'afficher des messages contextuels importants à vos utilisateurs. Elles sont conçues pour attirer l'attention sur des informations critiques, des succès, des avertissements ou des erreurs.
+        </p>
+
+        <h2 class="o-mb-3">Comment elles fonctionnent</h2>
+        <p>Les alertes Orochi sont des composants flexibles qui s'adaptent à divers contextes d'utilisation. Elles utilisent un système de classes modulaires pour contrôler leur apparence et leur comportement.</p>
+        <ul class="o-list-unstyled">
+            <li><code>.o-alert</code> : classe de base pour toutes les alertes</li>
+            <li><code>.o-alert-{type}</code> : variantes de couleur (primary, secondary, success, etc.)</li>
+            <li><code>.o-alert-border-left</code> : ajoute une bordure latérale distinctive</li>
+            <li><code>.o-alert-dismissible</code> : rend l'alerte fermable</li>
+        </ul>
+    </section>
+
+    <!-- Alertes standard -->
+    <section id="standard-alerts" class="o-mb-6">
+        <h2 class="o-text-dark o-mb-4">Alertes standard</h2>
+        <p class="o-mb-4">Les alertes standard offrent une variété de couleurs contextuelles pour différents types de messages. Chaque couleur correspond à un niveau d'importance ou un type de message spécifique.</p>
+        
+        <div class="o-row o-g-3 o-mb-4">
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-primary">Alerte Primaire - Pour les informations principales</div>
+                <div class="o-alert o-alert-secondary">Alerte Secondaire - Pour les informations secondaires</div>
+                <div class="o-alert o-alert-success">Alerte Succès - Pour indiquer une opération réussie</div>
+                <div class="o-alert o-alert-danger">Alerte Danger - Pour les erreurs ou actions critiques</div>
+            </div>
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-warning">Alerte Avertissement - Pour les messages d'avertissement</div>
+                <div class="o-alert o-alert-info">Alerte Info - Pour les informations générales</div>
+                <div class="o-alert o-alert-light">Alerte Light - Style discret</div>
+                <div class="o-alert o-alert-dark">Alerte Dark - Style sobre</div>
+            </div>
+        </div>
+        
+        <div class="o-code-block">
+            <pre class="language-html"><code>&lt;div class="o-alert o-alert-primary"&gt;Alerte Primaire&lt;/div&gt;
+&lt;div class="o-alert o-alert-secondary"&gt;Alerte Secondaire&lt;/div&gt;
+&lt;div class="o-alert o-alert-success"&gt;Alerte Succès&lt;/div&gt;
+&lt;div class="o-alert o-alert-danger"&gt;Alerte Danger&lt;/div&gt;
+&lt;div class="o-alert o-alert-warning"&gt;Alerte Avertissement&lt;/div&gt;
+&lt;div class="o-alert o-alert-info"&gt;Alerte Info&lt;/div&gt;
+&lt;div class="o-alert o-alert-light"&gt;Alerte Light&lt;/div&gt;
+&lt;div class="o-alert o-alert-dark"&gt;Alerte Dark&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Alertes avec liens -->
+    <section id="alerts-with-links" class="o-mb-6">
+        <h2 class="o-text-dark o-mb-4">Alertes avec liens</h2>
+        <p class="o-mb-4">Les alertes peuvent contenir des liens contextuels pour guider l'utilisateur vers des actions ou des informations supplémentaires. Utilisez la classe <code>.o-alert-link</code> pour styliser les liens intégrés.</p>
+        
+        <div class="o-row o-g-3 o-mb-4">
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-primary">
+                    Alerte avec <a href="#" class="o-alert-link">lien primaire</a> pour actions principales
+                </div>
+                <div class="o-alert o-alert-success">
+                    Succès avec <a href="#" class="o-alert-link">lien vert</a> pour actions positives
+                </div>
+            </div>
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-danger">
+                    Danger avec <a href="#" class="o-alert-link">lien rouge</a> pour actions critiques
+                </div>
+                <div class="o-alert o-alert-info">
+                    Info avec <a href="#" class="o-alert-link">lien bleu</a> pour informations supplémentaires
+                </div>
+            </div>
+        </div>
+        
+        <div class="o-code-block">
+            <pre class="language-html"><code>&lt;div class="o-alert o-alert-info"&gt;
+    Message avec &lt;a class="o-alert-link" href="#"&gt;lien contextuel&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Alertes avec icônes -->
+    <section id="alerts-with-icons" class="o-mb-6">
+        <h2 class="o-text-dark o-mb-4">Alertes avec icônes</h2>
+        <p class="o-mb-4">Ajoutez des icônes à vos alertes pour améliorer la compréhension et l'accessibilité. Les icônes aident à identifier rapidement le type de message sans avoir à lire le texte intégral.</p>
+        
+        <div class="o-row o-g-3 o-mb-4">
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-primary">
+                    <i class="bx bx-info-circle o-me-2"></i>Alerte informative avec icône
+                </div>
+                <div class="o-alert o-alert-success">
+                    <i class="bx bx-check-circle o-me-2"></i>Opération réussie avec confirmation
+                </div>
+            </div>
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-danger">
+                    <i class="bx bx-error-circle o-me-2"></i>Erreur détectée nécessitant une action
+                </div>
+                <div class="o-alert o-alert-warning">
+                    <i class="bx bx-error o-me-2"></i>Avertissement important à considérer
+                </div>
+            </div>
+        </div>
+        
+        <div class="o-code-block">
+            <pre class="language-html"><code>&lt;div class="o-alert o-alert-warning"&gt;
+    &lt;i class="bx bx-error o-me-2"&gt;&lt;/i&gt;
+    Message d'avertissement avec icône
+&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Alertes avec bordures -->
+    <section id="bordered-alerts" class="o-mb-6">
+        <h2 class="o-text-dark o-mb-4">Alertes avec bordures accentuées</h2>
+        <p class="o-mb-4">Les alertes bordurées utilisent la classe <code>.o-alert-border-left</code> pour ajouter une bordure latérale distinctive qui renforce l'impact visuel du message.</p>
+        
+        <div class="o-row o-g-3 o-mb-4">
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-primary o-alert-border-left">
+                    Bordure gauche primaire pour informations importantes
+                </div>
+                <div class="o-alert o-alert-success o-alert-border-left">
+                    Bordure gauche succès pour confirmations
+                </div>
+            </div>
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-danger o-alert-border-left">
+                    Bordure gauche danger pour alertes critiques
+                </div>
+                <div class="o-alert o-alert-info o-alert-border-left">
+                    Bordure gauche info pour messages généraux
+                </div>
+            </div>
+        </div>
+        
+        <div class="o-code-block">
+            <pre class="language-html"><code>&lt;div class="o-alert o-alert-info o-alert-border-left"&gt;
+    Alerte avec bordure latérale accentuée
+&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Alertes fermables -->
+    <section id="dismissible-alerts" class="o-mb-6">
+        <h2 class="o-text-dark o-mb-4">Alertes fermables</h2>
+        <p class="o-mb-4">Les alertes fermables permettent à l'utilisateur de masquer les messages une fois qu'ils ont été lus. Utilisez la classe <code>.o-alert-dismissible</code> et incluez un bouton de fermeture avec la classe <code>.o-alert-close</code>.</p>
+        
+        <div class="o-row o-g-3 o-mb-4">
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-primary o-alert-dismissible">
+                    Message important pouvant être fermé
+                    <button class="o-alert-close">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+                <div class="o-alert o-alert-success o-alert-dismissible">
+                    Succès pouvant être masqué après lecture
+                    <button class="o-alert-close">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="o-col-12 o-col-md-6">
+                <div class="o-alert o-alert-danger o-alert-dismissible">
+                    Erreur pouvant être fermée une fois corrigée
+                    <button class="o-alert-close">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+                <div class="o-alert o-alert-warning o-alert-dismissible">
+                    Avertissement pouvant être ignoré
+                    <button class="o-alert-close">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="o-code-block">
+            <pre class="language-html"><code>&lt;div class="o-alert o-alert-danger o-alert-dismissible"&gt;
+    Message d'alerte important
+    &lt;button class="o-alert-close"&gt;
+        &lt;i class="bx bx-x"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Bonnes pratiques -->
+    <section id="best-practices" class="o-mb-6">
+        <h2 class="o-text-dark o-mb-4">🎓 Bonnes pratiques</h2>
+        <div class="o-card o-bg-light">
+            <div class="o-card-body">
+                <p class="o-mb-3">Pour une utilisation optimale des alertes dans vos interfaces, suivez ces recommandations :</p>
+                <ul class="o-list-unstyled">
+                    <li class="o-mb-2">
+                        <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                        Utilisez les couleurs de manière cohérente et contextuelle
+                    </li>
+                    <li class="o-mb-2">
+                        <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                        Ajoutez des icônes pertinentes pour une meilleure compréhension visuelle
+                    </li>
+                    <li class="o-mb-2">
+                        <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                        Rendez les alertes importantes fermables pour une meilleure expérience utilisateur
+                    </li>
+                    <li class="o-mb-2">
+                        <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                        Utilisez un langage clair et concis dans vos messages d'alerte
+                    </li>
+                    <li>
+                        <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                        Réservez les alertes pour les informations vraiment importantes
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="o-alert o-alert-info o-mt-5">
+        <strong>💡 Personnalisation :</strong> Utilisez les variables CSS pour modifier l'apparence des alertes :
+        <div class="o-code-block">
+            <pre class="language-css"><code>:root {
+    --o-alert-padding: 1rem 1.5rem;
+    --o-alert-border-radius: 0.375rem;
+    --o-alert-primary-bg: #your_color;
+    --o-alert-primary-text: #your_color;
+}</code></pre>
+        </div>
+    </div>
+</main>
+
+    <!-- Colonne droite (cachée sur petit écran) -->
+      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+        <h5>Sur cette page</h5>
+        <ul class="o-list-unstyled">
+          <li><a href="#">Aperçu</a></li>
+          <li><a href="#">Accessibilité</a></li>
+          <li><a href="#">CSS</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="o-bg-dark o-text-light o-py-4 o-mt-5">
+    <!-- Réseaux sociaux -->
+    <div class="o-d-flex o-justify-center o-gap-3 ">
+      <a href="#" class="o-text-white o-hover-text-primary">
+        <i class="bx bxl-facebook-circle o-text-h3"></i>
+      </a>
+      <a href="#" class="o-text-white o-hover-text-primary">
+        <i class="bx bxl-twitter o-text-h3"></i>
+      </a>
+      <a href="#" class="o-text-white o-hover-text-primary">
+        <i class="bx bxl-github o-text-h3"></i>
+      </a>
+    </div>
+    </div>
+    </div>
+    <div class="o-box o-mt-2">
+      <div class="o-text-center">
+        <p class="o-mb-0">
+          &copy; 2025 Orochi CSS - Tous droits réservés
+        </p>
+  </footer>
+
+  <script src="../../../src/orochi.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+</body>
+
+</html>

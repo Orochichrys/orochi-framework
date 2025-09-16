@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Espacement - Orochi Framework</title>
+  <link rel="stylesheet" href="../../../src/orochi.css" />
+  <link rel="stylesheet" href="../../../src/orochi-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6881388964812065"
+    crossorigin="anonymous"></script>
+  <style>
+    .spacing-visual {
+      border: 2px dashed #1a237e;
+      background: #e8eaf6;
+    }
+  </style>
+
+</head>
+
+<body class="o-overflow-x-hidden">
+  <!-- Navigation -->
+  <nav class="o-nav o-nav-sm o-shadow o-nav-fixed">
+    <div class="o-box-fluid">
+      <button class="sidebar-toggler">
+        <i class="bx bx-grid-alt"></i>
+      </button>
+      <a href="#" class="o-nav-logo"><i class="fas fa-dragon o-text-primary"></i>Orochi</a>
+      <button class="o-burger">
+        <span class="o-burger-icon"></span>
+      </button>
+
+      <div class="o-menu">
+        <ul class="o-nav-list">
+          <li class="o-nav-item">
+            <a href="introduction.html" class="o-nav-link">Documentation</a>
+          </li>
+          <li class="o-nav-item">
+            <a href="#" class="o-nav-link">Exemples</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Barre de recherche -->
+      <form class="o-d-flex" role="search">
+        <input type="text" class="o-form-input o-me-2 o-form-search" placeholder="Rechercher..."
+          aria-label="Rechercher" />
+        <button type="submit" class="o-btn o-btn-primary">🔍</button>
+      </form>
+    </div>
+  </nav>
+
+        <!-- Contenu principal avec 3 colonnes -->
+  <div class="o-box-fluid layout-box">
+    <div class="o-row">
+
+     <!-- Colonne gauche (cachée sur petit écran) -->
+      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
+        
+         <!-- Section : Commencer -->
+            <div class="o-mb-3">
+              <h4 class="o-text-primary o-mb-2 o-text-bold o-text-uppercase">
+                📚 Commencer
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/commencer/introduction.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-chevron-right o-me-2"></i>Introduction
+                </a>
+                <a href="/docs/v1.0.0/commencer/installation.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-chevron-right o-me-2"></i>Installation
+                </a>
+              </div>
+            </div>
+
+            <!-- Section : Mise en page -->
+            <div class="o-mb-3">
+              <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
+                🧱 Mise en page
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/mise-en-page/breakpoints.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-mobile-alt o-me-2"></i>Points d'arrêt
+                </a>
+                <a href="/docs/v1.0.0/mise-en-page/boxs.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-box o-me-2"></i>Boxs
+                </a>
+
+                <a href="/docs/v1.0.0/mise-en-page/spacing.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-space-bar o-me-2"></i>Espacement
+                </a>
+                <a href="/docs/v1.0.0/mise-en-page/grid.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-grid o-me-2"></i>Système de grille
+                </a>
+              </div>
+            </div>
+
+            <!-- Section : Composants -->
+            <div class="o-mb-3">
+              <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
+                🧩 Composants
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/composants/buttons.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-square-rounded o-me-2"></i>Boutons
+                </a>
+                <a href="/docs/v1.0.0/composants/cards.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-layer o-me-2"></i>Cartes
+                </a>
+                <a href="/docs/v1.0.0/composants/alerts.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-message-alt-error o-me-2"></i>Alertes
+                </a>
+
+                <!-- Composants de navigation -->
+                <a href="/docs/v1.0.0/composants/navbar.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-menu o-me-2"></i>Navigation
+                </a>
+                <a href="/docs/v1.0.0/composants/breadcrumbs.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-chevron-right o-me-2"></i>Fil d'Ariane
+                </a>
+                <a href="/docs/v1.0.0/composants/modals.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-window-open o-me-2"></i>Modales
+                </a>
+                <a href="/docs/v1.0.0/composants/tabs.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-tab o-me-2"></i>Onglets
+                </a>
+                <a href="/docs/v1.0.0/composants/accordions.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-list-plus o-me-2"></i>Accordéons
+                </a>
+                <a href="/docs/v1.0.0/composants/progress.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-loader-circle o-me-2"></i>Barres de progression
+                </a>
+              </div>
+            </div>
+
+            <!-- Section : Formulaires -->
+            <div class="o-mb-3">
+              <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
+                📝 Formulaires
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/formulaires/inputs.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-input o-me-2"></i>Champs de saisie
+                </a>
+                <a href="/docs/v1.0.0/formulaires/checkboxes.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-checkbox o-me-2"></i>Cases à cocher
+                </a>
+                <a href="/docs/v1.0.0/formulaires/selects.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-list-ul o-me-2"></i>Listes déroulantes
+                </a>
+              </div>
+            </div>
+
+            <!-- Section : Utilitaires -->
+            <div>
+              <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
+                ⚙️ Utilitaires
+              </h4>
+              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
+                <a href="/docs/v1.0.0/utilitaires/spacing.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-space-bar o-me-2"></i>Espacement
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/flexbox.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-layout o-me-2"></i>Flexbox
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/grid.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-grid-alt o-me-2"></i>Grille CSS
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/position.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-move o-me-2"></i>Positionnement
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/visibility.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-show o-me-2"></i>Visibilité
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/shadows.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-shadow o-me-2"></i>Ombres
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/borders.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-border-all o-me-2"></i>Bordures
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/interactivity.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-pointer o-me-2"></i>Interactions
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/typography.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-text o-me-2"></i>Typographie
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/opacity.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-low-vision o-me-2"></i>Opacité
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/overflow.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-collapse o-me-2"></i>Overflow
+                </a>
+
+                <a href="/docs/v1.0.0/utilitaires/z-index.html"
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  <i class="bx bx-layer o-me-2"></i>Z-index
+                </a>
+              </div>
+            </div>
+      </div>
+
+  
+       <!-- Contenu principal -->
+      <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6">
+          <section id="spacing-intro">
+            <h1 class="o-title o-text-primary">📏 Espacement</h1>
+            <p class="o-lead">
+              Contrôlez les marges et paddings avec les utilitaires
+              d'espacement responsives d'Orochi.
+            </p>
+
+            <!-- Système d'espacement -->
+            <section class="o-mt-5">
+              <h2 class="o-text-dark">Système d'espacement</h2>
+              <div class="o-alert o-alert-info">
+                Basé sur une échelle rem : 0.25rem (4px) → 10rem (160px)
+              </div>
+
+              <div class="o-row o-g-3 o-mt-3">
+                <div class="o-col-12 o-col-md-6">
+                  <div class="o-card o-p-3">
+                    <h4>Marges</h4>
+                    <div class="o-code-block">
+                      <pre class="language-css"><code>
+.o-m-{n}  /* Tous côtés */
+.o-mt-{n} /* Haut */
+.o-mb-{n} /* Bas */
+.o-ms-{n} /* Gauche */
+.o-me-{n} /* Droite */
+.o-mx-{n}  /* Gauche & Droite */
+.o-my-{n}  /* Haut & Bas */
+                        </code></pre>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="o-col-12 o-col-md-6">
+                  <div class="o-card o-p-3">
+                    <h4>Paddings</h4>
+                    <div class="o-code-block">
+                      <pre class="language-css"><code>
+.o-p-{n}  /* Tous côtés */
+.o-pt-{n} /* Haut */
+.o-pb-{n} /* Bas */
+.o-ps-{n} /* Gauche */
+.o-pe-{n} /* Droite */
+.o-px-{n}  /* Gauche & Droite */
+.o-py-{n}  /* Haut & Bas */
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Échelle des espacements -->
+            <section class="o-mt-5">
+              <h2 class="o-text-dark">Échelle des valeurs</h2>
+              <div class="o-table-responsive">
+                <table class="o-table o-table-bordered">
+                  <thead class="o-bg-light">
+                    <tr>
+                      <th>Classe</th>
+                      <th>Taille</th>
+                      <th>Valeur</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>.o-*-0</td>
+                      <td>0rem</td>
+                      <td>0px</td>
+                    </tr>
+                    <tr>
+                      <td>.o-*-1</td>
+                      <td>0.25rem</td>
+                      <td>4px</td>
+                    </tr>
+                    <tr>
+                      <td>.o-*-2</td>
+                      <td>0.5rem</td>
+                      <td>8px</td>
+                    </tr>
+                    <tr>
+                      <td>.o-*-3</td>
+                      <td>1rem</td>
+                      <td>16px</td>
+                    </tr>
+                    <tr>
+                      <td>.o-*-4</td>
+                      <td>1.5rem</td>
+                      <td>24px</td>
+                    </tr>
+                    <tr>
+                      <td>.o-*-5</td>
+                      <td>3rem</td>
+                      <td>48px</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- Exemples pratiques -->
+            <section class="o-mt-5">
+              <h2 class="o-text-dark">Exemples concrets</h2>
+
+              <div class="o-mb-4">
+                <h4>Marge extérieure</h4>
+                <div class="spacing-visual o-m-3 o-p-2">
+                  .o-m-3 (margin: 1rem)
+                </div>
+                <div class="o-code-block">
+                  <pre class="language-html"><code>&lt;div class="o-m-3"&gt;&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+
+              <div class="o-mb-4">
+                <h4>Padding interne</h4>
+                <div class="spacing-visual o-p-4">
+                  .o-p-4 (padding: 1.5rem)
+                </div>
+                <div class="o-code-block">
+                  <pre class="language-html"><code>&lt;div class="o-p-4"&gt;&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+
+              <div class="o-mb-4">
+                <h4>Combinaison</h4>
+                <div class="spacing-visual o-mt-2 o-mb-5 o-ps-3 o-pe-4">
+                  .o-mt-2 .o-mb-5 .o-ps-3 .o-pe-4
+                </div>
+                <div class="o-code-block">
+                  <pre
+                    class="language-html"><code>&lt;div class="o-mt-2 o-mb-5 o-ps-3 o-pe-4"&gt;&lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </section>
+
+            <!-- Bonnes pratiques -->
+            <section class="o-mt-5">
+              <h2 class="o-text-dark">🎓 Bonnes pratiques</h2>
+              <div class="o-card o-bg-light">
+                <div class="o-card-body">
+                  <ul class="o-list-unstyled">
+                    <li class="o-mb-2">
+                      <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                      Utilisez l'échelle progressive (0-5) pour maintenir la
+                      cohérence
+                    </li>
+                    <li class="o-mb-2">
+                      <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                      Combine avec Flexbox pour l'alignement
+                    </li>
+                    <li>
+                      <i class="bx bx-check-circle o-me-2 o-text-success"></i>
+                      Préférez les utilitaires responsives (ex:
+                      .o-md-mt-3)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+</main>
+           <!-- Colonne droite (cachée sur petit écran) -->
+      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+        <h5>Sur cette page</h5>
+        <ul class="o-list-unstyled">
+          <li><a href="#">Aperçu</a></li>
+          <li><a href="#">Accessibilité</a></li>
+          <li><a href="#">CSS</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+     
+
+  <footer class="o-bg-dark o-text-light o-py-4 o-mt-5">
+    <!-- Réseaux sociaux -->
+    <div class="o-d-flex o-justify-center o-gap-3 ">
+      <a href="#" class="o-text-white o-hover-text-primary">
+        <i class="bx bxl-facebook-circle o-text-h3"></i>
+      </a>
+      <a href="#" class="o-text-white o-hover-text-primary">
+        <i class="bx bxl-twitter o-text-h3"></i>
+      </a>
+      <a href="#" class="o-text-white o-hover-text-primary">
+        <i class="bx bxl-github o-text-h3"></i>
+      </a>
+    </div>
+    </div>
+    </div>
+    <div class="o-box o-mt-2">
+      <div class="o-text-center">
+        <p class="o-mb-0">
+          &copy; 2025 Orochi CSS - Tous droits réservés
+        </p>
+  </footer>
+
+</body>
+
+<script src="../../../src/orochi.js"></script>
+<script src="../js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
+</html>

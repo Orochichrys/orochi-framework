@@ -10,7 +10,7 @@ on:
       - 'src/orochi-icons.css'  
 jobs:
   build:
-    runs-on: ubuntu-lav.1.0.0
+    runs-on: ubuntu-lav1.0.0
 
     steps:
     - name: 🛎️ Checkout le repo
@@ -54,7 +54,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-lav.1.0.0
+    runs-on: ubuntu-lav1.0.0
 
     steps:
     - name: 🛎️ Checkout le repo

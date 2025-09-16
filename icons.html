@@ -7,7 +7,8 @@
     <title>Icônes Orochi</title>
     <link rel="stylesheet" href="src/orochi.css">
     <link rel="stylesheet" href="src/orochi-icons.css">
-    <link rel="stylesheet" href="docs/v.1.0.0/commencer/style.css">
+    <link rel="stylesheet" href="docs/v1.0.0/commencer/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6881388964812065"
@@ -17,29 +18,22 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="o-nav o-sticky o-bg-light o-top-0">
-        <div class="o-box-fluid">
-            <a href="#" class="o-nav-logo">
-                <i class="fas fa-dragon o-text-primary"></i>Orochi
-            </a>
-            <button class="o-burger">
-                <span class="o-burger-icon"></span>
-            </button>
-            <div class="o-menu">
-                <ul class="o-list">
-                    <li class="o-nav-item">
-                        <a href="docs/v.1.0.0/commencer/introduction.html" class="o-nav-link">Documents</a>
-                    </li>
-                    <li class="o-nav-item">
-                        <a href="indisponible.html" class="o-nav-link">Exemples</a>
-                    </li>
-                    <li class="o-nav-item">
-                        <a href="icons.html" class="o-nav-link">Icones</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="o-nav o-nav-fixed o-shadow">
+    <div class="o-box-fluid">
+      <a href="#" class="o-nav-logo"><i class="fas fa-dragon o-text-primary"></i>Orochi</a>
+      <button class="o-burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+        <span class="o-burger-icon"></span>
+      </button>
+      <div class="o-menu">
+        <ul class="o-nav-list">
+          <li class="o-nav-item"><a href="docs/v1.0.0/commencer/introduction.html" class="o-nav-link">Documents</a>
+          </li>
+          <li class="o-nav-item"><a href="indisponible.html" class="o-nav-link">Exemples</a></li>
+          <li class="o-nav-item"><a href="icons.html" class="o-nav-link">Icones</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     <main class="o-box o-py-6">
 
@@ -61,35 +55,57 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="o-bg-light o-py-5">
-        <div class="o-box-fluid">
-            <div class="o-row o-justify-between">
-                <div class="o-col-md-4">
-                    <h4>Orochi</h4>
-                    <p>Un framework fait avec passion</p>
-                    <p class="o-text-sm">
-                        Code sous licence propriétaire - Documentation CC BY 3.0 - v1.0.0
-                    </p>
-                </div>
-                <div class="o-col-md-4">
-                    <h4>Liens utiles</h4>
-                    <ul class="o-list">
-                        <li><a href="#" class="o-nav-link">Documentation</a></li>
-                        <li><a href="https://github.com/Orochichrys/o-framework" class="o-nav-link">Github</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="o-text-center o-mt-5">
-                <p>© 2025 Orochi - Conçu avec passion par l'équipe Orochi</p>
-            </div>
+   <!-- Footer -->
+  <footer class="o-bg-light o-py-5">
+    <div class="o-box-fluid">
+      <div class="o-row">
+        <div class="footer-column o-col-sm-6 o-col-md-3 o-mb-4">
+          <h3>Orochi CSS</h3>
+          <p>Un framework CSS moderne et léger pour créer des interfaces web élégantes et performantes.</p>
+          <div class="social-links">
+            <a href="#"><i class="oi oi-github"></i></a>
+            <a href="#"><i class="oi oi-facebook"></i></a>
+            <a href="#"><i class="oi oi-instagram"></i></a>
+            <a href="#"><i class="oi oi-linkedin"></i></a>
+          </div>
         </div>
-    </footer>
+        <div class="footer-column o-col-sm-6 o-col-md-3 o-mb-4">
+          <h3>Ressources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Tutoriels</a></li>
+            <li><a href="#">Exemples</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </div>
+        <div class="footer-column o-col-sm-6 o-col-md-3 o-mb-4">
+          <h3>Communauté</h3>
+          <ul class="footer-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Contribuer</a></li>
+          </ul>
+        </div>
+        <div class="footer-column o-col-sm-6 o-col-md-3 o-mb-4">
+          <h3>Légal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Licence MIT</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Conditions d'utilisation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="o-text-center o-pt-5 o-mt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);">
+        <p>© 2025 Orochi - Conçu avec passion par l'équipe Orochi</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 <script src="src/orochi.js"></script>
-<script src="docs/v.1.0.0/commencer/script.js"></script>
+<script src="docs/v1.0.0/commencer/script.js"></script>
 <script src="scripts/orochi-icons-loader.js"></script>
 <script src="scripts/orochi-icons-search.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
