@@ -5770,7 +5770,7 @@
   border-top-color: var(--o-primary);
 }
 
-.o-border-right {
+.o-border-end {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: var(--o-primary);
@@ -5782,7 +5782,7 @@
   border-bottom-color: var(--o-primary);
 }
 
-.o-border-left {
+.o-border-start {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: var(--o-primary);

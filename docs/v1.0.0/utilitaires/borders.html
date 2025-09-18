@@ -233,83 +233,202 @@
       </div>
 
   <!-- Contenu principal -->
-      <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6">
-                    <h1 class="o-title o-text-primary o-mb-4">
-                        ⭕ Bordures Orochi
-                    </h1>
+      <main class="o-col-12 o-col-lg-9 o-p-4 main-content o-mt-5">
+    <h1 class="o-title o-text-primary o-mb-4">⭕ Système de Bordures Orochi</h1>
+    <p class="o-lead">Utilisez notre système de bordures complet pour ajouter du style, de la structure et de la clarté à vos interfaces. Le système inclut des bordures de différentes couleurs, épaisseurs, styles et rayons pour tous vos besoins de design.</p>
 
-                    <!-- Bordures de base -->
-                    <section class="o-mb-6">
-                        <h2 class="o-text-dark o-mb-4">Bordures standards</h2>
-                        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
-                            <div class="o-border o-p-3">.o-border</div>
-                            <div class="o-border o-border-primary o-p-3">.o-border-primary</div>
-                            <div class="o-border o-border-success o-p-3">.o-border-success</div>
-                            <div class="o-border o-border-danger o-p-3">.o-border-danger</div>
-                        </div>
-                        <div class="o-code-block">
-                            <pre class="language-html"><code>&lt;div class="o-border"&gt;...&lt;/div&gt;
-&lt;div class="o-border o-border-primary"&gt;...&lt;/div&gt;
+    <!-- Bordures standards -->
+    <section id="borders" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Bordures standards</h2>
+        <p class="o-mb-4">La classe de base <code>.o-border</code> ajoute une bordure fine autour de l'élément. Vous pouvez la combiner avec d'autres classes pour personnaliser l'apparence.</p>
+
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-border o-p-3">.o-border</div>
+            <div class="o-border-top o-p-3">.o-border-top</div>
+            <div class="o-border-bottom o-p-3">.o-border-bottom</div>
+            <div class="o-border-start o-p-3">.o-border-start</div>
+            <div class="o-border-end o-p-3">.o-border-end</div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-border"&gt;Bordure complète&lt;/div&gt;
+&lt;div class="o-border-top"&gt;Bordure supérieure&lt;/div&gt;
+&lt;div class="o-border-bottom"&gt;Bordure inférieure&lt;/div&gt;
+&lt;div class="o-border-start"&gt;Bordure gauche&lt;/div&gt;
+&lt;div class="o-border-end"&gt;Bordure droite&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Couleurs de bordure -->
+    <section id="colors" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Couleurs de bordure</h2>
+        <p class="o-mb-4">Le système de bordures Orochi inclut des classes pour toutes les couleurs du thème. Utilisez <code>.o-border-{color}</code> pour appliquer une couleur spécifique.</p>
+
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-border o-border-primary o-p-3">.o-border-primary</div>
+            <div class="o-border o-border-secondary o-p-3">.o-border-secondary</div>
+            <div class="o-border o-border-success o-p-3">.o-border-success</div>
+            <div class="o-border o-border-danger o-p-3">.o-border-danger</div>
+            <div class="o-border o-border-warning o-p-3">.o-border-warning</div>
+            <div class="o-border o-border-info o-p-3">.o-border-info</div>
+            <div class="o-border o-border-dark o-p-3">.o-border-dark</div>
+            <div class="o-border o-border-light o-p-3">.o-border-light</div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-border o-border-primary"&gt;...&lt;/div&gt;
+&lt;div class="o-border o-border-secondary"&gt;...&lt;/div&gt;
 &lt;div class="o-border o-border-success"&gt;...&lt;/div&gt;
-&lt;div class="o-border o-border-danger"&gt;...&lt;/div&gt;</code></pre>
-                        </div>
-                    </section>
+&lt;div class="o-border o-border-danger"&gt;...&lt;/div&gt;
+&lt;div class="o-border o-border-warning"&gt;...&lt;/div&gt;
+&lt;div class="o-border o-border-info"&gt;...&lt;/div&gt;
+&lt;div class="o-border o-border-dark"&gt;...&lt;/div&gt;
+&lt;div class="o-border o-border-light"&gt;...&lt;/div&gt;</code></pre>
+        </div>
+    </section>
 
-                    <!-- Rayons de bordures -->
-                    <section class="o-mb-6">
-                        <h2 class="o-text-dark o-mb-4">Rayons de bordure</h2>
-                        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
-                            <div class="o-border o-rounded-sm o-p-3">.o-rounded-sm</div>
-                            <div class="o-border o-rounded o-p-3">.o-rounded</div>
-                            <div class="o-border o-rounded-lg o-p-3">.o-rounded-lg</div>
-                            <div class="o-border o-rounded-pill o-px-4 o-py-2">.o-rounded-pill</div>
-                        </div>
-                        <div class="o-code-block">
-                            <pre class="language-html"><code>&lt;div class="o-border o-rounded-sm"&gt;...&lt;/div&gt;
-&lt;div class="o-border o-rounded"&gt;...&lt;/div&gt;
-&lt;div class="o-border o-rounded-lg"&gt;...&lt;/div&gt;
-&lt;div class="o-border o-rounded-pill"&gt;...&lt;/div&gt;</code></pre>
-                        </div>
-                    </section>
+    <!-- Rayons de bordure -->
+    <section id="radius" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Rayons de bordure</h2>
+        <p class="o-mb-4">Contrôlez l'arrondi des coins avec les classes de rayon de bordure. Vous pouvez appliquer différents niveaux d'arrondi selon l'effet souhaité.</p>
 
-                    <!-- Astuce -->
-                    <div class="o-alert o-alert-info o-mt-5">
-                        <strong>💡 Astuce :</strong> Combine <code>.o-border</code> avec <code>.o-border-color</code> et
-                        <code>.o-rounded</code> pour créer des éléments visuellement distincts.
-                    </div>
-            </main>
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-border o-rounded-sm o-p-3">.o-rounded-sm</div>
+            <div class="o-border o-rounded o-p-3">.o-rounded</div>
+            <div class="o-border o-rounded-md o-p-3">.o-rounded-md</div>
+            <div class="o-border o-rounded-lg o-p-3">.o-rounded-lg</div>
+            <div class="o-border o-rounded-xl o-p-3">.o-rounded-xl</div>
+            <div class="o-border o-rounded-pill o-px-4 o-py-2">.o-rounded-pill</div>
+            <div class="o-border o-rounded-0 o-p-3">.o-rounded-0</div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-border o-rounded-sm"&gt;Petit rayon&lt;/div&gt;
+&lt;div class="o-border o-rounded"&gt;Rayon standard&lt;/div&gt;
+&lt;div class="o-border o-rounded-md"&gt;Rayon moyen&lt;/div&gt;
+&lt;div class="o-border o-rounded-lg"&gt;Grand rayon&lt;/div&gt;
+&lt;div class="o-border o-rounded-xl"&gt;Très grand rayon&lt;/div&gt;
+&lt;div class="o-border o-rounded-pill"&gt;Pilule/ellipse&lt;/div&gt;
+&lt;div class="o-border o-rounded-0"&gt;Aucun rayon&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Épaisseurs de bordure -->
+    <section id="width" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Épaisseurs de bordure</h2>
+        <p class="o-mb-4">Contrôlez l'épaisseur de vos bordures avec les classes d'épaisseur. Par défaut, la bordure est fine (1px), mais vous pouvez l'augmenter selon vos besoins.</p>
+
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-border o-border-1 o-p-3">.o-border-1 (1px)</div>
+            <div class="o-border o-border-2 o-p-3">.o-border-2 (2px)</div>
+            <div class="o-border o-border-4 o-p-3">.o-border-4 (4px)</div>
+            <div class="o-border o-border-8 o-p-3">.o-border-8 (8px)</div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-border o-border-1"&gt;Épaisseur 1px&lt;/div&gt;
+&lt;div class="o-border o-border-2"&gt;Épaisseur 2px&lt;/div&gt;
+&lt;div class="o-border o-border-4"&gt;Épaisseur 4px&lt;/div&gt;
+&lt;div class="o-border o-border-8"&gt;Épaisseur 8px&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Styles de bordure -->
+    <section id="styles" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Styles de bordure</h2>
+        <p class="o-mb-4">Choisissez parmi différents styles de bordure pour varier l'apparence de vos éléments. Chaque style peut être combiné avec les autres classes de bordure.</p>
+
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-border o-border-solid o-p-3">.o-border-solid</div>
+            <div class="o-border o-border-dashed o-p-3">.o-border-dashed</div>
+            <div class="o-border o-border-dotted o-p-3">.o-border-dotted</div>
+            <div class="o-border o-border-double o-p-3">.o-border-double</div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-border o-border-solid"&gt;Plein&lt;/div&gt;
+&lt;div class="o-border o-border-dashed"&gt;Tiretés&lt;/div&gt;
+&lt;div class="o-border o-border-dotted"&gt;Pointillés&lt;/div&gt;
+&lt;div class="o-border o-border-double"&gt;Double&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Utilitaires pratiques -->
+    <section id="utilities" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Utilitaires pratiques</h2>
+        <p class="o-mb-4">Découvrez quelques combinaisons utiles de classes de bordure pour créer des effets visuels intéressants.</p>
+
+        <h3 class="o-mb-3">Cartes avec bordures accentuées</h3>
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-border o-border-4 o-border-primary o-rounded-lg o-p-3">
+                <h4 class="o-text-primary">Carte primaire</h4>
+                <p class="o-mb-0">Contenu de la carte avec bordure accentuée.</p>
+            </div>
+            <div class="o-border o-border-4 o-border-success o-rounded-lg o-p-3">
+                <h4 class="o-text-success">Carte succès</h4>
+                <p class="o-mb-0">Contenu de la carte avec bordure accentuée.</p>
+            </div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-5">
+            <pre class="language-html"><code>&lt;div class="o-border o-border-4 o-border-primary o-rounded-lg o-p-3"&gt;
+  &lt;h4 class="o-text-primary"&gt;Carte primaire&lt;/h4&gt;
+  &lt;p&gt;Contenu de la carte avec bordure accentuée.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="o-border o-border-4 o-border-success o-rounded-lg o-p-3"&gt;
+  &lt;h4 class="o-text-success"&gt;Carte succès&lt;/h4&gt;
+  &lt;p&gt;Contenu de la carte avec bordure accentuée.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h3 class="o-mb-3">Badges avec bordures</h3>
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <span class="o-border o-border-primary o-rounded-pill o-px-3 o-py-1 o-text-primary">Badge Primaire</span>
+            <span class="o-border o-border-success o-rounded-pill o-px-3 o-py-1 o-text-success">Badge Succès</span>
+            <span class="o-border o-border-danger o-rounded-pill o-px-3 o-py-1 o-text-danger">Badge Danger</span>
+            <span class="o-border o-border-warning o-rounded-pill o-px-3 o-py-1 o-text-warning">Badge Avertissement</span>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;span class="o-border o-border-primary o-rounded-pill o-px-3 o-py-1 o-text-primary"&gt;
+  Badge Primaire
+&lt;/span&gt;
+
+&lt;span class="o-border o-border-success o-rounded-pill o-px-3 o-py-1 o-text-success"&gt;
+  Badge Succès
+&lt;/span&gt;
+
+&lt;span class="o-border o-border-danger o-rounded-pill o-px-3 o-py-1 o-text-danger"&gt;
+  Badge Danger
+&lt;/span&gt;
+
+&lt;span class="o-border o-border-warning o-rounded-pill o-px-3 o-py-1 o-text-warning"&gt;
+  Badge Avertissement
+&lt;/span&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Notes finales -->
+    <div class="o-alert o-alert-info o-mt-5">
+        <h4 class="o-alert-heading">💡 Astuce</h4>
+        <p class="o-mb-0">Combine <code>.o-border</code> avec <code>.o-border-{color}</code> et <code>.o-rounded</code> pour créer des éléments visuellement distincts. N'oubliez pas que vous pouvez également utiliser les classes d'épaisseur et de style pour personnaliser davantage l'apparence de vos bordures.</p>
+    </div>
+</main>
            <!-- Colonne droite (cachée sur petit écran) -->
       <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
         <h5>Sur cette page</h5>
         <ul class="o-list-unstyled">
-          <li><a href="#">Aperçu</a></li>
-          <li><a href="#">Accessibilité</a></li>
-          <li><a href="#">CSS</a></li>
+          <li><a href="#borders">Bordures standards</a></li>
+          <li><a href="#colors">Couleurs de bordure</a></li>
+          <li><a href="#radius">Rayons de bordure</li>
+          <li><a href="#width">Épaisseurs de bordure</a></li>
+          <li><a href="#styles">Styles de bordure</a></li>
+          <li><a href="#utilities">Utilitaires pratiques</li>
         </ul>
       </div>
-
     </div>
   </div>
-
-    <!-- Footer -->
-    <footer class="o-bg-dark o-text-light o-py-4 o-mt-5">
-        <div class="o-d-flex o-justify-center o-gap-3">
-            <a href="#" class="o-text-white o-hover-text-primary">
-                <i class="bx bxl-facebook-circle o-text-h3"></i>
-            </a>
-            <a href="#" class="o-text-white o-hover-text-primary">
-                <i class="bx bxl-twitter o-text-h3"></i>
-            </a>
-            <a href="#" class="o-text-white o-hover-text-primary">
-                <i class="bx bxl-github o-text-h3"></i>
-            </a>
-        </div>
-        <div class="o-box o-mt-2">
-            <div class="o-text-center">
-                <p class="o-mb-0">&copy; 2025 Orochi CSS - Tous droits réservés</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="../../../src/orochi.js"></script>
     <script src="../js/script.js"></script>
