@@ -11,6 +11,42 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>
+        .overflow-demo {
+            height: 120px;
+            width: 200px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            margin-bottom: 1rem;
+            padding: 10px;
+        }
+        
+        .overflow-content {
+            width: 250px;
+            height: 80px;
+            background: linear-gradient(45deg, #6f42c1, #e83e8c);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        
+        .scroll-container {
+            height: 150px;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .code-block {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #1a237e;
+        }
+    </style>
 </head>
 
 <body>
@@ -168,21 +204,7 @@
               <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
                 ⚙️ Utilitaires
               </h4>
-              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
-                <a href="/docs/v1.0.0/utilitaires/spacing.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                  <i class="bx bx-space-bar o-me-2"></i>Espacement
-                </a>
-
-                <a href="/docs/v1.0.0/utilitaires/flexbox.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                  <i class="bx bx-layout o-me-2"></i>Flexbox
-                </a>
-
-                <a href="/docs/v1.0.0/utilitaires/grid.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                  <i class="bx bx-grid-alt o-me-2"></i>Grille CSS
-                </a>
+              
 
                 <a href="/docs/v1.0.0/utilitaires/position.html"
                   class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
@@ -220,113 +242,247 @@
                 </a>
 
                 <a href="/docs/v1.0.0/utilitaires/overflow.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded o-bg-light o-text-primary">
                   <i class="bx bx-collapse o-me-2"></i>Overflow
                 </a>
 
-                <a href="/docs/v1.0.0/utilitaires/z-index.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                  <i class="bx bx-layer o-me-2"></i>Z-index
-                </a>
               </div>
             </div>
       </div>
 
   <!-- Contenu principal -->
-      <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
-                    <h1 class="o-title o-text-primary o-mb-4">
-                        📦 Overflow Orochi
-                    </h1>
+      <main class="o-col-12 o-col-lg-9 o-p-4 main-content o-mt-5">
+    <h1 class="o-title o-text-primary o-mb-4">📦 Système d'Overflow Orochi</h1>
+    <p class="o-lead">Utilisez notre système d'overflow complet pour contrôler le comportement des éléments qui dépassent de leur conteneur. Le système inclut des classes pour gérer le débordement horizontal, vertical et les deux axes simultanément.</p>
 
-                    <!-- Overflow visible -->
-                    <section class="o-mb-6">
-                        <h2 class="o-text-dark o-mb-4">Overflow visible</h2>
-                        <div class="o-bg-light o-p-3 o-mb-4 o-w-200 o-h-100 o-border o-overflow-visible">
-                            <div class="o-bg-primary o-text-white o-p-3 o-w-300">
-                                Texte dépassant la boîte.
-                            </div>
-                        </div>
-                        <div class="o-code-block">
-                            <pre class="language-html"><code>&lt;div class="o-w-200 o-h-100 o-border o-overflow-visible"&gt;
-  &lt;div class="o-bg-primary o-text-white o-p-3 o-w-300"&gt;
-    Texte dépassant la boîte.
-  &lt;/div&gt;
+    <!-- Overflow de base -->
+    <section id="basic" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Overflow de base</h2>
+        <p class="o-mb-4">Le framework Orochi propose plusieurs classes pour contrôler le comportement de débordement des éléments. Ces classes s'appliquent aux deux axes (horizontal et vertical).</p>
+
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-auto">
+                    <div class="overflow-content">.o-overflow-auto (contenu qui dépasse)</div>
+                </div>
+                <code>.o-overflow-auto</code>
+                <small>Ajoute des barres de défilement si nécessaire</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-hidden">
+                    <div class="overflow-content">.o-overflow-hidden (contenu qui dépasse)</div>
+                </div>
+                <code>.o-overflow-hidden</code>
+                <small>Cache le contenu qui dépasse</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-visible">
+                    <div class="overflow-content">.o-overflow-visible (contenu qui dépasse)</div>
+                </div>
+                <code>.o-overflow-visible</code>
+                <small>Affiche le contenu même s'il dépasse</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-scroll">
+                    <div class="overflow-content">.o-overflow-scroll (contenu qui dépasse)</div>
+                </div>
+                <code>.o-overflow-scroll</code>
+                <small>Ajoute toujours des barres de défilement</small>
+            </div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-overflow-auto"&gt;Contenu qui dépasse...&lt;/div&gt;
+&lt;div class="o-overflow-hidden"&gt;Contenu qui dépasse...&lt;/div&gt;
+&lt;div class="o-overflow-visible"&gt;Contenu qui dépasse...&lt;/div&gt;
+&lt;div class="o-overflow-scroll"&gt;Contenu qui dépasse...&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Overflow horizontal -->
+    <section id="horizontal" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Overflow horizontal</h2>
+        <p class="o-mb-4">Contrôlez spécifiquement le débordement sur l'axe horizontal avec ces classes spécialisées.</p>
+
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-x-auto">
+                    <div class="overflow-content">.o-overflow-x-auto (contenu large qui dépasse horizontalement)</div>
+                </div>
+                <code>.o-overflow-x-auto</code>
+                <small>Barre de défilement horizontale si nécessaire</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-x-hidden">
+                    <div class="overflow-content">.o-overflow-x-hidden (contenu large qui dépasse horizontalement)</div>
+                </div>
+                <code>.o-overflow-x-hidden</code>
+                <small>Cache le débordement horizontal</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-x-visible">
+                    <div class="overflow-content">.o-overflow-x-visible (contenu large qui dépasse horizontalement)</div>
+                </div>
+                <code>.o-overflow-x-visible</code>
+                <small>Affiche le contenu même s'il dépasse horizontalement</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-x-scroll">
+                    <div class="overflow-content">.o-overflow-x-scroll (contenu large qui dépasse horizontalement)</div>
+                </div>
+                <code>.o-overflow-x-scroll</code>
+                <small>Barre de défilement horizontale toujours visible</small>
+            </div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-overflow-x-auto"&gt;Contenu large...&lt;/div&gt;
+&lt;div class="o-overflow-x-hidden"&gt;Contenu large...&lt;/div&gt;
+&lt;div class="o-overflow-x-visible"&gt;Contenu large...&lt;/div&gt;
+&lt;div class="o-overflow-x-scroll"&gt;Contenu large...&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Overflow vertical -->
+    <section id="vertical" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Overflow vertical</h2>
+        <p class="o-mb-4">Contrôlez spécifiquement le débordement sur l'axe vertical avec ces classes spécialisées.</p>
+
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-y-auto">
+                    <div class="overflow-content">.o-overflow-y-auto</div>
+                    <div class="overflow-content">(contenu haut qui dépasse verticalement)</div>
+                    <div class="overflow-content">Plus de contenu...</div>
+                </div>
+                <code>.o-overflow-y-auto</code>
+                <small>Barre de défilement verticale si nécessaire</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-y-hidden">
+                    <div class="overflow-content">.o-overflow-y-hidden</div>
+                    <div class="overflow-content">(contenu haut qui dépasse verticalement)</div>
+                    <div class="overflow-content">Plus de contenu...</div>
+                </div>
+                <code>.o-overflow-y-hidden</code>
+                <small>Cache le débordement vertical</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-y-visible">
+                    <div class="overflow-content">.o-overflow-y-visible</div>
+                    <div class="overflow-content">(contenu haut qui dépasse verticalement)</div>
+                    <div class="overflow-content">Plus de contenu...</div>
+                </div>
+                <code>.o-overflow-y-visible</code>
+                <small>Affiche le contenu même s'il dépasse verticalement</small>
+            </div>
+            <div class="o-d-flex o-flex-column o-align-items-center">
+                <div class="overflow-demo o-overflow-y-scroll">
+                    <div class="overflow-content">.o-overflow-y-scroll</div>
+                    <div class="overflow-content">(contenu haut qui dépasse verticalement)</div>
+                    <div class="overflow-content">Plus de contenu...</div>
+                </div>
+                <code>.o-overflow-y-scroll</code>
+                <small>Barre de défilement verticale toujours visible</small>
+            </div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-overflow-y-auto"&gt;Contenu haut...&lt;/div&gt;
+&lt;div class="o-overflow-y-hidden"&gt;Contenu haut...&lt;/div&gt;
+&lt;div class="o-overflow-y-visible"&gt;Contenu haut...&lt;/div&gt;
+&lt;div class="o-overflow-y-scroll"&gt;Contenu haut...&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Applications pratiques -->
+    <section id="applications" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Applications pratiques</h2>
+        <p class="o-mb-4">Découvrez comment utiliser l'overflow dans des cas concrets pour améliorer l'expérience utilisateur.</p>
+
+        <h3 class="o-mb-3">Conteneurs de texte avec défilement</h3>
+        <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
+            <div class="scroll-container o-overflow-auto">
+                <h4>Conteneur avec défilement automatique</h4>
+                <p>Ce conteneur affichera des barres de défilement uniquement si le contenu dépasse.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut sit amet enim vel lacus sodales consectetur.</p>
+            </div>
+            
+            <div class="scroll-container o-overflow-scroll">
+                <h4>Conteneur avec défilement forcé</h4>
+                <p>Ce conteneur affichera toujours des barres de défilement, même si le contenu ne dépasse pas.</p>
+                <p>Parfait pour maintenir une disposition cohérente.</p>
+            </div>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-5">
+            <pre class="language-html"><code>&lt;div class="o-overflow-auto"&gt;
+  &lt;h4&gt;Conteneur avec défilement automatique&lt;/h4&gt;
+  &lt;p&gt;Contenu long...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="o-overflow-scroll"&gt;
+  &lt;h4&gt;Conteneur avec défilement forcé&lt;/h4&gt;
+  &lt;p&gt;Contenu court...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-                        </div>
-                    </section>
+        </div>
 
-                    <!-- Overflow hidden -->
-                    <section class="o-mb-6">
-                        <h2 class="o-text-dark o-mb-4">Overflow caché</h2>
-                        <div class="o-bg-light o-p-3 o-mb-4 o-w-200 o-h-100 o-border o-overflow-hidden">
-                            <div class="o-bg-danger o-text-white o-p-3 o-w-300">
-                                Ce contenu est tronqué.
-                            </div>
-                        </div>
-                        <div class="o-code-block">
-                            <pre class="language-html"><code>&lt;div class="o-w-200 o-h-100 o-border o-overflow-hidden"&gt;
-  &lt;div class="o-bg-danger o-text-white o-p-3 o-w-300"&gt;
-    Ce contenu est tronqué.
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </section>
-
-                    <!-- Overflow scroll -->
-                    <section class="o-mb-6">
-                        <h2 class="o-text-dark o-mb-4">Overflow scroll</h2>
-                        <div class="o-bg-light o-p-3 o-mb-4 o-w-200 o-h-100 o-border o-overflow-scroll">
-                            <div class="o-bg-success o-text-white o-p-3 o-w-300 o-h-150">
-                                Ce contenu est scrollable.
-                            </div>
-                        </div>
-                        <div class="o-code-block">
-                            <pre class="language-html"><code>&lt;div class="o-w-200 o-h-100 o-border o-overflow-scroll"&gt;
-  &lt;div class="o-bg-success o-text-white o-p-3 o-w-300 o-h-150"&gt;
-    Ce contenu est scrollable.
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </section>
-
-                    <!-- Astuce -->
-                    <div class="o-alert o-alert-info o-mt-5">
-                        <strong>💡 Conseil :</strong> Utilisez les classes utilitaires <code>.o-overflow-hidden</code>,
-                        <code>.o-overflow-scroll</code>, etc., pour contrôler facilement le comportement de dépassement.
+        <h3 class="o-mb-3">Navigation horizontale</h3>
+        <div class="o-mb-4">
+            <div class="o-overflow-x-auto o-py-2">
+                <div class="o-d-flex o-gap-3" style="min-width: 600px;">
+                    <div class="o-card o-card-sm o-text-center" style="width: 150px;">
+                        <div class="o-card-body">Élément 1</div>
                     </div>
-              </main>
+                    <div class="o-card o-card-sm o-text-center" style="width: 150px;">
+                        <div class="o-card-body">Élément 2</div>
+                    </div>
+                    <div class="o-card o-card-sm o-text-center" style="width: 150px;">
+                        <div class="o-card-body">Élément 3</div>
+                    </div>
+                    <div class="o-card o-card-sm o-text-center" style="width: 150px;">
+                        <div class="o-card-body">Élément 4</div>
+                    </div>
+                    <div class="o-card o-card-sm o-text-center" style="width: 150px;">
+                        <div class="o-card-body">Élément 5</div>
+                    </div>
+                </div>
+            </div>
+            <small class="o-text-muted">Une navigation horizontale avec défilement sur les petits écrans</small>
+        </div>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+            <pre class="language-html"><code>&lt;div class="o-overflow-x-auto"&gt;
+  &lt;div class="o-d-flex" style="min-width: 600px;"&gt;
+    &lt;div class="o-card"&gt;Élément 1&lt;/div&gt;
+    &lt;div class="o-card"&gt;Élément 2&lt;/div&gt;
+    &lt;div class="o-card"&gt;Élément 3&lt;/div&gt;
+    &lt;div class="o-card"&gt;Élément 4&lt;/div&gt;
+    &lt;div class="o-card"&gt;Élément 5&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Notes finales -->
+    <div class="o-alert o-alert-info o-mt-5">
+        <h4 class="o-alert-heading">💡 Astuce</h4>
+        <p class="o-mb-0">Utilisez les classes d'overflow pour gérer le contenu qui dépasse de manière élégante. <code>.o-overflow-auto</code> est généralement préféré car il n'affiche les barres de défilement que lorsque c'est nécessaire. Pour les interfaces mobiles, envisagez d'utiliser <code>-webkit-overflow-scrolling: touch</code> pour un défilement plus fluide.</p>
+    </div>
+</main>
            <!-- Colonne droite (cachée sur petit écran) -->
       <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
         <h5>Sur cette page</h5>
         <ul class="o-list-unstyled">
-          <li><a href="#">Aperçu</a></li>
-          <li><a href="#">Accessibilité</a></li>
-          <li><a href="#">CSS</a></li>
+          <li><a href="#basic">Overflow de base</a></li>
+          <li><a href="#horizontal">Overflow horizontal</a></li>
+          <li><a href="#vertical">Overflow vertical</a></li>
+          <li><a href="#applications">Applications pratiques</a></li>
         </ul>
       </div>
-
     </div>
   </div>
-
-    <!-- Footer -->
-    <footer class="o-bg-dark o-text-light o-py-4 o-mt-5">
-        <div class="o-d-flex o-justify-center o-gap-3">
-            <a href="#" class="o-text-white o-hover-text-primary">
-                <i class="bx bxl-facebook-circle o-text-h3"></i>
-            </a>
-            <a href="#" class="o-text-white o-hover-text-primary">
-                <i class="bx bxl-twitter o-text-h3"></i>
-            </a>
-            <a href="#" class="o-text-white o-hover-text-primary">
-                <i class="bx bxl-github o-text-h3"></i>
-            </a>
-        </div>
-        <div class="o-box o-mt-2">
-            <div class="o-text-center">
-                <p class="o-mb-0">&copy; 2025 Orochi CSS - Tous droits réservés</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="../../../src/orochi.js"></script>
     <script src="../js/script.js"></script>

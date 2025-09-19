@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6881388964812065"
     crossorigin="anonymous"></script>
 </head>
@@ -20,18 +21,23 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="o-nav o-nav-fixed o-shadow">
-    <div class="o-box-fluid">
-      <a href="#" class="o-nav-logo"><i class="fas fa-dragon o-text-primary"></i>Orochi</a>
-      <button class="o-burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
-        <span class="o-burger-icon"></span>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand o-text-primary" href="#"><i class="fas fa-dragon o-text-primary"></i> Orochi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOrochi" aria-controls="navbarOrochi" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="o-menu">
-        <ul class="o-nav-list">
-          <li class="o-nav-item"><a href="docs/v1.0.0/commencer/introduction.html" class="o-nav-link">Documents</a>
+      <div class="collapse navbar-collapse" id="navbarOrochi">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="docs/v1.0.0/commencer/introduction.html">Documents</a>
           </li>
-          <li class="o-nav-item"><a href="indisponible.html" class="o-nav-link">Exemples</a></li>
-          <li class="o-nav-item"><a href="icons.html" class="o-nav-link">Icones</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="indisponible.html">Exemples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="icons.html">Icones</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -366,6 +372,7 @@
 </body>
 <script src="src/orochi.js"></script>
 <script src="docs/v1.0.0/commencer/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>

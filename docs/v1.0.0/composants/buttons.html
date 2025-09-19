@@ -49,7 +49,7 @@
   </nav>
 
     <!-- Contenu principal avec 3 colonnes -->
-  <div class="o-box-fluid layout-box overflow-x-hidden">
+  <div class="o-box-fluid layout-box">
     <div class="o-row">
 
 <!-- Colonne gauche (cachée sur petit écran) -->
@@ -171,21 +171,7 @@
               <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
                 ⚙️ Utilitaires
               </h4>
-              <div class="o-ms-3 o-d-flex o-flex-column o-gap-2">
-                <a href="/docs/v1.0.0/utilitaires/spacing.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                  <i class="bx bx-space-bar o-me-2"></i>Espacement
-                </a>
-
-                <a href="/docs/v1.0.0/utilitaires/flexbox.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                  <i class="bx bx-layout o-me-2"></i>Flexbox
-                </a>
-
-                <a href="/docs/v1.0.0/utilitaires/grid.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                  <i class="bx bx-grid-alt o-me-2"></i>Grille CSS
-                </a>
+              
 
                 <a href="/docs/v1.0.0/utilitaires/position.html"
                   class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
@@ -227,10 +213,6 @@
                   <i class="bx bx-collapse o-me-2"></i>Overflow
                 </a>
 
-                <a href="/docs/v1.0.0/utilitaires/z-index.html"
-                  class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                  <i class="bx bx-layer o-me-2"></i>Z-index
-                </a>
               </div>
             </div>
       </div>
@@ -365,8 +347,15 @@
         <strong>💡 Personnalisation :</strong> Utilisez les variables CSS pour modifier les couleurs :
         <div class="o-code-block">
             <pre class="language-css"><code>:root {
---o-primary: #votre_couleur;
+--o-btn-primary: #votre_couleur;
+--o-btn-secondary: #votre_couleur;
+--o-btn-success: #votre_couleur;
+--o-btn-danger: #votre_couleur;
+--o-btn-warning: #votre_couleur;
+--o-btn-info: #votre_couleur;
 --o-btn-padding: 0.5rem 1.5rem;
+--o-btn-sm-padding: 0.375rem 0.75rem;
+--o-btn-lg-padding: 1rem 2rem;
 }</code></pre>
         </div>
     </div>
