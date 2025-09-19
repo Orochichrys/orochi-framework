@@ -70,7 +70,7 @@ const iconNames = [
   'twitter','instagram',
   'linkedin','youtube',
   'github','gitlab','tiktok','discord',
-  'twitch','reddit','vr','brush','palette','pen-tool','pencil','box'
+  'twitch','reddit','vr','brush','palette','pen-tool','pencil','box','gem','tachometer'
 ];
 
 const numberOfIcons = iconNames.length;
