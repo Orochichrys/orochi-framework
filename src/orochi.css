@@ -60,6 +60,27 @@
   --o-btn-light: var(--o-light);
   --o-btn-white: var(--o-white);
   --o-btn-black: var(--o-black);
+  /*btn color*/
+  --o-btn-hover-primary: var(--o-primary);
+  --o-btn-hover-secondary: var(--o-secondary);
+  --o-btn-hover-success: var(--o-success);
+  --o-btn-hover-danger: var(--o-danger);
+  --o-btn-hover-warning: var(--o-warning);
+  --o-btn-hover-info: var(--o-info);
+  --o-btn-hover-dark: var(--o-dark);
+  --o-btn-hover-light: var(--o-light);
+  --o-btn-hover-white: var(--o-white);
+  --o-btn-hover-black: var(--o-black);
+  /*btn text color*/
+  --o-btn-text-primary: var(--o-white);
+  --o-btn-text-secondary: var(--o-white);
+  --o-btn-text-success: var(--o-white);
+  --o-btn-text-danger: var(--o-white);
+  --o-btn-text-warning: var(--o-black);
+  --o-btn-text-info: var(--o-white);
+  --o-btn-text-light: var(--o-black);
+  --o-btn-text-white: var(--o-black);
+  --o-btn-text-black: var(--o-white);
   /* Couleurs de texte */
   --o-text-primary: var(--o-primary);
   --o-text-secondary: var(--o-secondary);
@@ -69,8 +90,6 @@
   --o-text-info: var(--o-info);
   --o-text-dark: var(--o-dark);
   --o-text-light: var(--o-light);
-  --o-text-white: var(--o-white);
-  --o-text-black: var(--o-black);
   /* Couleurs de bordure */
   --o-border-primary: var(--o-primary);
   --o-border-secondary: var(--o-secondary);
@@ -1670,7 +1689,7 @@
 /* Couleurs principales */
 .o-btn-primary {
   background-color: var(--o-btn-primary);
-  color: var(--o-text-white);
+  color: var(--o-btn-text-primary);
   border-color: var(--o-border-primary);
 }
 
@@ -1678,14 +1697,14 @@
 .o-btn-primary:focus {
   background-color: var(--o-btn-secondary);
   border-color: var(--o-border-secondary);
-  color: var(--o-white);
+  color: var(--o-btn-text-primary);
   outline: none;
 }
 
 /* Bouton secondaire */
 .o-btn-secondary {
   background-color: var(--o-btn-secondary);
-  color: var(--o-text-white);
+  color: var(--o-btn-text-secondary);
   border-color: var(--o-border-secondary);
 }
 
@@ -1693,13 +1712,13 @@
 .o-btn-secondary:focus {
   background-color: var(--o-btn-primary);
   border-color: var(--o-border-primary);
-  color: var(--o-text-white);
+  color: var(--o-btn-text-secondary);
 }
 
 /* Bouton succès */
 .o-btn-success {
   background-color: var(--o-btn-success);
-  color: var(--o-text-white);
+  color: var(--o-btn-text-success);
   border-color: var(--o-border-success);
 }
 
@@ -1713,7 +1732,7 @@
 /* Bouton danger */
 .o-btn-danger {
   background-color: var(--o-btn-danger);
-  color: var(--o-text-white);
+  color: var(--o-btn-text-danger);
   border-color: var(--o-border-danger);
 }
 
@@ -1727,7 +1746,7 @@
 /* Bouton warning */
 .o-btn-warning {
   background-color: var(--o-btn-warning);
-  color: var(--o-text-dark);
+  color: var(--o-btn-text-warning);
   border-color: var(--o-border-warning);
 }
 
@@ -1741,7 +1760,7 @@
 /* Bouton info */
 .o-btn-info {
   background-color: var(--o-btn-info);
-  color: var(--o-text-white);
+  color: var(--o-btn-text-info);
   border-color: var(--o-border-info);
 }
 
@@ -1755,7 +1774,7 @@
 /* Bouton light */
 .o-btn-light {
   background-color: var(--o-btn-light);
-  color: var(--o-text-dark);
+  color: var(--o-btn-text-light);
   border-color: var(--o-border-light);
 }
 
@@ -6118,6 +6137,10 @@
 }
 
 /* Custom styles pour améliorer l'apparence */
+.o-list-style-none{
+  list-style: none;
+}
+
 .o-list-unstyled {
   list-style: none;
   padding-left: 0;
