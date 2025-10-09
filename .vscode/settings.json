@@ -7,7 +7,7 @@
   "prettier.tabWidth": 2,
   "prettier.useTabs": false,
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-feature"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
