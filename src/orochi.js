@@ -1,45 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggler = document.querySelector('.o-burger');
-  const togglerIcon = document.querySelector('.o-burger-icon');
+  // Pour chaque nav sur la page
+  document.querySelectorAll('nav.o-nav').forEach((nav) => {
+    const burger = nav.querySelector('.o-burger');
+    const burgerIcon = nav.querySelector('.o-burger-icon');
+    const menu = nav.querySelector('.o-menu');
 
-  // Icône initiale
-  if (togglerIcon) {
-    togglerIcon.innerHTML = '<i class="oi oi-menu"></i>';
-  }
+    if (!burger || !burgerIcon || !menu) return;
 
-  // Dropdown arrows
-  document.querySelectorAll('.o-dropdown > .o-nav-link').forEach((link) => {
-    if (!link.textContent.includes('▾') && !link.textContent.includes('▴')) {
-      link.textContent += ' ▾';
-    }
+    // Icône initiale (menu)
+    burgerIcon.innerHTML = '<i class="oi oi-menu"></i>';
 
-    const toggleArrow = () => {
-      link.textContent = link.textContent.includes('▾')
-        ? link.textContent.replace('▾', '▴')
-        : link.textContent.replace('▴', '▾');
-    };
-
-    ['click', 'mouseover', 'mouseout'].forEach((evt) =>
-      link.addEventListener(evt, toggleArrow)
-    );
-  });
-
-  // Menu mobile toggle
-  if (toggler) {
-    toggler.addEventListener('click', () => {
-      const navWrapper = document.querySelector('.o-menu');
-      if (!navWrapper || !togglerIcon) return;
-
-      const isActive = navWrapper.classList.contains(
-        'o-menu-active'
-      );
-      navWrapper.classList.toggle('o-menu-active');
-
-      togglerIcon.innerHTML = isActive
-        ? '<i class="oi oi-menu"></i>'
-        : '<i class="oi oi-close"></i>';
+    // Toggle du menu mobile
+    burger.addEventListener('click', () => {
+      const isActive = menu.classList.toggle('o-menu-active');
+      burgerIcon.innerHTML = isActive
+        ? '<i class="oi oi-close"></i>'
+        : '<i class="oi oi-menu"></i>';
     });
-  }
+
+    // Gestion des dropdowns dans chaque nav
+    nav.querySelectorAll('.o-dropdown > .o-nav-link').forEach((link) => {
+      if (!link.querySelector('.nav-arrow')) {
+        const span = document.createElement('span');
+        span.className = 'nav-arrow';
+        span.textContent = ' ▾';
+        link.appendChild(span);
+      }
+
+      link.addEventListener('click', (e) => {
+        const dropdown = link.parentElement.querySelector('.o-dropdown-menu');
+        if (!dropdown) return;
+        dropdown.classList.toggle('open');
+        const arrow = link.querySelector('.nav-arrow');
+        arrow.textContent = arrow.textContent.includes('▾') ? ' ▴' : ' ▾';
+      });
+    });
+  });
 });
 
 // Configuration de l'Intersection Observer

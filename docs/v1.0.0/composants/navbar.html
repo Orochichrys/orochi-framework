@@ -17,12 +17,16 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="o-nav  o-shadow o-nav-fixed">
+  <nav id="main-nav" class="o-nav o-shadow o-nav-fixed">
     <div class="o-box-fluid">
       <button class="sidebar-toggler">
         <i class="bx bx-grid-alt"></i>
       </button>
-      <a href="../../../index.html" class="o-nav-logo"><i class="fas fa-dragon o-text-primary"></i>Orochi</a>
+
+      <a href="../../../index.html" class="o-nav-logo">
+        <i class="fas fa-dragon o-text-primary"></i>Orochi
+      </a>
+
       <button class="o-burger">
         <span class="o-burger-icon"></span>
       </button>
@@ -37,16 +41,13 @@
           </li>
         </ul>
       </div>
-
-
     </div>
   </nav>
 
   <!-- Contenu principal avec 3 colonnes -->
   <div class="o-box-fluid layout-box">
     <div class="o-row">
-
-      <!-- Colonne gauche (cachée sur petit écran) -->
+       <!-- Colonne gauche (cachée sur petit écran) -->
       <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
 
         <!-- Section : Commencer -->
@@ -207,6 +208,10 @@
             <i class="bx bx-collapse o-me-2"></i>Overflow
           </a>
 
+          <a href="/docs/v1.0.0/utilitaires/z-index.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            <i class="bx bx-layer o-me-2"></i>Z-index
+          </a>
         </div>
       </div>
     </div>
@@ -214,35 +219,55 @@
     <!-- Contenu principal -->
     <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
       <h1 class="o-title o-text-primary o-mb-4">🧭 Navigation Orochi</h1>
-      <p class="o-lead o-mb-5">Système de navigation flexible et personnalisable</p>
+      <p class="o-lead o-mb-5">
+        Le composant <strong>Navigation (Navbar)</strong> d'Orochi CSS vous permet de créer des barres de
+        navigation modernes, flexibles et responsives.  
+        Elle s’adapte automatiquement aux différents écrans et peut intégrer des éléments tels que des menus déroulants,
+        des boutons, des logos et bien plus encore.
+      </p>
 
-      <!-- Navbar de base -->
+      <!-- Navigation de base -->
       <section id="basic" class="o-mb-6">
         <h2 class="o-text-dark o-mb-4">Navigation de base</h2>
+        <p class="o-mb-4">
+          La navigation de base constitue le cœur du système de navigation Orochi.  
+          Elle contient un logo, des liens de menu et un bouton “burger” qui s’affiche automatiquement sur les petits
+          écrans pour une meilleure accessibilité mobile.
+        </p>
+
         <div class="o-mb-4">
-          <nav class="o-nav o-bg-light">
+          <nav class="o-nav o-bg-light o-z-1">
             <div class="o-box-fluid">
               <a href="#" class="o-nav-logo">Logo</a>
-              <ul class="o-list">
-                <li class="o-nav-item"><a href="#" class="o-nav-link">Accueil</a></li>
-                <li class="o-nav-item"><a href="#" class="o-nav-link">Services</a></li>
-                <li class="o-nav-item"><a href="#" class="o-nav-link">Contact</a></li>
-              </ul>
+              <button class="o-burger">
+                <span class="o-burger-icon"></span>
+              </button>
+              <div class="o-menu">
+                <ul class="o-nav-list">
+                  <li class="o-nav-item"><a href="#" class="o-nav-link">Accueil</a></li>
+                  <li class="o-nav-item"><a href="#" class="o-nav-link">Services</a></li>
+                  <li class="o-nav-item"><a href="#" class="o-nav-link">Contact</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
+
         <div class="o-code-block">
           <pre class="language-html"><code>&lt;nav class="o-nav o-bg-light"&gt;
   &lt;div class="o-box-fluid"&gt;
-      &lt;a href="#" class="o-nav-logo"&gt;Logo&lt;/a&gt;
-      &lt;div class="o-menu"&gt;
-        &lt;ul class="o-list"&gt;
-          &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
-          &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Services&lt;/a&gt;&lt;/li&gt;
-          &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
+    &lt;a href="#" class="o-nav-logo"&gt;Logo&lt;/a&gt;
+    &lt;button class="o-burger"&gt;
+      &lt;span class="o-burger-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="o-menu"&gt;
+      &lt;ul class="o-nav-list"&gt;
+        &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
         </div>
       </section>
@@ -250,12 +275,20 @@
       <!-- Dropdown -->
       <section id="dropdown" class="o-mb-6">
         <h2 class="o-text-dark o-mb-4">Avec dropdown</h2>
+        <p class="o-mb-4">
+          Les menus déroulants (dropdowns) permettent d’ajouter des sous-catégories dans votre navigation.  
+          Ils sont parfaits pour les sites comportant plusieurs sections ou produits.
+        </p>
+
         <div class="o-mb-4">
-          <nav class="o-nav o-bg-light">
+          <nav class="o-nav o-bg-light o-z-1">
             <div class="o-box-fluid">
-              <a href="#" class="o-nav-logo">Menu</a>
+              <a href="#" class="o-nav-logo">Logo</a>
+              <button class="o-burger">
+                <span class="o-burger-icon"></span>
+              </button>
               <div class="o-menu">
-                <ul class="o-list">
+                <ul class="o-nav-list">
                   <li class="o-nav-item o-dropdown">
                     <a href="#" class="o-nav-link">Produits</a>
                     <ul class="o-dropdown-menu">
@@ -269,22 +302,26 @@
             </div>
           </nav>
         </div>
+
         <div class="o-code-block">
           <pre class="language-html"><code>&lt;nav class="o-nav o-bg-light"&gt;
   &lt;div class="o-box-fluid"&gt;
-      &lt;a href="#" class="o-nav-logo"&gt;Menu&lt;/a&gt;
-      &lt;div class="o-menu"&gt;
-        &lt;ul class="o-list"&gt;
-          &lt;li class="o-nav-item o-dropdown"&gt;
-            &lt;a href="#" class="o-nav-link"&gt;Produits&lt;/a&gt;
-            &lt;ul class="o-dropdown-menu"&gt;
-              &lt;li&gt;&lt;a href="#" class="o-dropdown-item"&gt;Logiciels&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="#" class="o-dropdown-item"&gt;Applications&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Support&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
+    &lt;a href="#" class="o-nav-logo"&gt;Menu&lt;/a&gt;
+    &lt;button class="o-burger"&gt;
+      &lt;span class="o-burger-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="o-menu"&gt;
+      &lt;ul class="o-nav-list"&gt;
+        &lt;li class="o-nav-item o-dropdown"&gt;
+          &lt;a href="#" class="o-nav-link"&gt;Produits&lt;/a&gt;
+          &lt;ul class="o-dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#" class="o-dropdown-item"&gt;Logiciels&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#" class="o-dropdown-item"&gt;Applications&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Support&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
         </div>
@@ -293,82 +330,65 @@
       <!-- Couleurs -->
       <section id="colors" class="o-mb-6">
         <h2 class="o-text-dark o-mb-4">Variantes de couleur</h2>
+        <p class="o-mb-4">
+          Le système de couleur Orochi vous permet de modifier facilement le thème de votre barre de navigation.  
+          Utilisez les classes utilitaires comme <code>o-bg-dark</code>, <code>o-bg-primary</code> ou
+          <code>o-bg-danger</code> pour correspondre à votre identité visuelle.
+        </p>
+
         <div class="o-row o-g-3">
           <div class="o-col-md-6">
-            <nav class="o-nav o-bg-danger o-text-bg-danger">
-              <div class="o-box-fluid">
-                <!-- Contenu navbar -->
-              </div>
+            <nav class="o-nav o-bg-danger o-z-1">
+              <div class="o-box-fluid"></div>
             </nav>
           </div>
           <div class="o-col-md-6">
-            <nav class="o-nav o-bg-dark o-text-bg-dark">
-              <div class="o-box-fluid">
-                <!-- Contenu navbar -->
-              </div>
+            <nav class="o-nav o-bg-dark o-z-1">
+              <div class="o-box-fluid"></div>
             </nav>
           </div>
         </div>
+
         <div class="o-code-block">
           <pre class="language-html"><code>&lt;!-- Danger --&gt;
-&lt;nav class="o-nav o-bg-danger o-text-bg-danger"&gt;...&lt;/nav&gt;
+&lt;nav class="o-nav o-bg-danger"&gt;...&lt;/nav&gt;
 
 &lt;!-- Dark --&gt;
-&lt;nav class="o-nav o-bg-dark o-text-bg-dark"&gt;...&lt;/nav&gt;</code></pre>
+&lt;nav class="o-nav o-bg-dark"&gt;...&lt;/nav&gt;</code></pre>
         </div>
       </section>
 
       <!-- Positionnement -->
       <section id="position" class="o-mb-6">
         <h2 class="o-text-dark o-mb-4">Position fixed</h2>
-        <div class="o-mb-4">
-          <!-- <nav class="o-nav o-fixed o-top-0 o-w-100">
-                Contenu navbar -->
-          </nav>
-        </div>
+        <p class="o-mb-4">
+          Grâce aux classes de positionnement d’Orochi, vous pouvez fixer votre barre de navigation en haut de la page
+          (<code>o-nav-fixed</code>) pour la garder visible lors du défilement.  
+          Cela améliore la navigation et l’expérience utilisateur sur les sites à longue page.
+        </p>
+
         <div class="o-code-block">
-          <pre class="language-html"><code>&lt;nav class="o-nav o-fixed o-top-0 o-w-100"&gt;
+          <pre class="language-html"><code>&lt;nav class="o-nav o-fixed"&gt;
   &lt;!-- Contenu navigation --&gt;
 &lt;/nav&gt;</code></pre>
         </div>
       </section>
     </main>
-    <!-- Colonne droite (cachée sur petit écran) -->
+
+    <!-- Colonne droite -->
     <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
       <h5>Sur cette page</h5>
       <ul class="o-list-unstyled">
-        <li><a href="#">Aperçu</a></li>
-        <li><a href="#">Accessibilité</a></li>
-        <li><a href="#">CSS</a></li>
+        <li><a href="#basic">Navigation de base</a></li>
+        <li><a href="#dropdown">Avec dropdown</a></li>
+        <li><a href="#colors">Variantes de couleur</a></li>
+        <li><a href="#position">Position fixed</a></li>
       </ul>
     </div>
-
   </div>
-  </div>
-
-  <footer class="o-bg-dark o-text-light o-py-4 o-mt-5">
-    <div class="o-d-flex o-justify-center o-gap-3">
-      <a href="#" class="o-text-white o-hover-text-primary">
-        <i class="bx bxl-facebook-circle o-text-h3"></i>
-      </a>
-      <a href="#" class="o-text-white o-hover-text-primary">
-        <i class="bx bxl-twitter o-text-h3"></i>
-      </a>
-      <a href="#" class="o-text-white o-hover-text-primary">
-        <i class="bx bxl-github o-text-h3"></i>
-      </a>
-    </div>
-    <div class="o-box o-mt-2">
-      <div class="o-text-center">
-        <p class="o-mb-0">
-          &copy; 2025 Orochi CSS - Tous droits réservés
-        </p>
-      </div>
-    </div>
-  </footer>
 
   <script src="../../../src/orochi.js"></script>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
 </body>

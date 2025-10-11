@@ -130,42 +130,43 @@ code {
     padding: 10px !important;
   }
 }
-
-/* Réorganisation de la navbar sur mobile */
 @media (max-width: 767.98px) {
-  .o-nav .o-box-fluid {
+  /* cadence sur ton nav ciblé - plus spécifique */
+  nav#main-nav.o-nav > .o-box-fluid {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 0.5rem; /* optionnel */
   }
 
-  /* Sidebar toggler à gauche */
-  .sidebar-toggler {
+  /* toggler à gauche */
+  nav#main-nav .sidebar-toggler {
     order: 1;
     flex: 0 0 auto;
   }
 
-  /* Logo au centre */
-  .o-nav-logo {
+  /* logo centré : on le transforme en flex item qui prend l'espace disponible,
+     puis on center son contenu horizontalement */
+  nav#main-nav .o-nav-logo {
     order: 2;
-    flex: 1 1 auto;
-    text-align: center;
+    flex: 1 1 auto;        /* prend l'espace disponible */
+    display: flex;         /* pour centrer icône + texte */
     justify-content: center;
-    margin-right: 0;
+    align-items: center;
+    text-align: center;
+    margin: 0;             /* annule margins hérités */
   }
 
-  /* Burger à droite */
-  .o-burger {
+  /* burger à droite */
+  nav#main-nav .o-burger {
     order: 3;
     flex: 0 0 auto;
-    margin-left: 0;
   }
 
-  /* Le menu mobile prend toute la largeur en dessous */
-  .o-menu {
+  /* menu sous le logo (plein largeur) */
+  nav#main-nav .o-menu {
     order: 4;
     flex: 1 1 100%;
     width: 100%;
   }
 }
-

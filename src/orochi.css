@@ -1477,6 +1477,7 @@
 }
 
 /* Thèmes de navigation */
+
 .o-nav.o-nav-dark {
   background-color: var(--o-bg-dark);
 }
@@ -1510,6 +1511,10 @@
 .o-nav.o-nav-dark .o-dropdown-item:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--o-white);
+}
+
+.o-nav.o-bg-light .o-menu{
+  background-color: var(--o-bg-light);
 }
 
 /* Navigation transparente */
