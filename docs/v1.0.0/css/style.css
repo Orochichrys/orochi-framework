@@ -16,40 +16,15 @@ footer{
   background-color: var(--o-light);
   text-align: center;
 }
-@media (min-width:992px) {
-  .sidebar-left{
-    position: fixed;
-    top: 56px;
-    left: 0;
-    height: calc(100vh - 56px);
-    width: 16.6667%;
-    padding: 1rem;
-    z-index: 100;
-}
-  .sidebar-right{
-    position: fixed;
-    top: 56px;
-    right: 0;
-    height: calc(100vh - 56px);
-    width: 16.6667%;
-    padding: 1rem;
-    z-index: 100;
-}
-.main-content{
-  margin-left:16.6667%;
-  margin-right: 16.6667%;
-  width: 66.6667%;
-}
 
-}
 code {
   font-family: 'Courier New', Courier, monospace;
   color: var(--o-danger);
 }
+
 /* Custom code blocks */
 .o-code-block {
   position: relative;
-  /* margin: 1.5rem 0; */
   border-radius: var(--o-rounded-md);
   background: var(--o-dark) !important;
   width: 100%;
@@ -83,7 +58,7 @@ code {
 }
 
 /* Bouton toggle de la sidebar */
-.sidebar-toggler {
+.sidebar-toggler{
   background: none;
   border: none;
   padding: 0.5rem;
@@ -91,7 +66,7 @@ code {
   cursor: pointer;
   font-size: 1.25rem;
   color: inherit;
-  display: none; /* caché par défaut sur desktop */
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -104,35 +79,93 @@ code {
   opacity: 0.8;
 }
 
-/* Responsive pour mobile (<768px) */
-@media (max-width: 767.98px) {
-  /* Affiche le bouton toggle */
-  .sidebar-toggler {
-    display: inline-flex;
-    margin-right: 0.5rem;
-  }
-
-  #sidebar .o-rounded-lg {
-    border: none;
-  }
-
-  #sidebar {
+/* Desktop - Sidebar left et right */
+@media (min-width: 992px) {
+  .sidebar-left {
     position: fixed;
-    top: 60px;
+    top: 56px;
     left: 0;
-    width: 80%;
-    height: 100vh; /* Prend toute la hauteur visible */
-    background: white;
-    padding-top: 2rem;
-    z-index: 2000;
-    overflow-y: auto;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    height: calc(100vh - 56px);
+    width: 16.6667%;
+    padding: 1rem;
+    z-index: 100;
   }
 
-  /* Quand actif, ramène la sidebar dans l’écran */
-  #sidebar.active {
-    transform: translateX(0);
+  .sidebar-right {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    height: calc(100vh - 56px);
+    width: 16.6667%;
+    padding: 1rem;
+    z-index: 100;
+  }
+
+  .main-content {
+    margin-left: 16.6667%;
+    margin-right: 16.6667%;
+    width: 66.6667%;
   }
 }
+@media (max-width: 991.98px) {
+  .sidebar-left {
+    position: fixed !important;
+    left: 0 !important;
+    width: 75% !important;
+    height: 100vh !important;
+    background: white !important;
+    z-index: 99999 !important;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3) !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease !important;
+    display: block !important;
+  }
+
+  .sidebar-left.active {
+    transform: translateX(0) !important;
+  }
+
+  .sidebar-toggler {
+    display: block !important;
+    padding: 10px !important;
+  }
+}
+
+/* Réorganisation de la navbar sur mobile */
+@media (max-width: 767.98px) {
+  .o-nav .o-box-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Sidebar toggler à gauche */
+  .sidebar-toggler {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  /* Logo au centre */
+  .o-nav-logo {
+    order: 2;
+    flex: 1 1 auto;
+    text-align: center;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  /* Burger à droite */
+  .o-burger {
+    order: 3;
+    flex: 0 0 auto;
+    margin-left: 0;
+  }
+
+  /* Le menu mobile prend toute la largeur en dessous */
+  .o-menu {
+    order: 4;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
