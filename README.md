@@ -23,7 +23,7 @@ It combines the power of CSS Grid, Flexbox, and smart utility classes with a sim
 ### Via CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.orochi.dev/css/orochi.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.css">
 ```
 
 ### Via NPM _(coming soon)_
