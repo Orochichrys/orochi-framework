@@ -17,12 +17,12 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="o-nav o-nav-sm o-shadow o-nav-fixed">
+  <nav class="o-nav  o-shadow o-nav-fixed">
     <div class="o-box-fluid">
       <button class="sidebar-toggler">
         <i class="bx bx-grid-alt"></i>
       </button>
-      <a href="index.html" class="o-nav-logo"><i class="fas fa-dragon o-text-primary"></i>Orochi</a>
+      <a href="../../../index.html" class="o-nav-logo"><i class="fas fa-dragon o-text-primary"></i>Orochi</a>
       <button class="o-burger">
         <span class="o-burger-icon"></span>
       </button>
@@ -38,12 +38,7 @@
         </ul>
       </div>
 
-      <!-- Barre de recherche -->
-      <form class="o-d-flex" role="search">
-        <input type="text" class="o-form-input o-me-2 o-form-search" placeholder="Rechercher..."
-          aria-label="Rechercher" />
-        <button type="submit" class="o-btn o-btn-primary">🔍</button>
-      </form>
+
     </div>
   </nav>
 
@@ -53,7 +48,7 @@
 
       <!-- Colonne gauche (cachée sur petit écran) -->
       <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
-        
+
         <!-- Section : Commencer -->
         <div class="o-mb-3">
           <h4 class="o-text-primary o-mb-2 o-text-bold o-text-uppercase">
@@ -170,7 +165,7 @@
           <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
             ⚙️ Utilitaires
           </h4>
-          
+
           <a href="/docs/v1.0.0/utilitaires/position.html"
             class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
             <i class="bx bx-move o-me-2"></i>Positionnement
@@ -212,91 +207,98 @@
           </a>
         </div>
       </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="o-col-12 o-col-lg-9 o-p-4 main-content o-mt-5">
+      <h1 class="o-title o-text-primary o-mb-4">📥 Installation d'Orochi</h1>
+      <p class="o-lead">Découvrez les différentes méthodes pour installer et commencer à utiliser Orochi Framework dans
+        vos projets.</p>
+
+      <div class="o-alert o-alert-warning o-text-center o-mb-4" id="alert-message">
+        Orochi est encore en développement actif. Certaines fonctionnalités peuvent évoluer.
       </div>
 
-      <!-- Contenu principal -->
-      <main class="o-col-12 o-col-lg-9 o-p-4 main-content o-mt-5">
-        <h1 class="o-title o-text-primary o-mb-4">📥 Installation d'Orochi</h1>
-        <p class="o-lead">Découvrez les différentes méthodes pour installer et commencer à utiliser Orochi Framework dans vos projets.</p>
-        
-        <div class="o-alert o-alert-warning o-text-center o-mb-4" id="alert-message">
-          Orochi est encore en développement actif. Certaines fonctionnalités peuvent évoluer.
+      <!-- Via CDN -->
+      <section id="cdn" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Via CDN</h2>
+        <div class="o-alert o-alert-danger o-mb-4">
+          <strong>Attention :</strong> Cette version est encore instable et peut changer sans préavis.
+        </div>
+        <p class="o-mb-4">Pour une intégration rapide, vous pouvez utiliser le CDN en ajoutant ces liens dans le
+          <code>&lt;head&gt;</code> de votre projet :
+        </p>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-4">
+          <pre
+            class="language-html"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi-icons.min.css"&gt;</code></pre>
         </div>
 
-        <!-- Via CDN -->
-        <section id="cdn" class="o-mb-6">
-          <h2 class="o-section-title o-text-dark o-mb-4">Via CDN</h2>
-          <div class="o-alert o-alert-danger o-mb-4">
-            <strong>Attention :</strong> Cette version est encore instable et peut changer sans préavis.
-          </div>
-          <p class="o-mb-4">Pour une intégration rapide, vous pouvez utiliser le CDN en ajoutant ces liens dans le <code>&lt;head&gt;</code> de votre projet :</p>
+        <p>Et ce script avant la fermeture de la balise <code>&lt;/body&gt;</code> :</p>
 
-          <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-4">
-            <pre class="language-html"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.css"&gt;
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi-icons.min.css"&gt;</code></pre>
-          </div>
-          
-          <p>Et ce script avant la fermeture de la balise <code>&lt;/body&gt;</code> :</p>
-          
-          <div class="o-code-block o-bg-light o-p-3 o-rounded">
-            <pre class="language-html"><code>&lt;script src="https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.js"&gt;&lt;/script&gt;</code></pre>
-          </div>
-        </section>
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+          <pre
+            class="language-html"><code>&lt;script src="https://cdn.jsdelivr.net/gh/Orochichrys/orochi-framework@main/dist/orochi.min.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+      </section>
 
-        <!-- Installation locale -->
-        <section id="local" class="o-mb-6">
-          <h2 class="o-section-title o-text-dark o-mb-4">Installation locale</h2>
-          <div class="o-alert o-alert-info o-mb-4">
-            Téléchargez la dernière version depuis GitHub et incluez les fichiers CSS et JS dans votre projet.
-          </div>
-          
-          <p class="o-mb-4">1. Téléchargez la dernière version depuis le <a href="https://github.com/Orochichrys/orochi-framework" class="o-text-primary">dépôt GitHub</a>.</p>
-          
-          <p class="o-mb-4">2. Décompressez l'archive et copiez les fichiers dans votre projet.</p>
-          
-          <p class="o-mb-4">3. Ajoutez les liens vers les fichiers CSS dans le <code>&lt;head&gt;</code> :</p>
-          
-          <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-4">
-            <pre class="language-html"><code>&lt;link rel="stylesheet" href="/chemin/vers/orochi.css"&gt;
+      <!-- Installation locale -->
+      <section id="local" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Installation locale</h2>
+        <div class="o-alert o-alert-info o-mb-4">
+          Téléchargez la dernière version depuis GitHub et incluez les fichiers CSS et JS dans votre projet.
+        </div>
+
+        <p class="o-mb-4">1. Téléchargez la dernière version depuis le <a
+            href="https://github.com/Orochichrys/orochi-framework" class="o-text-primary">dépôt GitHub</a>.</p>
+
+        <p class="o-mb-4">2. Décompressez l'archive et copiez les fichiers dans votre projet.</p>
+
+        <p class="o-mb-4">3. Ajoutez les liens vers les fichiers CSS dans le <code>&lt;head&gt;</code> :</p>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-4">
+          <pre class="language-html"><code>&lt;link rel="stylesheet" href="/chemin/vers/orochi.css"&gt;
 &lt;link rel="stylesheet" href="/chemin/vers/orochi-icons.css"&gt;</code></pre>
-          </div>
-          
-          <p class="o-mb-4">4. Ajoutez le script JavaScript avant la fermeture de la balise <code>&lt;/body&gt;</code> :</p>
-          
-          <div class="o-code-block o-bg-light o-p-3 o-rounded">
-            <pre class="language-html"><code>&lt;script src="/chemin/vers/orochi.js"&gt;&lt;/script&gt;</code></pre>
-          </div>
-        </section>
+        </div>
 
-        <!-- Package NPM -->
-        <section id="npm" class="o-mb-6">
-          <h2 class="o-section-title o-text-dark o-mb-4">Package NPM</h2>
-          <div class="o-alert o-alert-warning o-mb-4">
-            Le package NPM sera disponible à partir de la version 1.1+
-          </div>
-          
-          <p class="o-mb-4">Une fois disponible, vous pourrez installer Orochi via NPM avec la commande :</p>
-          
-          <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-4">
-            <pre class="language-bash"><code>npm install orochi-css</code></pre>
-          </div>
-          
-          <p class="o-mb-4">Puis importer les fichiers dans votre projet :</p>
-          
-          <div class="o-code-block o-bg-light o-p-3 o-rounded">
-            <pre class="language-javascript"><code>import 'orochi-css/dist/orochi.css';
+        <p class="o-mb-4">4. Ajoutez le script JavaScript avant la fermeture de la balise <code>&lt;/body&gt;</code> :
+        </p>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+          <pre class="language-html"><code>&lt;script src="/chemin/vers/orochi.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- Package NPM -->
+      <section id="npm" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Package NPM</h2>
+        <div class="o-alert o-alert-warning o-mb-4">
+          Le package NPM sera disponible à partir de la version 1.1+
+        </div>
+
+        <p class="o-mb-4">Une fois disponible, vous pourrez installer Orochi via NPM avec la commande :</p>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-4">
+          <pre class="language-bash"><code>npm install orochi-css</code></pre>
+        </div>
+
+        <p class="o-mb-4">Puis importer les fichiers dans votre projet :</p>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+          <pre class="language-javascript"><code>import 'orochi-css/dist/orochi.css';
 import 'orochi-css/dist/orochi-icons.css';
 import 'orochi-css/dist/orochi.js';</code></pre>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Structure de base -->
-        <section id="structure" class="o-mb-6">
-          <h2 class="o-section-title o-text-dark o-mb-4">Structure HTML de base</h2>
-          <p class="o-mb-4">Voici un exemple de structure HTML de base pour commencer avec Orochi :</p>
-          
-          <div class="o-code-block o-bg-light o-p-3 o-rounded">
-            <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+      <!-- Structure de base -->
+      <section id="structure" class="o-mb-6">
+        <h2 class="o-section-title o-text-dark o-mb-4">Structure HTML de base</h2>
+        <p class="o-mb-4">Voici un exemple de structure HTML de base pour commencer avec Orochi :</p>
+
+        <div class="o-code-block o-bg-light o-p-3 o-rounded">
+          <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="fr"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -312,26 +314,31 @@ import 'orochi-css/dist/orochi.js';</code></pre>
   &lt;script src="/chemin/vers/orochi.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-          </div>
-        </section>
-
-        <div class="o-alert o-alert-success">
-          <h4 class="o-alert-heading">✅ Prêt à commencer !</h4>
-          <p class="o-mb-0">Vous avez maintenant installé Orochi Framework. Consultez la documentation des composants pour découvrir toutes les possibilités.</p>
         </div>
-      </main>
+      </section>
 
-      <!-- Colonne droite (cachée sur petit écran) -->
-      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
-        <h5 class="o-text-dark o-mb-3">Sur cette page</h5>
-        <ul class="o-list-unstyled">
-          <li class="o-mb-2"><a href="#cdn" class="o-text-dark o-text-decoration-none o-hover-text-primary">Via CDN</a></li>
-          <li class="o-mb-2"><a href="#local" class="o-text-dark o-text-decoration-none o-hover-text-primary">Installation locale</a></li>
-          <li class="o-mb-2"><a href="#npm" class="o-text-dark o-text-decoration-none o-hover-text-primary">Package NPM</a></li>
-          <li class="o-mb-2"><a href="#structure" class="o-text-dark o-text-decoration-none o-hover-text-primary">Structure de base</a></li>
-        </ul>
+      <div class="o-alert o-alert-success">
+        <h4 class="o-alert-heading">✅ Prêt à commencer !</h4>
+        <p class="o-mb-0">Vous avez maintenant installé Orochi Framework. Consultez la documentation des composants pour
+          découvrir toutes les possibilités.</p>
       </div>
+    </main>
+
+    <!-- Colonne droite (cachée sur petit écran) -->
+    <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+      <h5 class="o-text-dark o-mb-3">Sur cette page</h5>
+      <ul class="o-list-unstyled">
+        <li class="o-mb-2"><a href="#cdn" class="o-text-dark o-text-decoration-none o-hover-text-primary">Via CDN</a>
+        </li>
+        <li class="o-mb-2"><a href="#local" class="o-text-dark o-text-decoration-none o-hover-text-primary">Installation
+            locale</a></li>
+        <li class="o-mb-2"><a href="#npm" class="o-text-dark o-text-decoration-none o-hover-text-primary">Package
+            NPM</a></li>
+        <li class="o-mb-2"><a href="#structure"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary">Structure de base</a></li>
+      </ul>
     </div>
+  </div>
   </div>
 
   <script src="../../../src/orochi.js"></script>

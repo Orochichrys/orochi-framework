@@ -1287,8 +1287,6 @@
   }
 } */
 
-
-
 /* Navigation */
 .o-nav {
   background-color: var(--o-bg-white);
@@ -1296,6 +1294,7 @@
   padding-bottom: var(--space-3);
   z-index: 9999;
   transition: all 0.3s ease;
+  position: relative; /* AJOUTÉ pour que le menu mobile se positionne correctement */
 }
 
 /* Navigation fixe */
@@ -1327,7 +1326,6 @@
 }
 
 /* Logo/Brand */
-
 .o-nav-logo {
   font-size: 1.5rem;
   font-weight: 600;
@@ -1338,7 +1336,6 @@
   margin-right: var(--space-4);
   transition: color 0.3s ease;
 }
-
 
 .o-nav-logo:hover {
   color: var(--o-secondary);
@@ -1359,14 +1356,16 @@
   font-size: 1.5rem;
   color: var(--o-dark);
   margin-left: auto;
+  order: 3; /* Place le burger après le menu sur desktop */
 }
 
-/* Menu principal */
+/* Menu principal - À GAUCHE par défaut comme Bootstrap */
 .o-menu {
   display: flex;
   align-items: center;
   gap: 2rem;
   flex-grow: 1;
+  order: 2; /* Place le menu entre le logo et le burger */
 }
 
 /* Liste des éléments */
@@ -1376,7 +1375,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-grow: 1;
+  flex-grow: 0; /* Permet au menu de rester à gauche */
 }
 
 /* Éléments de navigation */
@@ -1433,7 +1432,6 @@
 .o-dropdown-menu {
   position: absolute;
   top: 100%;
-  /* colle bien le menu déroulant */
   left: 0;
   display: none;
   background: var(--o-bg-white);
@@ -1444,9 +1442,7 @@
   z-index: 1000;
   border-radius: var(--o-rounded);
   margin-top: 0;
-  /* supprimé pour éviter le gap */
 }
-
 
 .o-dropdown-item {
   padding: 0.75rem 1rem;
@@ -1483,10 +1479,9 @@
 /* Thèmes de navigation */
 .o-nav.o-nav-dark {
   background-color: var(--o-bg-dark);
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
-.o-nav.o-nav-dark .o-nav.o-nav-dark .o-nav-logo {
+.o-nav.o-nav-dark .o-nav-logo {
   color: var(--o-white);
 }
 
@@ -1523,7 +1518,7 @@
   border-bottom: none;
 }
 
-.o-nav.o-nav-transparent .o-nav.o-nav-transparent .o-nav-logo {
+.o-nav.o-nav-transparent .o-nav-logo {
   color: var(--o-white);
 }
 
@@ -1545,7 +1540,7 @@
   padding-bottom: var(--space-2);
 }
 
-.o-nav.o-nav-sm .o-nav.o-nav-sm .o-nav-logo {
+.o-nav.o-nav-sm .o-nav-logo {
   font-size: 1.25rem;
 }
 
@@ -1554,33 +1549,37 @@
   padding-bottom: var(--space-4);
 }
 
-.o-nav.o-nav-lg .o-nav.o-nav-lg .o-nav-logo {
+.o-nav.o-nav-lg .o-nav-logo {
   font-size: 1.75rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
   .o-nav {
-    padding: var(--space-2) var(--space-3);
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
   }
 
   .o-burger {
     display: block;
   }
 
+  /* CORRECTION MAJEURE : Menu mobile collé à la navbar */
   .o-menu {
     position: absolute;
     display: none;
     flex-direction: column;
     height: auto;
-    top: 100%;
+    top: 100%; /* Colle le menu juste en dessous de la navbar */
     right: 0;
     left: 0;
     width: 100%;
     background-color: var(--o-bg-white);
     border-top: var(--o-border);
     padding: var(--space-3) 0;
+    z-index: 9998; /* Juste en dessous de la navbar */
+    max-height: calc(100vh - 100%); /* Limite la hauteur */
+    overflow-y: auto; /* Scroll si nécessaire */
   }
 
   .o-nav.o-nav-dark .o-menu {
@@ -1653,11 +1652,7 @@
   }
 
   .o-nav.o-nav-fixed .o-menu {
-    position: fixed;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 9998;
+    position: absolute; /* CHANGÉ de fixed à absolute */
   }
 
   /* Compensation pour le body quand la nav est fixe */
@@ -1737,11 +1732,13 @@
   0% {
     transform: translateX(-100%);
   }
-
   100% {
     transform: translateX(100%);
   }
 }
+
+
+
 
 /* Boutons */
 .o-btn {
