@@ -234,8 +234,8 @@
 
       <!--coprs -->
       <section id="corps" class="o-mb-4">
-        <h3 class="o-text-dark o-mb-3">Corps</h3>
-        <p class="o-card-text">
+        <h3 class="o-mb-3">Corps</h3>
+        <p class="o-mb-3">
           L'élément de base d'une carte est le <code>.o-card-body</code>. Utilisez-le chaque fois que vous avez
           besoin d'une section rembourrée dans une carte.
         </p>
@@ -255,8 +255,8 @@
 
       <!-- Carte simple -->
       <section id="basic" class="o-mb-4">
-        <h3 class="o-text-dark o-mb-3">Titres, textes et liens</h3>
-        <p class="o-card-text">
+        <h3 class="o-mb-3">Titres, textes et liens</h3>
+        <p class="o-mb-3">
           Les titres de carte s’ajoutent en appliquant <code>.o-card-title</code> à une balise
           <code>&lt;h*&gt;</code>. Les sous-titres utilisent <code>.o-card-subtitle</code> sur une balise
           <code>&lt;h*&gt;</code> également. Placez titres et sous-titres dans un <code>.o-card-body</code> pour
@@ -278,7 +278,7 @@
           <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
   &lt;div class="o-card-body"&gt;
     &lt;h5 class="o-card-title"&gt;Titre de la carte&lt;/h5&gt;
-    &lt;h6 class="o-card-title"&gt;Sous-titre de la carte&lt;/h6&gt;
+    &lt;h6 class="o-card-subtitle"&gt;Sous-titre de la carte&lt;/h6&gt;
     &lt;p class="o-card-text"&gt;Voici un exemple de texte concis pour illustrer le contenu principal de la carte et compléter son titre.&lt;/p&gt;
     &lt;a class="o-card-link"&gt;Lien de la carte &lt;/a&gt;
     &lt;a class="o-card-link"&gt;Un autre lien &lt;/a&gt;
@@ -289,8 +289,8 @@
 
       <!-- Image en haut -->
       <section id="img-top" class="o-mb-4">
-        <h3 class="o-text-dark o-mb-3">Carte avec image en haut</h3>
-        <p class="o-card-text">
+        <h3 class="o-mb-3">Carte avec image en haut</h3>
+        <p class="o-mb-3">
           La classe <code>.o-card-img-top</code> permet d’insérer une image en haut de la carte,
           avec les coins supérieurs arrondis automatiquement.
         </p>
@@ -303,8 +303,8 @@
         </div>
         <div class="o-code-block">
           <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
+  &lt;img src="..." class="o-card-img-top" alt="..."&gt;
   &lt;div class="o-card-body"&gt;
-    &lt;img src="..." class="o-card-img-top" alt="..."&gt;
     &lt;h4 class="o-card-title"&gt;Titre&lt;/h4&gt;
     &lt;p class="o-card-text"&gt;Texte descriptif&lt;/p&gt;
   &lt;/div&gt;
@@ -314,8 +314,8 @@
 
       <!--Image en bas -->
       <section id="img-bottom" class="o-mb-4">
-        <h3 class="o-text-dark o-mb-3">Carte avec image en bas</h3>
-        <p class="o-card-text">
+        <h3 class="o-mb-3">Carte avec image en bas</h3>
+        <p class="o-mb-3">
           La classe <code>.o-card-img-bottom</code> permet d’ajouter une image en bas de la carte, sous le contenu
           principal. Placez simplement la balise <code>&lt;img&gt;</code> après le <code>.o-card-body</code> :
           l’image occupera toute la largeur et les coins inférieurs seront arrondis automatiquement.
@@ -339,9 +339,9 @@
       </section>
 
       <!-- List group -->
-      <section id="list-group" class="o-mb-6">
-        <h3 class="o-text-dark o-mb-3">List group dans carte</h3>
-        <p class="o-card-text">
+      <section id="list-group" class="o-mb-4">
+        <h3 class="o-mb-3">List group dans carte</h3>
+        <p class="o-mb-3">
           Créez des listes de contenu dans une carte en utilisant un groupe de listes avec
           <code>.o-list-group</code> et <code>.o-list-group-item</code>.
           Ajoutez <code>.o-list-group-flush</code> pour supprimer les bordures extérieures et aligner la liste avec
@@ -406,8 +406,8 @@
       </section>
 
       <section id="complet" class="o-mb-4">
-        <h3 class="o-text-dark o-mb-3">Évier de cuisine</h3>
-        <p class="o-card-text">
+        <h3 class="o-mb-3">Évier de cuisine</h3>
+        <p class="o-mb-3">
           Combinez plusieurs types de contenu pour créer la carte dont vous avez besoin, ou intégrez-y tout. Vous
           trouverez ci-dessous des styles d'image, des blocs, des styles de texte et un groupe de listes, le tout
           dans une carte à largeur fixe.
@@ -451,11 +451,11 @@
 
       <!-- 2. En-tête et pied -->
       <section id="header-footer" class="o-mb-4">
-        <h3 class="o-text-dark o-mb-3">Carte avec en-tête et pied</h3>
-        <p class="o-card-text">
+        <h3 class="o-mb-3">Carte avec en-tête et pied</h3>
+        <p class="o-mb-3">
           Ajoutez un en-tête et/ou un pied de page facultatif dans une carte.
         </p>
-        <div class="o-card">
+        <div class="o-card o-mb-3">
           <div class="o-card-header">En-tête</div>
           <div class="o-card-body">
             <h5 class="o-card-title">Traitement spécial du titre</h5>
@@ -475,13 +475,13 @@
 
 
       <!-- 5. Overlay sur image -->
-      <section id="overlay" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Carte avec overlay</h2>
-        <p class="o-card-text">
+      <section id="overlay" class="o-mb-4">
+        <h2 class="o-mb-3">Carte avec overlay</h2>
+        <p class="o-mb-3">
           Combinez <code>.o-card-bg-image</code> (fond image) et <code>.o-card-img-overlay</code>
           pour superposer du texte ou des boutons sur l’image.
         </p>
-        <div class="o-card o-card-bg-image" style="background-image:url('https://picsum.photos/400/200')">
+        <div class="o-card o-card-bg-image o-mb-3" style="background-image:url('https://picsum.photos/400/200')">
           <div class="o-card-img-overlay">
             <h3 class="o-card-title o-text-light">Overlay</h3>
             <p class="o-card-text o-text-light">Texte sur image</p>
@@ -496,18 +496,17 @@
       </section>
 
       <!-- 6. Tailles sm et lg -->
-      <section id="sizes" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Tailles de carte</h2>
-        <p class="o-card-text">
+      <section id="sizes" class="o-mb-4">
+        <h2 class="o-mb-3">Tailles de carte</h2>
+        <p>
           Les classes <code>.o-card-sm</code> et <code>.o-card-lg</code> adaptent padding et typographie
           pour obtenir des cartes plus compactes ou plus généreuses.
         </p>
-        <div class="o-row o-g-4">
+        <div class="o-row o-g-3">
           <div class="o-col-md-4">
             <div class="o-card o-card-sm">
               <div class="o-card-body">
                 <h5 class="o-card-title">Petite</h5>
-                <p class="o-card-text">Compacte.</p>
               </div>
             </div>
           </div>
@@ -521,13 +520,12 @@
           <div class="o-col-md-4">
             <div class="o-card o-card-lg">
               <div class="o-card-body">
-                <h5 class="o-card-title">Grande</h5>
-                <p class="o-card-text">Spacieuse.</p>
+                <h5 class="o-card-title">Grande</h5>  
               </div>
             </div>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card o-card-sm"&gt;…&lt;/div&gt;
 &lt;div class="o-card"&gt;…&lt;/div&gt;
 &lt;div class="o-card o-card-lg"&gt;…&lt;/div&gt;</code></pre>
@@ -535,15 +533,15 @@
       </section>
 
       <!-- 7. Variantes colorées -->
-      <section id="colors" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Variantes colorées</h2>
-        <p class="o-card-text">
+      <section id="colors" class="o-mb-4">
+        <h2 class="o-mb-3">Variantes colorées</h2>
+        <p>
           Changez le fond et la couleur du texte avec <code>.o-card-primary</code>, <code>.o-card-success</code>,
           <code>.o-card-warning</code>, <code>.o-card-danger</code>, <code>.o-card-info</code>, etc.
         </p>
         <div class="o-row o-g-3">
           <div class="o-col-md-4">
-            <div class="o-card o-text-bg-primary">
+            <div class="o-card o-text-bg-primary o-h-100">
               <div class="o-card-header">
                 En-tête
               </div>
@@ -555,7 +553,7 @@
             </div>
           </div>
           <div class="o-col-md-4">
-            <div class="o-card o-text-bg-secondary">
+            <div class="o-card o-text-bg-secondary o-h-100">
               <div class="o-card-header">
                 En-tête
               </div>
@@ -567,7 +565,7 @@
             </div>
           </div>
           <div class="o-col-md-4">
-            <div class="o-card o-text-bg-success">
+            <div class="o-card o-text-bg-success o-h-100">
               <div class="o-card-header">
                 En-tête
               </div>
@@ -579,7 +577,7 @@
             </div>
           </div>
           <div class="o-col-md-4">
-            <div class="o-card  o-text-bg-danger">
+            <div class="o-card  o-text-bg-danger o-h-100">
               <div class="o-card-header">
                 En-tête
               </div>
@@ -591,7 +589,7 @@
             </div>
           </div>
           <div class="o-col-md-4">
-            <div class="o-card  o-text-bg-warning">
+            <div class="o-card  o-text-bg-warning o-h-100">
               <div class="o-card-header">
                 En-tête
               </div>
@@ -603,7 +601,7 @@
             </div>
           </div>
           <div class="o-col-md-4">
-            <div class="o-card  o-text-bg-info">
+            <div class="o-card  o-text-bg-info o-h-100">
               <div class="o-card-header">
                 En-tête
               </div>
@@ -615,7 +613,7 @@
             </div>
           </div>
           <div class="o-col-md-4">
-            <div class="o-card  o-text-bg-light">
+            <div class="o-card  o-text-bg-light o-h-100">
               <div class="o-card-header">
                 En-tête
               </div>
@@ -627,7 +625,7 @@
             </div>
           </div>
           <div class="o-col-md-4">
-            <div class="o-card  o-text-bg-dark">
+            <div class="o-card  o-text-bg-dark o-h-100">
               <div class="o-card-header">
                 En-tête
               </div>
@@ -639,7 +637,7 @@
             </div>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card o-text-bg-primary"&gt;…&lt;/div&gt;
 &lt;div class="o-card o-text-bg-success"&gt;…&lt;/div&gt;
 &lt;div class="o-card o-text-bg-danger"&gt;…&lt;/div&gt;</code></pre>
@@ -647,9 +645,9 @@
       </section>
 
       <!-- 8. Variantes outline -->
-      <section id="outlines" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Variantes outline</h2>
-        <p class="o-card-text">
+      <section id="outlines" class="o-mb-4">
+        <h2 class="o-mb-3">Variantes outline</h2>
+        <p>
           Utilisez <code>.o-card-outline-primary</code>, <code>.o-card-outline-secondary</code>, etc.
           pour un look épuré avec bordure colorée et fond transparent.
         </p>
@@ -676,7 +674,7 @@
             </div>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card o-card-outline-primary"&gt;…&lt;/div&gt;
 &lt;div class="o-card o-card-outline-success"&gt;…&lt;/div&gt;
 &lt;div class="o-card o-card-outline-danger"&gt;…&lt;/div&gt;</code></pre>
@@ -684,13 +682,13 @@
       </section>
 
       <!-- 9. Effets hover -->
-      <section id="hover" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Effets au survol</h2>
-        <p class="o-card-text">
+      <section id="hover" class="o-mb-4">
+        <h2 class="o-mb-3">Effets au survol</h2>
+        <p>
           Ajoutez <code>.o-card-hover</code> pour une légère élévation au survol,
           ou <code>.o-card-hover-primary</code> pour une ombre colorée.
         </p>
-        <div class="o-row o-g-4">
+        <div class="o-row o-g-3">
           <div class="o-col-md-4">
             <div class="o-card o-card-hover o-p-4">
               <h5>Standard</h5>
@@ -702,16 +700,16 @@
             </div>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card o-card-hover"&gt;…&lt;/div&gt;
 &lt;div class="o-card o-card-hover-primary"&gt;…&lt;/div&gt;</code></pre>
         </div>
       </section>
 
       <!-- 10. Layout horizontal -->
-      <section id="horizontal" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Layout horizontal</h2>
-        <p class="o-card-text">
+      <section id="horizontal" class="o-mb-4">
+        <h2 class="o-mb-3">Layout horizontal</h2>
+        <p class="o-mb-3">
           Avec <code>.o-card-horizontal</code>, image et corps s’affichent côte à côte,
           idéal pour vues en ligne.
         </p>
@@ -727,7 +725,7 @@
             </p>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card o-card-horizontal"&gt;
   &lt;img src="..." class="o-card-img-top"&gt;
   &lt;div class="o-card-body"&gt;…&lt;/div&gt;
@@ -736,13 +734,13 @@
       </section>
 
       <!-- 11. Groupe de cartes -->
-      <section id="group" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Groupe de cartes</h2>
-        <p class="o-card-text">
+      <section id="group" class="o-mb-4">
+        <h2 class=" o-mb-3">Groupe de cartes</h2>
+        <p class="o-mb-3">
           La classe <code>.o-card-group</code> aligne plusieurs cartes
           sans espace entre elles pour un rendu de bloc unifié.
         </p>
-        <div class="o-card-group o-mb-4">
+        <div class="o-card-group">
           <div class="o-card">
             <div class="o-card-body">Carte 1</div>
           </div>
@@ -753,7 +751,7 @@
             <div class="o-card-body">Carte 3</div>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card-group"&gt;
   &lt;div class="o-card"&gt;…&lt;/div&gt;
   &lt;div class="o-card"&gt;…&lt;/div&gt;
@@ -762,9 +760,9 @@
       </section>
 
       <!-- 12. Deck de cartes -->
-      <section id="deck" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Deck de cartes</h2>
-        <p class="o-card-text">
+      <section id="deck" class="o-mb-3">
+        <h2 class="o-mb-3">Deck de cartes</h2>
+        <p class="o-mb-3">
           <code>.o-card-deck</code> répartit les cartes sur toute la largeur,
           avec marges automatiques et alignement uniforme.
         </p>
@@ -779,7 +777,7 @@
             <div class="o-card-body">Deck 3</div>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card-deck"&gt;
   &lt;div class="o-card"&gt;…&lt;/div&gt;
   &lt;div class="o-card"&gt;…&lt;/div&gt;
@@ -788,9 +786,9 @@
       </section>
 
       <!-- 13. Badge -->
-      <section id="badge" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Badge sur carte</h2>
-        <p class="o-card-text">
+      <section id="badge" class="o-mb-3">
+        <h2 class="o-mb-3">Badge sur carte</h2>
+        <p class="o-mb-3">
           Placez un <code>.o-card-badge</code> dans une carte pour indiquer une étiquette
           (nouveau, promo…) positionnée en haut à droite.
         </p>
@@ -802,7 +800,7 @@
             <p class="o-card-text">Description de la carte avec badge.</p>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
   &lt;span class="o-card-badge"&gt;Nouveau&lt;/span&gt;
   &lt;div class="o-card-body"&gt;
@@ -814,9 +812,9 @@
       </section>
 
       <!-- 14. Actions -->
-      <section id="actions" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">Actions</h2>
-        <p class="o-card-text">
+      <section id="actions" class="o-mb-3">
+        <h2 class="o-mb-3">Actions</h2>
+        <p class="o-mb-3">
           Utilisez <code>.o-card-actions</code> pour aligner plusieurs boutons
           ou liens dans le pied de carte.
         </p>
@@ -832,7 +830,7 @@
             </div>
           </div>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card" style="width: 18rem;"&gt;
   &lt;span class="o-card-badge"&gt;Nouveau&lt;/span&gt;
   &lt;div class="o-card-body"&gt;
@@ -850,9 +848,9 @@
 
 
       <!-- 16. États et utilitaires -->
-      <section id="states" class="o-mb-6">
-        <h2 class="o-text-dark o-mb-3">États & utilitaires</h2>
-        <p class="o-card-text">
+      <section id="states" class="o-mb-3">
+        <h2 class="o-mb-3">États & utilitaires</h2>
+        <p class="o-mb-3">
           Gérez l’état de la carte avec :
           <code>.o-card-disabled</code> (opacité, pointeur désactivé),
           <code>.o-card-loading</code> (animation de chargement),
@@ -867,7 +865,7 @@
         <div class="o-card o-card-no-shadow o-p-4">
           <p>Carte sans ombre</p>
         </div>
-        <div class="o-code-block">
+        <div class="o-code-block o-mt-3">
           <pre class="language-html"><code>&lt;div class="o-card o-card-disabled"&gt;…&lt;/div&gt;
 &lt;div class="o-card o-card-loading"&gt;…&lt;/div&gt;
 &lt;div class="o-card o-card-no-shadow"&gt;…&lt;/div&gt;</code></pre>
@@ -888,19 +886,6 @@
   </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="o-bg-dark o-text-light o-py-4 o-mt-5">
-    <div class="o-d-flex o-justify-center o-gap-3">
-      <a href="#" class="o-text-white o-hover-text-primary"><i class="bx bxl-facebook-circle o-text-h3"></i></a>
-      <a href="#" class="o-text-white o-hover-text-primary"><i class="bx bxl-twitter o-text-h3"></i></a>
-      <a href="#" class="o-text-white o-hover-text-primary"><i class="bx bxl-github o-text-h3"></i></a>
-    </div>
-    <div class="o-box o-mt-2">
-      <div class="o-text-center">
-        <p class="o-mb-0">&copy; 2025 Orochi CSS - Tous droits réservés</p>
-      </div>
-    </div>
-  </footer>
 
   <script src="../../../src/orochi.js"></script>
   <script src="../js/script.js"></script>

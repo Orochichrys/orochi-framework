@@ -47,7 +47,7 @@
   <!-- Contenu principal avec 3 colonnes -->
   <div class="o-box-fluid layout-box">
     <div class="o-row">
-       <!-- Colonne gauche (cachée sur petit écran) -->
+      <!-- Colonne gauche (cachée sur petit écran) -->
       <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
 
         <!-- Section : Commencer -->
@@ -221,7 +221,7 @@
       <h1 class="o-title o-text-primary o-mb-4">🧭 Navigation Orochi</h1>
       <p class="o-lead o-mb-5">
         Le composant <strong>Navigation (Navbar)</strong> d'Orochi CSS vous permet de créer des barres de
-        navigation modernes, flexibles et responsives.  
+        navigation modernes, flexibles et responsives.
         Elle s’adapte automatiquement aux différents écrans et peut intégrer des éléments tels que des menus déroulants,
         des boutons, des logos et bien plus encore.
       </p>
@@ -230,7 +230,7 @@
       <section id="basic" class="o-mb-6">
         <h2 class="o-text-dark o-mb-4">Navigation de base</h2>
         <p class="o-mb-4">
-          La navigation de base constitue le cœur du système de navigation Orochi.  
+          La navigation de base constitue le cœur du système de navigation Orochi.
           Elle contient un logo, des liens de menu et un bouton “burger” qui s’affiche automatiquement sur les petits
           écrans pour une meilleure accessibilité mobile.
         </p>
@@ -272,11 +272,60 @@
         </div>
       </section>
 
+      <!-- Navigation alignée à droite -->
+<section id="right-align" class="o-mb-6">
+  <h2 class="o-text-dark o-mb-4">Navigation alignée à droite</h2>
+  <p class="o-mb-4">
+    En ajoutant la classe <code>o-justify-content-end</code> à l’élément 
+    <code>&lt;div class="o-menu"&gt;</code>, les liens du menu sont automatiquement alignés 
+    à droite dans la barre de navigation.  
+    Cela permet d’organiser les éléments pour obtenir une mise en page plus équilibrée 
+    lorsque le logo se trouve à gauche et le menu à droite.
+  </p>
+
+  <div class="o-mb-4">
+    <nav class="o-nav o-bg-light o-z-1">
+      <div class="o-box-fluid">
+        <a href="#" class="o-nav-logo">Logo</a>
+        <button class="o-burger">
+          <span class="o-burger-icon"></span>
+        </button>
+        <div class="o-menu o-justify-content-end">
+          <ul class="o-nav-list">
+            <li class="o-nav-item"><a href="#" class="o-nav-link">Accueil</a></li>
+            <li class="o-nav-item"><a href="#" class="o-nav-link">Services</a></li>
+            <li class="o-nav-item"><a href="#" class="o-nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="o-code-block">
+    <pre class="language-html"><code>&lt;nav class="o-nav o-bg-light"&gt;
+  &lt;div class="o-box-fluid"&gt;
+    &lt;a href="#" class="o-nav-logo"&gt;Logo&lt;/a&gt;
+    &lt;button class="o-burger"&gt;
+      &lt;span class="o-burger-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="o-menu o-justify-content-end"&gt;
+      &lt;ul class="o-nav-list"&gt;
+        &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="o-nav-item"&gt;&lt;a href="#" class="o-nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+  </div>
+</section>
+
+
       <!-- Dropdown -->
       <section id="dropdown" class="o-mb-6">
         <h2 class="o-text-dark o-mb-4">Avec dropdown</h2>
         <p class="o-mb-4">
-          Les menus déroulants (dropdowns) permettent d’ajouter des sous-catégories dans votre navigation.  
+          Les menus déroulants (dropdowns) permettent d’ajouter des sous-catégories dans votre navigation.
           Ils sont parfaits pour les sites comportant plusieurs sections ou produits.
         </p>
 
@@ -331,7 +380,7 @@
       <section id="colors" class="o-mb-6">
         <h2 class="o-text-dark o-mb-4">Variantes de couleur</h2>
         <p class="o-mb-4">
-          Le système de couleur Orochi vous permet de modifier facilement le thème de votre barre de navigation.  
+          Le système de couleur Orochi vous permet de modifier facilement le thème de votre barre de navigation.
           Utilisez les classes utilitaires comme <code>o-bg-dark</code>, <code>o-bg-primary</code> ou
           <code>o-bg-danger</code> pour correspondre à votre identité visuelle.
         </p>
@@ -363,7 +412,7 @@
         <h2 class="o-text-dark o-mb-4">Position fixed</h2>
         <p class="o-mb-4">
           Grâce aux classes de positionnement d’Orochi, vous pouvez fixer votre barre de navigation en haut de la page
-          (<code>o-nav-fixed</code>) pour la garder visible lors du défilement.  
+          (<code>o-nav-fixed</code>) pour la garder visible lors du défilement.
           Cela améliore la navigation et l’expérience utilisateur sur les sites à longue page.
         </p>
 
