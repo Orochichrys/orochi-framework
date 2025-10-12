@@ -112,7 +112,7 @@
   --o-btn-outline-hover-text-light: var(--o-black);
   --o-btn-outline-hover-text-white: var(--o-black);
   --o-btn-outline-hover-text-black: var(--o-white);
-    /*btn hover text color*/
+  /*btn hover text color*/
   --o-btn-hover-text-primary: var(--o-white);
   --o-btn-hover-text-secondary: var(--o-white);
   --o-btn-hover-text-success: var(--o-white);
@@ -162,8 +162,8 @@
   --o-btn-hover-border-light: var(--o-black);
   --o-btn-hover-border-white: var(--o-black);
   --o-btn-hover-border-black: var(--o-white);
-    /*btn outline hover border color*/
-  --o-btn-outline-hover-border-primary:var(--o-primary) ;
+  /*btn outline hover border color*/
+  --o-btn-outline-hover-border-primary: var(--o-primary);
   --o-btn-outline-hover-border-secondary: var(--o-secondary);
   --o-btn-outline-hover-border-success: #1b5e20;
   --o-btn-outline-hover-border-danger: #b71c1c;
@@ -328,7 +328,431 @@
   --o-hero-subtitle-sm: 1rem;
   --o-hero-subtitle-md: 1.25rem;
   --o-hero-subtitle-lg: 1.5rem;
+
+  /* Nouveaux gradients */
+  --o-gradient-cyberpunk: linear-gradient(135deg, #ff0080, #00ffff, #8000ff, #ff4080);
+  --o-gradient-matrix: linear-gradient(135deg, #000000, #003300, #00ff00, #008000);
+  --o-gradient-lava: linear-gradient(135deg, #ff4500, #ff0000, #8b0000, #ff6347);
+  --o-gradient-ice: linear-gradient(135deg, #87ceeb, #00bfff, #1e90ff, #4682b4);
+  --o-gradient-gold: linear-gradient(135deg, #ffd700, #ffb347, #ff8c00, #daa520);
+  --o-gradient-rainbow: linear-gradient(135deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #8000ff);
+
 }
+
+/* Nouvelles Keyframes pour animations avancées */
+@keyframes heroWaveDistortion {
+
+  0%,
+  100% {
+    transform: skew(0deg, 0deg) scale(1);
+  }
+
+  25% {
+    transform: skew(2deg, 1deg) scale(1.02);
+  }
+
+  50% {
+    transform: skew(-1deg, 2deg) scale(0.98);
+  }
+
+  75% {
+    transform: skew(1deg, -1deg) scale(1.01);
+  }
+}
+
+@keyframes heroMorphing {
+  0% {
+    border-radius: 0%;
+  }
+
+  25% {
+    border-radius: 50% 0% 50% 0%;
+  }
+
+  50% {
+    border-radius: 0% 50% 0% 50%;
+  }
+
+  75% {
+    border-radius: 25% 75% 25% 75%;
+  }
+
+  100% {
+    border-radius: 0%;
+  }
+}
+
+@keyframes heroGlitch {
+
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-2px, 2px);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+  }
+
+  30% {
+    transform: translate(-2px, -2px);
+  }
+
+  40% {
+    transform: translate(2px, 2px);
+  }
+
+  50% {
+    transform: translate(-2px, 2px);
+  }
+
+  60% {
+    transform: translate(2px, -2px);
+  }
+
+  70% {
+    transform: translate(-2px, -2px);
+  }
+
+  80% {
+    transform: translate(2px, 2px);
+  }
+
+  90% {
+    transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes heroTypewriter {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes heroNeon {
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+
+  50% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+  }
+}
+
+@keyframes heroIconSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes heroIconBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes heroIconPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+@keyframes heroIconWobble {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes heroIconOrbit {
+  0% {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+@keyframes heroHexagonFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-15px) rotate(120deg);
+  }
+
+  66% {
+    transform: translateY(15px) rotate(240deg);
+  }
+}
+
+@keyframes heroLiquid {
+
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+@keyframes heroMatrixRain {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Classes de base */
+.o-hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.o-hero-box {
+  max-width: 1200px;
+  padding: var(--space-4);
+  z-index: 2;
+  position: relative;
+}
+
+/* Tailles */
+.o-hero-sm {
+  height: var(--o-hero-sm);
+}
+
+.o-hero-md {
+  height: var(--o-hero-md);
+}
+
+.o-hero-lg {
+  height: var(--o-hero-lg);
+}
+
+/* Nouveaux styles de fond */
+.o-hero-cyberpunk {
+  background: var(--o-gradient-cyberpunk);
+  background-size: 400% 400%;
+  animation: heroWaveDistortion 6s ease-in-out infinite;
+}
+
+.o-hero-matrix {
+  background: var(--o-gradient-matrix);
+  position: relative;
+}
+
+.o-hero-lava {
+  background: var(--o-gradient-lava);
+  background-size: 400% 400%;
+  animation: heroLiquid 8s ease-in-out infinite;
+}
+
+.o-hero-ice {
+  background: var(--o-gradient-ice);
+  background-size: 400% 400%;
+  animation: heroMorphing 10s ease-in-out infinite;
+}
+
+.o-hero-gold {
+  background: var(--o-gradient-gold);
+  background-size: 400% 400%;
+  position: relative;
+}
+
+.o-hero-rainbow {
+  background: var(--o-gradient-rainbow);
+  background-size: 600% 600%;
+  animation: heroWaveDistortion 4s ease-in-out infinite;
+}
+
+/* Titres avec effets spéciaux */
+.o-hero-title {
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  letter-spacing: 1px;
+}
+
+.o-hero-title-sm {
+  font-size: 2rem;
+}
+
+.o-hero-title-md {
+  font-size: 3rem;
+}
+
+.o-hero-title-lg {
+  font-size: 4rem;
+}
+
+.o-hero-title-xl {
+  font-size: 5rem;
+}
+
+.o-hero-subtitle {
+  margin-bottom: var(--space-4);
+  opacity: 0.9;
+  font-size: 1.25rem;
+}
+
+/* Effets de texte avancés */
+.o-hero-glitch {
+  animation: heroGlitch 0.3s infinite;
+}
+
+.o-hero-neon {
+  animation: heroNeon 2s ease-in-out infinite;
+}
+
+.o-hero-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: heroTypewriter 3s steps(40, end);
+  border-right: 3px solid;
+}
+
+/* Icônes animées */
+.o-hero-icon {
+  font-size: 3rem;
+  margin: var(--space-2);
+  display: inline-block;
+  color: currentColor;
+}
+
+.o-hero-icon-spin {
+  animation: heroIconSpin 3s linear infinite;
+}
+
+.o-hero-icon-bounce {
+  animation: heroIconBounce 2s ease-in-out infinite;
+}
+
+.o-hero-icon-pulse {
+  animation: heroIconPulse 2s ease-in-out infinite;
+}
+
+.o-hero-icon-wobble {
+  animation: heroIconWobble 1s ease-in-out infinite;
+}
+
+.o-hero-icon-orbit {
+  position: relative;
+  animation: heroIconOrbit 4s linear infinite;
+}
+
+/* Formes géométriques animées */
+.o-hero-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.o-hero-shape {
+  position: absolute;
+  opacity: 0.1;
+}
+
+.o-hero-hexagon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: heroHexagonFloat 6s ease-in-out infinite;
+}
+
+.o-hero-triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid white;
+  animation: heroIconSpin 8s linear infinite;
+}
+
+.o-hero-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  animation: heroIconBounce 4s ease-in-out infinite;
+}
+
+/* Effet Matrix */
+.o-hero-matrix-rain {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(transparent, #00ff00, transparent);
+  animation: heroMatrixRain 3s linear infinite;
+
+}
+
+
 
 /* Boxs */
 .o-box,
@@ -1314,7 +1738,8 @@
   padding-bottom: var(--space-3);
   z-index: 9999;
   transition: all 0.3s ease;
-  position: relative; /* AJOUTÉ pour que le menu mobile se positionne correctement */
+  position: relative;
+  /* AJOUTÉ pour que le menu mobile se positionne correctement */
 }
 
 /* Navigation fixe */
@@ -1376,7 +1801,8 @@
   font-size: 1.5rem;
   color: var(--o-dark);
   margin-left: auto;
-  order: 3; /* Place le burger après le menu sur desktop */
+  order: 3;
+  /* Place le burger après le menu sur desktop */
 }
 
 /* Menu principal - À GAUCHE par défaut comme Bootstrap */
@@ -1385,7 +1811,8 @@
   align-items: center;
   gap: 2rem;
   flex-grow: 1;
-  order: 2; /* Place le menu entre le logo et le burger */
+  order: 2;
+  /* Place le menu entre le logo et le burger */
 }
 
 /* Liste des éléments */
@@ -1395,7 +1822,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-grow: 0; /* Permet au menu de rester à gauche */
+  flex-grow: 0;
+  /* Permet au menu de rester à gauche */
 }
 
 /* Éléments de navigation */
@@ -1533,7 +1961,7 @@
   color: var(--o-white);
 }
 
-.o-nav.o-bg-light .o-menu{
+.o-nav.o-bg-light .o-menu {
   background-color: var(--o-bg-light);
 }
 
@@ -1595,16 +2023,20 @@
     display: none;
     flex-direction: column;
     height: auto;
-    top: 100%; /* Colle le menu juste en dessous de la navbar */
+    top: 100%;
+    /* Colle le menu juste en dessous de la navbar */
     right: 0;
     left: 0;
     width: 100%;
     background-color: var(--o-bg-white);
     border-top: var(--o-border);
     padding: var(--space-3) 0;
-    z-index: 9998; /* Juste en dessous de la navbar */
-    max-height: calc(100vh - 100%); /* Limite la hauteur */
-    overflow-y: auto; /* Scroll si nécessaire */
+    z-index: 9998;
+    /* Juste en dessous de la navbar */
+    max-height: calc(100vh - 100%);
+    /* Limite la hauteur */
+    overflow-y: auto;
+    /* Scroll si nécessaire */
   }
 
   .o-nav.o-nav-dark .o-menu {
@@ -1677,7 +2109,8 @@
   }
 
   .o-nav.o-nav-fixed .o-menu {
-    position: absolute; /* CHANGÉ de fixed à absolute */
+    position: absolute;
+    /* CHANGÉ de fixed à absolute */
   }
 
   /* Compensation pour le body quand la nav est fixe */
@@ -1757,6 +2190,7 @@
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
