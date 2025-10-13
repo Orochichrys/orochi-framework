@@ -2196,9 +2196,6 @@
   }
 }
 
-
-
-
 /* Boutons */
 .o-btn {
   display: inline-block;
@@ -2210,6 +2207,11 @@
   font-weight: 500;
   text-align: center;
   text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2483,36 +2485,55 @@
 }
 
 .o-form-label {
-  display: block;
   margin-bottom: 0.5rem;
-  font-weight: 600;
+
 }
 
-.o-form-input {
+.o-form-control {
+  display: block;
   width: 100%;
   padding: 0.8rem;
   border: 1px solid #ddd;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
   border-radius: 4px;
   transition: var(--transition-form);
 }
 
-.o-form-input:focus {
+@media (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
+}
+
+.form-control[type=file] {
+  overflow: hidden;
+}
+
+.form-control[type=file]:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+
+.o-form-control:focus {
   outline: 3px solid rgba(26, 35, 126, 0.5);
   border: 1px solid var(--o-primary);
 }
 
-.o-form-textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  transition: var(--transition-form);
+.o-form-control-lg{
+  padding: 1.2rem 1rem;
 }
 
-.o-form-textarea:focus {
-  outline: 3px solid rgba(26, 35, 126, 0.5);
-  border: 1px solid var(--o-primary);
+.o-form-control-sm {
+  padding: 0.5rem 0.6rem;;
 }
+
+textarea {
+  resize: vertical;
+}
+
+
 
 .o-form-select {
   width: 100%;
@@ -3785,7 +3806,7 @@
 }
 
 /* =====================================================
-   LIST GROUP - Orochi Framework 
+   LIST GROUP - Orochi CSS 
    ===================================================== */
 
 /* Conteneur de liste : bordure par défaut */
@@ -4241,7 +4262,7 @@
   }
 }
 
-/* Modal System - Orochi Framework - Version Corrigée avec blocage du scroll */
+/* Modal System - Orochi CSS - Version Corrigée avec blocage du scroll */
 
 /* Classe utilitaire pour bloquer le scroll du body */
 .o-modal-open {
