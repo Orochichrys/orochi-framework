@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Boutons - Orochi CSS</title>
-  <link rel="stylesheet" href="../../../src/orochi.css" />
-  <link rel="stylesheet" href="../../../src/orochi-icons.css" />
+  <link rel="stylesheet" href="../../../dist/orochi.min.css" />
+  <link rel="stylesheet" href="../../../dist/orochi-icons.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
   <link rel="stylesheet" href="../css/style.css">
@@ -252,8 +252,67 @@
           <pre class="language-html"><code>&lt;button class="o-btn o-btn-primary"&gt;Primaire&lt;/button&gt;
 &lt;button class="o-btn o-btn-secondary"&gt;Secondaire&lt;/button&gt;
 &lt;button class="o-btn o-btn-success"&gt;Succès&lt;/button&gt;
-&lt;button class="o-btn o-btn-danger"&gt;Danger&lt;/button&gt;</code></pre>
+&lt;button class="o-btn o-btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="o-btn o-btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="o-btn o-btn-info"&gt;Info&lt;/button&gt;
+</code></pre>
         </div>
+        <div class="o-alert o-alert-info o-mt-4">
+          <strong>💡 Personnalisation :</strong> Utilisez les variables CSS pour modifier les couleurs du fond, du texte
+          et de la bordure, ainsi que leurs variantes au survol.<div class="o-code-block o-mt-2">
+            <pre class="language-css"><code>:root {
+  /* 🎨 Couleurs de fond principales des boutons */
+  --o-btn-bg-primary: #votre_couleur; /* Fond du bouton principal */
+  --o-btn-bg-secondary: #votre_couleur; /* Fond du bouton secondaire */
+  --o-btn-bg-success: #votre_couleur; /* Fond du bouton de succès */
+  --o-btn-bg-danger: #votre_couleur; /* Fond du bouton d’erreur */
+  --o-btn-bg-warning: #votre_couleur; /* Fond du bouton d’avertissement */
+  --o-btn-bg-info: #votre_couleur; /* Fond du bouton d’information */
+
+  /* 🖋️ Couleurs du texte des boutons */
+  --o-btn-text-primary: #votre_couleur; /* Couleur du texte du bouton principal */
+  --o-btn-text-secondary: #votre_couleur; /* Couleur du texte du bouton secondaire */
+  --o-btn-text-success: #votre_couleur; /* Couleur du texte du bouton de succès */
+  --o-btn-text-danger: #votre_couleur; /* Couleur du texte du bouton d’erreur */
+  --o-btn-text-warning: #votre_couleur; /* Couleur du texte du bouton d’avertissement */
+  --o-btn-text-info: #votre_couleur; /* Couleur du texte du bouton d’information */
+
+  /* 🧱 Couleurs de bordure des boutons */
+  --o-btn-border-primary: #votre_couleur; /* Bordure du bouton principal */
+  --o-btn-border-secondary: #votre_couleur; /* Bordure du bouton secondaire */
+  --o-btn-border-success: #votre_couleur; /* Bordure du bouton de succès */
+  --o-btn-border-danger: #votre_couleur; /* Bordure du bouton d’erreur */
+  --o-btn-border-warning: #votre_couleur; /* Bordure du bouton d’avertissement */
+  --o-btn-border-info: #votre_couleur; /* Bordure du bouton d’information */
+
+  /* 🖱️ Couleurs de fond au survol */
+  --o-btn-hover-bg-primary: #votre_couleur; /* Fond du bouton principal au survol */
+  --o-btn-hover-bg-secondary: #votre_couleur; /* Fond du bouton secondaire au survol */
+  --o-btn-hover-bg-success: #votre_couleur; /* Fond du bouton de succès au survol */
+  --o-btn-hover-bg-danger: #votre_couleur; /* Fond du bouton d’erreur au survol */
+  --o-btn-hover-bg-warning: #votre_couleur; /* Fond du bouton d’avertissement au survol */
+  --o-btn-hover-bg-info: #votre_couleur; /* Fond du bouton d’information au survol */
+
+  /* ✍️ Couleurs du texte au survol */
+  --o-btn-hover-text-primary: #votre_couleur; /* Texte du bouton principal au survol */
+  --o-btn-hover-text-secondary: #votre_couleur; /* Texte du bouton secondaire au survol */
+  --o-btn-hover-text-success: #votre_couleur; /* Texte du bouton de succès au survol */
+  --o-btn-hover-text-danger: #votre_couleur; /* Texte du bouton d’erreur au survol */
+  --o-btn-hover-text-warning: #votre_couleur; /* Texte du bouton d’avertissement au survol */
+  --o-btn-hover-text-info: #votre_couleur; /* Texte du bouton d’information au survol */
+
+  /* 🔲 Couleurs des bordures au survol */
+  --o-btn-hover-border-primary: #votre_couleur; /* Bordure du bouton principal au survol */
+  --o-btn-hover-border-secondary: #votre_couleur; /* Bordure du bouton secondaire au survol */
+  --o-btn-hover-border-success: #votre_couleur; /* Bordure du bouton de succès au survol */
+  --o-btn-hover-border-danger: #votre_couleur; /* Bordure du bouton d’erreur au survol */
+  --o-btn-hover-border-warning: #votre_couleur; /* Bordure du bouton d’avertissement au survol */
+  --o-btn-hover-border-info: #votre_couleur; /* Bordure du bouton d’information au survol */
+}</code></pre>
+
+          </div>
+        </div>
+
       </section>
 
       <!-- Tailles -->
@@ -273,6 +332,19 @@
 &lt;button class="o-btn"&gt;Moyen&lt;/button&gt;
 &lt;button class="o-btn o-btn-lg"&gt;Large&lt;/button&gt;</code></pre>
         </div>
+
+        <div class="o-alert o-alert-info o-mt-5">
+          <strong>💡 Personnalisation :</strong> Ajustez facilement l’espacement interne des boutons en modifiant ces
+          variables CSS :
+          <div class="o-code-block o-mt-2">
+            <pre class="language-css"><code>:root {
+  --o-btn-padding: 0.5rem 1rem; /*Rembourrage (padding) par défaut du bouton */
+  --o-btn-sm-padding: 0.375rem 0.75rem; /*Rembourrage pour les petits boutons (.o-btn-sm) */
+  --o-btn-lg-padding: 1rem 2rem; /*Rembourrage pour les grands boutons (.o-btn-lg) */
+}</code></pre>
+          </div>
+        </div>
+
       </section>
 
       <!-- États -->
@@ -327,6 +399,62 @@
 &lt;button class="o-btn o-btn-outline-warning"&gt;Avertissement&lt;/button&gt;
 &lt;button class="o-btn o-btn-outline-info"&gt;Info&lt;/button&gt;</code></pre>
         </div>
+
+        <div class="o-alert o-alert-info o-mt-4">
+          <strong>💡 Personnalisation :</strong> Utilisez les variables CSS pour modifier les couleurs du fond, du texte
+          et de la bordure, ainsi que leurs variantes au survol.<div class="o-code-block o-mt-2">
+            <pre class="language-css"><code>:root {
+  /* 🎨 Couleurs de fond principales des boutons */
+  --o-btn-outline-bg-primary: #votre_couleur; /* Fond du bouton principal */
+  --o-btn-outline-bg-secondary: #votre_couleur; /* Fond du bouton secondaire */
+  --o-btn-outline-bg-success: #votre_couleur; /* Fond du bouton de succès */
+  --o-btn-outline-bg-danger: #votre_couleur; /* Fond du bouton d’erreur */
+  --o-btn-outline-bg-warning: #votre_couleur; /* Fond du bouton d’avertissement */
+  --o-btn-outline-bg-info: #votre_couleur; /* Fond du bouton d’information */
+
+  /* 🖋️ Couleurs du texte des boutons */
+  --o-btn-outline-text-primary: #votre_couleur; /* Couleur du texte du bouton principal */
+  --o-btn-outline-text-secondary: #votre_couleur; /* Couleur du texte du bouton secondaire */
+  --o-btn-outline-text-success: #votre_couleur; /* Couleur du texte du bouton de succès */
+  --o-btn-outline-text-danger: #votre_couleur; /* Couleur du texte du bouton d’erreur */
+  --o-btn-outline-text-warning: #votre_couleur; /* Couleur du texte du bouton d’avertissement */
+  --o-btn-outline-text-info: #votre_couleur; /* Couleur du texte du bouton d’information */
+
+  /* 🧱 Couleurs de bordure des boutons */
+  --o-btn-outline-border-primary: #votre_couleur; /* Bordure du bouton principal */
+  --o-btn-outline-border-secondary: #votre_couleur; /* Bordure du bouton secondaire */
+  --o-btn-outline-border-success: #votre_couleur; /* Bordure du bouton de succès */
+  --o-btn-outline-border-danger: #votre_couleur; /* Bordure du bouton d’erreur */
+  --o-btn-outline-border-warning: #votre_couleur; /* Bordure du bouton d’avertissement */
+  --o-btn-outline-border-info: #votre_couleur; /* Bordure du bouton d’information */
+
+  /* 🖱️ Couleurs de fond au survol */
+  --o-btn-outline-hover-bg-primary: #votre_couleur; /* Fond du bouton principal au survol */
+  --o-btn-outline-hover-bg-secondary: #votre_couleur; /* Fond du bouton secondaire au survol */
+  --o-btn-outline-hover-bg-success: #votre_couleur; /* Fond du bouton de succès au survol */
+  --o-btn-outline-hover-bg-danger: #votre_couleur; /* Fond du bouton d’erreur au survol */
+  --o-btn-outline-hover-bg-warning: #votre_couleur; /* Fond du bouton d’avertissement au survol */
+  --o-btn-outline-hover-bg-info: #votre_couleur; /* Fond du bouton d’information au survol */
+
+  /* ✍️ Couleurs du texte au survol */
+  --o-btn-outline-hover-text-primary: #votre_couleur; /* Texte du bouton principal au survol */
+  --o-btn-outline-hover-text-secondary: #votre_couleur; /* Texte du bouton secondaire au survol */
+  --o-btn-outline-hover-text-success: #votre_couleur; /* Texte du bouton de succès au survol */
+  --o-btn-outline-hover-text-danger: #votre_couleur; /* Texte du bouton d’erreur au survol */
+  --o-btn-outline-hover-text-warning: #votre_couleur; /* Texte du bouton d’avertissement au survol */
+  --o-btn-outline-hover-text-info: #votre_couleur; /* Texte du bouton d’information au survol */
+
+  /* 🔲 Couleurs des bordures au survol */
+  --o-btn-outline-hover-border-primary: #votre_couleur; /* Bordure du bouton principal au survol */
+  --o-btn-outline-hover-border-secondary: #votre_couleur; /* Bordure du bouton secondaire au survol */
+  --o-btn-outline-hover-border-success: #votre_couleur; /* Bordure du bouton de succès au survol */
+  --o-btn-outline-hover-border-danger: #votre_couleur; /* Bordure du bouton d’erreur au survol */
+  --o-btn-outline-hover-border-warning: #votre_couleur; /* Bordure du bouton d’avertissement au survol */
+  --o-btn-outline-hover-border-info: #votre_couleur; /* Bordure du bouton d’information au survol */
+}</code></pre>
+
+          </div>
+        </div>
       </section>
 
       <!-- Boutons avec icônes -->
@@ -350,30 +478,6 @@
         </div>
       </section>
 
-      <div class="o-alert o-alert-info o-mt-5">
-        <strong>💡 Personnalisation :</strong> Utilisez les variables CSS pour modifier les couleurs :
-        <div class="o-code-block">
-          <pre class="language-css"><code>:root {
---o-btn-primary: #votre_couleur;
---o-btn-secondary: #votre_couleur;
---o-btn-success: #votre_couleur;
---o-btn-danger: #votre_couleur;
---o-btn-warning: #votre_couleur;
---o-btn-info: #votre_couleur;
---o-btn-text-primary: #votre_couleur;
---o-btn-text-secondary: #votre_couleur;
---o-btn-text-success: #votre_couleur;
---o-btn-text-danger: #votre_couleur;
---o-btn-text-warning: #votre_couleur;
---o-btn-text-info: #votre_couleur;
---o-text-dark: #votre_couleur;
---o-text-light: #votre_couleur;
---o-btn-padding: 0.5rem 1.5rem;
---o-btn-sm-padding: 0.375rem 0.75rem;
---o-btn-lg-padding: 1rem 2rem;
-}</code></pre>
-        </div>
-      </div>
     </main>
 
     <!-- Colonne droite (cachée sur petit écran) -->
@@ -391,7 +495,7 @@
 
 
 
-  <script src="../../../src/orochi.js"></script>
+  <script src="../../../dist/orochi.min.js"></script>
   <script src="../js/script.js"></script>
   <!-- Prism JS -->
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>

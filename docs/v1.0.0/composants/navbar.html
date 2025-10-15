@@ -236,7 +236,7 @@
         </p>
 
         <div class="o-mb-4">
-          <nav class="o-nav o-bg-light o-z-1">
+          <nav class="o-nav o-nav-light o-z-1">
             <div class="o-box-fluid">
               <a href="#" class="o-nav-logo">Logo</a>
               <button class="o-burger">
@@ -254,7 +254,7 @@
         </div>
 
         <div class="o-code-block">
-          <pre class="language-html"><code>&lt;nav class="o-nav o-bg-light"&gt;
+          <pre class="language-html"><code>&lt;nav class="o-nav o-nav-light"&gt;
   &lt;div class="o-box-fluid"&gt;
     &lt;a href="#" class="o-nav-logo"&gt;Logo&lt;/a&gt;
     &lt;button class="o-burger"&gt;
@@ -284,7 +284,7 @@
         </p>
 
         <div class="o-mb-4">
-          <nav class="o-nav o-bg-light o-z-1">
+          <nav class="o-nav o-nav-light o-z-1">
             <div class="o-box-fluid">
               <a href="#" class="o-nav-logo">Logo</a>
               <button class="o-burger">
@@ -302,7 +302,7 @@
         </div>
 
         <div class="o-code-block">
-          <pre class="language-html"><code>&lt;nav class="o-nav o-bg-light"&gt;
+          <pre class="language-html"><code>&lt;nav class="o-nav o-nav-light"&gt;
   &lt;div class="o-box-fluid"&gt;
     &lt;a href="#" class="o-nav-logo"&gt;Logo&lt;/a&gt;
     &lt;button class="o-burger"&gt;
@@ -330,7 +330,7 @@
         </p>
 
         <div class="o-mb-4">
-          <nav class="o-nav o-bg-light o-z-1">
+          <nav class="o-nav o-nav-light o-z-1">
             <div class="o-box-fluid">
               <a href="#" class="o-nav-logo">Logo</a>
               <button class="o-burger">
@@ -385,18 +385,6 @@
           <code>o-bg-danger</code> pour correspondre à votre identité visuelle.
         </p>
 
-        <div class="o-row o-g-3">
-          <div class="o-col-md-6">
-            <nav class="o-nav o-bg-danger o-z-1">
-              <div class="o-box-fluid"></div>
-            </nav>
-          </div>
-          <div class="o-col-md-6">
-            <nav class="o-nav o-bg-dark o-z-1">
-              <div class="o-box-fluid"></div>
-            </nav>
-          </div>
-        </div>
 
         <div class="o-code-block">
           <pre class="language-html"><code>&lt;!-- Danger --&gt;
@@ -410,6 +398,28 @@
       <!-- Positionnement -->
       <section id="position" class="o-mb-6">
         <h2 class="o-text-dark o-mb-4">Position fixed</h2>
+        <div class="o-box-fluid o-overflow-hidden o-nav-sticky o-border h-[100px]">
+          <nav class="o-nav o-nav-light o-z-1">
+            <div class="o-box-fluid">
+              <a href="#" class="o-nav-logo">Logo</a>
+              <button class="o-burger">
+                <span class="o-burger-icon"></span>
+              </button>
+              <div class="o-menu">
+                <ul class="o-nav-list">
+                  <li class="o-nav-item o-dropdown">
+                    <a href="#" class="o-nav-link">Produits</a>
+                    <ul class="o-dropdown-menu">
+                      <li><a href="#" class="o-dropdown-item">Logiciels</a></li>
+                      <li><a href="#" class="o-dropdown-item">Applications</a></li>
+                    </ul>
+                  </li>
+                  <li class="o-nav-item"><a href="#" class="o-nav-link">Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
         <p class="o-mb-4">
           Grâce aux classes de positionnement d’Orochi, vous pouvez fixer votre barre de navigation en haut de la page
           (<code>o-nav-fixed</code>) pour la garder visible lors du défilement.
@@ -437,6 +447,7 @@
   </div>
 
   <script src="../../../src/orochi.js"></script>
+  <script src="../../../src/orochi-jit.js"></script>
   <script src="../script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>

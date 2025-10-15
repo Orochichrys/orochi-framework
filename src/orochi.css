@@ -1926,6 +1926,18 @@
 
 /* Thèmes de navigation */
 
+.o-nav.o-nav-light {
+  background-color: var(--o-bg-light);
+}
+.o-nav.o-nav-light .o-menu {
+  background-color: var(--o-bg-light);
+}
+/* 
+.o-nav.o-nav-light .o-dropdown .o-dropdown-menu{
+  background-color: var(--o-bg-white);
+  border-color: var(--o-border-light);
+} */
+
 .o-nav.o-nav-dark {
   background-color: var(--o-bg-dark);
 }
@@ -1961,9 +1973,6 @@
   color: var(--o-white);
 }
 
-.o-nav.o-bg-light .o-menu {
-  background-color: var(--o-bg-light);
-}
 
 /* Navigation transparente */
 .o-nav.o-nav-transparent {

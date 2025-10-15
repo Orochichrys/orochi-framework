@@ -223,6 +223,29 @@
                     focus personnalisés et une apparence moderne et soignée.
                 </p>
 
+                <!-- AJOUT: Section "Comment ils fonctionnent" (provenant du guide Boutons) -->
+                <section class="o-mt-4">
+                    <h2 class="o-mb-3">Comment ils fonctionnent</h2>
+                    <p class="o-mb-3">Les contrôles de formulaire Orochi sont conçus pour être flexibles et s'adapter à de
+                        nombreux cas d'usage. Ils utilisent des classes de base et des variantes qui permettent d'ajuster
+                        leur apparence, leur taille et leurs états (focus, désactivé, erreurs, etc.). Le système est entièrement
+                        modifiable via des variables CSS pour personnaliser couleurs, espacements et comportements visuels.</p>
+
+                    <ul class="o-list-unstyled o-mt-2">
+                        <li><code>.o-form-group</code> : conteneur pour étiquettes et contrôles (gère marges et alignement). Ajoute une marge inférieure de 1rem</li>
+                        <li><code>.o-form-label</code> : style standard pour les <code>&lt;label&gt;</code></li>
+                        <li><code>.o-form-control</code> : classe de base pour <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>,
+                            etc.</li>
+                        <li><code>.o-form-control-lg / .o-form-control-sm</code> : variantes de taille</li>
+                        <li>Utilisez les variables CSS (ex. <code>--o-form-control-border-radius</code>, <code>--o-form-control-padding</code>)
+                            pour personnaliser l'apparence globale.</li>
+                    </ul>
+
+                    <p class="o-mb-3 o-mt-3"><strong>Accessibilité :</strong> les contrôles respectent les bonnes pratiques ARIA —
+                        assurez-vous d'utiliser les attributs <code>aria-label</code> / <code>aria-describedby</code> lorsque
+                        le contexte visuel n'est pas suffisant.</p>
+                </section>
+
 
                 <!--  -->
                 <section class="o-mt-4">
@@ -249,7 +272,7 @@
 &lt;/div&gt;
 &lt;div class="o-form-group"&gt;
     &lt;label for="exempleFormControlTextarea1" class="o-form-label"&gt;Exemple de zone de texte&lt;/label&gt;
-    &lt;textarea class="o-form-control" id="exempleFormControlTextarea1"&gt;&lt;textarea&gt;
+    &lt;textarea class="o-form-control" id="exempleFormControlTextarea1"&gt;&lt;/textarea&gt;
 &lt;/div&gt;</code></pre>
                     </div>
                 </section>
