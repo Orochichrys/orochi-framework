@@ -4605,6 +4605,9 @@ textarea {
 /*       Utilitaires         */
 
 /* Espacement (Margin & Padding) */
+.o-m-auto{
+  margin: auto;
+}
 .o-m-0 {
   margin: var(--space-0);
 }
@@ -4649,6 +4652,9 @@ textarea {
   margin: var(--space-10);
 }
 
+.o-mt-auto{
+  margin-top: auto;
+}
 .o-mt-0 {
   margin-top: var(--space-0);
 }
@@ -4693,6 +4699,9 @@ textarea {
   margin-top: var(--space-10);
 }
 
+.o-mb-auto{
+  margin-bottom: auto;
+}
 .o-mb-0 {
   margin-bottom: var(--space-0);
 }

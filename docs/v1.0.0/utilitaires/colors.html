@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Form-control - Orochi CSS</title>
+    <title>Bordures - Orochi CSS</title>
     <link rel="stylesheet" href="../../../src/orochi.css" />
     <link rel="stylesheet" href="../../../src/orochi-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6881388964812065"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -167,11 +165,11 @@
                     </h4> <a href="/docs/v1.0.0/utilitaires/background.html"
                         class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
                         Arrière plan
-                    </a><a href="/docs/v1.0.0/utilitaires/colors.html"
+                    </a>
+<a href="/docs/v1.0.0/utilitaires/colors.html"
                         class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
                         Couleurs
                     </a>
-
 
                     <a href="/docs/v1.0.0/utilitaires/position.html"
                         class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
@@ -218,127 +216,73 @@
         </div>
 
         <!-- Contenu principal -->
-        <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
-            <section id="form-control-intro">
-                <h1 class="o-title o-text-primary">🎛️ Contrôles de formulaire </h1>
-                <p class="o-lead o-mb-5">
-                    Appliquez un style amélioré aux champs de formulaire textuels tels que <code>&lt;input&gt;</code> et
-                    <code>&lt;textarea&gt;</code> grâce
-                    à Orochi, en leur offrant des dimensions harmonisées, des effets
-                    de
-                    focus personnalisés et une apparence moderne et soignée.
-                </p>
+        <main class="o-col-12 o-col-lg-9 o-p-4 main-content o-mt-5">
+            <h1 class="o-title o-text-primary o-mb-4"> Couleurs</h1>
+            <p class="o-lead">Utilisez des classes de couleur simples pour donner du sens à vos éléments.
+                Elles permettent aussi de styliser les liens et leurs effets au survol.
+            </p>
 
-                <!-- AJOUT: Section "Comment ils fonctionnent" (provenant du guide Boutons) -->
-                <section class="o-mt-4">
-                    <h2 class="o-mb-3">Comment ils fonctionnent</h2>
-                    <p class="o-mb-3">Les contrôles de formulaire Orochi sont conçus pour être flexibles et s'adapter à
-                        de
-                        nombreux cas d'usage. Ils utilisent des classes de base et des variantes qui permettent
-                        d'ajuster
-                        leur apparence, leur taille et leurs états (focus, désactivé, erreurs, etc.). Le système est
-                        entièrement
-                        modifiable via des variables CSS pour personnaliser couleurs, espacements et comportements
-                        visuels.</p>
-
-                    <ul class="o-list-unstyled o-mt-2">
-                        <li><code>.o-form-group</code> : conteneur pour étiquettes et contrôles (gère marges et
-                            alignement). Ajoute une marge inférieure de 1rem</li>
-                        <li><code>.o-form-label</code> : style standard pour les <code>&lt;label&gt;</code></li>
-                        <li><code>.o-form-control</code> : classe de base pour <code>&lt;input&gt;</code>,
-                            <code>&lt;textarea&gt;</code>,
-                            etc.</li>
-                        <li><code>.o-form-control-lg / .o-form-control-sm</code> : variantes de taille</li>
-                        <li>Utilisez les variables CSS (ex. <code>--o-form-control-border-radius</code>,
-                            <code>--o-form-control-padding</code>)
-                            pour personnaliser l'apparence globale.</li>
-                    </ul>
-
-                    <p class="o-mb-3 o-mt-3"><strong>Accessibilité :</strong> les contrôles respectent les bonnes
-                        pratiques ARIA —
-                        assurez-vous d'utiliser les attributs <code>aria-label</code> / <code>aria-describedby</code>
-                        lorsque
-                        le contexte visuel n'est pas suffisant.</p>
-                </section>
-
-
-                <!--  -->
-                <section class="o-mt-4">
-                    <h2 class="o-mb-3">Exemple</h2>
-                    <p class="o-mb-3">Les contrôles de formulaire Orochi sont entièrement stylisés en CSS pur,
-                        à l'aide de <strong>variable personnalisées</strong>, ce qui leur permet de s'adapter
-                        automatiquement aux modes de couleur et de faciliter toute forme de personnalisation.
-                    </p>
-
-                    <div class="o-form-group">
-                        <label for="exempleFormControlInput1" class="o-form-label">Address email </label>
-                        <input type="email" class="o-form-control o-mt-2" id="exempleFormControlInput1"
-                            placeholder="nom@exemple.com">
+            <section class="o-mb-6">
+                <h2 class="o-mb-4">Couleurs</h2>
+                <p class="o-text-primary ">.o-text-primary</p>
+                <p class="o-text-secondary ">.o-text-secondary</p>
+                <p class="o-text-success">.o-text-success</p>
+                <p class="o-text-danger">.o-text-danger</p>
+                <p class="o-text-warning">.o-text-warning</p>
+                <p class="o-text-info">.o-text-info</p>
+                <p class="o-text-light o-bg-dark">.o-text-light</p>
+                <p class="o-text-dark o-bg-white ">.o-text-dark</p>
+                <p class="o-text-white o-bg-dark">.o-text-primary</p>
+                <div class="o-code-block o-mt-4">
+                    <pre class="language-html"><code>&lt;o class="o-text-primary"&gt;.o-text-primary&lt;/div&gt;
+&lt;p class="o-text-secondary"&gt;.o-text-secondary&lt;/div&gt;
+&lt;p class="o-text-success"&gt;.o-text-success&lt;/div&gt;
+&lt;p class="o-text-danger"&gt;.o-text-danger&lt;/div&gt;
+&lt;p class="o-text-warning"&gt;.o-text-warning&lt;/div&gt;
+&lt;p class="o-text-info"&gt;.o-text-info&lt;/div&gt;
+&lt;p class="o-text-light"&gt;.o-text-light&lt;/div&gt;
+&lt;p class="o-text-dark"&gt;.o-text-dark&lt;/div&gt;
+&lt;p class="o-text-black"&gt;.o-text-black&lt;/div&gt;
+&lt;p class="o-text-white"&gt;.o-text-white&lt;/div&gt;
+          </code></pre>
+                </div>
+                <div class="o-alert o-alert-info o-mt-4">
+                    <strong>💡 Personnalisation </strong>
+                    <div class="o-code-block o-mt-2">
+                        <pre class="language-css"><code>:root {
+--o-text-primary:#votre_couleur;
+--o-text-secondary:#votre_couleur;
+--o-text-success:#votre_couleur;
+--o-text-danger:#votre_couleur;
+--o-text-warning:#votre_couleur;
+--o-text-info:#votre_couleur;
+--o-text-light:#votre_couleur;
+--o-text-dark:#votre_couleur;
+--o-text-black:#votre_couleur;
+--o-text-white:#votre_couleur;
+}</code></pre>
                     </div>
-                    <div class="o-form-group">
-                        <label for="exempleFormControlTextarea1" class="o-form-label">Exemple de zone de texte</label>
-                        <textarea class="o-form-control o-mt-2" id="exempleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-
-                    <div class="o-code-block">
-                        <pre class="language-html"><code>&lt;div class="o-form-group"&gt;
-    &lt;label for="exempleFormControlInput1" class="o-form-label"&gt;Address email&lt;/label&gt;
-    &lt;input type="email" class="o-form-control" id="exempleFormControlInput1" placeholder="nom@exemple.com"&gt;
-&lt;/div&gt;
-&lt;div class="o-form-group"&gt;
-    &lt;label for="exempleFormControlTextarea1" class="o-form-label"&gt;Exemple de zone de texte&lt;/label&gt;
-    &lt;textarea class="o-form-control" id="exempleFormControlTextarea1"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</code></pre>
-                    </div>
-                </section>
-
-                <section class="o-mt-4">
-                    <h2 class="o-mb-3">Dimensionnement</h2>
-                    <p class="o-mb-3">
-                        Définissez les hauteurs à l’aide de classes telles que
-                        <code>.o-form-control-lg</code> et <code>.o-form-control-sm</code>.
-                    </p>
-
-                    <input class="o-form-control o-form-control-lg o-mt-2" type="text" placeholder=".o-form-control-lg"
-                        aria-label=".o-form-control-lg example">
-                    <input class="o-form-control o-mt-2" type="text" placeholder="Default input"
-                        aria-label="default input example">
-                    <input class="o-form-control o-form-control-sm o-mt-2" type="text" placeholder=".o-form-control-sm"
-                        aria-label=".o-form-control-sm example">
-
-                    <div class="o-code-block o-mt-4">
-                        <pre class="language-html">
-      <code>
-&lt;input class="o-form-control o-form-control-lg" type="text" placeholder=".o-form-control-lg" aria-label=".o-form-control-lg example"&gt;
-&lt;input class="o-form-control" type="text" placeholder="Default input" aria-label="default input example"&gt;
-&lt;input class="o-form-control o-form-control-sm" type="text" placeholder=".o-form-control-sm" aria-label=".o-form-control-sm example"&gt;
-</code>
-</pre>
-                    </div>
-                </section>
+                </div>
+            </section>
 
 
         </main>
-
         <!-- Colonne droite (cachée sur petit écran) -->
         <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
             <h5>Sur cette page</h5>
             <ul class="o-list-unstyled">
-                <li><a href="#">Aperçu</a></li>
-                <li><a href="#">Accessibilité</a></li>
-                <li><a href="#">CSS</a></li>
+
             </ul>
         </div>
-
     </div>
     </div>
 
+    <script src="../../../src/orochi.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
 </body>
-<script src="../../../src/orochi.js"></script>
-<script src="../js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
 
 </html>
