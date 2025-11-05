@@ -1811,7 +1811,7 @@
 .o-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  /* gap: 2rem; */
   flex-grow: 1;
   order: 2;
   /* Place le menu entre le logo et le burger */
@@ -1820,7 +1820,7 @@
 /* Liste des éléments */
 .o-nav-list {
   display: flex;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
   list-style: none;
   margin: 0;
   padding: 0;
