@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Sélection des éléments
   const searchInput = document.querySelector('input[type="search"]');
   const searchForm = document.querySelector('form.o-d-flex');
-  const iconboxs = document.querySelectorAll(
+  const iconbox = document.querySelectorAll(
     '.o-row > [class*="o-col-"]'
   );
 
@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const term = searchTerm.toLowerCase().trim();
     let found = false;
 
-    // Réinitialiser tous les Boxs
-    iconboxs.forEach((box) => {
+    // Réinitialiser tous les box
+    iconbox.forEach((box) => {
       box.style.display = 'block';
     });
 
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Filtrer les icônes
-    iconboxs.forEach((box) => {
-      const iconNameElement = box.querySelector('.o-text-sm');
+    iconbox.forEach((box) => {
+      const iconNameElement = box.querySelector('.o-text-phone');
 
       // Vérifier si l'élément existe avant d'accéder à ses propriétés
       if (iconNameElement) {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         noResultsDiv.className = 'o-col-12 o-text-center o-p-4';
         noResultsDiv.innerHTML = `
           <div class="o-card o-p-4">
-            <i class="oi oi-search o-icon-xl"></i>
+            <i class="oi oi-search o-icon-desktop"></i>
             <h3 class="o-mt-3">Aucun résultat trouvé</h3>
             <p>Aucune icône ne correspond à votre recherche : "${term}"</p>
           </div>
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (searchForm) {
     searchForm.addEventListener('submit', function (e) {
-      e.preventDefault(); // Empêche le rechargement de la page
+      e.preventbase(); // Empêche le rechargement de la page
       filterIcons(searchInput.value);
     });
   }

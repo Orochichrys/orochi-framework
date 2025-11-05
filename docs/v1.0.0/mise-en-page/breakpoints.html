@@ -47,7 +47,7 @@
   <div class="o-box-fluid layout-box">
     <div class="o-row">
       <!-- Colonne gauche (cachée sur petit écran) -->
-      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
+      <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
 
         <!-- Section : Commencer -->
         <div class="o-mb-3">
@@ -78,7 +78,7 @@
             </a>
             <a href="/docs/v1.0.0/mise-en-page/boxs.html"
               class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-              <i class="bx bx-box o-me-2"></i>Boxs
+              <i class="bx bx-box o-me-2"></i>box
             </a>
 
             <a href="/docs/v1.0.0/mise-en-page/spacing.html"
@@ -166,12 +166,12 @@
             ⚙️ Utilitaires
           </h4>
           <a href="/docs/v1.0.0/utilitaires/background.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Arrière plan
-                    </a><a href="/docs/v1.0.0/utilitaires/colors.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Couleurs
-                    </a>
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Arrière plan
+          </a><a href="/docs/v1.0.0/utilitaires/colors.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Couleurs
+          </a>
           <a href="/docs/v1.0.0/utilitaires/position.html"
             class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
             <i class="bx bx-move o-me-2"></i>Positionnement
@@ -217,7 +217,7 @@
     </div>
 
     <!-- Contenu principal -->
-    <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
+    <main class="o-col-12 o-col-laptop-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
       <section id="breakpoints-intro">
         <h1 class="o-title o-text-primary">📱 Points d'arrêt</h1>
         <p class="o-lead">
@@ -267,34 +267,34 @@
               </tr>
               <tr>
                 <td>Petit</td>
-                <td>sm</td>
+                <td>phone</td>
                 <td>≥576px</td>
               </tr>
               <tr>
                 <td>Moyen</td>
-                <td>md</td>
+                <td>tablet</td>
                 <td>≥768px</td>
               </tr>
               <tr>
                 <td>Grand</td>
-                <td>lg</td>
+                <td>laptop</td>
                 <td>≥992px</td>
               </tr>
               <tr>
                 <td>Très grand</td>
-                <td>xl</td>
+                <td>desktop</td>
                 <td>≥1200px</td>
               </tr>
               <tr>
                 <td>Très très grand</td>
-                <td>xxl</td>
+                <td>tv</td>
                 <td>≥1400px</td>
               </tr>
             </tbody>
           </table>
         </div>
         <h3 class="o-mb-3">Variables CSS des breakpoints :</h3>
-        <p class="o-mb-3">Chaque point d'arrêt a été choisi pour accueillir confortablement des Boxs dont la
+        <p class="o-mb-3">Chaque point d'arrêt a été choisi pour accueillir confortablement des box dont la
           largeur est un
           multiple de 12. Les points d'arrêt sont également représentatifs d'un sous-ensemble de tailles d'appareils
           et de dimensions de fenêtre d'affichage courantes ; ils ne ciblent pas spécifiquement chaque cas
@@ -308,12 +308,12 @@
         <div class="o-code-block">
           <pre class="language-css"><code>
 :root {
-  --o-xs: 0;
-  --o-sm: 576px;
-  --o-md: 768px;
-  --o-lg: 992px;
-  --o-xl: 1200px;
-  --o-xxl: 1400px;
+  --o-base: 0;
+  --o-phone: 576px;
+  --o-tablet: 768px;
+  --o-laptop: 992px;
+  --o-desktop: 1200px;
+  --o-tv: 1400px;
 }
 </code></pre>
         </div>
@@ -336,31 +336,31 @@
         <h4 class="o-mb-3">Structure des media queries :</h4>
         <div class="o-code-block o-mb-3">
           <pre class="language-css"><code>
-/* Pas de media query nécessaire pour xs car c'est effectivement `@media (min-width: 0) { ... }` */
+/* Pas de media query nécessaire pour base car c'est effectivement `@media (min-width: 0) { ... }` */
 
-/* Petits appareils (téléphones en mode paysage, 576px et plus) */
+/* Petits appareils (télébases en mode paysage, 576px et plus) */
 @media (min-width: 576px) { 
-  .o-col-sm-6 { width: 50%; }
+  .o-col-phone-6 { width: 50%; }
 }
 
 /* Appareils moyens (tablettes, 768px et plus) */
 @media (min-width: 768px) { 
-  .o-col-md-4 { width: 33.33%; }
+  .o-col-tablet-4 { width: 33.33%; }
 }
 
 /* Grands appareils (ordinateurs de bureau, 992px et plus) */
 @media (min-width: 992px) { 
-  .o-col-lg-3 { width: 25%; }
+  .o-col-laptop-3 { width: 25%; }
 }
 
 /* Très grands appareils (grands ordinateurs de bureau, 1200px et plus) */
 @media (min-width: 1200px) { 
-  .o-col-xl-2 { width: 16.67%; }
+  .o-col-desktop-2 { width: 16.67%; }
 }
 
 /* Très très grands appareils (ordinateurs de bureau plus larges, 1400px et plus) */
 @media (min-width: 1400px) { 
-  .o-col-xxl-1 { width: 8.33%; }
+  .o-col-tv-1 { width: 8.33%; }
 }
 </code></pre>
         </div>
@@ -368,7 +368,7 @@
         <h4 class="o-mb-3">Exemple d'utilisation :</h4>
         <div class="o-code-block o-mb-3">
           <pre class="language-css"><code>
-/* Exemple : Masquer à partir de `min-width: 0`, puis afficher au point d'arrêt `sm` */
+/* Exemple : Masquer à partir de `min-width: 0`, puis afficher au point d'arrêt `phone` */
 .custom-class {
   display: none;
 }
@@ -388,22 +388,22 @@
         <h4 class="o-mb-3">Structure des media queries :</h4>
         <div class="o-code-block o-mb-3">
           <pre class="language-css"><code>
-/* `xs` ne retourne qu'un ensemble de règles et aucune requête média */
+/* `base` ne retourne qu'un ensemble de règles et aucune requête média */
 /* ... { ... } */
 
-/* `sm` s'applique aux très petits appareils (téléphones portrait, moins de 576px) */
+/* `phone` s'applique aux très petits appareils (télébases portrait, moins de 576px) */
 @media (max-width: 575.98px) { ... }
 
-/* `md` s'applique aux petits appareils (téléphones paysage, moins de 768px) */
+/* `tablet` s'applique aux petits appareils (télébases paysage, moins de 768px) */
 @media (max-width: 767.98px) { ... }
 
-/* `lg` s'applique aux appareils moyens (tablettes, moins de 992px) */
+/* `laptop` s'applique aux appareils moyens (tablettes, moins de 992px) */
 @media (max-width: 991.98px) { ... }
 
-/* `xl` s'applique aux grands appareils (ordinateurs de bureau, moins de 1200px) */
+/* `desktop` s'applique aux grands appareils (ordinateurs de bureau, moins de 1200px) */
 @media (max-width: 1199.98px) { ... }
 
-/* `xxl` s'applique aux très grands appareils (grands ordinateurs de bureau, moins de 1400px) */
+/* `tv` s'applique aux très grands appareils (grands ordinateurs de bureau, moins de 1400px) */
 @media (max-width: 1399.98px) { ... }
 
 </code></pre>
@@ -471,14 +471,14 @@
           <pre class="language-css"><code>
 /* Appliquer des styles en partant des appareils moyens jusqu'aux très grands appareils */
 @media (min-width: 768px) and (max-width: 1199.98px) {
-  .between-md-xl {
+  .between-tablet-desktop {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* De petit à grand */
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .between-sm-lg {
+  .between-phone-laptop {
     flex-direction: column;
   }
 }
@@ -492,18 +492,18 @@
           <pre class="language-css"><code>
 :root {
   /* Points d'arrêt par défaut */
-  --o-xs: 0;
-  --o-sm: 576px;
-  --o-md: 768px;
-  --o-lg: 992px;
-  --o-xl: 1200px;
-  --o-xxl: 1400px;
+  --o-base: 0;
+  --o-phone: 576px;
+  --o-tablet: 768px;
+  --o-laptop: 992px;
+  --o-desktop: 1200px;
+  --o-tv: 1400px;
 
   /* Exemple de personnalisation */
   /*
-  --o-sm: 600px;
-  --o-md: 800px;
-  --o-lg: 1024px;
+  --o-phone: 600px;
+  --o-tablet: 800px;
+  --o-laptop: 1024px;
   */
 }
 </code></pre>
@@ -523,7 +523,7 @@
   display: none;
 }
 
-/* Navigation desktop à partir de md */
+/* Navigation desktop à partir de tablet */
 @media (min-width: 768px) {
   .o-nav {
     flex-direction: row;
@@ -548,19 +548,19 @@
 
 @media (min-width: 576px) {
   .card-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur sm */
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur phone */
   }
 }
 
 @media (min-width: 768px) {
   .card-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur md */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur tablet */
   }
 }
 
 @media (min-width: 1200px) {
   .card-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur xl */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur desktop */
   }
 }
 </code></pre>
@@ -623,7 +623,7 @@
     </main>
 
     <!-- Colonne droite (cachée sur petit écran) -->
-    <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+    <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
       <h5>Sur cette page</h5>
       <ul class="o-list-unstyled">
         <li><a href="#">Aperçu</a></li>

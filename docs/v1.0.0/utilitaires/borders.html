@@ -45,7 +45,7 @@
     <div class="o-row">
 
       <!-- Colonne gauche (cachée sur petit écran) -->
-      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
+      <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
 
         <!-- Section : Commencer -->
         <div class="o-mb-3">
@@ -76,7 +76,7 @@
             </a>
             <a href="/docs/v1.0.0/mise-en-page/boxs.html"
               class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-              <i class="bx bx-box o-me-2"></i>Boxs
+              <i class="bx bx-box o-me-2"></i>box
             </a>
 
             <a href="/docs/v1.0.0/mise-en-page/spacing.html"
@@ -163,14 +163,14 @@
           <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
             ⚙️ Utilitaires
           </h4>
-<a href="/docs/v1.0.0/utilitaires/background.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Arrière plan
-                    </a>
-<a href="/docs/v1.0.0/utilitaires/colors.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Couleurs
-                    </a>
+          <a href="/docs/v1.0.0/utilitaires/background.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Arrière plan
+          </a>
+          <a href="/docs/v1.0.0/utilitaires/colors.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Couleurs
+          </a>
           <a href="/docs/v1.0.0/utilitaires/position.html"
             class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
             <i class="bx bx-move o-me-2"></i>Positionnement
@@ -216,7 +216,7 @@
     </div>
 
     <!-- Contenu principal -->
-    <main class="o-col-12 o-col-lg-9 o-p-4 main-content o-mt-5">
+    <main class="o-col-12 o-col-laptop-9 o-p-4 main-content o-mt-5">
       <h1 class="o-title o-text-primary o-mb-4">⭕ Système de Bordures Orochi</h1>
       <p class="o-lead">Utilisez notre système de bordures complet pour ajouter du style, de la structure et de la
         clarté à vos interfaces. Le système inclut des bordures de différentes couleurs, épaisseurs, styles et rayons
@@ -282,21 +282,21 @@
           différents niveaux d'arrondi selon l'effet souhaité.</p>
 
         <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
-          <div class="o-border o-rounded-sm o-p-3">.o-rounded-sm</div>
+          <div class="o-border o-rounded-phone o-p-3">.o-rounded-phone</div>
           <div class="o-border o-rounded o-p-3">.o-rounded</div>
-          <div class="o-border o-rounded-md o-p-3">.o-rounded-md</div>
-          <div class="o-border o-rounded-lg o-p-3">.o-rounded-lg</div>
-          <div class="o-border o-rounded-xl o-p-3">.o-rounded-xl</div>
+          <div class="o-border o-rounded-tablet o-p-3">.o-rounded-tablet</div>
+          <div class="o-border o-rounded-laptop o-p-3">.o-rounded-laptop</div>
+          <div class="o-border o-rounded-desktop o-p-3">.o-rounded-desktop</div>
           <div class="o-border o-rounded-pill o-px-4 o-py-2">.o-rounded-pill</div>
           <div class="o-border o-rounded-0 o-p-3">.o-rounded-0</div>
         </div>
 
         <div class="o-code-block o-bg-light o-p-3 o-rounded">
-          <pre class="language-html"><code>&lt;div class="o-border o-rounded-sm"&gt;Petit rayon&lt;/div&gt;
+          <pre class="language-html"><code>&lt;div class="o-border o-rounded-phone"&gt;Petit rayon&lt;/div&gt;
 &lt;div class="o-border o-rounded"&gt;Rayon standard&lt;/div&gt;
-&lt;div class="o-border o-rounded-md"&gt;Rayon moyen&lt;/div&gt;
-&lt;div class="o-border o-rounded-lg"&gt;Grand rayon&lt;/div&gt;
-&lt;div class="o-border o-rounded-xl"&gt;Très grand rayon&lt;/div&gt;
+&lt;div class="o-border o-rounded-tablet"&gt;Rayon moyen&lt;/div&gt;
+&lt;div class="o-border o-rounded-laptop"&gt;Grand rayon&lt;/div&gt;
+&lt;div class="o-border o-rounded-desktop"&gt;Très grand rayon&lt;/div&gt;
 &lt;div class="o-border o-rounded-pill"&gt;Pilule/ellipse&lt;/div&gt;
 &lt;div class="o-border o-rounded-0"&gt;Aucun rayon&lt;/div&gt;</code></pre>
         </div>
@@ -352,23 +352,23 @@
 
         <h3 class="o-mb-3">Cartes avec bordures accentuées</h3>
         <div class="o-d-flex o-gap-3 o-flex-wrap o-mb-4">
-          <div class="o-border o-border-4 o-border-primary o-rounded-lg o-p-3">
+          <div class="o-border o-border-4 o-border-primary o-rounded-laptop o-p-3">
             <h4 class="o-text-primary">Carte primaire</h4>
             <p class="o-mb-0">Contenu de la carte avec bordure accentuée.</p>
           </div>
-          <div class="o-border o-border-4 o-border-success o-rounded-lg o-p-3">
+          <div class="o-border o-border-4 o-border-success o-rounded-laptop o-p-3">
             <h4 class="o-text-success">Carte succès</h4>
             <p class="o-mb-0">Contenu de la carte avec bordure accentuée.</p>
           </div>
         </div>
 
         <div class="o-code-block o-bg-light o-p-3 o-rounded o-mb-5">
-          <pre class="language-html"><code>&lt;div class="o-border o-border-4 o-border-primary o-rounded-lg o-p-3"&gt;
+          <pre class="language-html"><code>&lt;div class="o-border o-border-4 o-border-primary o-rounded-laptop o-p-3"&gt;
   &lt;h4 class="o-text-primary"&gt;Carte primaire&lt;/h4&gt;
   &lt;p&gt;Contenu de la carte avec bordure accentuée.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class="o-border o-border-4 o-border-success o-rounded-lg o-p-3"&gt;
+&lt;div class="o-border o-border-4 o-border-success o-rounded-laptop o-p-3"&gt;
   &lt;h4 class="o-text-success"&gt;Carte succès&lt;/h4&gt;
   &lt;p&gt;Contenu de la carte avec bordure accentuée.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
@@ -410,7 +410,7 @@
       </div>
     </main>
     <!-- Colonne droite (cachée sur petit écran) -->
-    <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+    <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
       <h5>Sur cette page</h5>
       <ul class="o-list-unstyled">
         <li><a href="#borders">Bordures standards</a></li>

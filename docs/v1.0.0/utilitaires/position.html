@@ -45,7 +45,7 @@
     <div class="o-row">
 
       <!-- Colonne gauche (cachée sur petit écran) -->
-      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
+      <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
 
         <!-- Section : Commencer -->
         <div class="o-mb-3">
@@ -76,7 +76,7 @@
             </a>
             <a href="/docs/v1.0.0/mise-en-page/boxs.html"
               class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-              <i class="bx bx-box o-me-2"></i>Boxs
+              <i class="bx bx-box o-me-2"></i>box
             </a>
 
             <a href="/docs/v1.0.0/mise-en-page/spacing.html"
@@ -163,14 +163,14 @@
           <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
             ⚙️ Utilitaires
           </h4>
-<a href="/docs/v1.0.0/utilitaires/background.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Arrière plan
-                    </a>
-<a href="/docs/v1.0.0/utilitaires/colors.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Couleurs
-                    </a>
+          <a href="/docs/v1.0.0/utilitaires/background.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Arrière plan
+          </a>
+          <a href="/docs/v1.0.0/utilitaires/colors.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Couleurs
+          </a>
           <a href="/docs/v1.0.0/utilitaires/position.html"
             class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
             <i class="bx bx-move o-me-2"></i>Positionnement
@@ -216,67 +216,82 @@
     </div>
 
     <!-- Contenu principal -->
-    <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
-      <h1 class="o-title o-text-primary o-mb-4">
-        📌 Position Orochi
-      </h1>
+    <main class="o-col-12 o-col-laptop-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
+      <h1 class="o-title o-text-primary o-mb-4">📌 Position</h1>
+      <p class="o-lead">
+        Les classes de position d’Orochi vous permettent de contrôler facilement l’emplacement
+        des éléments sur la page.
+        Elles simplifient la gestion du positionnement relatif, absolu ou fixe sans écrire de CSS
+        personnalisé, tout en assurant une mise en page fluide et réactive.
+      </p>
 
-      <!-- Exemples de positionnement -->
       <section class="o-mb-6">
-        <h2 class="o-text-dark o-mb-4">Classes de position</h2>
+        <h2 class="o-mb-4">Valeurs de position</h2>
+        <p class="o-mb-4">
+          Les classes de position d’Orochi définissent le comportement d’un élément dans le flux de la page.
+          Utilisez-les pour positionner vos composants selon vos besoins, que ce soit pour des layouts,
+          des overlays ou des éléments fixes à l’écran.
+        </p>
 
-        <!-- Affichage visuel -->
-        <div class="o-position-relative o-bg-light o-p-5" style="height: 200px;">
-          <div class="o-position-absolute o-top-1 o-start-1 o-bg-primary o-text-white o-p-2">
-            Absolue
-          </div>
-          <div class="o-position-relative o-bg-success o-text-white o-p-2 o-mt-5">
-            Relative
-          </div>
+        <div class="o-code-block o-mt-4">
+          <pre class="language-html"><code>&lt;div class="o-static"&gt;.o-static&lt;/div&gt;
+&lt;div class="o-relative"&gt;.o-relative&lt;/div&gt;
+&lt;div class="o-absolute"&gt;.o-absolute&lt;/div&gt;
+&lt;div class="o-fixed"&gt;.o-fixed&lt;/div&gt;
+&lt;div class="o-sticky"&gt;.o-sticky&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="o-mb-6">
+        <h2 class="o-mb-4">Organiser les éléments</h2>
+        <p class="o-mb-4">
+          Organisez facilement les éléments grâce aux utilitaires de positionnement des bords.
+          Le format est <code>{propriété}-{position}</code>.
+        </p>
+        <p class="o-mb-4">
+          Lorsque la propriété est l'une des suivantes :
+        <ul>
+          <li><code>top-</code> pour la position verticale supérieure</li>
+          <li><code>start-</code> pour la position horizontale gauche (en LTR)</li>
+          <li><code>bottom-</code> pour la position verticale inférieure</li>
+          <li><code>end-</code> pour la position horizontale droite (en LTR)</li>
+        </ul>
+        Et la position est l'une des suivantes :
+        <ul>
+          <li><code>0</code> pour 0% du bord</li>
+          <li><code>50</code> pour 50% du bord</li>
+          <li><code>100</code> pour 100% du bord</li>
+        </ul>
+        <!-- (Vous pouvez ajouter davantage de valeurs en modifiant la variable <code>$position-values</code> dans Sass.) -->
+        </p>
+
+        <div class="o-relative o-bg-light o-p-4" style="height: 300px;">
+          <div class="o-absolute o-top-0 o-start-0 o-bg-primary o-p-2">Top Start</div>
+          <div class="o-absolute o-top-0 o-end-0 o-bg-secondary o-p-2">Top End</div>
+          <div class="o-absolute o-top-50 o-start-50 o-bg-success o-p-2">Center</div>
+          <div class="o-absolute o-bottom-50 o-end-50 o-bg-warning o-p-2">Middle</div>
+          <div class="o-absolute o-bottom-0 o-start-0 o-bg-danger o-p-2">Bottom Start</div>
+          <div class="o-absolute o-bottom-0 o-end-0 o-bg-info o-p-2">Bottom End</div>
         </div>
 
-        <!-- Bloc de code -->
         <div class="o-code-block o-mt-4">
-          <pre class="language-html"><code>&lt;div class="o-position-relative o-bg-light o-p-5" style="height: 200px;"&gt;
-  &lt;div class="o-position-absolute o-top-1 o-start-1 o-bg-primary o-text-white o-p-2"&gt;
-    Absolue
-  &lt;/div&gt;
-  &lt;div class="o-position-relative o-bg-success o-text-white o-p-2 o-mt-5"&gt;
-    Relative
-  &lt;/div&gt;
+          <pre class="language-html"><code>&lt;div class="o-relative"&gt;
+  &lt;div class="o-absolute o-top-0 o-start-0"&gt;&lt;/div&gt;
+  &lt;div class="o-absolute o-top-0 o-end-0"&gt;&lt;/div&gt;
+  &lt;div class="o-absolute o-top-50 o-start-50"&gt;&lt;/div&gt;
+  &lt;div class="o-absolute o-bottom-50 o-end-50"&gt;&lt;/div&gt;
+  &lt;div class="o-absolute o-bottom-0 o-start-0"&gt;&lt;/div&gt;
+  &lt;div class="o-absolute o-bottom-0 o-end-0"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
         </div>
       </section>
 
-      <!-- Position fixe -->
-      <section class="o-mb-6">
-        <h2 class="o-text-dark o-mb-4">Position fixe</h2>
 
-        <div class="o-alert o-alert-info">
-          Utilisez <code>o-position-fixed</code> pour figer un élément à l'écran.
-        </div>
 
-        <!-- Exemple visuel -->
-        <div class="o-position-fixed o-top-0 o-end-0 o-bg-danger o-text-white o-p-2 o-m-2">
-          Fixé en haut à droite
-        </div>
 
-        <!-- Bloc de code -->
-        <div class="o-code-block o-mt-4">
-          <pre class="language-html"><code>&lt;div class="o-position-fixed o-top-0 o-end-0 o-bg-danger o-text-white o-p-2 o-m-2"&gt;
-  Fixé en haut à droite
-&lt;/div&gt;</code></pre>
-        </div>
-      </section>
-
-      <!-- Astuce -->
-      <div class="o-alert o-alert-info o-mt-5">
-        <strong>💡 Astuce :</strong> Ajoutez vos propres classes utilitaires comme <code>.o-top-0</code>,
-        <code>.o-bottom-0</code>, etc., pour un positionnement rapide.
-      </div>
     </main>
     <!-- Colonne droite (cachée sur petit écran) -->
-    <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+    <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
       <h5>Sur cette page</h5>
       <ul class="o-list-unstyled">
         <li><a href="#">Aperçu</a></li>
@@ -288,25 +303,6 @@
   </div>
   </div>
 
-  <!-- Pied de page -->
-  <footer class="o-bg-dark o-text-light o-py-4 o-mt-5">
-    <div class="o-d-flex o-justify-center o-gap-3">
-      <a href="#" class="o-text-white o-hover-text-primary">
-        <i class="bx bxl-facebook-circle o-text-h3"></i>
-      </a>
-      <a href="#" class="o-text-white o-hover-text-primary">
-        <i class="bx bxl-twitter o-text-h3"></i>
-      </a>
-      <a href="#" class="o-text-white o-hover-text-primary">
-        <i class="bx bxl-github o-text-h3"></i>
-      </a>
-    </div>
-    <div class="o-box o-mt-2">
-      <div class="o-text-center">
-        <p class="o-mb-0">&copy; 2025 Orochi CSS - Tous droits réservés</p>
-      </div>
-    </div>
-  </footer>
 
   <!-- Scripts -->
   <script src="../../../src/orochi.js"></script>

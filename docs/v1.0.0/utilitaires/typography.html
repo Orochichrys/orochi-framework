@@ -45,7 +45,7 @@
     <div class="o-row">
 
       <!-- Colonne gauche (cachée sur petit écran) -->
-      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
+      <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
 
         <!-- Section : Commencer -->
         <div class="o-mb-3">
@@ -76,7 +76,7 @@
             </a>
             <a href="/docs/v1.0.0/mise-en-page/boxs.html"
               class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-              <i class="bx bx-box o-me-2"></i>Boxs
+              <i class="bx bx-box o-me-2"></i>box
             </a>
 
             <a href="/docs/v1.0.0/mise-en-page/spacing.html"
@@ -163,13 +163,13 @@
           <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
             ⚙️ Utilitaires
           </h4>
-<a href="/docs/v1.0.0/utilitaires/background.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Arrière plan
-                    </a><a href="/docs/v1.0.0/utilitaires/colors.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Couleurs
-                    </a>
+          <a href="/docs/v1.0.0/utilitaires/background.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Arrière plan
+          </a><a href="/docs/v1.0.0/utilitaires/colors.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Couleurs
+          </a>
 
           <a href="/docs/v1.0.0/utilitaires/position.html"
             class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
@@ -216,12 +216,22 @@
     </div>
 
     <!-- Contenu principal -->
-    <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
+    <main class="o-col-12 o-col-laptop-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
       <h1 class="o-title o-text-primary o-mb-4">📝 Typographie</h1>
-      
- <!-- Alignement -->
+      <p class="o-lead">
+        Utilisez les classes de typographie pour structurer et hiérarchiser vos textes.
+        Elles vous aident à améliorer la lisibilité et à harmoniser le style de vos titres et paragraphes.
+      </p>
+
+
+      <!-- Alignement -->
       <section class="o-mb-6">
-        <h2 class="o-text-dark o-mb-4">Alignement du texte</h2>
+        <h2 class="o-mb-4">Alignement du texte</h2>
+        <p class="o-mb-4">
+          Les classes d’alignement du texte d’Orochi permettent de positionner facilement
+          vos contenus à gauche, au centre ou à droite sans écrire de CSS supplémentaire.
+          Elles assurent une mise en page cohérente et s’adaptent à tous les types d’écrans.
+        </p>
         <p class="o-text-start">Aligné à gauche</p>
         <p class="o-text-center">Centré</p>
         <p class="o-text-end">Aligné à droite</p>
@@ -232,54 +242,111 @@
         </div>
       </section>
 
-      <!-- Titres -->
-      <section class="o-mb-6">
-        <h2 class="o-text-dark o-mb-4">Titres</h2>
-        <h1 class="o-h1">Titre h1</h1>
-        <h2 class="o-h2">Titre h2</h2>
-        <h3 class="o-h3">Titre h3</h3>
-        <h4 class="o-h4">Titre h4</h4>
-        <h5 class="o-h5">Titre h5</h5>
-        <h6 class="o-h6">Titre h6</h6>
-        <div class="o-code-block">
-          <pre class="language-html"><code>&lt;h1 class="o-h1"&gt;Titre h1&lt;/h1&gt;
-&lt;h2 class="o-h2"&gt;Titre h2&lt;/h2&gt;
-&lt;h3 class="o-h3"&gt;Titre h3&lt;/h3&gt;
-&lt;h4 class="o-h4"&gt;Titre h4&lt;/h4&gt;
-&lt;h5 class="o-h5"&gt;Titre h5&lt;/h5&gt;
-&lt;h6 class="o-h6"&gt;Titre h6&lt;/h6&gt;</code></pre>
-        </div>
-      </section>
 
-      <!-- Texte -->
       <section class="o-mb-6">
-        <h2 class="o-text-dark o-mb-4">Texte</h2>
-        <p class="o-text-base">Ceci est un paragraphe de base utilisant la classe
-          <code>o-text-base</code>.
+        <h2 class="o-mb-4">Saut de mots</h2>
+        <p class="o-mb-4">
+          La classe <code>o-text-break</code> permet de forcer la coupure des mots trop longs
+          afin d’éviter qu’ils ne débordent de leur conteneur.
+          Elle garantit une meilleure lisibilité et un affichage propre, même pour des textes sans espaces
+          ou des chaînes de caractères continues.
         </p>
-        <p class="o-text-muted">Texte atténué avec <code>o-text-muted</code>.</p>
-        <p><strong class="o-text-bold">Texte en gras</strong> avec <code>o-text-bold</code>.</p>
-        <p><em class="o-text-italic">Texte en italique</em> avec <code>o-text-italic</code>.</p>
-        <p><u class="o-text-underline">Texte souligné</u> avec <code>o-text-underline</code>.</p>
-        <div class="o-code-block">
-          <pre class="language-html"><code>&lt;p class="o-text-base"&gt;Texte de base&lt;/p&gt;
-&lt;p class="o-text-muted"&gt;Texte atténué&lt;/p&gt;
-&lt;strong class="o-text-bold"&gt;Gras&lt;/strong&gt;
-&lt;em class="o-text-italic"&gt;Italique&lt;/em&gt;
-&lt;u class="o-text-underline"&gt;Souligné&lt;/u&gt;</code></pre>
+        <p class="o-text-break">
+          mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+        </p>
+        <div class="o-code-block o-mt-4">
+          <pre
+            class="language-html"><code>&lt;p class="o-text-break"&gt;mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm&lt;/p&gt;</code></pre>
         </div>
       </section>
 
-     
+      <section class="o-mb-6">
+        <h2 class="o-mb-4">Transformation de texte</h2>
+        <p class="o-mb-4">
+          Les classes de transformation de texte d’Orochi permettent de modifier facilement
+          la casse de vos contenus sans écrire de CSS.
+          Utilisez <code>o-text-lowercase</code> pour tout passer en minuscules,
+          <code>o-text-uppercase</code> pour les majuscules,
+          et <code>o-text-capitalize</code> pour mettre la première lettre de chaque mot en majuscule.
+        </p>
+        <p class="o-text-lowercase o-mb-2">texte en minuscules.</p>
+        <p class="o-text-uppercase o-mb-2">texte en majuscules.</p>
+        <p class="o-text-capitalize">texte en minuscules.</p>
+        <div class="o-code-block o-mt-4">
+          <pre class="language-html"><code>&lt;p class="o-text-lowercase"&gt;texte en minuscules.&lt;/p&gt;
+&lt;p class="o-text-uppercase"&gt;texte en majuscules.&lt;/p&gt;
+&lt;p class="o-text-capitalize"&gt;texte en minuscules.&lt;/p&gt;</code></pre>
+        </div>
+      </section>
+
+
+      <section class="o-mb-6">
+        <h2 class="o-mb-4">Taille de la police</h2>
+        <p class="o-mb-4">
+          Les classes de taille de police d’Orochi offrent un moyen rapide d’ajuster la hiérarchie
+          visuelle de vos textes sans écrire de CSS.
+          Utilisez <code>.o-fs-1</code> pour les plus grandes tailles et descendez jusqu’à
+          <code>.o-fs-6</code> pour les textes plus discrets.
+          Ces classes garantissent une cohérence typographique à travers tout votre projet.
+        </p>
+        <p class="o-fs-1 o-mb-2">Text .o-fs-1</p>
+        <p class="o-fs-2 o-mb-2">Text .o-fs-2</p>
+        <p class="o-fs-3 o-mb-2">Text .o-fs-3</p>
+        <p class="o-fs-4 o-mb-2">Text .o-fs-4</p>
+        <p class="o-fs-5 o-mb-2">Text .o-fs-5</p>
+        <p class="o-fs-6">Text .o-fs-6</p>
+        <div class="o-code-block o-mt-4">
+          <pre class="language-html"><code>&lt;p class="o-fs-1"&gt;Text .o-fs-1&lt;/p&gt;
+&lt;p class="o-fs-2"&gt;Text .o-fs-2&lt;/p&gt;
+&lt;p class="o-fs-3"&gt;Text .o-fs-3&lt;/p&gt;
+&lt;p class="o-fs-4"&gt;Text .o-fs-4&lt;/p&gt;
+&lt;p class="o-fs-5"&gt;Text .o-fs-5&lt;/p&gt;
+&lt;p class="o-fs-6"&gt;Text .o-fs-6&lt;/p&gt;</code></pre>
+        </div>
+      </section>
+
+      <section class="o-mb-6">
+        <h2 class="o-mb-4">Poids de la police et italique</h2>
+        <p class="o-mb-4">
+          Les classes de poids et de style de police d’Orochi permettent de gérer facilement
+          l’épaisseur et l’inclinaison du texte sans écrire de CSS personnalisé.
+          Utilisez <code>.o-fw-bold</code> ou <code>.o-fw-semibold</code> pour renforcer la
+          visibilité d’un élément, et <code>.o-fw-light</code> ou <code>.o-fw-lighter</code>
+          pour un rendu plus subtil.
+          Les classes <code>.o-fst-italic</code> et <code>.o-fst-normal</code> vous permettent
+          d’appliquer ou de retirer le style italique selon vos besoins.
+        </p>
+        <p class="o-fw-bold o-mb-2">Texte en gras.</p>
+        <p class="o-fw-bolder o-mb-2">Texte en gras (par rapport à l'élément parent).</p>
+        <p class="o-fw-semibold o-mb-2">Texte en demi-gras.</p>
+        <p class="o-fw-medium o-mb-2">Texte de poids moyen.</p>
+        <p class="o-fw-normal o-mb-2">Texte de poids normal.</p>
+        <p class="o-fw-light o-mb-2">Texte léger.</p>
+        <p class="o-fw-lighter o-mb-2">Texte plus léger (par rapport à l'élément parent).</p>
+        <p class="o-fst-italic o-mb-2">Texte en italique</p>
+        <p class="o-fst-normal">Texte avec un style de police normal</p>
+        <div class="o-code-block o-mt-4">
+          <pre class="language-html"><code>&lt;p class="o-fw-bold"&gt;Texte en gras.&lt;/p&gt;
+&lt;p class="o-fw-bolder"&gt;Texte en gras (par rapport à l'élément parent).&lt;/p&gt;
+&lt;p class="o-fw-semibold"&gt;Texte en demi-gras.&lt;/p&gt;
+&lt;p class="o-fw-medium"&gt;Texte de poids moyen.&lt;/p&gt;
+&lt;p class="o-fw-normal"&gt;Texte de poids normal.&lt;/p&gt;
+&lt;p class="o-fw-light"&gt;Texte léger.&lt;/p&gt;
+&lt;p class="o-fw-lighter"&gt;Texte plus léger (par rapport à l'élément parent).&lt;/p&gt;
+&lt;p class="o-fst-italic"&gt;Texte en italique&lt;/p&gt;
+&lt;p class="o-fst-normal"&gt;Texte avec un style de police normal&lt;/p&gt;</code></pre>
+        </div>
+      </section>
+
 
       <!-- Astuce -->
-      <div class="o-alert o-alert-info o-mt-5">
+      <!-- <div class="o-alert o-alert-info o-mt-5">
         <strong>💡 Astuce :</strong> Combine les classes <code>o-h*</code>, <code>o-text-*</code> pour
         créer des blocs typographiques cohérents dans ton interface.
-      </div>
+      </div> -->
     </main>
     <!-- Colonne droite (cachée sur petit écran) -->
-    <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+    <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
       <h5>Sur cette page</h5>
       <ul class="o-list-unstyled">
         <li><a href="#">Aperçu</a></li>
@@ -290,8 +357,6 @@
 
   </div>
   </div>
-
- 
 
   <script src="../../../src/orochi.js"></script>
   <script src="../js/script.js"></script>

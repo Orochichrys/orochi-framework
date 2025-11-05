@@ -1,7 +1,7 @@
 # Orochi CSS
 
 **Orochi CSS** is a responsive, modular, and accessible CSS framework designed to speed up modern web development.  
-It combines the power of CSS Grid, Flexbox, and smart utility classes with a simple and efficient syntax.
+It combines the power of CSS Grid, Flexbox, and phoneart utility classes with a simple and efficient syntax.
 
 > **Slogan:** Unleash the power of code
 
@@ -13,7 +13,7 @@ It combines the power of CSS Grid, Flexbox, and smart utility classes with a sim
 - Clear and powerful utility classes
 - Dynamic spacing with `clamp()`, `%`, `em`, etc.
 - Customizable theme system
-- Accessibility built-in by default
+- Accessibility built-in by base
 - Designed to work with Orochi UI, Forge, and the Orochi ecosystem
 
 ---
@@ -39,8 +39,8 @@ npm install orochi-css
 ```html
 <div class="o-box-fluid">
   <div class="o-row o-g-2">
-    <div class="o-col-md-6">Colonne 1</div>
-    <div class="o-col-md-6">Colonne 2</div>
+    <div class="o-col-tablet-6">Colonne 1</div>
+    <div class="o-col-tablet-6">Colonne 2</div>
   </div>
 </div>
 ```

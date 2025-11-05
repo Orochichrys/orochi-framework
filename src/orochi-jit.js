@@ -64,7 +64,7 @@
     if (_pseudoRuleMap[key]) return _pseudoRuleMap[key];
 
     _pseudoCounter += 1;
-    const cls = `orojit-${_pseudoCounter}-${Math.random().toString(36).slice(2,7)}`;
+    const cls = `orojit-${_pseudoCounter}-${Math.random().toString(36).slice(2, 7)}`;
     const safeCls = escapeClassNameForCss(cls);
 
     // support both pseudo classes and pseudo elements (e.g., before/after)
@@ -85,9 +85,9 @@
     return safeCls;
   }
 
-  /* ---------- DEFAULT_MAP : map short prefixes to property appliers ---------- */
+  /* ---------- base_MAP : map short prefixes to property appliers ---------- */
 
-  const DEFAULT_MAP = {
+  const base_MAP = {
     // colors / backgrounds
     'bg': (v) => ({ property: 'background', value: v }),
     'bg-color': (v) => ({ property: 'background-color', value: v }),
@@ -279,7 +279,7 @@
   /* ---------- OrochiJIT public object ---------- */
 
   const OrochiJIT = {
-    handlers: Object.assign({}, DEFAULT_MAP),
+    handlers: Object.assign({}, base_MAP),
     options: {
       observeRoot: document.documentElement,
       attributeFilter: ['class'],
@@ -322,7 +322,7 @@
     destroy() {
       try {
         _oroJitObserver && _oroJitObserver.disconnect();
-      } catch (e) {}
+      } catch (e) { }
       this._orochiJitInitialized = false;
     },
 
@@ -335,8 +335,8 @@
   };
 
   // aliases tolerant
-  if (!OrochiJIT.handlers['bg-']) OrochiJIT.addHandler('bg-', DEFAULT_MAP['bg']);
-  if (!OrochiJIT.handlers['radius-']) OrochiJIT.addHandler('radius-', DEFAULT_MAP['radius']);
+  if (!OrochiJIT.handlers['bg-']) OrochiJIT.addHandler('bg-', base_MAP['bg']);
+  if (!OrochiJIT.handlers['radius-']) OrochiJIT.addHandler('radius-', base_MAP['radius']);
 
   /* ---------- MutationObserver (internal unique name) ---------- */
 

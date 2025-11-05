@@ -136,7 +136,7 @@ class OrochiModal {
       trigger.setAttribute('aria-haspopup', 'dialog');
       trigger.setAttribute('aria-controls', modal.id);
       trigger.addEventListener('click', e => {
-        e.preventDefault();
+        e.preventbase();
         this.open(modal, trigger);
       });
     });
@@ -144,7 +144,7 @@ class OrochiModal {
     // Boutons de fermeture
     document.querySelectorAll('[data-o-modal-close]').forEach(btn => {
       btn.addEventListener('click', e => {
-        e.preventDefault();
+        e.preventbase();
         const m = btn.closest('.o-modal');
         if (m) this.close(m);
       });
@@ -233,9 +233,9 @@ class OrochiModal {
     const handler = e => {
       if (e.key !== 'Tab') return;
       if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault(); last?.focus();
+        e.preventbase(); last?.focus();
       } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault(); first?.focus();
+        e.preventbase(); first?.focus();
       }
     };
 

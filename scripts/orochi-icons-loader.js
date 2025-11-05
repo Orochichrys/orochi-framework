@@ -41,7 +41,7 @@ const iconNames = [
   'info',
   'alert-circle',
   'external-link',
-  'phone',
+  'base',
   'message-square',
   'message-circle',
   'video',
@@ -66,11 +66,11 @@ const iconNames = [
   'spark',
   'inbox',
   'plus-circle',
-  'compass','facebook',
-  'twitter','instagram',
-  'linkedin','youtube',
-  'github','gitlab','tiktok','discord',
-  'twitch','reddit','vr','brush','palette','pen-tool','pencil','box','gem','tachometer'
+  'compass', 'facebook',
+  'twitter', 'instagram',
+  'linkedin', 'youtube',
+  'github', 'gitlab', 'tiktok', 'discord',
+  'twitch', 'reddit', 'vr', 'brush', 'palette', 'pen-tool', 'pencil', 'box', 'gem', 'tachometer'
 ];
 
 const numberOfIcons = iconNames.length;
@@ -85,13 +85,13 @@ const box = document.querySelector('.o-row');
 
 iconNames.forEach((name) => {
   const col = document.createElement('div');
-  col.className = 'o-col-12 o-col-xs-4 o-col-sm-4 o-col-md-4 o-col-lg-3';
+  col.className = 'o-col-12 o-col-base-4 o-col-phone-4 o-col-tablet-4 o-col-laptop-3';
 
   col.innerHTML = `
             <div class="o-card o-p-4 o-center-content">
                 <i class="oi oi-${name}"></i>
             </div>
-            <div class="o-text-sm o-text-center o-mt-2">${name}</div>
+            <div class="o-text-phone o-text-center o-mt-2">${name}</div>
         `;
 
   box.appendChild(col);

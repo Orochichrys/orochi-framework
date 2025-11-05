@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title> Arrière plan - Orochi CSS</title>
+    <title>Position - Orochi CSS</title>
     <link rel="stylesheet" href="../../../src/orochi.css" />
     <link rel="stylesheet" href="../../../src/orochi-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -171,7 +171,6 @@
                         class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
                         Couleurs
                     </a>
-
                     <a href="/docs/v1.0.0/utilitaires/position.html"
                         class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
                         <i class="bx bx-move o-me-2"></i>Positionnement
@@ -217,104 +216,54 @@
         </div>
 
         <!-- Contenu principal -->
-        <main class="o-col-12 o-col-laptop-9 o-p-4 main-content o-mt-6">
-            <h1 class="o-title o-text-primary o-mb-4">🎨 Arrière-plan</h1>
-            <p class="o-lead">
-                Apportez du sens à vos éléments grâce aux classes de couleur de fond et ajoutez
-                une touche de style avec des dégradés élégants.
+        <main class="o-col-12 o-col-laptop-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
+            <h1 class="o-title o-text-primary o-mb-4">✨ Ombres</h1>
+            <p class="o-lead o-mb-4">
+                Appliquez facilement des ombres aux éléments grâce aux utilitaires d’Orochi.
+                Ces classes vous permettent d’ajouter de la profondeur et de faire ressortir vos composants.
             </p>
-
-            <h2 class="o-mb-3">Comment ils fonctionnent</h2>
-            <p>
-                Les classes d’arrière-plan d’Orochi permettent de modifier rapidement la couleur
-                de fond d’un élément ou d’y appliquer un dégradé fluide sans écrire de CSS
-                supplémentaire. Ces classes sont basées sur les variables de couleur du framework
-                et s’adaptent automatiquement au mode clair ou sombre.<br><br>
-
-                Orochi fournit deux grandes familles de classes d’arrière-plan :
-            </p>
-
-            <ul class="o-list-unstyled o-mb-4">
-                <li><code>.o-bg-{color}</code> — définit une couleur de fond unie (ex. <code>.o-bg-primary</code>)</li>
-                <li><code>.o-bg-gradient-{color}</code> — applique un dégradé élégant basé sur la même teinte
-                    (ex. <code>.o-bg-gradient-success</code>)</li>
-            </ul>
-
-            <p class="o-my-4">
-                Ces classes vous offrent une grande liberté pour exprimer votre identité visuelle,
-                tout en gardant un design harmonieux et cohérent avec le reste d’Orochi.
-            </p>
-
-
             <section class="o-mb-6">
-                <h2 class="o-mb-4">Couleur d'arrière-plan</h2>
-                <p class="o-mb-4">
-                    Les classes de couleur d’arrière-plan d’Orochi vous permettent d’appliquer rapidement une teinte
-                    uniforme à n’importe quel élément.
-                    Chaque classe est basée sur la palette principale du framework et s’adapte parfaitement aux textes
-                    et aux modes clair/sombre.
-                    Utilisez-les pour mettre en valeur des sections, des cartes ou des boutons sans écrire une seule
-                    ligne de CSS.
-                </p>
-
-                <div class="o-p-3 o-mb-2 o-bg-primary o-text-white">.o-bg-primary</div>
-                <div class="o-p-3 o-mb-2 o-bg-secondary o-text-white">.o-bg-secondary</div>
-                <div class="o-p-3 o-mb-2 o-bg-success o-text-white">.o-bg-success</div>
-                <div class="o-p-3 o-mb-2 o-bg-danger o-text-white">.o-bg-danger</div>
-                <div class="o-p-3 o-mb-2 o-bg-warning o-text-dark">.o-bg-warning</div>
-                <div class="o-p-3 o-mb-2 o-bg-info o-text-white">.o-bg-info</div>
-                <div class="o-p-3 o-mb-2 o-bg-light o-text-dark">.o-bg-light</div>
-                <div class="o-p-3 o-mb-2 o-bg-dark o-text-white">.o-bg-dark</div>
-                <div class="o-p-3 o-mb-2 o-bg-black o-text-white">.o-bg-black</div>
-                <div class="o-p-3 o-mb-2 o-bg-white o-text-black">.o-bg-white</div>
-
-                <div class="o-code-block o-mt-4">
-                    <pre class="language-html"><code>&lt;div class="o-bg-primary"&gt;.o-bg-primary&lt;/div&gt;
-&lt;div class="o-bg-secondary"&gt;.o-bg-secondary&lt;/div&gt;
-&lt;div class="o-bg-success"&gt;.o-bg-success&lt;/div&gt;
-&lt;div class="o-bg-danger"&gt;.o-bg-danger&lt;/div&gt;
-&lt;div class="o-bg-warning"&gt;.o-bg-warning&lt;/div&gt;
-&lt;div class="o-bg-info"&gt;.o-bg-info&lt;/div&gt;
-&lt;div class="o-bg-light"&gt;.o-bg-light&lt;/div&gt;
-&lt;div class="o-bg-dark"&gt;.o-bg-dark&lt;/div&gt;
-&lt;div class="o-bg-black"&gt;.o-bg-black&lt;/div&gt;
-&lt;div class="o-bg-white"&gt;.o-bg-white&lt;/div&gt;
-          </code></pre>
+                <div class="o-mb-4">
+                    <div class="o-p-3 o-bg-light o-mb-2">pas d'ombre</div>
+                    <div class="o-shadow-phone o-p-3 o-bg-light o-mb-2">Ombre petite (.o-shadow-phone)</div>
+                    <div class="o-shadow o-p-3 o-bg-light o-mb-2">Ombre normale (.o-shadow)</div>
+                    <div class="o-shadow-laptop o-p-3 o-bg-light">Ombre large (.o-shadow-laptop)</div>
                 </div>
 
+                <div class="o-code-block o-mt-4">
+                    <pre class="language-html"><code>&lt;div &gt;pas d'ombre&lt;/div&gt;
+&lt;div class="o-shadow-phone"&gt;Ombre petite (.o-shadow-phone)&lt;/div&gt;
+&lt;div class="o-shadow"&gt;Ombre normale (.o-shadow)&lt;/div&gt;
+&lt;div class="o-shadow-laptop"&gt;Ombre large (.o-shadow-laptop)&lt;/div&gt;</code></pre>
+                </div>
                 <div class="o-alert o-alert-info o-mt-4">
                     <strong>💡 Personnalisation </strong>
                     <div class="o-code-block o-mt-2">
                         <pre class="language-css"><code>:root {
---o-bg-primary:#votre_couleur;
---o-bg-secondary:#votre_couleur;
---o-bg-success:#votre_couleur;
---o-bg-danger:#votre_couleur;
---o-bg-warning:#votre_couleur;
---o-bg-info:#votre_couleur;
---o-bg-light:#votre_couleur;
---o-bg-dark:#votre_couleur;
---o-bg-black:#votre_couleur;
---o-bg-white:#votre_couleur;
+--o-shadow-phone:#votre_couleur;
+--o-shadow:#votre_couleur;
+--o-shadow-laptop:#votre_couleur;
 }</code></pre>
                     </div>
                 </div>
-
             </section>
-
-
 
         </main>
         <!-- Colonne droite (cachée sur petit écran) -->
         <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
             <h5>Sur cette page</h5>
             <ul class="o-list-unstyled">
-
+                <li><a href="#">Aperçu</a></li>
+                <li><a href="#">Accessibilité</a></li>
+                <li><a href="#">CSS</a></li>
             </ul>
         </div>
+
     </div>
     </div>
 
+
+    <!-- Scripts -->
     <script src="../../../src/orochi.js"></script>
     <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>

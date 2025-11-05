@@ -47,7 +47,7 @@
         <div class="o-row">
 
             <!-- Colonne gauche (cachée sur petit écran) -->
-            <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
+            <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
 
                 <!-- Section : Commencer -->
                 <div class="o-mb-3">
@@ -78,7 +78,7 @@
                         </a>
                         <a href="/docs/v1.0.0/mise-en-page/boxs.html"
                             class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                            <i class="bx bx-box o-me-2"></i>Boxs
+                            <i class="bx bx-box o-me-2"></i>box
                         </a>
 
                         <a href="/docs/v1.0.0/mise-en-page/spacing.html"
@@ -218,7 +218,7 @@
         </div>
 
         <!-- Contenu principal -->
-        <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
+        <main class="o-col-12 o-col-laptop-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
             <section id="form-control-intro">
                 <h1 class="o-title o-text-primary">🎛️ Contrôles de formulaire </h1>
                 <p class="o-lead o-mb-5">
@@ -247,11 +247,13 @@
                         <li><code>.o-form-label</code> : style standard pour les <code>&lt;label&gt;</code></li>
                         <li><code>.o-form-control</code> : classe de base pour <code>&lt;input&gt;</code>,
                             <code>&lt;textarea&gt;</code>,
-                            etc.</li>
-                        <li><code>.o-form-control-lg / .o-form-control-sm</code> : variantes de taille</li>
+                            etc.
+                        </li>
+                        <li><code>.o-form-control-laptop / .o-form-control-phone</code> : variantes de taille</li>
                         <li>Utilisez les variables CSS (ex. <code>--o-form-control-border-radius</code>,
                             <code>--o-form-control-padding</code>)
-                            pour personnaliser l'apparence globale.</li>
+                            pour personnaliser l'apparence globale.
+                        </li>
                     </ul>
 
                     <p class="o-mb-3 o-mt-3"><strong>Accessibilité :</strong> les contrôles respectent les bonnes
@@ -296,22 +298,22 @@
                     <h2 class="o-mb-3">Dimensionnement</h2>
                     <p class="o-mb-3">
                         Définissez les hauteurs à l’aide de classes telles que
-                        <code>.o-form-control-lg</code> et <code>.o-form-control-sm</code>.
+                        <code>.o-form-control-laptop</code> et <code>.o-form-control-phone</code>.
                     </p>
 
-                    <input class="o-form-control o-form-control-lg o-mt-2" type="text" placeholder=".o-form-control-lg"
-                        aria-label=".o-form-control-lg example">
-                    <input class="o-form-control o-mt-2" type="text" placeholder="Default input"
-                        aria-label="default input example">
-                    <input class="o-form-control o-form-control-sm o-mt-2" type="text" placeholder=".o-form-control-sm"
-                        aria-label=".o-form-control-sm example">
+                    <input class="o-form-control o-form-control-laptop o-mt-2" type="text"
+                        placeholder=".o-form-control-laptop" aria-label=".o-form-control-laptop example">
+                    <input class="o-form-control o-mt-2" type="text" placeholder="base input"
+                        aria-label="base input example">
+                    <input class="o-form-control o-form-control-phone o-mt-2" type="text"
+                        placeholder=".o-form-control-phone" aria-label=".o-form-control-phone example">
 
                     <div class="o-code-block o-mt-4">
                         <pre class="language-html">
       <code>
-&lt;input class="o-form-control o-form-control-lg" type="text" placeholder=".o-form-control-lg" aria-label=".o-form-control-lg example"&gt;
-&lt;input class="o-form-control" type="text" placeholder="Default input" aria-label="default input example"&gt;
-&lt;input class="o-form-control o-form-control-sm" type="text" placeholder=".o-form-control-sm" aria-label=".o-form-control-sm example"&gt;
+&lt;input class="o-form-control o-form-control-laptop" type="text" placeholder=".o-form-control-laptop" aria-label=".o-form-control-laptop example"&gt;
+&lt;input class="o-form-control" type="text" placeholder="base input" aria-label="base input example"&gt;
+&lt;input class="o-form-control o-form-control-phone" type="text" placeholder=".o-form-control-phone" aria-label=".o-form-control-phone example"&gt;
 </code>
 </pre>
                     </div>
@@ -321,7 +323,7 @@
         </main>
 
         <!-- Colonne droite (cachée sur petit écran) -->
-        <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+        <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
             <h5>Sur cette page</h5>
             <ul class="o-list-unstyled">
                 <li><a href="#">Aperçu</a></li>

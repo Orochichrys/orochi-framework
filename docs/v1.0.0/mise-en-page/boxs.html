@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boxs - Orochi CSS</title>
+  <title>box - Orochi CSS</title>
   <link rel="stylesheet" href="../../../src/orochi.css" />
   <link rel="stylesheet" href="../../../src/orochi-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -47,7 +47,7 @@
     <div class="o-row">
 
       <!-- Colonne gauche (cachée sur petit écran) -->
-      <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
+      <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white o-p-3 sidebar-left o-overflow-y-auto">
 
         <!-- Section : Commencer -->
         <div class="o-mb-3">
@@ -165,13 +165,13 @@
           <h4 class="o-text-dark o-mb-2 o-text-bold o-text-uppercase">
             ⚙️ Utilitaires
           </h4>
-<a href="/docs/v1.0.0/utilitaires/background.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Arrière plan
-                    </a><a href="/docs/v1.0.0/utilitaires/colors.html"
-                        class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
-                        Couleurs
-                    </a>
+          <a href="/docs/v1.0.0/utilitaires/background.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Arrière plan
+          </a><a href="/docs/v1.0.0/utilitaires/colors.html"
+            class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
+            Couleurs
+          </a>
 
           <a href="/docs/v1.0.0/utilitaires/position.html"
             class="o-text-dark o-text-decoration-none o-hover-text-primary o-d-block o-ps-3 o-py-1 o-hover-bg-light o-rounded">
@@ -218,20 +218,20 @@
     </div>
 
     <!-- Contenu principal -->
-    <main class="o-col-12 o-col-lg-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
-      <section id="boxs-intro">
+    <main class="o-col-12 o-col-laptop-8 o-p-4 main-content o-mt-6 o-overflow-x-hidden">
+      <section id="box-intro">
         <h1 class="o-title o-text-primary">📦 Boxs</h1>
         <p class="o-lead o-mb-5">
-          Les Boxs sont un composant clé d’Orochi : ils servent à centrer, limiter la largeur et structurer
+          Les box sont un composant clé d’Orochi : ils servent à centrer, limiter la largeur et structurer
           votre contenu de façon responsive sur tous les appareils.
         </p>
 
         <h2 class="o-mb-3">Comment ils fonctionnent</h2>
-        <p>Les Boxs sont l'élément de mise en page le plus basique d’Orochi et sont indispensables à
+        <p>Les box sont l'élément de mise en page le plus basique d’Orochi et sont indispensables à
           l'utilisation de notre système de grille par défaut. Ils servent à contenir, remplir et (parfois) centrer
-          le contenu. Bien que les Boxs puissent être imbriqués, la plupart des mises en page n'en nécessitent
+          le contenu. Bien que les box puissent être imbriqués, la plupart des mises en page n'en nécessitent
           pas.<br><br>
-          Orochi est livré avec trois Boxs différents :
+          Orochi est livré avec trois box différents :
         <ul class="o-list-unstyled">
           <li><code>.o-box</code>, qui définit un max-width à chaque point d'arrêt réactif</li>
           <li><code>.o-box-{breakpoint}</code>, qui dure width: 100% jusqu'au point d'arrêt spécifié</li>
@@ -239,21 +239,33 @@
         </ul>
         </p>
 
-        <!-- Conteneur de base -->
-        <section class="o-mt-4">
-          <h2 class="o-text-dark o-mb-3">Conteneur standard</h2>
-          <p class="o-mb-3">Notre .boxclasse par défaut est un conteneur réactif à largeur fixe, ce qui
-            signifie qu'il max-widthchange à chaque point d'arrêt.</p>
+        <!-- Box de base -->
+        <section id="standard" class="o-mt-4">
+          <h2 class="o-mb-3">Box standard</h2>
+          <p class="o-mb-3">Notre .box classe par défaut est un conteneur réactif à largeur fixe, ce qui
+            signifie qu'il max-width change à chaque point d'arrêt.</p>
           <div class="o-code-block">
             <pre class="language-html"><code>&lt;div class="o-box"&gt;
     Contenu centré avec largeur responsive
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</code></pre>ON DABA BIEN - Commandez votre déjeuner
           </div>
         </section>
 
-        <!-- Conteneur fluide -->
-        <section class="o-mt-4">
-          <h2 class="o-text-dark o-mb-3">Conteneur fluide</h2>
+        <section id="breakpoint" class="o-mt-4">
+          <h2 class="o-mb-3">Box réactifs</h2>
+            <div class="o-code-block">
+            <pre class="language-html"><code>&lt;div class="o-box-phone"&gt;&lt;/div&gt;
+&lt;div class="o-box-tablet"&gt;&lt;/div&gt;
+&lt;div class="o-box-laptop"&gt;&lt;/div&gt;
+&lt;div class="o-box-desktop"&gt;&lt;/div&gt;
+&lt;div class="o-box-tv"&gt;&lt;/div&gt;
+            </code></pre>
+          </div>
+        </section>
+
+        <!-- Box fluide -->
+        <section id="fluide" class="o-mt-4">
+          <h2 class="o-mb-3">Box fluide</h2>
           <p class="o-mb-3">À utiliser .box-fluid pour un conteneur pleine largeur, couvrant toute la largeur
             de la fenêtre d'affichage.</p>
           <div class="o-code-block">
@@ -263,9 +275,9 @@
           </div>
         </section>
 
-        <!-- Boxs responsives -->
+        <!-- box responsives -->
         <!-- <section class="o-mt-5">
-              <h2 class="o-text-dark">Boxs responsives</h2>
+              <h2 class="o-text-dark">box responsives</h2>
               <div class="o-table-responsive">
                 <table class="o-table o-table-bordered">
                   <thead class="o-bg-light">
@@ -282,22 +294,22 @@
                       <td>Par défaut</td>
                     </tr>
                     <tr>
-                      <td><code>.o-box-sm</code></td>
+                      <td><code>.o-box-phone</code></td>
                       <td>540px</td>
                       <td>≥576px</td>
                     </tr>
                     <tr>
-                      <td><code>.o-box-md</code></td>
+                      <td><code>.o-box-tablet</code></td>
                       <td>720px</td>
                       <td>≥768px</td>
                     </tr>
                     <tr>
-                      <td><code>.o-box-lg</code></td>
+                      <td><code>.o-box-laptop</code></td>
                       <td>960px</td>
                       <td>≥992px</td>
                     </tr>
                     <tr>
-                      <td><code>.o-box-xl</code></td>
+                      <td><code>.o-box-desktop</code></td>
                       <td>1140px</td>
                       <td>≥1200px</td>
                     </tr>
@@ -308,7 +320,7 @@
 
         <!-- Bonnes pratiques -->
         <section class="o-mt-4">
-          <h2 class="o-text-dark o-mb-3">💡 Bonnes pratiques</h2>
+          <h2 class="o-mb-3">💡 Bonnes pratiques</h2>
           <div class="o-card o-bg-light">
             <div class="o-card-body">
               <ul class="o-list-unstyled">
@@ -323,7 +335,7 @@
                 </li>
                 <li>
                   <i class="bx bx-check-circle o-me-2 o-text-success"></i>
-                  Préférez les Boxs responsives pour le mobile-first
+                  Préférez les box responsives pour le mobile-first
                 </li>
               </ul>
             </div>
@@ -332,12 +344,12 @@
     </main>
 
     <!-- Colonne droite (cachée sur petit écran) -->
-    <div class="o-col-lg-2 o-d-none o-d-lg-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
+    <div class="o-col-laptop-2 o-d-none o-d-laptop-block o-bg-white p-3 sidebar-right o-overflow-y-auto">
       <h5>Sur cette page</h5>
       <ul class="o-list-unstyled">
-        <li><a href="#">Aperçu</a></li>
-        <li><a href="#">Accessibilité</a></li>
-        <li><a href="#">CSS</a></li>
+        <li><a href="#standard" class="o-text-dark o-text-decoration-none o-hover-text-primary">Box standard</a></li>
+        <li><a href="#breakpoint" class="o-text-dark o-text-decoration-none o-hover-text-primary">Box réactifs</a></li>
+        <li><a href="#fluide" class="o-text-dark o-text-decoration-none o-hover-text-primary">Box fluide</a></li>
       </ul>
     </div>
 

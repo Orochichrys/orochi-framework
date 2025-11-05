@@ -2,15 +2,18 @@
 body {
   /* background-color: #f9f9f9; */
 }
-.o-box-fluid.layout-box{
+
+.o-box-fluid.layout-box {
   padding-left: 0;
-  padding-right:0;
+  padding-right: 0;
 }
-.main-content{
+
+.main-content {
   min-height: calc(100vh - 56px - 120px);
   padding-bottom: 2rem;
 }
-footer{
+
+footer {
   margin-top: 2rem;
   padding: 1rem 0;
   background-color: var(--o-light);
@@ -25,7 +28,7 @@ code {
 /* Custom code blocks */
 .o-code-block {
   position: relative;
-  border-radius: var(--o-rounded-md);
+  border-radius: var(--o-rounded-tablet);
   background: var(--o-dark) !important;
   width: 100%;
 }
@@ -45,7 +48,7 @@ code {
   border: none;
   color: var(--o-light);
   cursor: pointer;
-  border-radius: var(--o-rounded-sm);
+  border-radius: var(--o-rounded-phone);
   transition: all 0.2s ease;
 }
 
@@ -58,7 +61,7 @@ code {
 }
 
 /* Bouton toggle de la sidebar */
-.sidebar-toggler{
+.sidebar-toggler {
   background: none;
   border: none;
   padding: 0.5rem;
@@ -107,6 +110,7 @@ code {
     width: 66.6667%;
   }
 }
+
 @media (max-width: 991.98px) {
   .sidebar-left {
     position: fixed !important;
@@ -115,7 +119,7 @@ code {
     height: 100vh !important;
     background: white !important;
     z-index: 99999 !important;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.3) !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3) !important;
     transform: translateX(-100%) !important;
     transition: transform 0.3s ease !important;
     display: block !important;
@@ -130,13 +134,16 @@ code {
     padding: 10px !important;
   }
 }
+
 @media (max-width: 767.98px) {
+
   /* cadence sur ton nav ciblé - plus spécifique */
-  nav#main-nav.o-nav > .o-box-fluid {
+  nav#main-nav.o-nav>.o-box-fluid {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem; /* optionnel */
+    gap: 0.5rem;
+    /* optionnel */
   }
 
   /* toggler à gauche */
@@ -149,12 +156,15 @@ code {
      puis on center son contenu horizontalement */
   nav#main-nav .o-nav-logo {
     order: 2;
-    flex: 1 1 auto;        /* prend l'espace disponible */
-    display: flex;         /* pour centrer icône + texte */
+    flex: 1 1 auto;
+    /* prend l'espace disponible */
+    display: flex;
+    /* pour centrer icône + texte */
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0;             /* annule margins hérités */
+    margin: 0;
+    /* annule margins hérités */
   }
 
   /* burger à droite */
